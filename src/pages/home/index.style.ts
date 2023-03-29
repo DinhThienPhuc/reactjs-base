@@ -1,6 +1,3 @@
-/* PAGE STYLE: HOME
-   ========================================================================== */
-
 import styled from "styled-components";
 
 const Styled = {

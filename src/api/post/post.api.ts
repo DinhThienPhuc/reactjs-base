@@ -1,6 +1,3 @@
-/* API: POST
-   ========================================================================== */
-
 import { IPostListResponse, IPostResponse } from "./post.interface";
 
 import { AxiosResponse } from "axios";
