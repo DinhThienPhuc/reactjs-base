@@ -1,6 +1,3 @@
-/* API INTERFACE: POST
-   ========================================================================== */
-
 import { IBaseResponse } from "../interfaces";
 
 export interface IPostData {

@@ -1,49 +1,41 @@
-/* ROUTES ENTRY
-   ========================================================================== */
-
-import { AuthRoute, LayoutDefault, Loading } from "containers";
+import { Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
 import ROUTES from "./constant";
-import { RouteObject } from "react-router-dom";
-import loadable from "@loadable/component";
 
-/**
- * Lazy load page components. Fallback to <Loading /> when in loading phase
- */
-const Home = loadable(() => import("pages/home"), {
-  fallback: <Loading />,
-});
-const Login = loadable(() => import("pages/login"), {
-  fallback: <Loading />,
-});
-const NotFound = loadable(() => import("pages/not-found"), {
-  fallback: <Loading />,
-});
+const PageHome = lazy(() => import("pages/home"));
+const PageLogin = lazy(() => import("pages/login"));
+const PageNotFound = lazy(() => import("pages/not-found"));
 
-/**
- * Use <AuthRoute /> to protect authenticate pages
- */
-const routes: RouteObject[] = [
-  {
-    path: ROUTES.LOGIN,
-    element: (
-      <AuthRoute>
-        <Login />
-      </AuthRoute>
-    ),
-  },
-  {
-    path: ROUTES.HOME,
-    element: (
-      <AuthRoute>
-        <LayoutDefault />
-      </AuthRoute>
-    ),
-    children: [
-      { index: true, element: <Home /> },
-      { path: ROUTES.NOT_FOUND, element: <NotFound /> },
-    ],
-  },
-];
+const SuspensedPageHome = () => (
+  <Suspense fallback={<div>Spinning on Notfound page ...</div>}>
+    <PageHome />
+  </Suspense>
+);
 
-export default routes;
+const SuspensedPageLogin = () => (
+  <Suspense fallback={<div>Spinning on Login page ...</div>}>
+    <PageLogin />
+  </Suspense>
+);
+
+const SuspensedPageNotFound = () => (
+  <Suspense fallback={<div>Spinning on Notfound page ...</div>}>
+    <PageNotFound />
+  </Suspense>
+);
+
+const MainRoutes = () => {
+  return (
+    <Routes>
+      <Route>
+        <Route index element={<SuspensedPageHome />} />
+        <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
+        <Route path={ROUTES.LOGIN} element={<SuspensedPageLogin />} />
+      </Route>
+      <Route path="*" element={<SuspensedPageNotFound />} />
+    </Routes>
+  );
+};
+
+export default MainRoutes;

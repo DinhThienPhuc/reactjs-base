@@ -1,14 +1,7 @@
-/* API REQUEST
-   ========================================================================== */
-
 import axios, { AxiosError } from "axios";
 
 import { IBaseErrorResponse } from "./interfaces";
-import { getFromLocalStorage } from "utils/helpers";
 
-/**
- * Authenticated Request Interceptors config
- */
 export const requestWithJwt = axios.create({
   baseURL: process.env.REACT_APP_API,
   timeout: 10000,
@@ -16,12 +9,10 @@ export const requestWithJwt = axios.create({
 });
 
 requestWithJwt.interceptors.request.use(async (config) => {
-  const refreshToken = getFromLocalStorage<string | null>("refresh-token");
-
   return {
     ...config,
     headers: {
-      Authorization: `Bearer ${refreshToken || ""}`,
+      Authorization: "Bearer ",
       ...config.headers,
     },
   };
@@ -45,9 +36,6 @@ requestWithJwt.interceptors.response.use(
   },
 );
 
-/**
- * Non-authenticated Request Interceptors config
- */
 export const requestWithoutJwt = axios.create({
   baseURL: process.env.REACT_APP_API,
   timeout: 10000,
