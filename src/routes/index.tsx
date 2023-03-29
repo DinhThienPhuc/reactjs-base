@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import ROUTES from "./constant";
@@ -27,14 +27,16 @@ const SuspensedPageNotFound = () => (
 
 const MainRoutes = () => {
   return (
-    <Routes>
-      <Route>
-        <Route index element={<SuspensedPageHome />} />
-        <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
-        <Route path={ROUTES.LOGIN} element={<SuspensedPageLogin />} />
-      </Route>
-      <Route path="*" element={<SuspensedPageNotFound />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route>
+          <Route index element={<SuspensedPageHome />} />
+          <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
+          <Route path={ROUTES.LOGIN} element={<SuspensedPageLogin />} />
+        </Route>
+        <Route path="*" element={<SuspensedPageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

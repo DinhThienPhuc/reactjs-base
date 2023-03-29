@@ -25,6 +25,7 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "ignorePatterns": ["public/bit", "workspace.jsonc"],
   "rules": {
     "indent": ["warn", 2, { "ignoredNodes": ["ConditionalExpression"] }],
     "quotes": ["warn", "double"],
@@ -34,7 +35,11 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["warn"],
-    "no-console": "warn"
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^_" }
+    ],
+    "no-console": "warn",
+    "@typescript-eslint/no-non-null-assertion": "off"
   }
 }
