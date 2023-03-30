@@ -3112,10 +3112,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.4.0":
-  version: 1.4.0
-  resolution: "@remix-run/router@npm:1.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40remix-run%2Frouter%2F-%2Frouter-1.4.0.tgz"
-  checksum: 707dce35a2b8138005cf19e63f6fd3c4da05b4b892e9e9118e8b727c3b95953efe27307ca2df35084044df30fa1fc367cf0bbc98d1ded9020c82e61e6242caaf
+"@remix-run/router@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@remix-run/router@npm:1.5.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40remix-run%2Frouter%2F-%2Frouter-1.5.0.tgz"
+  checksum: 9c510c174af1553edd1f039ba16e7e3d34e04d53b3bac18814660e31cd0c48297ea4291ff86d0736b560123ebc63ecb62fa525829181d16a8dad15270d6672d7
   languageName: node
   linkType: hard
 
@@ -3490,12 +3490,12 @@ __metadata:
   linkType: hard
 
 "@types/eslint@npm:*, @types/eslint@npm:^7.29.0 || ^8.4.1":
-  version: 8.21.3
-  resolution: "@types/eslint@npm:8.21.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Feslint%2F-%2Feslint-8.21.3.tgz"
+  version: 8.37.0
+  resolution: "@types/eslint@npm:8.37.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40types%2Feslint%2F-%2Feslint-8.37.0.tgz"
   dependencies:
     "@types/estree": "*"
     "@types/json-schema": "*"
-  checksum: 80e0b5ca9ffb77bff19d01df08b93a99a6b44cad4c40e6450733ead6f1bc44b5514e7d28c3b0ad6304aeb01d690ee7ca89250729a9373551b7e587c6dbb41d7f
+  checksum: 06d3b3fba12004294591b5c7a52e3cec439472195da54e096076b1f2ddfbb8a445973b9681046dd530a6ac31eca502f635abc1e3ce37d03513089358e6f822ee
   languageName: node
   linkType: hard
 
@@ -7096,9 +7096,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.342
-  resolution: "electron-to-chromium@npm:1.4.342::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Felectron-to-chromium%2F-%2Felectron-to-chromium-1.4.342.tgz"
-  checksum: 61ecf9f3ea65a6044cdcea092dd56b42d0961fdb8fb3942ba808c6aa6ab3213d3218e599748d6d6ae8b43ddc9f76f428af0b96eaee2f0b4b2f0195c643f36f3d
+  version: 1.4.344
+  resolution: "electron-to-chromium@npm:1.4.344::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Felectron-to-chromium%2F-%2Felectron-to-chromium-1.4.344.tgz"
+  checksum: 3ddcdd608314247da9d8764011a27130a017cc31444cfb784b9ff7c9bad07d4bd81adc981f206078a00e79de53a525514403a95fddfc20da72e3321c05ac9925
   languageName: node
   linkType: hard
 
@@ -8523,8 +8523,6 @@ __metadata:
 "fsevents@npm:^2.3.2, fsevents@npm:~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ffsevents%2F-%2Ffsevents-2.3.2.tgz"
-  dependencies:
-    node-gyp: latest
   checksum: 97ade64e75091afee5265e6956cb72ba34db7819b4c3e94c431d4be2b19b8bb7a2d4116da417950c3425f17c8fe693d25e20212cac583ac1521ad066b77ae31f
   conditions: os=darwin
   languageName: node
@@ -8533,8 +8531,6 @@ __metadata:
 "fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2%3A%3A__archiveUrl=https%253A%252F%252Fregistry.npmjs.org%252Ffsevents%252F-%252Ffsevents-2.3.2.tgz#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
-  dependencies:
-    node-gyp: latest
   conditions: os=darwin
   languageName: node
   linkType: hard
@@ -14422,26 +14418,26 @@ __metadata:
   linkType: hard
 
 "react-router-dom@npm:6":
-  version: 6.9.0
-  resolution: "react-router-dom@npm:6.9.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-router-dom%2F-%2Freact-router-dom-6.9.0.tgz"
+  version: 6.10.0
+  resolution: "react-router-dom@npm:6.10.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-router-dom%2F-%2Freact-router-dom-6.10.0.tgz"
   dependencies:
-    "@remix-run/router": 1.4.0
-    react-router: 6.9.0
+    "@remix-run/router": 1.5.0
+    react-router: 6.10.0
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 4d593491ab8db5611feda70002c62902baebb84d5c1c5e5b6172496f31f91130deee132bf4240dea634a88cb86c76d6da348f15b9cd5e5197be455efd88edf72
+  checksum: d048d8cc66e5aec782bd675097d6bf0e5f867f3f0539bff9acdc4a314b5e0e34093944762960ca0977a54c6255272edd262231242b18c4e260d68df6b5288464
   languageName: node
   linkType: hard
 
-"react-router@npm:6.9.0":
-  version: 6.9.0
-  resolution: "react-router@npm:6.9.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-router%2F-%2Freact-router-6.9.0.tgz"
+"react-router@npm:6.10.0":
+  version: 6.10.0
+  resolution: "react-router@npm:6.10.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Freact-router%2F-%2Freact-router-6.10.0.tgz"
   dependencies:
-    "@remix-run/router": 1.4.0
+    "@remix-run/router": 1.5.0
   peerDependencies:
     react: ">=16.8"
-  checksum: b2a5f42e042bee7a7f116ca7817b0e58359e5353d84887c9fe7a633d7490c03b1e0ae37cd01830c2a381e3d1e7d501bb4751e53cc3d491e25f36582d3f6e0546
+  checksum: c9fce46147c04257d7d6fa1f5bbfac96c5fdd0b15f26918bd12b2e5fe9143977c5a4452272f9b85795a22e29ec105a60d0bbe036118efc52b383d163cd8829ab
   languageName: node
   linkType: hard
 
@@ -17258,8 +17254,8 @@ __metadata:
   linkType: hard
 
 "webpack@npm:5, webpack@npm:^5.64.4":
-  version: 5.76.3
-  resolution: "webpack@npm:5.76.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fwebpack%2F-%2Fwebpack-5.76.3.tgz"
+  version: 5.77.0
+  resolution: "webpack@npm:5.77.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fwebpack%2F-%2Fwebpack-5.77.0.tgz"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^0.0.51
@@ -17290,7 +17286,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 363f536b56971d056e34ab4cffa4cbc630b220e51be1a8c3adea87d9f0b51c49cfc7c3720d6614a1fd2c8c63f1ab3100db916fe8367c8bb9299327ff8c3f856d
+  checksum: 21341bb72cbbf61dfb3af91eabe9290a6c05139f268eff3c419e5339deb6c79f2f36de55d9abf017d3ccbad290a535c02325001b2816acc393f3c022e67ac17c
   languageName: node
   linkType: hard
 
