@@ -45,8 +45,7 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "format": "npx pretty-quick --staged && npx lint-staged",
-    "postinstall": "bit compile && bit link && bit install"
+    "format": "npx pretty-quick --staged && npx lint-staged"
   },
   "eslintConfig": {
     "extends": [
