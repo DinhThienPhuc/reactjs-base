@@ -34,3 +34,10 @@ yarn-error.log*
 
 # Sentry
 .sentryclirc
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
