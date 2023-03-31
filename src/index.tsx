@@ -1,7 +1,7 @@
 import * as ReactDOM from "react-dom/client";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
-import App from "./app";
+import App from "./appp1";
 import { StrictMode } from "react";
 import { logger } from "utils";
 import reportWebVitals from "./reportWebVitals";
