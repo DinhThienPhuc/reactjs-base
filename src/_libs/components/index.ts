@@ -17,8 +17,9 @@ export * from "./label/types";
 export * from "./navbar";
 export * from "./navbar/types";
 
-export * from "./next-image";
-export * from "./next-image/types";
+// export * from "./next-image";
+// export * from "./next-image/types";
+// TODO: check what causing error
 
 export * from "./portal";
 export * from "./portal/types";

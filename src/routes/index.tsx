@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import Layout from "layouts";
@@ -49,23 +49,25 @@ const SuspensedPageEdit = () => (
 
 const MainRoutes = () => {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<SuspensedPageHome />} />
-        <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
-        <Route path={ROUTES.GRAPH} element={<SuspensedPageGraph />} />
-        <Route path={ROUTES.SEARCH} element={<SuspensedPageSearch />} />
-        <Route
-          path={`${ROUTES.DETAIL}/:id/view`}
-          element={<SuspensedPageDetail />}
-        />
-        <Route
-          path={`${ROUTES.DETAIL}/:id/edit`}
-          element={<SuspensedPageEdit />}
-        />
-      </Route>
-      <Route path="*" element={<SuspensedPageNotFound />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<SuspensedPageHome />} />
+          <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
+          <Route path={ROUTES.GRAPH} element={<SuspensedPageGraph />} />
+          <Route path={ROUTES.SEARCH} element={<SuspensedPageSearch />} />
+          <Route
+            path={`${ROUTES.DETAIL}/:id/view`}
+            element={<SuspensedPageDetail />}
+          />
+          <Route
+            path={`${ROUTES.DETAIL}/:id/edit`}
+            element={<SuspensedPageEdit />}
+          />
+        </Route>
+        <Route path="*" element={<SuspensedPageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

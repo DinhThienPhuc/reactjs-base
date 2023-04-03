@@ -5,6 +5,7 @@ import { ErrorBoundary } from "modules";
 import MainRoutes from "routes";
 import { Suspense } from "react";
 import { reload } from "utils";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -12,6 +13,8 @@ const App = () => {
       <Suspense fallback={<div>Spinning on root ...</div>}>
         <MainRoutes />
       </Suspense>
+      <ToastContainer />
+      {/* TODO: Fix toastify position */}
     </ErrorBoundary>
   );
 };
