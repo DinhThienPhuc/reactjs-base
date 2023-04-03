@@ -1,43 +1,71 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import Layout from "layouts";
-import ROUTES from "./constant";
+import ROUTES from "./constants";
 
 const PageHome = lazy(() => import("pages/home"));
-const PageLogin = lazy(() => import("pages/login"));
+const PageGraph = lazy(() => import("pages/graph"));
+const PageSearch = lazy(() => import("pages/search"));
+const PageDetail = lazy(() => import("pages/detail"));
+const PageEdit = lazy(() => import("pages/edit"));
 const PageNotFound = lazy(() => import("pages/not-found"));
 
 const SuspensedPageHome = () => (
-  <Suspense fallback={<div>Spinning on Notfound page ...</div>}>
+  <Suspense fallback={<div>Spinning on Home page ...</div>}>
     <PageHome />
   </Suspense>
 );
 
-const SuspensedPageLogin = () => (
-  <Suspense fallback={<div>Spinning on Login page ...</div>}>
-    <PageLogin />
+const SuspensedPageGraph = () => (
+  <Suspense fallback={<div>Spinning on Graph page ...</div>}>
+    <PageGraph />
+  </Suspense>
+);
+
+const SuspensedPageSearch = () => (
+  <Suspense fallback={<div>Spinning on Search page ...</div>}>
+    <PageSearch />
   </Suspense>
 );
 
 const SuspensedPageNotFound = () => (
-  <Suspense fallback={<div>Spinning on Notfound page ...</div>}>
+  <Suspense fallback={<div>Spinning on Not found page ...</div>}>
     <PageNotFound />
+  </Suspense>
+);
+
+const SuspensedPageDetail = () => (
+  <Suspense fallback={<div>Spinning on Fighter detail page ...</div>}>
+    <PageDetail />
+  </Suspense>
+);
+
+const SuspensedPageEdit = () => (
+  <Suspense fallback={<div>Spinning on Fighter edit page ...</div>}>
+    <PageEdit />
   </Suspense>
 );
 
 const MainRoutes = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<SuspensedPageHome />} />
-          <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
-          <Route path={ROUTES.LOGIN} element={<SuspensedPageLogin />} />
-        </Route>
-        <Route path="*" element={<SuspensedPageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<SuspensedPageHome />} />
+        <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
+        <Route path={ROUTES.GRAPH} element={<SuspensedPageGraph />} />
+        <Route path={ROUTES.SEARCH} element={<SuspensedPageSearch />} />
+        <Route
+          path={`${ROUTES.DETAIL}/:id/view`}
+          element={<SuspensedPageDetail />}
+        />
+        <Route
+          path={`${ROUTES.DETAIL}/:id/edit`}
+          element={<SuspensedPageEdit />}
+        />
+      </Route>
+      <Route path="*" element={<SuspensedPageNotFound />} />
+    </Routes>
   );
 };
 

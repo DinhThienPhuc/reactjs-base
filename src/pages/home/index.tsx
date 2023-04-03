@@ -1,14 +1,50 @@
-import Styled from "./index.style";
-import { reload } from "@phantomthief/react-mui.utils";
+import { useMemo, useState } from "react";
 
-const Home = () => {
+import { IFighter } from "utils";
+import Styled from "./style";
+import StyledLayout from "layouts/style";
+import { WrapperNavbar } from "components";
+import { getFighters } from "services";
+import { toast } from "react-toastify";
+import { useEffectOnce } from "hooks";
+
+const PageHome = () => {
+  const [data, setData] = useState<IFighter[] | null>(null);
+
+  useEffectOnce(() => {
+    const fetch = async () => {
+      const { error, result } = await getFighters();
+      if (error) {
+        toast.error("Get list fighters failed!", {
+          position: toast.POSITION.TOP_CENTER,
+          icon: "🍎",
+        });
+      } else {
+        setData(result);
+      }
+    };
+
+    fetch();
+  });
+
+  const content = useMemo(() => {
+    return data?.map((fighter) => (
+      <Styled.Card
+        key={fighter.id}
+        id={fighter.id}
+        name={fighter.name}
+        epithet={fighter.epithet}
+        avatar={fighter.avatar}
+      />
+    ));
+  }, [data]);
+
   return (
-    <Styled.Container>
-      <p>Home page</p>
-      <p>App name: {process.env.REACT_APP_NAME}</p>
-      <button onClick={reload}>Reload</button>
-    </Styled.Container>
+    <>
+      <WrapperNavbar title={"Home"} />
+      <StyledLayout.Content>{content}</StyledLayout.Content>
+    </>
   );
 };
 
-export default Home;
+export default PageHome;

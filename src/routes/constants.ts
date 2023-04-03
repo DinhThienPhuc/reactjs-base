@@ -1,7 +1,9 @@
 const ROUTES = {
   HOME: "/",
+  GRAPH: "/graph",
+  SEARCH: "/search",
+  DETAIL: "/fighter",
   NOT_FOUND: "*",
-  LOGIN: "/login",
 };
 
 export default ROUTES;

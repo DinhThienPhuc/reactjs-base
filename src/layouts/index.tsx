@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Styled from "./style";
+import Tabbar from "./tabbar";
 
 const Layout = () => {
   return (
@@ -7,6 +8,7 @@ const Layout = () => {
       <Styled.Main>
         <Outlet />
       </Styled.Main>
+      <Tabbar />
     </>
   );
 };
