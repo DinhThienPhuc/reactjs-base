@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
+import Layout from "layouts";
 import ROUTES from "./constant";
 
 const PageHome = lazy(() => import("pages/home"));
@@ -29,7 +30,7 @@ const MainRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route>
+        <Route element={<Layout />}>
           <Route index element={<SuspensedPageHome />} />
           <Route path={ROUTES.HOME} element={<SuspensedPageHome />} />
           <Route path={ROUTES.LOGIN} element={<SuspensedPageLogin />} />

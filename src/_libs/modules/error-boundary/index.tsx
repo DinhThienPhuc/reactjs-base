@@ -19,9 +19,11 @@ class ErrorBoundary extends Component<
 
   override render() {
     if (this.state.error) {
-      if (this.props.errorChildren) {
-        return this.props.errorChildren;
+      if (this.props.FallbackComponent) {
+        const FallbackComponent = this.props.FallbackComponent;
+        return <FallbackComponent />;
       }
+
       return (
         <Styled.Container>
           <Styled.Content>
