@@ -1,10 +1,11 @@
-import { ReactNode } from "react";
+import { ComponentType, ReactNode } from "react";
+
 import { TFunction } from "@phantomthief/react-mui.utils";
 
 export interface IErrorBoundaryProps {
   onReset: TFunction<void>;
   children: ReactNode | null;
-  errorChildren?: ReactNode | null;
+  FallbackComponent?: ComponentType | null;
 }
 
 export interface IErrorBoundaryState {
