@@ -13,7 +13,7 @@ const StatBarChart = ({ data, label }: IProps) => {
   return (
     <Styled.Container>
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data}>
+        <BarChart data={data} margin={{ top: 20 }}>
           <Bar dataKey="first" label={{ position: "top" }}>
             {data?.map((_, index) => (
               <Cell fill={FIGHTER_ORDER_COLORS.FIRST} key={`cell1-${index}`} />

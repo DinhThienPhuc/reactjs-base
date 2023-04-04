@@ -5,7 +5,7 @@ import styled from "styled-components";
 const WrapperStyled = {
   Navbar: styled(Navbar)`
     background: #091522;
-    height: 128px;
+    height: 100px;
     border: 2px solid #000000;
     box-shadow: 0px -4px 16px #000000;
     border-radius: 0px 0px 28px 28px;

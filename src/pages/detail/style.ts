@@ -73,7 +73,7 @@ const Styled = {
     display: flex;
     justify-content: space-around;
     position: absolute;
-    bottom: 100px;
+    bottom: 140px;
   `,
   DeleteButton: styled(WrapperButton)`
     &.button-variant__outlined {

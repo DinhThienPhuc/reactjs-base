@@ -15,7 +15,7 @@ const Styled = {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     width: 52px;
     font-weight: 600;
   `,
@@ -24,7 +24,7 @@ const Styled = {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     width: 30px;
     font-weight: 600;
 

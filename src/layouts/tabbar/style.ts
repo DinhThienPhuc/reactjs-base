@@ -4,10 +4,11 @@ const Styled = {
   Container: styled.nav`
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
     bottom: 0;
-    height: 74px;
+    height: 100px;
+    padding: 18px 0px;
     width: 100%;
     background: #091522;
     box-shadow: 0px -4px 16px #000000;

@@ -22,6 +22,7 @@ import { getFighterById } from "services";
 import { useCompareFighters } from "store";
 import { useEffectOnce } from "hooks";
 import { useNavigate } from "react-router-dom";
+import ROUTES from "routes/constants";
 
 interface IFighterWithMoreStats
   extends Omit<IFighter, "avatar" | "height" | "weight">,
@@ -123,8 +124,8 @@ const PageGraph = () => {
     return result;
   }, [fighters.first, fighters.second]);
 
-  const goBack = useCallback(() => {
-    navigate(-1);
+  const goToHomepage = useCallback(() => {
+    navigate(ROUTES.HOME);
   }, [navigate]);
 
   useEffectOnce(() => {
@@ -136,7 +137,7 @@ const PageGraph = () => {
       <WrapperNavbar
         title={"Graph"}
         leftIcon={<IconArrowLeft />}
-        onLeftClick={goBack}
+        onLeftClick={goToHomepage}
         rightIcon={<IconHeart />}
       />
       <StyledLayout.Content>

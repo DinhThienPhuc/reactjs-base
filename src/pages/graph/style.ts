@@ -32,7 +32,7 @@ const Styled = {
   StatChartGroup: styled.div`
     display: flex;
     justify-content: space-around;
-    margin-top: 24px;
+    margin-top: 32px;
   `,
 };
 
