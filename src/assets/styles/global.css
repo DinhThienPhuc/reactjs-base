@@ -8,7 +8,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: #ffffff;
-  min-width: 375px;
   scroll-behavior: smooth;
 }
 
