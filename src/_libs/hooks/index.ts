@@ -8,3 +8,4 @@ export * from "./useOnClickOutside";
 export * from "./useClickAnyWhere";
 export * from "./useSsr";
 export * from "./useNotClickOnElements";
+export * from "./useInternetStatus";

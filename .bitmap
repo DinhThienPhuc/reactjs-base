@@ -11,13 +11,13 @@
 {
     "components": {
         "scope": "phantomthief.react-mui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/components"
     },
     "hooks": {
         "scope": "phantomthief.react-mui",
-        "version": "0.0.2",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/hooks"
     },

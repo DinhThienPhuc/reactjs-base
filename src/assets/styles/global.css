@@ -22,7 +22,7 @@ a {
 .Toastify__toast {
   background: #091522 !important;
   box-shadow: 0px -4px 16px #000000 !important;
-  height: 80px;
+  height: 64px;
   width: 100%;
   border-bottom: 1px solid #ffffff80;
 }
@@ -32,7 +32,7 @@ a {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  color: #ffffff;
+  color: #ffffff !important;
   width: 20px;
   height: 20px;
   opacity: 0.7;
