@@ -3,6 +3,7 @@ import "assets/styles/global.css";
 import "react-toastify/dist/ReactToastify.css";
 
 import { ErrorBoundary } from "modules";
+import { LoadingEllipsis } from "components";
 import MainRoutes from "routes";
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
@@ -11,7 +12,7 @@ import { reload } from "utils";
 const App = () => {
   return (
     <ErrorBoundary onReset={reload}>
-      <Suspense fallback={<div>Spinning on root ...</div>}>
+      <Suspense fallback={<LoadingEllipsis color="#11dce8" />}>
         <MainRoutes />
       </Suspense>
       <ToastContainer />

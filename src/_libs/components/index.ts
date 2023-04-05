@@ -14,6 +14,8 @@ export * from "./label";
 export * from "./label/constants";
 export * from "./label/types";
 
+export * from "./loading";
+
 export * from "./navbar";
 export * from "./navbar/types";
 

@@ -11,31 +11,31 @@
 {
     "components": {
         "scope": "phantomthief.react-mui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/components"
     },
     "hooks": {
         "scope": "phantomthief.react-mui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/hooks"
     },
     "modules": {
         "scope": "phantomthief.react-mui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/modules"
     },
     "services": {
         "scope": "phantomthief.react-mui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/services"
     },
     "utils": {
         "scope": "phantomthief.react-mui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/_libs/utils"
     },
