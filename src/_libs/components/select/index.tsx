@@ -54,7 +54,11 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           return;
         }
         if (!isShowed) {
-          setPosition(getPositionOfNode(boxRef, true));
+          const boxPosition = getPositionOfNode(boxRef);
+          setPosition({
+            ...boxPosition,
+            top: boxPosition.top + boxPosition.height,
+          });
         }
         setShow((prev) => !prev);
       },

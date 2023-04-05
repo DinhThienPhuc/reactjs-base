@@ -34,10 +34,7 @@ export const getPositionOfNode = (
   const bounds = ref.current?.getBoundingClientRect();
   return {
     left: bounds?.x || 0,
-    top:
-      (bounds?.y || 0) +
-      (bounds?.height || 0) +
-      (withScrollable ? window?.scrollY : 0),
+    top: (bounds?.y || 0) + (withScrollable ? window?.scrollY || 0 : 0),
     width: bounds?.width || 0,
     height: bounds?.height || 0,
   };
