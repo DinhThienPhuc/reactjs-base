@@ -2,6 +2,9 @@ export * from "./button";
 export * from "./button/constants";
 export * from "./button/types";
 
+export * from "./flex";
+export * from "./flex/types";
+
 export * from "./helper-text";
 export * from "./helper-text/constants";
 export * from "./helper-text/types";
@@ -40,3 +43,6 @@ export * from "./select/types";
 
 export * from "./switch";
 export * from "./switch/types";
+
+export * from "./text";
+export * from "./text/types";

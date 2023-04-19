@@ -27,7 +27,10 @@ const Avatar = ({ fighterId, className }: IProps) => {
   );
 
   return (
-    <Styled.Container className={cx("card", className)} isSelected={isSelected}>
+    <Styled.Container
+      className={cx("avatar", className)}
+      isSelected={isSelected}
+    >
       <img src={url} alt={url || NOT_AVAILABLE} onError={onImageError} />
     </Styled.Container>
   );

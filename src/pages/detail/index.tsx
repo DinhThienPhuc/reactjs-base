@@ -3,7 +3,7 @@ import {
   Edit as IconEdit,
   Trash2 as IconTrash2,
 } from "react-feather";
-import { SelectFighterButton, WrapperButton } from "components";
+import { SelectFighterButton, Text, WrapperButton } from "components";
 import { deleteFighter, getFighterById } from "services";
 import { useAvatar, useCompareFighters } from "store";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -52,7 +52,12 @@ const PageDetail = () => {
   const fightingStyles = useMemo(() => {
     return data?.fightingStyles?.map?.((fs, i) => {
       return (
-        <Styled.FightingStyle key={fs} className={cx({ "first-element": !i })}>
+        <Styled.FightingStyle
+          key={fs}
+          variant="div"
+          size={16}
+          className={cx({ "first-element": !i })}
+        >
           {fs}
         </Styled.FightingStyle>
       );
@@ -95,33 +100,43 @@ const PageDetail = () => {
       <StyledLayout.Content>
         <Styled.Box>
           <Styled.Avatar fighterId={id + ""} />
-          <Styled.Name>{data?.name || ""}</Styled.Name>
-          <Styled.Epithet>{data?.epithet || ""}</Styled.Epithet>
+          <Styled.Name variant="div" size={32} bold={800}>
+            {data?.name || ""}
+          </Styled.Name>
+          <Styled.Epithet variant="div" size={20}>
+            {data?.epithet || ""}
+          </Styled.Epithet>
 
           <Styled.ParamGroup>
-            <Styled.Param>
+            <Styled.Param flexDirection="column">
               <IconHeight height={48} width={48} />
-              <Styled.Title>Height</Styled.Title>
-              <Styled.Unit>(cm)</Styled.Unit>
-              <Styled.Value>{data?.height}</Styled.Value>
+              <Styled.Title size={16}>Height</Styled.Title>
+              <Text size={16}>(cm)</Text>
+              <Styled.Value size={20} bold={800}>
+                {data?.height}
+              </Styled.Value>
             </Styled.Param>
-            <Styled.Param>
+            <Styled.Param flexDirection="column">
               <IconWeight height={48} width={48} />
-              <Styled.Title>Weight</Styled.Title>
-              <Styled.Unit>(kg)</Styled.Unit>
-              <Styled.Value>{data?.weight}</Styled.Value>
+              <Styled.Title size={16}>Weight</Styled.Title>
+              <Text size={16}>(kg)</Text>
+              <Styled.Value size={20} bold={800}>
+                {data?.weight}
+              </Styled.Value>
             </Styled.Param>
-            <Styled.Param>
+            <Styled.Param flexDirection="column">
               <IconWinLoseRate height={48} width={48} />
-              <Styled.Title>WLR</Styled.Title>
-              <Styled.Unit>(%)</Styled.Unit>
-              <Styled.Value>{data?.winLoseRate}</Styled.Value>
+              <Styled.Title size={16}>WLR</Styled.Title>
+              <Text size={16}>(%)</Text>
+              <Styled.Value size={20} bold={800}>
+                {data?.winLoseRate}
+              </Styled.Value>
             </Styled.Param>
           </Styled.ParamGroup>
 
           {fightingStyles}
 
-          <Styled.ButtonGroup>
+          <Styled.ButtonGroup justifyContent="space-around">
             <Styled.DeleteButton
               variant="outlined"
               onClick={handleDeleteFighter}
@@ -129,13 +144,13 @@ const PageDetail = () => {
               <Styled.WrapIcon>
                 <IconTrash2 width={16} height={16} />
               </Styled.WrapIcon>{" "}
-              <div>Delete</div>
+              Delete
             </Styled.DeleteButton>
             <WrapperButton variant="outlined" onClick={goToEditPage}>
               <Styled.WrapIcon>
                 <IconEdit width={16} height={16} />
               </Styled.WrapIcon>{" "}
-              <div>Edit</div>
+              Edit
             </WrapperButton>
           </Styled.ButtonGroup>
         </Styled.Box>

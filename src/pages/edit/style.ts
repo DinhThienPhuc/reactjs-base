@@ -1,4 +1,10 @@
-import { Avatar, WrapperButton, WrapperInput, WrapperNavbar } from "components";
+import {
+  Avatar,
+  Flex,
+  WrapperButton,
+  WrapperInput,
+  WrapperNavbar,
+} from "components";
 
 import styled from "styled-components";
 
@@ -22,10 +28,8 @@ const Styled = {
       margin-bottom: 24px;
     }
   `,
-  ButtonGroup: styled.div`
+  ButtonGroup: styled(Flex)`
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     margin-top: 36px;
   `,
   DeleteButton: styled(WrapperButton)`
@@ -41,9 +45,6 @@ const Styled = {
   `,
   WrapIcon: styled.div`
     margin-right: 8px;
-  `,
-  LabelTest: styled.span`
-    color: #ff5858;
   `,
 };
 

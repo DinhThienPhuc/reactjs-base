@@ -89,3 +89,6 @@ export const parseJSON = <T>(jsonString: string | null): T | null => {
 export const doNothing = () => {
   return undefined;
 };
+
+export const capitalized = (word: string) =>
+  word.charAt(0).toUpperCase() + word.slice(1);

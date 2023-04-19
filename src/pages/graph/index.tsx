@@ -1,5 +1,6 @@
 import {
   DEFAULT_AVATAR,
+  FIGHTER_ORDER_COLORS,
   FIGHTER_PROPERTIES,
   FIRST_FIGHTER_PROPERTIES,
   IFighter,
@@ -13,16 +14,21 @@ import {
   getFighterStats,
 } from "utils";
 import { ArrowLeft as IconArrowLeft, Heart as IconHeart } from "react-feather";
-import { StatBarChart, TwoVerticalBarsChart, WrapperNavbar } from "components";
+import {
+  StatBarChart,
+  Text,
+  TwoVerticalBarsChart,
+  WrapperNavbar,
+} from "components";
 import { useCallback, useMemo, useState } from "react";
 
+import ROUTES from "routes/constants";
 import Styled from "./style";
 import StyledLayout from "layouts/style";
 import { getFighterById } from "services";
 import { useCompareFighters } from "store";
 import { useEffectOnce } from "hooks";
 import { useNavigate } from "react-router-dom";
-import ROUTES from "routes/constants";
 
 interface IFighterWithMoreStats
   extends Omit<IFighter, "avatar" | "height" | "weight">,
@@ -93,18 +99,30 @@ const PageGraph = () => {
 
   const firstFighterValues = useMemo(
     () =>
-      [...(firstFighterData || [])]
-        .reverse()
-        .map((item, index) => (
-          <span key={`${item.value}-${item.bg}-${index}`}>{item.value}</span>
-        )),
+      [...(firstFighterData || [])].reverse().map((item, index) => (
+        <Text
+          color={FIGHTER_ORDER_COLORS.FIRST}
+          size={14}
+          bold={600}
+          key={`${item.value}-${item.bg}-${index}`}
+        >
+          {item.value}
+        </Text>
+      )),
     [firstFighterData],
   );
 
   const secondFighterValues = useMemo(
     () =>
       secondFighterData?.map((item, index) => (
-        <span key={`${item.value}-${item.bg}-${index}`}>{item.value}</span>
+        <Text
+          color={FIGHTER_ORDER_COLORS.SECOND}
+          size={14}
+          bold={600}
+          key={`${item.value}-${item.bg}-${index}`}
+        >
+          {item.value}
+        </Text>
       )),
     [secondFighterData],
   );
@@ -161,11 +179,11 @@ const PageGraph = () => {
           firstValues={firstFighterValues}
           secondValues={secondFighterValues}
         />
-        <Styled.StatChartGroup>
+        <Styled.StatChartGroup justifyContent="space-around">
           <StatBarChart data={statsComparation.height} label={"Height"} />
           <StatBarChart data={statsComparation.weight} label={"Weight"} />
         </Styled.StatChartGroup>
-        <Styled.StatChartGroup>
+        <Styled.StatChartGroup justifyContent="space-around">
           <StatBarChart data={statsComparation.win} label={"Win"} />
           <StatBarChart data={statsComparation.lose} label={"Lose"} />
         </Styled.StatChartGroup>

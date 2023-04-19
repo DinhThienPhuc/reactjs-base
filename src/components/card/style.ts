@@ -1,3 +1,4 @@
+import { Flex, Text } from "_libs/components";
 import styled, { css } from "styled-components";
 
 import { ArrowRight as IconArrowRight } from "react-feather";
@@ -34,48 +35,27 @@ const WrapperStyled = {
       height: 70px;
     }
   `,
-  Box: styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  Box: styled(Flex)`
     height: 100%;
     width: 100%;
     margin-left: 12px;
   `,
-  BoxHeader: styled.div``,
-  BoxHeaderChild: styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  BoxHeaderChild: styled(Flex)`
     height: 24px;
   `,
   Description: styled.div`
-    font-weight: 400;
-    font-size: 14px;
     margin-top: 8px;
   `,
-  Epithet: styled.div``,
-  Name: styled.span`
-    font-weight: 800;
-    font-size: 16px;
-    color: #11dce8;
-  `,
   SelectBox: styled.div``,
-  BoxFooter: styled.div`
-    display: flex;
-    justify-content: flex-end;
+  BoxFooter: styled(Flex)`
     height: 24px;
   `,
   DetailButton: styled(WrapperButton)`
     padding: unset;
     min-width: unset;
     height: 100%;
-    display: flex;
-    align-items: center;
   `,
-  BtnText: styled.span`
-    font-weight: 700;
-    font-size: 14px;
+  BtnText: styled(Text)`
     margin-right: 6px;
   `,
   IconArrowRight: styled(IconArrowRight)`

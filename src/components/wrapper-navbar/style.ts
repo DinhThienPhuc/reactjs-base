@@ -33,9 +33,6 @@ const WrapperStyled = {
     border: 2px solid #000000;
     box-shadow: 0px -4px 16px #000000;
     border-radius: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   `,
 };
 

@@ -1,10 +1,9 @@
 import { FIGHTER_ORDER_COLORS } from "utils";
+import { Flex } from "components";
 import styled from "styled-components";
 
 const Styled = {
-  AvatarGroup: styled.div`
-    display: flex;
-    justify-content: center;
+  AvatarGroup: styled(Flex)`
     margin-bottom: 12px;
   `,
   Avatar: styled.div`
@@ -29,9 +28,7 @@ const Styled = {
       border-radius: 50%;
     }
   `,
-  StatChartGroup: styled.div`
-    display: flex;
-    justify-content: space-around;
+  StatChartGroup: styled(Flex)`
     margin-top: 32px;
   `,
 };

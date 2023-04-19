@@ -200,12 +200,12 @@ const PageEdit = () => {
         <Styled.AvatarPreview fighterId={id + ""} />
         <Styled.Box>{formContent}</Styled.Box>
 
-        <Styled.ButtonGroup>
+        <Styled.ButtonGroup justifyContent="space-between">
           <Styled.DeleteButton variant="outlined" onClick={handleDeleteFighter}>
             <Styled.WrapIcon>
               <IconTrash2 width={16} height={16} />
             </Styled.WrapIcon>{" "}
-            <div>Delete</div>
+            Delete
           </Styled.DeleteButton>
           <WrapperButton
             variant="outlined"
@@ -214,7 +214,7 @@ const PageEdit = () => {
             <Styled.WrapIcon>
               <IconSave width={16} height={16} />
             </Styled.WrapIcon>{" "}
-            <div>Save</div>
+            Save
           </WrapperButton>
         </Styled.ButtonGroup>
       </StyledLayout.Content>

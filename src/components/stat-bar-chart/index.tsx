@@ -26,7 +26,9 @@ const StatBarChart = ({ data, label }: IProps) => {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
-      <Styled.Label>{label}</Styled.Label>
+      <Styled.Label size={13} bold={600}>
+        {label}
+      </Styled.Label>
     </Styled.Container>
   );
 };
