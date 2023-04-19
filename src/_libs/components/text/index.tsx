@@ -1,7 +1,6 @@
 import { ITextProps } from "./types";
 import React from "react";
-import { Styled } from "./style";
-import { capitalized } from "@phantomthief/react-mui.utils";
+import { useLogic } from "./useLogic";
 
 export const Text = ({
   variant = "span",
@@ -11,8 +10,7 @@ export const Text = ({
   className,
   children,
 }: ITextProps) => {
-  const styledTagProperty = capitalized(variant) as keyof typeof Styled;
-  const StyledTag = Styled[styledTagProperty];
+  const StyledTag = useLogic({ variant });
 
   return (
     <StyledTag size={size} bold={bold} color={color} className={className}>

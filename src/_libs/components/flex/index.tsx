@@ -1,7 +1,6 @@
 import { IFlexProps } from "./types";
 import React from "react";
-import { Styled } from "./style";
-import { capitalized } from "@phantomthief/react-mui.utils";
+import { useLogic } from "./useLogic";
 
 export const Flex = ({
   children,
@@ -11,8 +10,7 @@ export const Flex = ({
   justifyContent = "center",
   variant = "div",
 }: IFlexProps) => {
-  const styledTagProperty = capitalized(variant) as keyof typeof Styled;
-  const StyledTag = Styled[styledTagProperty];
+  const StyledTag = useLogic({ variant });
 
   return (
     <StyledTag

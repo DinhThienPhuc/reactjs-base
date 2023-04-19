@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 export interface ITextProps {
   variant?: IntrinsicElementsKeys;
-  children: string | ReactNode;
+  children?: string | ReactNode;
   size?: number | string;
   bold?: number;
   color?: string;

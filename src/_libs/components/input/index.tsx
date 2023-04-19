@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo } from "react";
+import React, { forwardRef } from "react";
 
 import { HelperText } from "../helper-text";
 import { IInputProps } from "./types";
@@ -8,7 +8,7 @@ import { PostAdorment } from "../post-adorment";
 import { PreAdorment } from "../pre-adorment";
 import { Styled } from "./style";
 import cx from "classnames";
-import { useFocusWithCallback } from "@phantomthief/react-mui.hooks";
+import { useLogic } from "./useLogic";
 
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
   (
@@ -31,20 +31,12 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
     },
     ref,
   ) => {
-    const { captureOnFocus, captureOnBlur, isFocused } = useFocusWithCallback(
+    const { captureOnFocus, captureOnBlur, isLabelCollapsed } = useLogic({
+      preAdorment,
+      value,
       onFocus,
       onBlur,
-    );
-
-    const isLabelCollapsed = useMemo(() => {
-      if (isFocused) {
-        return true;
-      }
-      if (!!preAdorment || !!value) {
-        return true;
-      }
-      return false;
-    }, [isFocused, preAdorment, value]);
+    });
 
     return (
       <Styled.Container

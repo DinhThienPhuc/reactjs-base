@@ -1,18 +1,5 @@
-import { IPosition, getPositionOfNode } from "@phantomthief/react-mui.utils";
-import { ISelectEventTarget, ISelectOption, ISelectProps } from "./types";
-import React, {
-  MouseEvent,
-  MouseEventHandler,
-  forwardRef,
-  useCallback,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
-import {
-  useFocusWithCallback,
-  useNotClickOnElements,
-} from "@phantomthief/react-mui.hooks";
+import { ISelectOption, ISelectProps } from "./types";
+import React, { forwardRef, useMemo } from "react";
 
 import { HelperText } from "../helper-text";
 import { Label } from "../label";
@@ -21,6 +8,7 @@ import { PostAdorment } from "../post-adorment";
 import { SELECT_VARIANT } from "./constants";
 import { Styled } from "./style";
 import cx from "classnames";
+import { useLogic } from "./useLogic";
 
 export const Select = forwardRef<HTMLInputElement, ISelectProps>(
   (
@@ -42,65 +30,18 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     },
     _ref,
   ) => {
-    const boxRef = useRef<HTMLDivElement | null>(null);
-    const optionGroupRef = useRef<HTMLDivElement | null>(null);
-    const [isShowed, setShow] = useState(false);
-    const [position, setPosition] = useState<IPosition | null>(null);
-
-    const toggleListOptions = useCallback<MouseEventHandler<HTMLDivElement>>(
-      (e) => {
-        e.preventDefault();
-        if (disabled) {
-          return;
-        }
-        if (!isShowed) {
-          const boxPosition = getPositionOfNode(boxRef);
-          setPosition({
-            ...boxPosition,
-            top: boxPosition.top + boxPosition.height,
-          });
-        }
-        setShow((prev) => !prev);
-      },
-      [disabled, isShowed],
-    );
-
-    const { isFocused, captureOnFocus, captureOnBlur } = useFocusWithCallback(
-      onFocus,
-      onBlur,
-    );
-
-    useNotClickOnElements([boxRef, optionGroupRef], () => {
-      setShow(false);
-    });
-
-    const isLabelCollapsed = useMemo(() => {
-      if (disabled) {
-        return true;
-      }
-      if (isFocused || !!value) {
-        return true;
-      }
-      return false;
-    }, [disabled, isFocused, value]);
-
-    const displayedOption = useMemo(
-      () => options.find((o) => o.value === value),
-      [options, value],
-    );
-
-    const handleSelectOption = useCallback(
-      (value: string) => (e: MouseEvent<HTMLDivElement>) => {
-        const target: ISelectEventTarget = {
-          ...e.target,
-          value,
-        };
-        e.target = target;
-        onChange?.(e);
-        setShow(false);
-      },
-      [onChange],
-    );
+    const {
+      boxRef,
+      optionGroupRef,
+      isShowed,
+      position,
+      displayedOption,
+      isLabelCollapsed,
+      handleSelectOption,
+      captureOnFocus,
+      captureOnBlur,
+      toggleListOptions,
+    } = useLogic({ options, value, disabled, onChange, onFocus, onBlur });
 
     const listOptions = useMemo(() => {
       return options.map((option: ISelectOption) => {
