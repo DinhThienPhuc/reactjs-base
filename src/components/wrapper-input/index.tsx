@@ -1,5 +1,5 @@
-import { IWrapperInputProps } from "./types";
-import WrapperStyled from "./style";
+import { IWrapperInputProps } from "components/wrapper-input/types";
+import WrapperStyled from "components/wrapper-input/style";
 import cx from "classnames";
 import { forwardRef } from "react";
 

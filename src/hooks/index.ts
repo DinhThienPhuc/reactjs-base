@@ -1,1 +1,1 @@
-export * from "_libs/hooks";
+export * as _Hooks from "_core/hooks";

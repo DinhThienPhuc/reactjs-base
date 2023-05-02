@@ -1,9 +1,10 @@
-import { Navbar } from "_libs/components";
-import WrapperButton from "../wrapper-button";
+import * as _Components from "_core/components";
+
+import WrapperButton from "components/wrapper-button";
 import styled from "styled-components";
 
 const WrapperStyled = {
-  Navbar: styled(Navbar)`
+  Navbar: styled(_Components.Navbar)`
     background: #091522;
     height: 100px;
     border: 2px solid #000000;

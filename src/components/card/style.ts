@@ -1,8 +1,9 @@
-import { Flex, Text } from "_libs/components";
+import * as _Components from "_core/components";
+
 import styled, { css } from "styled-components";
 
 import { ArrowRight as IconArrowRight } from "react-feather";
-import WrapperButton from "../wrapper-button";
+import WrapperButton from "components/wrapper-button";
 
 const WrapperStyled = {
   Container: styled.div<{ isSelected: boolean }>`
@@ -35,19 +36,19 @@ const WrapperStyled = {
       height: 70px;
     }
   `,
-  Box: styled(Flex)`
+  Box: styled(_Components.Flex)`
     height: 100%;
     width: 100%;
     margin-left: 12px;
   `,
-  BoxHeaderChild: styled(Flex)`
+  BoxHeaderChild: styled(_Components.Flex)`
     height: 24px;
   `,
   Description: styled.div`
     margin-top: 8px;
   `,
   SelectBox: styled.div``,
-  BoxFooter: styled(Flex)`
+  BoxFooter: styled(_Components.Flex)`
     height: 24px;
   `,
   DetailButton: styled(WrapperButton)`
@@ -55,7 +56,7 @@ const WrapperStyled = {
     min-width: unset;
     height: 100%;
   `,
-  BtnText: styled(Text)`
+  BtnText: styled(_Components.Text)`
     margin-right: 6px;
   `,
   IconArrowRight: styled(IconArrowRight)`

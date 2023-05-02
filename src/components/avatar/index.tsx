@@ -1,8 +1,8 @@
-import { DEFAULT_AVATAR, NOT_AVAILABLE } from "utils";
+import { DEFAULT_AVATAR, _Utils } from "utils";
 import { SyntheticEvent, useCallback, useMemo } from "react";
 import { useAvatar, useCompareFighters } from "store";
 
-import Styled from "./style";
+import Styled from "components/avatar/style";
 import cx from "classnames";
 
 interface IProps {
@@ -31,7 +31,7 @@ const Avatar = ({ fighterId, className }: IProps) => {
       className={cx("avatar", className)}
       isSelected={isSelected}
     >
-      <img src={url} alt={url || NOT_AVAILABLE} onError={onImageError} />
+      <img src={url} alt={url || _Utils.NOT_AVAILABLE} onError={onImageError} />
     </Styled.Container>
   );
 };

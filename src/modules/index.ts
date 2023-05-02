@@ -1,1 +1,1 @@
-export * from "_libs/modules";
+export * as _Modules from "_core/modules";

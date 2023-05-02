@@ -2,9 +2,9 @@ import { Id, toast } from "react-toastify";
 import { useCallback, useRef } from "react";
 
 import { Outlet } from "react-router-dom";
-import Styled from "./style";
-import Tabbar from "./tabbar";
-import { useInternetStatus } from "_libs/hooks";
+import Styled from "layouts/style";
+import Tabbar from "layouts/tabbar";
+import { _Hooks } from "hooks";
 
 const Layout = () => {
   const toastId = useRef<Id | null>(null);
@@ -28,7 +28,7 @@ const Layout = () => {
     });
   }, []);
 
-  useInternetStatus(showOnline, showOffline);
+  _Hooks.useInternetStatus(showOnline, showOffline);
 
   return (
     <>

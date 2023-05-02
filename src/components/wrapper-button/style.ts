@@ -1,8 +1,9 @@
-import { Button } from "_libs/components";
+import * as _Components from "_core/components";
+
 import styled from "styled-components";
 
 const WrapperStyled = {
-  Button: styled(Button)`
+  Button: styled(_Components.Button)`
     transition: all 300ms linear;
     min-width: 115px;
     height: 44px;

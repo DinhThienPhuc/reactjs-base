@@ -5,29 +5,28 @@ import {
   FIRST_FIGHTER_PROPERTIES,
   IFighter,
   IFighterInfo,
-  IObject,
   IStatBarChartData,
   ITwoVerticalBarsChartData,
   SECOND_FIGHTER_PROPERTIES,
   TFighterProperty,
-  TTryCatchResult,
+  _Utils,
   getFighterStats,
 } from "utils";
 import { ArrowLeft as IconArrowLeft, Heart as IconHeart } from "react-feather";
 import {
   StatBarChart,
-  Text,
   TwoVerticalBarsChart,
   WrapperNavbar,
+  _Components,
 } from "components";
 import { useCallback, useMemo, useState } from "react";
 
 import ROUTES from "routes/constants";
-import Styled from "./style";
+import Styled from "pages/graph/style";
 import StyledLayout from "layouts/style";
+import { _Hooks } from "hooks";
 import { getFighterById } from "services";
 import { useCompareFighters } from "store";
-import { useEffectOnce } from "hooks";
 import { useNavigate } from "react-router-dom";
 
 interface IFighterWithMoreStats
@@ -56,7 +55,7 @@ const PageGraph = () => {
   const fighterIds = useCompareFighters((state) => state.fighterIds);
 
   const fetchFighterData = useCallback(async () => {
-    const promises: Promise<TTryCatchResult<IFighter>>[] = [];
+    const promises: Promise<_Utils.TTryCatchResult<IFighter>>[] = [];
     fighterIds.forEach((fighterId) => {
       if (fighterId) {
         promises.push(getFighterById(fighterId));
@@ -100,14 +99,14 @@ const PageGraph = () => {
   const firstFighterValues = useMemo(
     () =>
       [...(firstFighterData || [])].reverse().map((item, index) => (
-        <Text
+        <_Components.Text
           color={FIGHTER_ORDER_COLORS.FIRST}
           size={14}
           bold={600}
           key={`${item.value}-${item.bg}-${index}`}
         >
           {item.value}
-        </Text>
+        </_Components.Text>
       )),
     [firstFighterData],
   );
@@ -115,20 +114,20 @@ const PageGraph = () => {
   const secondFighterValues = useMemo(
     () =>
       secondFighterData?.map((item, index) => (
-        <Text
+        <_Components.Text
           color={FIGHTER_ORDER_COLORS.SECOND}
           size={14}
           bold={600}
           key={`${item.value}-${item.bg}-${index}`}
         >
           {item.value}
-        </Text>
+        </_Components.Text>
       )),
     [secondFighterData],
   );
 
   const statsComparation = useMemo(() => {
-    const result: IObject<IStatBarChartData[]> = {};
+    const result: _Utils.IObject<IStatBarChartData[]> = {};
 
     Object.values(FIGHTER_PROPERTIES).forEach((p) => {
       result[p] = [
@@ -146,7 +145,7 @@ const PageGraph = () => {
     navigate(ROUTES.HOME);
   }, [navigate]);
 
-  useEffectOnce(() => {
+  _Hooks.useEffectOnce(() => {
     fetchFighterData();
   });
 

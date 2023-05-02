@@ -1,3 +1,3 @@
-import { IButtonProps } from "_libs/components";
+import * as _Components from "_core/components";
 
-export type IWrapperButtonProps = IButtonProps;
+export type IWrapperButtonProps = _Components.IButtonProps;

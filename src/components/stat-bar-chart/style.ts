@@ -1,4 +1,5 @@
-import { Text } from "_libs/components";
+import * as _Components from "_core/components";
+
 import styled from "styled-components";
 
 const Styled = {
@@ -7,9 +8,7 @@ const Styled = {
     height: 120px;
     text-align: center;
   `,
-  Label: styled(Text)`
-    /* font-size: 13px;
-    font-weight: 600; */
+  Label: styled(_Components.Text)`
     margin-top: 6px;
   `,
 };

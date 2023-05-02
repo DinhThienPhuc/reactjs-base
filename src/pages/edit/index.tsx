@@ -1,5 +1,5 @@
 import { Controller, useForm } from "react-hook-form";
-import { DEFAULT_AVATAR, IFighter, NOT_AVAILABLE } from "utils";
+import { DEFAULT_AVATAR, IFighter, _Utils } from "utils";
 import {
   ArrowLeft as IconArrowLeft,
   Save as IconSave,
@@ -12,7 +12,7 @@ import { useAvatar, useCompareFighters } from "store";
 import { useNavigate, useParams } from "react-router-dom";
 
 import ROUTES from "routes/constants";
-import Styled from "./style";
+import Styled from "pages/edit/style";
 import StyledLayout from "layouts/style";
 import { toast } from "react-toastify";
 
@@ -71,17 +71,17 @@ const PageEdit = () => {
         ...data,
         id: id + "",
         avatar:
-          !data?.avatar || data?.avatar === NOT_AVAILABLE
+          !data?.avatar || data?.avatar === _Utils.NOT_AVAILABLE
             ? DEFAULT_AVATAR
             : data?.avatar,
-        name: data?.name || NOT_AVAILABLE,
-        epithet: data?.epithet || NOT_AVAILABLE,
-        height: data?.height || NOT_AVAILABLE,
-        weight: data?.weight || NOT_AVAILABLE,
-        winLoseRate: data?.winLoseRate || NOT_AVAILABLE,
+        name: data?.name || _Utils.NOT_AVAILABLE,
+        epithet: data?.epithet || _Utils.NOT_AVAILABLE,
+        height: data?.height || _Utils.NOT_AVAILABLE,
+        weight: data?.weight || _Utils.NOT_AVAILABLE,
+        winLoseRate: data?.winLoseRate || _Utils.NOT_AVAILABLE,
         fightingStyles: data?.fightingStyles
           ? data?.fightingStyles.split(", ")
-          : [NOT_AVAILABLE],
+          : [_Utils.NOT_AVAILABLE],
       };
 
       const { error } = await setFighter(payload);

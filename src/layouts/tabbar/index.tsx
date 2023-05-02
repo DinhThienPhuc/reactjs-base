@@ -5,8 +5,8 @@ import {
 } from "react-feather";
 
 import ROUTES from "routes/constants";
-import Styled from "./style";
-import TabbarItem from "../tabbar-item";
+import Styled from "layouts/tabbar/style";
+import TabbarItem from "layouts/tabbar-item";
 
 const Tabbar = () => (
   <Styled.Container>

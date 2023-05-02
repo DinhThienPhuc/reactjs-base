@@ -1,9 +1,9 @@
 import {
   Avatar,
-  Flex,
   WrapperButton,
   WrapperInput,
   WrapperNavbar,
+  _Components,
 } from "components";
 
 import styled from "styled-components";
@@ -28,7 +28,7 @@ const Styled = {
       margin-bottom: 24px;
     }
   `,
-  ButtonGroup: styled(Flex)`
+  ButtonGroup: styled(_Components.Flex)`
     width: 100%;
     margin-top: 36px;
   `,

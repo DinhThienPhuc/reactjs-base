@@ -2,7 +2,7 @@ import { Bar, BarChart, Cell, ResponsiveContainer } from "recharts";
 import { FIGHTER_ORDER_COLORS, IStatBarChartData } from "utils";
 
 import { ReactNode } from "react";
-import Styled from "./style";
+import Styled from "components/stat-bar-chart/style";
 
 interface IProps {
   data: IStatBarChartData[] | undefined;

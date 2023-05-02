@@ -1,13 +1,14 @@
+import * as _Components from "_core/components";
+
 import {
   CheckCircle as IconCheckCircle,
   Circle as IconCircle,
 } from "react-feather";
 import { useCallback, useMemo } from "react";
 
-import { ICardProps } from "./types";
+import { ICardProps } from "components/card/types";
 import ROUTES from "routes/constants";
-import Styled from "./style";
-import { Text } from "_libs/components";
+import Styled from "components/card/style";
 import cx from "classnames";
 import { useCompareFighters } from "store";
 import { useNavigate } from "react-router-dom";
@@ -56,12 +57,12 @@ const Card = ({ id, avatar, name, epithet, className }: ICardProps) => {
       >
         <div>
           <Styled.BoxHeaderChild justifyContent="space-between">
-            <Text color="#11dce8" bold={800} size={16}>
+            <_Components.Text color="#11dce8" bold={800} size={16}>
               {name}
-            </Text>
+            </_Components.Text>
             {checkBox}
           </Styled.BoxHeaderChild>
-          <Text>{epithet}</Text>
+          <_Components.Text>{epithet}</_Components.Text>
         </div>
         <Styled.BoxFooter justifyContent="flex-end">
           <Styled.DetailButton onClick={goDetail}>

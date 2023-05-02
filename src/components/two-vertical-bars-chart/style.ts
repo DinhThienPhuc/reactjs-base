@@ -1,4 +1,5 @@
-import { Flex } from "_libs/components";
+import * as _Components from "_core/components";
+
 import styled from "styled-components";
 
 const Styled = {
@@ -6,10 +7,10 @@ const Styled = {
     width: calc(50vw - 80px);
     height: 160px;
   `,
-  Labels: styled(Flex)`
+  Labels: styled(_Components.Flex)`
     width: 52px;
   `,
-  Values: styled(Flex)`
+  Values: styled(_Components.Flex)`
     width: 30px;
   `,
 };

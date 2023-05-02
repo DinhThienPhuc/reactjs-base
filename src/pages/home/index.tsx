@@ -1,17 +1,17 @@
 import { useMemo, useState } from "react";
 
 import { IFighter } from "utils";
-import Styled from "./style";
+import Styled from "pages/home/style";
 import StyledLayout from "layouts/style";
 import { WrapperNavbar } from "components";
+import { _Hooks } from "hooks";
 import { getFighters } from "services";
 import { toast } from "react-toastify";
-import { useEffectOnce } from "hooks";
 
 const PageHome = () => {
   const [data, setData] = useState<IFighter[] | null>(null);
 
-  useEffectOnce(() => {
+  _Hooks.useEffectOnce(() => {
     const fetch = async () => {
       const { error, result } = await getFighters();
       if (error) {

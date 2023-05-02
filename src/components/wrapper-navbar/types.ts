@@ -1,8 +1,8 @@
+import * as _Components from "_core/components";
+
 import { MouseEventHandler, ReactNode } from "react";
 
-import { INavbarProps } from "_libs/components";
-
-export interface IWrapperNavbarProps extends INavbarProps {
+export interface IWrapperNavbarProps extends _Components.INavbarProps {
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   onLeftClick?: MouseEventHandler<HTMLButtonElement>;

@@ -1,4 +1,4 @@
-export * from "_libs/utils";
+export * as _Utils from "_core/utils";
 
 export * from "./constants";
 export * from "./definations/types";

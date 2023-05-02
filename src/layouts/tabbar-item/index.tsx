@@ -2,7 +2,7 @@ import { ReactNode, useCallback } from "react";
 
 import { Icon } from "react-feather";
 import { MAX_COMPARE_FIGHTERS } from "utils";
-import Styled from "./style";
+import Styled from "layouts/tabbar-item/style";
 import { useCompareFighters } from "store";
 
 interface IProps {

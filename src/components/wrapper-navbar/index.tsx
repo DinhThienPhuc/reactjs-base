@@ -1,8 +1,7 @@
 import { Menu as IconMenu, User as IconUser } from "react-feather";
 
-import { IWrapperNavbarProps } from "./types";
-import Styled from "./style";
-import WrapperStyled from "./style";
+import { IWrapperNavbarProps } from "components/wrapper-navbar/types";
+import Styled from "components/wrapper-navbar/style";
 import cx from "classnames";
 import { useMemo } from "react";
 
@@ -31,7 +30,7 @@ const WrapperNavbar = ({
   }, [onRightClick, rightIcon]);
 
   return (
-    <WrapperStyled.Navbar
+    <Styled.Navbar
       {...props}
       className={cx("wrapper-navbar", className)}
       leftButton={leftButton}

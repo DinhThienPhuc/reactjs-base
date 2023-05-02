@@ -1,8 +1,9 @@
-import { Input } from "_libs/components";
+import * as _Components from "_core/components";
+
 import styled from "styled-components";
 
 const WrapperStyled = {
-  Input: styled(Input)`
+  Input: styled(_Components.Input)`
     border-radius: 22px;
   `,
 };

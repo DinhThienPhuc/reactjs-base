@@ -1,3 +1,3 @@
-export * from "_libs/services";
+export * as _Services from "_core/services";
 
 export * from "./firebase";

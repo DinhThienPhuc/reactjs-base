@@ -3,7 +3,7 @@ import {
   Edit as IconEdit,
   Trash2 as IconTrash2,
 } from "react-feather";
-import { SelectFighterButton, Text, WrapperButton } from "components";
+import { SelectFighterButton, WrapperButton, _Components } from "components";
 import { deleteFighter, getFighterById } from "services";
 import { useAvatar, useCompareFighters } from "store";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -14,7 +14,7 @@ import { ReactComponent as IconHeight } from "assets/svg/height.svg";
 import { ReactComponent as IconWeight } from "assets/svg/weight.svg";
 import { ReactComponent as IconWinLoseRate } from "assets/svg/wlr.svg";
 import ROUTES from "routes/constants";
-import Styled from "./style";
+import Styled from "pages/detail/style";
 import StyledLayout from "layouts/style";
 import cx from "classnames";
 import { toast } from "react-toastify";
@@ -111,7 +111,7 @@ const PageDetail = () => {
             <Styled.Param flexDirection="column">
               <IconHeight height={48} width={48} />
               <Styled.Title size={16}>Height</Styled.Title>
-              <Text size={16}>(cm)</Text>
+              <_Components.Text size={16}>(cm)</_Components.Text>
               <Styled.Value size={20} bold={800}>
                 {data?.height}
               </Styled.Value>
@@ -119,7 +119,7 @@ const PageDetail = () => {
             <Styled.Param flexDirection="column">
               <IconWeight height={48} width={48} />
               <Styled.Title size={16}>Weight</Styled.Title>
-              <Text size={16}>(kg)</Text>
+              <_Components.Text size={16}>(kg)</_Components.Text>
               <Styled.Value size={20} bold={800}>
                 {data?.weight}
               </Styled.Value>
@@ -127,7 +127,7 @@ const PageDetail = () => {
             <Styled.Param flexDirection="column">
               <IconWinLoseRate height={48} width={48} />
               <Styled.Title size={16}>WLR</Styled.Title>
-              <Text size={16}>(%)</Text>
+              <_Components.Text size={16}>(%)</_Components.Text>
               <Styled.Value size={20} bold={800}>
                 {data?.winLoseRate}
               </Styled.Value>

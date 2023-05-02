@@ -1,5 +1,5 @@
-import { IWrapperButtonProps } from "./types";
-import WrapperStyled from "./style";
+import { IWrapperButtonProps } from "components/wrapper-button/types";
+import WrapperStyled from "components/wrapper-button/style";
 import cx from "classnames";
 
 const WrapperButton = (props: IWrapperButtonProps) => {

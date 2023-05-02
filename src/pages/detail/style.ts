@@ -1,4 +1,4 @@
-import { Avatar, Flex, Text, WrapperButton, WrapperNavbar } from "components";
+import { Avatar, WrapperButton, WrapperNavbar, _Components } from "components";
 
 import styled from "styled-components";
 
@@ -23,28 +23,28 @@ const Styled = {
     top: -60px;
     left: calc(50% - 60px);
   `,
-  Name: styled(Text)`
+  Name: styled(_Components.Text)`
     margin-top: 80px;
     text-align: center;
   `,
-  Epithet: styled(Text)`
+  Epithet: styled(_Components.Text)`
     margin-top: 10px;
     text-align: center;
   `,
-  ParamGroup: styled(Flex)`
+  ParamGroup: styled(_Components.Flex)`
     margin-top: 40px;
   `,
-  Param: styled(Flex)`
+  Param: styled(_Components.Flex)`
     width: 110px;
     min-height: 120px;
   `,
-  Title: styled(Text)`
+  Title: styled(_Components.Text)`
     margin-top: 10px;
   `,
-  Value: styled(Text)`
+  Value: styled(_Components.Text)`
     margin-top: 10px;
   `,
-  FightingStyle: styled(Text)`
+  FightingStyle: styled(_Components.Text)`
     padding: 5px 0px;
     text-align: center;
 
@@ -52,7 +52,7 @@ const Styled = {
       margin-top: 30px;
     }
   `,
-  ButtonGroup: styled(Flex)`
+  ButtonGroup: styled(_Components.Flex)`
     width: 100%;
     position: absolute;
     bottom: 140px;

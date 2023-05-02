@@ -1,12 +1,13 @@
+import * as _Components from "_core/components";
+
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 import {
   FIGHTER_LABELS,
   FIGHTER_ORDER_COLORS,
   ITwoVerticalBarsChartData,
 } from "utils";
-import { Flex, Text } from "_libs/components";
 
-import Styled from "./style";
+import Styled from "components/two-vertical-bars-chart/style";
 import { useMemo } from "react";
 
 interface IProps {
@@ -25,15 +26,15 @@ const TwoVerticalBarsChart = ({
   const barItemLabels = useMemo(
     () =>
       Object.values(FIGHTER_LABELS).map((item) => (
-        <Text size={14} bold={600} key={item.key}>
+        <_Components.Text size={14} bold={600} key={item.key}>
           {item.label}
-        </Text>
+        </_Components.Text>
       )),
     [],
   );
 
   return (
-    <Flex alignItems="unset">
+    <_Components.Flex alignItems="unset">
       <Styled.Values flexDirection="column" justifyContent="space-around">
         {firstValues}
       </Styled.Values>
@@ -83,7 +84,7 @@ const TwoVerticalBarsChart = ({
       <Styled.Values flexDirection="column" justifyContent="space-around">
         {secondValues}
       </Styled.Values>
-    </Flex>
+    </_Components.Flex>
   );
 };
 

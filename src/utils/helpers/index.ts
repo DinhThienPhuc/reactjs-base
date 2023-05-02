@@ -1,6 +1,6 @@
-import { IFighter, IFighterInfo } from "../definations/types";
+import * as _Utils from "_core/utils";
 
-import { NOT_AVAILABLE } from "_libs/utils";
+import { IFighter, IFighterInfo } from "utils/definations/types";
 
 export const getFighterStats = (data: IFighter | null): IFighterInfo => {
   let win = 0;
@@ -8,13 +8,13 @@ export const getFighterStats = (data: IFighter | null): IFighterInfo => {
   let height = 0;
   let weight = 0;
 
-  if (data?.height && data?.height !== NOT_AVAILABLE) {
+  if (data?.height && data?.height !== _Utils.NOT_AVAILABLE) {
     height = +data?.height;
   }
-  if (data?.weight && data?.weight !== NOT_AVAILABLE) {
+  if (data?.weight && data?.weight !== _Utils.NOT_AVAILABLE) {
     weight = +data?.weight;
   }
-  if (data?.winLoseRate && data?.winLoseRate !== NOT_AVAILABLE) {
+  if (data?.winLoseRate && data?.winLoseRate !== _Utils.NOT_AVAILABLE) {
     const winLoseRate = data?.winLoseRate;
     const arr = winLoseRate.split("/");
     win = +arr[0].replace("+", "");

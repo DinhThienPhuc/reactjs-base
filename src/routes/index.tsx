@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import Layout from "layouts";
-import { LoadingEllipsis } from "components";
-import ROUTES from "./constants";
+import ROUTES from "routes/constants";
+import { _Components } from "components";
 
 const PageHome = lazy(() => import("pages/home"));
 const PageGraph = lazy(() => import("pages/graph"));
@@ -13,37 +13,37 @@ const PageEdit = lazy(() => import("pages/edit"));
 const PageNotFound = lazy(() => import("pages/not-found"));
 
 const SuspensedPageHome = () => (
-  <Suspense fallback={<LoadingEllipsis color="#11dce8" />}>
+  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
     <PageHome />
   </Suspense>
 );
 
 const SuspensedPageGraph = () => (
-  <Suspense fallback={<LoadingEllipsis color="#11dce8" />}>
+  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
     <PageGraph />
   </Suspense>
 );
 
 const SuspensedPageSearch = () => (
-  <Suspense fallback={<LoadingEllipsis color="#11dce8" />}>
+  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
     <PageSearch />
   </Suspense>
 );
 
 const SuspensedPageNotFound = () => (
-  <Suspense fallback={<LoadingEllipsis color="#11dce8" />}>
+  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
     <PageNotFound />
   </Suspense>
 );
 
 const SuspensedPageDetail = () => (
-  <Suspense fallback={<LoadingEllipsis color="#11dce8" />}>
+  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
     <PageDetail />
   </Suspense>
 );
 
 const SuspensedPageEdit = () => (
-  <Suspense fallback={<LoadingEllipsis color="#11dce8" />}>
+  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
     <PageEdit />
   </Suspense>
 );

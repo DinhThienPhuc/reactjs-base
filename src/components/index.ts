@@ -1,4 +1,4 @@
-export * from "_libs/components";
+export * as _Components from "_core/components";
 
 export { default as WrapperNavbar } from "./wrapper-navbar";
 export { default as WrapperButton } from "./wrapper-button";
