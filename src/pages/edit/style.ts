@@ -1,15 +1,9 @@
-import {
-  Avatar,
-  WrapperButton,
-  WrapperInput,
-  WrapperNavbar,
-  _Components,
-} from "components";
+import { Avatar, Button, Input, Navbar, _Components } from "components";
 
 import styled from "styled-components";
 
 const Styled = {
-  Navbar: styled(WrapperNavbar)`
+  Navbar: styled(Navbar)`
     background-color: transparent;
     box-shadow: none;
     border: none;
@@ -23,7 +17,7 @@ const Styled = {
     border-radius: 28px;
     padding: 24px;
   `,
-  Input: styled(WrapperInput)`
+  Input: styled(Input)`
     &:not(:last-of-type) {
       margin-bottom: 24px;
     }
@@ -32,7 +26,7 @@ const Styled = {
     width: 100%;
     margin-top: 36px;
   `,
-  DeleteButton: styled(WrapperButton)`
+  DeleteButton: styled(Button)`
     &.button-variant__outlined {
       color: #ff5858;
       border-color: #ff5858;
@@ -43,7 +37,7 @@ const Styled = {
       border-color: #ff5858;
     }
   `,
-  WrapIcon: styled.div`
+  Icon: styled.div`
     margin-right: 8px;
   `,
 };

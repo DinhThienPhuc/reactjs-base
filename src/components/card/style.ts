@@ -3,9 +3,9 @@ import * as _Components from "_core/components";
 import styled, { css } from "styled-components";
 
 import { ArrowRight as IconArrowRight } from "react-feather";
-import WrapperButton from "components/wrapper-button";
+import Button from "components/button";
 
-const WrapperStyled = {
+const Styled = {
   Container: styled.div<{ isSelected: boolean }>`
     transition: all 300ms ease-in-out;
     display: flex;
@@ -51,7 +51,7 @@ const WrapperStyled = {
   BoxFooter: styled(_Components.Flex)`
     height: 24px;
   `,
-  DetailButton: styled(WrapperButton)`
+  DetailButton: styled(Button)`
     padding: unset;
     min-width: unset;
     height: 100%;
@@ -64,4 +64,4 @@ const WrapperStyled = {
   `,
 };
 
-export default WrapperStyled;
+export default Styled;

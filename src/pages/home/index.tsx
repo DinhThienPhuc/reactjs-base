@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { IFighter } from "utils";
 import Styled from "pages/home/style";
 import StyledLayout from "layouts/style";
-import { WrapperNavbar } from "components";
+import { Navbar } from "components";
 import { _Hooks } from "hooks";
 import { getFighters } from "services";
 import { toast } from "react-toastify";
@@ -41,7 +41,7 @@ const PageHome = () => {
 
   return (
     <>
-      <WrapperNavbar title={"Home"} />
+      <Navbar title={"Home"} />
       <StyledLayout.Content>{content}</StyledLayout.Content>
     </>
   );

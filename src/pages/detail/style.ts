@@ -1,9 +1,9 @@
-import { Avatar, WrapperButton, WrapperNavbar, _Components } from "components";
+import { Avatar, Button, Navbar, _Components } from "components";
 
 import styled from "styled-components";
 
 const Styled = {
-  Navbar: styled(WrapperNavbar)`
+  Navbar: styled(Navbar)`
     background-color: transparent;
     box-shadow: none;
     border: none;
@@ -57,7 +57,7 @@ const Styled = {
     position: absolute;
     bottom: 140px;
   `,
-  DeleteButton: styled(WrapperButton)`
+  DeleteButton: styled(Button)`
     &.button-variant__outlined {
       color: #ff5858;
       border-color: #ff5858;
@@ -68,7 +68,7 @@ const Styled = {
       border-color: #ff5858;
     }
   `,
-  WrapIcon: styled.div`
+  Icon: styled.div`
     margin-right: 8px;
   `,
 };

@@ -1,8 +1,8 @@
 export * as _Components from "_core/components";
 
-export { default as WrapperNavbar } from "./wrapper-navbar";
-export { default as WrapperButton } from "./wrapper-button";
-export { default as WrapperInput } from "./wrapper-input";
+export { default as Navbar } from "./navbar";
+export { default as Button } from "./button";
+export { default as Input } from "./input";
 
 export { default as Card } from "./card";
 export { default as Avatar } from "./avatar";

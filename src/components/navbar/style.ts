@@ -1,9 +1,9 @@
 import * as _Components from "_core/components";
 
-import WrapperButton from "components/wrapper-button";
+import Button from "components/button";
 import styled from "styled-components";
 
-const WrapperStyled = {
+const Styled = {
   Navbar: styled(_Components.Navbar)`
     background: #091522;
     height: 100px;
@@ -25,7 +25,7 @@ const WrapperStyled = {
       font-size: 24px;
     }
   `,
-  Button: styled(WrapperButton)`
+  Button: styled(Button)`
     min-width: unset;
     padding: unset;
     width: 48px;
@@ -37,4 +37,4 @@ const WrapperStyled = {
   `,
 };
 
-export default WrapperStyled;
+export default Styled;

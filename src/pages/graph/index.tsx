@@ -16,7 +16,7 @@ import { ArrowLeft as IconArrowLeft, Heart as IconHeart } from "react-feather";
 import {
   StatBarChart,
   TwoVerticalBarsChart,
-  WrapperNavbar,
+  Navbar,
   _Components,
 } from "components";
 import { useCallback, useMemo, useState } from "react";
@@ -151,7 +151,7 @@ const PageGraph = () => {
 
   return (
     <>
-      <WrapperNavbar
+      <Navbar
         title={"Graph"}
         leftIcon={<IconArrowLeft />}
         onLeftClick={goToHomepage}

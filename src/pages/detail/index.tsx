@@ -3,7 +3,7 @@ import {
   Edit as IconEdit,
   Trash2 as IconTrash2,
 } from "react-feather";
-import { SelectFighterButton, WrapperButton, _Components } from "components";
+import { SelectFighterButton, Button, _Components } from "components";
 import { deleteFighter, getFighterById } from "services";
 import { useAvatar, useCompareFighters } from "store";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -141,17 +141,17 @@ const PageDetail = () => {
               variant="outlined"
               onClick={handleDeleteFighter}
             >
-              <Styled.WrapIcon>
+              <Styled.Icon>
                 <IconTrash2 width={16} height={16} />
-              </Styled.WrapIcon>{" "}
+              </Styled.Icon>{" "}
               Delete
             </Styled.DeleteButton>
-            <WrapperButton variant="outlined" onClick={goToEditPage}>
-              <Styled.WrapIcon>
+            <Button variant="outlined" onClick={goToEditPage}>
+              <Styled.Icon>
                 <IconEdit width={16} height={16} />
-              </Styled.WrapIcon>{" "}
+              </Styled.Icon>{" "}
               Edit
-            </WrapperButton>
+            </Button>
           </Styled.ButtonGroup>
         </Styled.Box>
       </StyledLayout.Content>

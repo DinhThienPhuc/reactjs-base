@@ -2,7 +2,7 @@ import * as _Components from "_core/components";
 
 import styled from "styled-components";
 
-const WrapperStyled = {
+const Styled = {
   Button: styled(_Components.Button)`
     transition: all 300ms linear;
     min-width: 115px;
@@ -33,4 +33,4 @@ const WrapperStyled = {
   `,
 };
 
-export default WrapperStyled;
+export default Styled;

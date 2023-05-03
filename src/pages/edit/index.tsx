@@ -5,7 +5,7 @@ import {
   Save as IconSave,
   Trash2 as IconTrash2,
 } from "react-feather";
-import { SelectFighterButton, WrapperButton } from "components";
+import { SelectFighterButton, Button } from "components";
 import { SyntheticEvent, useCallback, useEffect, useMemo } from "react";
 import { deleteFighter, getFighterById, setFighter } from "services";
 import { useAvatar, useCompareFighters } from "store";
@@ -202,20 +202,17 @@ const PageEdit = () => {
 
         <Styled.ButtonGroup justifyContent="space-between">
           <Styled.DeleteButton variant="outlined" onClick={handleDeleteFighter}>
-            <Styled.WrapIcon>
+            <Styled.Icon>
               <IconTrash2 width={16} height={16} />
-            </Styled.WrapIcon>{" "}
+            </Styled.Icon>{" "}
             Delete
           </Styled.DeleteButton>
-          <WrapperButton
-            variant="outlined"
-            onClick={handleSubmit(updateFighterInfo)}
-          >
-            <Styled.WrapIcon>
+          <Button variant="outlined" onClick={handleSubmit(updateFighterInfo)}>
+            <Styled.Icon>
               <IconSave width={16} height={16} />
-            </Styled.WrapIcon>{" "}
+            </Styled.Icon>{" "}
             Save
-          </WrapperButton>
+          </Button>
         </Styled.ButtonGroup>
       </StyledLayout.Content>
     </>
