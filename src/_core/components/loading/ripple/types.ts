@@ -1,4 +1,4 @@
-export interface ILoadingEllipsisProps {
+export interface ILoadingRippleProps {
   size?: number;
   color?: string;
   sizeUnit?: "px" | "rem" | "em";

@@ -12,7 +12,9 @@ import { _Utils } from "utils";
 const App = () => {
   return (
     <_Modules.ErrorBoundary onReset={_Utils.reload}>
-      <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
+      <Suspense
+        fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
+      >
         <MainRoutes />
       </Suspense>
       <ToastContainer />

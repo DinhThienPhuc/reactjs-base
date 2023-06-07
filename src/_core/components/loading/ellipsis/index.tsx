@@ -7,9 +7,10 @@ export const LoadingEllipsis = ({
   size = 64,
   color = "#00bfff",
   sizeUnit = "px",
+  fullScreen = false,
   className,
 }: ILoadingEllipsisProps) => (
-  <Styled.Container className={className}>
+  <Styled.Container fullScreen={fullScreen} className={className}>
     <Styled.Spinner
       size={size}
       color={color}

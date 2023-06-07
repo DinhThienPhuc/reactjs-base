@@ -27,12 +27,12 @@ const motion3 = keyframes`
 `;
 
 export const Styled = {
-  Container: styled.div`
+  Container: styled.div<{ fullScreen: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    width: ${({ fullScreen }) => (fullScreen ? "100vw" : "100%")};
+    height: ${({ fullScreen }) => (fullScreen ? "100vh" : "100%")};
   `,
   Spinner: styled.div<{ size: number; sizeUnit: string; color: string }>`
     display: inline-block;

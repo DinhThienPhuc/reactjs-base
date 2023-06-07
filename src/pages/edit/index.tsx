@@ -1,3 +1,4 @@
+import { Button, SelectFighterButton, _Components } from "components";
 import { Controller, useForm } from "react-hook-form";
 import { DEFAULT_AVATAR, IFighter, _Utils } from "utils";
 import {
@@ -5,8 +6,13 @@ import {
   Save as IconSave,
   Trash2 as IconTrash2,
 } from "react-feather";
-import { SelectFighterButton, Button } from "components";
-import { SyntheticEvent, useCallback, useEffect, useMemo } from "react";
+import {
+  SyntheticEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import { deleteFighter, getFighterById, setFighter } from "services";
 import { useAvatar, useCompareFighters } from "store";
 import { useNavigate, useParams } from "react-router-dom";
@@ -60,6 +66,7 @@ const PageEdit = () => {
     (state) => state.toggleSelectFighter,
   );
   const setUrl = useAvatar((state) => state.setUrl);
+  const [loading, setLoading] = useState(false);
 
   const goBackDetailPage = useCallback(() => {
     navigate(`${ROUTES.DETAIL}/${id}/view`);
@@ -98,6 +105,7 @@ const PageEdit = () => {
   );
 
   const fetchFighterData = useCallback(async () => {
+    setLoading(true);
     const { error, result } = await getFighterById(id + "");
     if (error) {
       toast.error("Get fighter information failed!", {
@@ -118,6 +126,7 @@ const PageEdit = () => {
         result?.fightingStyles ? result?.fightingStyles.join(", ") : "",
       );
     }
+    setLoading(false);
   }, [id, setUrl, setValue]);
 
   const clearValue = useCallback(
@@ -186,6 +195,10 @@ const PageEdit = () => {
   useEffect(() => {
     fetchFighterData();
   }, [fetchFighterData]);
+
+  if (loading) {
+    return <_Components.LoadingEllipsis color="#11dce8" fullScreen />;
+  }
 
   return (
     <>

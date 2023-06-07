@@ -1,18 +1,20 @@
+import { Navbar, _Components } from "components";
 import { useMemo, useState } from "react";
 
 import { IFighter } from "utils";
 import Styled from "pages/home/style";
 import StyledLayout from "layouts/style";
-import { Navbar } from "components";
 import { _Hooks } from "hooks";
 import { getFighters } from "services";
 import { toast } from "react-toastify";
 
 const PageHome = () => {
   const [data, setData] = useState<IFighter[] | null>(null);
+  const [loading, setLoading] = useState(false);
 
   _Hooks.useEffectOnce(() => {
     const fetch = async () => {
+      setLoading(true);
       const { error, result } = await getFighters();
       if (error) {
         toast.error("Get list fighters failed!", {
@@ -22,6 +24,7 @@ const PageHome = () => {
       } else {
         setData(result);
       }
+      setLoading(false);
     };
 
     fetch();
@@ -38,6 +41,10 @@ const PageHome = () => {
       />
     ));
   }, [data]);
+
+  if (loading) {
+    return <_Components.LoadingEllipsis color="#11dce8" fullScreen />;
+  }
 
   return (
     <>

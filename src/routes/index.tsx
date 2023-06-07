@@ -13,37 +13,49 @@ const PageEdit = lazy(() => import("pages/edit"));
 const PageNotFound = lazy(() => import("pages/not-found"));
 
 const SuspensedPageHome = () => (
-  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
+  <Suspense
+    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
+  >
     <PageHome />
   </Suspense>
 );
 
 const SuspensedPageGraph = () => (
-  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
+  <Suspense
+    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
+  >
     <PageGraph />
   </Suspense>
 );
 
 const SuspensedPageSearch = () => (
-  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
+  <Suspense
+    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
+  >
     <PageSearch />
   </Suspense>
 );
 
 const SuspensedPageNotFound = () => (
-  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
+  <Suspense
+    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
+  >
     <PageNotFound />
   </Suspense>
 );
 
 const SuspensedPageDetail = () => (
-  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
+  <Suspense
+    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
+  >
     <PageDetail />
   </Suspense>
 );
 
 const SuspensedPageEdit = () => (
-  <Suspense fallback={<_Components.LoadingEllipsis color="#11dce8" />}>
+  <Suspense
+    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
+  >
     <PageEdit />
   </Suspense>
 );

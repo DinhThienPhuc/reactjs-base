@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, MouseEventHandler } from "react";
+import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
 export type TButtonSize = "small" | "medium" | "large";
 
@@ -9,4 +9,6 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: TButtonVariant;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  loading?: boolean;
+  loadingComponent?: ReactNode;
 }

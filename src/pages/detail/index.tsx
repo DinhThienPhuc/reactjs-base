@@ -1,9 +1,9 @@
+import { Button, SelectFighterButton, _Components } from "components";
 import {
   ArrowLeft as IconArrowLeft,
   Edit as IconEdit,
   Trash2 as IconTrash2,
 } from "react-feather";
-import { SelectFighterButton, Button, _Components } from "components";
 import { deleteFighter, getFighterById } from "services";
 import { useAvatar, useCompareFighters } from "store";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -23,6 +23,7 @@ const PageDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [data, setData] = useState<IFighter | null>(null);
+  const [loading, setLoading] = useState(false);
   const toggleSelectFighter = useCompareFighters(
     (state) => state.toggleSelectFighter,
   );
@@ -37,6 +38,7 @@ const PageDetail = () => {
   }, [id, navigate]);
 
   const fetchFighterData = useCallback(async () => {
+    setLoading(true);
     const { error, result } = await getFighterById(id as string);
     if (error) {
       toast.error("Get fighter information failed!", {
@@ -47,6 +49,7 @@ const PageDetail = () => {
       setData(result);
       setUrl(result?.avatar);
     }
+    setLoading(false);
   }, [id, setUrl]);
 
   const fightingStyles = useMemo(() => {
@@ -87,6 +90,10 @@ const PageDetail = () => {
   useEffect(() => {
     fetchFighterData();
   }, [fetchFighterData]);
+
+  if (loading) {
+    return <_Components.LoadingEllipsis color="#11dce8" fullScreen />;
+  }
 
   return (
     <>
