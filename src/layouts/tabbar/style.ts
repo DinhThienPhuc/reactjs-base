@@ -1,3 +1,4 @@
+import { LAYOUT_SIDE } from "utils";
 import styled from "styled-components";
 
 const Styled = {
@@ -7,7 +8,7 @@ const Styled = {
     align-items: flex-start;
     position: fixed;
     bottom: 0;
-    height: 100px;
+    height: ${LAYOUT_SIDE.TABBAR}px;
     padding: 18px 0px;
     width: 100%;
     background: #091522;

@@ -81,3 +81,8 @@ export const SPECIAL_VALUE = {
   NULL_STRING: "null",
   EMPTY_STRING: "",
 };
+
+export const LAYOUT_SIDE = {
+  NAVBAR: 112,
+  TABBAR: 100,
+};
