@@ -1,13 +1,13 @@
 import * as _Components from "_core/components";
 
 import Button from "components/button";
-import { LAYOUT_SIDE } from "utils";
+import { LAYOUT_SIZE } from "utils";
 import styled from "styled-components";
 
 const Styled = {
   Navbar: styled(_Components.Navbar)`
     background: #091522;
-    height: ${LAYOUT_SIDE.NAVBAR}px;
+    height: ${LAYOUT_SIZE.NAVBAR}px;
     border: 2px solid #000000;
     box-shadow: 0px -4px 16px #000000;
     border-radius: 0px 0px 28px 28px;

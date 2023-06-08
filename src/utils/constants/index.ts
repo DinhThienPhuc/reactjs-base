@@ -82,7 +82,7 @@ export const SPECIAL_VALUE = {
   EMPTY_STRING: "",
 };
 
-export const LAYOUT_SIDE = {
+export const LAYOUT_SIZE = {
   NAVBAR: 112,
   TABBAR: 100,
 };
