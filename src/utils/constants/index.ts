@@ -83,6 +83,6 @@ export const SPECIAL_VALUE = {
 };
 
 export const LAYOUT_SIZE = {
-  NAVBAR: 112,
+  NAVBAR: 124,
   TABBAR: 100,
 };
