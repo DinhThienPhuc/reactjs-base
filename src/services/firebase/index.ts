@@ -3,13 +3,13 @@ import * as _Services from "_core/services";
 import { IFighter } from "utils";
 
 const firebaseConfig: _Services.IFirebaseConfig = {
-  apiKey: "AIzaSyCmeVC8352EouzhFtYJASCO8YhZIFBS7Tg",
-  authDomain: "kengan-fighters.firebaseapp.com",
-  projectId: "kengan-fighters",
-  storageBucket: "kengan-fighters.appspot.com",
-  messagingSenderId: "322097054744",
-  appId: "1:322097054744:web:5b93c4dddda9db56e86f6d",
-  measurementId: "G-DT4F1GPC79",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASSUREMENT_ID,
 };
 
 const firebaseApp = _Services.initFirebaseApp(firebaseConfig);
