@@ -1,3 +1,5 @@
-import { getPostById, getPosts } from "./post/post.api";
+export * from "./request";
+export * from "./types";
 
-export { getPosts, getPostById };
+export * from "./post/post.api";
+export * from "./post/post.types";

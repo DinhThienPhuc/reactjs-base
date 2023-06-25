@@ -22,7 +22,4 @@ export const Styled = {
   Span: styled.span<IFlexProps>`
     ${flexModify};
   `,
-  Nav: styled.nav<IFlexProps>`
-    ${flexModify};
-  `,
 };
