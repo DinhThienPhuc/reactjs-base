@@ -1,9 +1,9 @@
 html,
 body {
   font-family: "Figtree", sans-serif;
-  background-color: #ffffff;
-  background: url(../images/bg.png) no-repeat center center fixed;
+  /* background: url(../images/bg.png) no-repeat center center fixed; */
   -webkit-background-size: cover;
+  background-color: #0a1929;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -17,37 +17,4 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.Toastify__toast {
-  background: #091522 !important;
-  box-shadow: 0px -4px 16px #000000 !important;
-  height: 64px;
-  width: 100%;
-  border-bottom: 1px solid #ffffff80;
-}
-
-.Toastify__close-button {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  color: #ffffff !important;
-  width: 20px;
-  height: 20px;
-  opacity: 0.7;
-}
-
-.Toastify__close-button > svg {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.Toastify__toast-body {
-  padding-left: 20px;
-}
-
-.Toastify__toast-icon {
-  font-size: 20px;
 }

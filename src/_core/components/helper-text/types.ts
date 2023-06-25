@@ -6,5 +6,5 @@ export type THelperTextVariant = TVariant;
 export interface IHelperTextProps {
   className?: string;
   variant?: THelperTextVariant;
-  text?: string | ReactNode;
+  text?: ReactNode;
 }

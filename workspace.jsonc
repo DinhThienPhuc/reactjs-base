@@ -10,7 +10,7 @@
     /**
      * the name of the component workspace. used for development purposes.
      **/
-    "name": "kengan-fighters",
+    "name": "react-base",
     /**
      * set the icon to be shown on the Bit server.
      **/

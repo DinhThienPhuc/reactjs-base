@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios";
 
-import { IBaseErrorResponse } from "./interfaces";
+import { IBaseErrorResponse } from "./types";
 
 export const requestWithJwt = axios.create({
   baseURL: process.env.REACT_APP_API,

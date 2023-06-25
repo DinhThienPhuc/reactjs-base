@@ -5,7 +5,7 @@ export type TLabelVariant = TVariant;
 
 export interface ILabelProps {
   className?: string;
-  content: string | ReactNode;
+  content: ReactNode;
   required?: boolean;
   disabled?: boolean;
   hiddenLabel?: boolean;
