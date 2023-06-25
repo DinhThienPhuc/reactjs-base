@@ -1,4 +1,4 @@
-import { IPostListResponse, IPostResponse } from "./post.interface";
+import { IPostListResponse, IPostResponse } from "./post.types";
 
 import { AxiosResponse } from "axios";
 import { requestWithoutJwt } from "../request";

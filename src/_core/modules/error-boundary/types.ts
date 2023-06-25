@@ -4,7 +4,7 @@ import { TFunction } from "@phantomthief/react-mui.utils";
 
 export interface IErrorBoundaryProps {
   onReset: TFunction<void>;
-  children: ReactNode | null;
+  children: ReactNode;
   FallbackComponent?: ComponentType | null;
 }
 

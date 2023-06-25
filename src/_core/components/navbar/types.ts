@@ -4,5 +4,5 @@ export interface INavbarProps {
   className?: string;
   leftButton?: ReactNode;
   rightButton?: ReactNode;
-  title?: string | ReactNode;
+  title?: ReactNode;
 }

@@ -1,5 +1,7 @@
+import { _Components } from "components";
+
 const PageNotFound = () => {
-  return <>Not found page</>;
+  return <_Components.Flex>Not found page</_Components.Flex>;
 };
 
 export default PageNotFound;
