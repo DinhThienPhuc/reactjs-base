@@ -44,9 +44,9 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
         variant={variant}
         disabled={disabled}
         className={cx(
-          "input-container",
-          `input-container-fullwidth__${fullWidth}`,
-          `input-container__${variant}`,
+          "input",
+          `input-fullwidth__${fullWidth}`,
+          `input__${variant}`,
           className,
         )}
       >

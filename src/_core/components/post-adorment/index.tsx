@@ -15,11 +15,7 @@ export const PostAdorment = ({
     return (
       <Styled.Container
         variant={variant}
-        className={cx(
-          "post-adorment-container",
-          `post-adorment-container__${variant}`,
-          className,
-        )}
+        className={cx("post-adorment", `post-adorment__${variant}`, className)}
         onClick={clear}
       >
         <IconXCircle width={20} height={20} />
@@ -34,11 +30,7 @@ export const PostAdorment = ({
   return (
     <Styled.Container
       variant={variant}
-      className={cx(
-        "post-adorment-container",
-        `post-adorment-container__${variant}`,
-        className,
-      )}
+      className={cx("post-adorment", `post-adorment__${variant}`, className)}
     >
       {content}
     </Styled.Container>

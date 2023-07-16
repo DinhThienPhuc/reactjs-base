@@ -1,5 +1,5 @@
-import { ISelectOption, ISelectProps } from "./types";
-import React, { forwardRef, useMemo } from "react";
+import { ISelectOption, ISelectOptionsProps, ISelectProps } from "./types";
+import React, { forwardRef } from "react";
 
 import { HelperText } from "../helper-text";
 import { Label } from "../label";
@@ -9,6 +9,29 @@ import { SELECT_VARIANT } from "./constants";
 import { Styled } from "./style";
 import cx from "classnames";
 import { useLogic } from "./useLogic";
+
+const SelectOptions = ({
+  options,
+  displayedOption,
+  handleSelectOption,
+}: ISelectOptionsProps) => {
+  return (
+    <>
+      {options.map((option: ISelectOption) => {
+        return (
+          <Styled.Option
+            key={option.value}
+            selected={option.value === displayedOption?.value}
+            className="select-option"
+            onClick={handleSelectOption(option.value)}
+          >
+            {option.label}
+          </Styled.Option>
+        );
+      })}
+    </>
+  );
+};
 
 export const Select = forwardRef<HTMLInputElement, ISelectProps>(
   (
@@ -43,41 +66,26 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       toggleListOptions,
     } = useLogic({ options, value, disabled, onChange, onFocus, onBlur });
 
-    const listOptions = useMemo(() => {
-      return options.map((option: ISelectOption) => {
-        return (
-          <Styled.Option
-            key={option.value}
-            selected={option.value === displayedOption?.value}
-            className="select-option"
-            onClick={handleSelectOption(option.value)}
-          >
-            {option.label}
-          </Styled.Option>
-        );
-      });
-    }, [displayedOption?.value, handleSelectOption, options]);
-
     return (
       <Styled.Container
-        className={cx("select-container", className)}
+        className={cx("select", `select-fullwidth__${fullWidth}`, className)}
         fullWidth={fullWidth}
       >
         <Styled.Box
+          ref={boxRef}
           onClick={toggleListOptions}
           variant={variant}
           disabled={disabled}
           fullWidth={fullWidth}
+          tabIndex={tabIndex}
+          onFocus={captureOnFocus}
+          onBlur={captureOnBlur}
           className={cx(
             "select-box",
             `select-box-fullwidth__${fullWidth}`,
             `select-box-disabled__${disabled}`,
             `select-box__${variant}`,
           )}
-          tabIndex={tabIndex}
-          onFocus={captureOnFocus}
-          onBlur={captureOnBlur}
-          ref={boxRef}
         >
           <Label
             content={label}
@@ -104,13 +112,16 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             position={position}
             isShowed={isShowed}
             className={cx(
-              "select-option-group",
-              `select-option-group-fullwidth__${fullWidth}`,
-              `select-option-group-disabled__${disabled}`,
-              `select-option-group__${variant}`,
+              "select-options",
+              `select-options-position__${position}`,
+              `select-options-isShowed__${isShowed}`,
             )}
           >
-            {listOptions}
+            <SelectOptions
+              options={options}
+              displayedOption={displayedOption}
+              handleSelectOption={handleSelectOption}
+            />
           </Styled.OptionGroup>
         </Portal>
       </Styled.Container>

@@ -1,5 +1,6 @@
 import { ITextProps } from "./types";
 import React from "react";
+import cx from "classnames";
 import { useLogic } from "./useLogic";
 
 export const Text = ({
@@ -13,7 +14,18 @@ export const Text = ({
   const StyledTag = useLogic({ variant });
 
   return (
-    <StyledTag size={size} bold={bold} color={color} className={className}>
+    <StyledTag
+      size={size}
+      bold={bold}
+      color={color}
+      className={cx(
+        "text",
+        `text-size__${size}`,
+        `text-bold__${bold}`,
+        `text-color__${color}`,
+        className,
+      )}
+    >
       {children}
     </StyledTag>
   );
