@@ -1,8 +1,36 @@
-import React, { forwardRef, useMemo } from "react";
+import {
+  ISwitchLeftLabelProps,
+  ISwitchProps,
+  ISwitchRightLabelProps,
+} from "./types";
+import React, { forwardRef } from "react";
 
-import { ISwitchProps } from "./types";
 import { Styled } from "./style";
 import cx from "classnames";
+
+const LeftLabel = ({ leftLabel }: ISwitchLeftLabelProps) => {
+  if (!leftLabel) {
+    return null;
+  }
+
+  return (
+    <Styled.LeftLabel className="switch-label__left">
+      {leftLabel}
+    </Styled.LeftLabel>
+  );
+};
+
+const RightLabel = ({ rightLabel }: ISwitchRightLabelProps) => {
+  if (!rightLabel) {
+    return null;
+  }
+
+  return (
+    <Styled.RightLabel className="switch-label__right">
+      {rightLabel}
+    </Styled.RightLabel>
+  );
+};
 
 export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
   (
@@ -16,35 +44,17 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
     },
     ref,
   ) => {
-    const leftLabelCustom = useMemo(() => {
-      if (!leftLabel) {
-        return null;
-      }
-      return (
-        <Styled.LeftLabel className="switch-label__left">
-          {leftLabel}
-        </Styled.LeftLabel>
-      );
-    }, [leftLabel]);
-
-    const rightLabelCustom = useMemo(() => {
-      if (!rightLabel) {
-        return null;
-      }
-      return (
-        <Styled.RightLabel className="switch-label__right">
-          {rightLabel}
-        </Styled.RightLabel>
-      );
-    }, [rightLabel]);
-
     return (
       <Styled.Container className={cx("switch", className)}>
-        {leftLabelCustom}
+        <LeftLabel leftLabel={leftLabel} />
         <Styled.Pad
-          className={cx("switch-pad", className)}
           isOn={!!value}
           disabled={disabled}
+          className={cx(
+            "switch-pad",
+            `switch-pad-isOn__${!!value}`,
+            `switch-pad-disabled__${disabled}`,
+          )}
         >
           <input
             {...props}
@@ -54,7 +64,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
             type="checkbox"
           />
         </Styled.Pad>
-        {rightLabelCustom}
+        <RightLabel rightLabel={rightLabel} />
       </Styled.Container>
     );
   },

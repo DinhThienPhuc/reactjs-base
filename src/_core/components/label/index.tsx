@@ -23,10 +23,10 @@ export const Label = ({
       disabled={disabled}
       isLabelCollapsed={isLabelCollapsed}
       className={cx(
-        "label-container",
-        `label-container__${variant}`,
-        `label-container-collapsed__${isLabelCollapsed}`,
-        `label-container-disabled__${disabled}`,
+        "label",
+        `label__${variant}`,
+        `label-collapsed__${isLabelCollapsed}`,
+        `label-disabled__${disabled}`,
         className,
       )}
     >

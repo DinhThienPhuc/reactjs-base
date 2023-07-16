@@ -1,10 +1,16 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
 import { TVariant } from "@phantomthief/react-mui.utils";
 
 export interface ISelectOption {
   value: string;
   label: ReactNode;
+}
+
+export interface ISelectOptionsProps {
+  options: ISelectOption[];
+  displayedOption?: ISelectOption;
+  handleSelectOption: (value: string) => MouseEventHandler<HTMLDivElement>;
 }
 
 export type TSelectVariant = TVariant;

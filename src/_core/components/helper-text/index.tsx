@@ -12,11 +12,7 @@ export const HelperText = ({
   return (
     <Styled.Container
       variant={variant}
-      className={cx(
-        "helper-text-container",
-        `helper-text-container__${variant}`,
-        className,
-      )}
+      className={cx("helper-text", `helper-text__${variant}`, className)}
     >
       {text}
     </Styled.Container>
