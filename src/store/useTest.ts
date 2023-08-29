@@ -1,13 +1,14 @@
 import { createJSONStorage, devtools, persist } from "zustand/middleware";
 
-import { create } from "zustand";
+import { createWithEqualityFn } from "zustand/traditional";
+import { shallow } from "zustand/shallow";
 
 interface ITest {
   id: string;
   setId: (id: string) => void;
 }
 
-const useTest = create<ITest>()(
+const useTest = createWithEqualityFn<ITest>()(
   devtools(
     persist(
       (set) => ({
@@ -24,6 +25,7 @@ const useTest = create<ITest>()(
       },
     ),
   ),
+  shallow,
 );
 
 export default useTest;
