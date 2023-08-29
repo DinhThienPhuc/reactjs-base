@@ -22,6 +22,7 @@ export const LoadingEllipsis = ({
         `loading-ellipsis-sizeunit_${sizeUnit}`,
         className,
       )}
+      data-testid="loading-ellipsis"
     >
       <div />
       <div />

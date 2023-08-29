@@ -41,13 +41,32 @@
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "build:production": "env-cmd -f .env.production react-scripts build",
     "deploy:firebase": "env-cmd -f .env.production react-scripts build && firebase login && firebase deploy",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --no-cache",
+    "test:coverage": "react-scripts test --coverage --watchAll=false --no-cache",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "format": "npx pretty-quick --staged && npx lint-staged",
     "postinstall": "bit install"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!src/**/*.types.{ts,tsx}",
+      "!src/**/types.{ts,tsx}",
+      "!src/**/definations/*",
+      "!src/**/style.{ts,tsx}",
+      "!src/app.{ts,tsx}",
+      "!src/service-worker.ts",
+      "!src/serviceWorkerRegistration.ts",
+      "!src/react-app-env.d.ts",
+      "!src/**/*/index.ts",
+      "!src/index.tsx",
+      "!src/api/request.ts"
+    ]
   },
   "eslintConfig": {
     "extends": [
