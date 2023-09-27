@@ -3,6 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "packageManager": "yarn@3.6.3",
+  "scripts": {
+    "dev": "env-cmd -f .env.development react-scripts start",
+    "dev:staging": "env-cmd -f .env.staging react-scripts start",
+    "dev:production": "env-cmd -f .env.production react-scripts start",
+    "build:development": "env-cmd -f .env.development react-scripts build",
+    "build:staging": "env-cmd -f .env.staging react-scripts build",
+    "build:production": "env-cmd -f .env.production react-scripts build",
+    "deploy:firebase": "env-cmd -f .env.production react-scripts build && firebase login && firebase deploy",
+    "test": "react-scripts test --watchAll=false --no-cache",
+    "test:coverage": "react-scripts test --coverage --watchAll=false --no-cache",
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "format": "npx pretty-quick --staged && npx lint-staged",
+    "postinstall": "bit install"
+  },
   "dependencies": {
     "axios": "^0.25.0",
     "classnames": "^2.3.2",
@@ -34,23 +51,6 @@
     "workbox-streams": "^6.5.4",
     "zustand": "^4.3.6"
   },
-  "scripts": {
-    "dev": "env-cmd -f .env.development react-scripts start",
-    "dev:staging": "env-cmd -f .env.staging react-scripts start",
-    "dev:production": "env-cmd -f .env.production react-scripts start",
-    "build:development": "env-cmd -f .env.development react-scripts build",
-    "build:staging": "env-cmd -f .env.staging react-scripts build",
-    "build:production": "env-cmd -f .env.production react-scripts build",
-    "deploy:firebase": "env-cmd -f .env.production react-scripts build && firebase login && firebase deploy",
-    "test": "react-scripts test --watchAll=false --no-cache",
-    "test:coverage": "react-scripts test --coverage --watchAll=false --no-cache",
-    "eject": "react-scripts eject",
-    "prepare": "husky install",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "format": "npx pretty-quick --staged && npx lint-staged",
-    "postinstall": "bit install"
-  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
@@ -67,22 +67,6 @@
       "!src/**/*/index.ts",
       "!src/index.tsx",
       "!src/api/request.ts"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
     ]
   },
   "browserslist": {
@@ -121,9 +105,5 @@
     "prettier": "^2.5.1",
     "pretty-quick": "^3.1.3",
     "webpack": "5"
-  },
-  "lint-staged": {
-    "*.ts*": "eslint --fix --max-warnings 0",
-    "*.js*": "eslint --fix"
   }
 }

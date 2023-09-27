@@ -10,6 +10,8 @@
     }
   },
   "extends": [
+    "react-app",
+    "react-app/jest",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -25,7 +27,14 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
-  "ignorePatterns": ["public/bit", "workspace.jsonc"],
+  "overrides": [
+    {
+      "files": ["**/*.stories.*"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ],
   "rules": {
     "indent": ["warn", 2, { "ignoredNodes": ["ConditionalExpression"] }],
     "quotes": ["warn", "double"],
