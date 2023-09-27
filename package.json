@@ -2,18 +2,15 @@
   "name": "react-base",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "yarn@3.6.3",
   "scripts": {
     "dev": "env-cmd -f .env.development react-scripts start",
     "dev:staging": "env-cmd -f .env.staging react-scripts start",
     "dev:production": "env-cmd -f .env.production react-scripts start",
     "build:development": "env-cmd -f .env.development react-scripts build",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
-    "build:production": "env-cmd -f .env.production react-scripts build",
-    "deploy:firebase": "env-cmd -f .env.production react-scripts build && firebase login && firebase deploy",
+    "build": "env-cmd -f .env.production react-scripts build",
     "test": "react-scripts test --watchAll=false --no-cache",
     "test:coverage": "react-scripts test --coverage --watchAll=false --no-cache",
-    "eject": "react-scripts eject",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -23,7 +20,6 @@
   "dependencies": {
     "axios": "^0.25.0",
     "classnames": "^2.3.2",
-    "firebase": "^9.18.0",
     "i18next": "^23.4.4",
     "next": "^13.2.4",
     "react": "^18.2.0",
@@ -50,36 +46,6 @@
     "workbox-strategies": "^6.5.4",
     "workbox-streams": "^6.5.4",
     "zustand": "^4.3.6"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
-      "!**/node_modules/**",
-      "!**/vendor/**",
-      "!src/**/*.types.{ts,tsx}",
-      "!src/**/types.{ts,tsx}",
-      "!src/**/definations/*",
-      "!src/**/style.{ts,tsx}",
-      "!src/app.{ts,tsx}",
-      "!src/service-worker.ts",
-      "!src/serviceWorkerRegistration.ts",
-      "!src/react-app-env.d.ts",
-      "!src/**/*/index.ts",
-      "!src/index.tsx",
-      "!src/api/request.ts"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
