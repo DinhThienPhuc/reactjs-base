@@ -5,6 +5,6 @@ export type TPreAdormentVariant = TVariant;
 
 export interface IPreAdormentProps {
   className?: string;
-  variant: TPreAdormentVariant;
-  content: ReactNode;
+  variant?: TPreAdormentVariant;
+  content?: ReactNode;
 }

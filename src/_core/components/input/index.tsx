@@ -49,6 +49,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
           `input__${variant}`,
           className,
         )}
+        data-testid="input"
       >
         <Label
           variant={variant}
@@ -71,6 +72,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
           hasPreAdorment={!!preAdorment}
           hasPostAdorment={!!clear || !!postAdorment}
           className={cx("input-box", `input-box__${variant}`)}
+          data-testid="input-box"
         />
         <PostAdorment variant={variant} content={postAdorment} clear={clear} />
         <HelperText text={helperText} variant={variant} />

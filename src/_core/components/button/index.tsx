@@ -40,6 +40,7 @@ export const Button = ({
         `button-loading__${loading}`,
         className,
       )}
+      data-testid="button"
     >
       {buttonContent}
     </Styled.Container>

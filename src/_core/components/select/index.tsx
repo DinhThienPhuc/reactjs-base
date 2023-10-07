@@ -47,6 +47,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       hiddenLabel = false,
       required = false,
       tabIndex = -1,
+      optionGroupClassName,
       onChange,
       onFocus,
       onBlur,
@@ -70,6 +71,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       <Styled.Container
         className={cx("select", `select-fullwidth__${fullWidth}`, className)}
         fullWidth={fullWidth}
+        data-testid="select"
       >
         <Styled.Box
           ref={boxRef}
@@ -86,6 +88,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             `select-box-disabled__${disabled}`,
             `select-box__${variant}`,
           )}
+          data-testid="select-box"
         >
           <Label
             content={label}
@@ -96,7 +99,10 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             isLabelCollapsed={isLabelCollapsed}
           />
           <Styled.FakeSelect required={required} />
-          <Styled.InnerBox className={cx("select-inner-box")}>
+          <Styled.InnerBox
+            className={cx("select-inner-box")}
+            data-testid="select-displayed-option"
+          >
             {displayedOption?.label}
           </Styled.InnerBox>
           <PostAdorment
@@ -106,14 +112,14 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           <HelperText text={helperText} variant={variant} />
         </Styled.Box>
 
-        <Portal id={"portal-select"}>
+        <Portal className={cx("portal-select", optionGroupClassName)}>
           <Styled.OptionGroup
             ref={optionGroupRef}
             position={position}
             isShowed={isShowed}
             className={cx(
               "select-options",
-              `select-options-position__${position}`,
+              `select-options-position__${JSON.stringify(position)}`,
               `select-options-isShowed__${isShowed}`,
             )}
           >

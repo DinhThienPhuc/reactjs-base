@@ -29,6 +29,7 @@ export const Label = ({
         `label-disabled__${disabled}`,
         className,
       )}
+      data-testid="label"
     >
       {content} {required ? "*" : ""}
     </Styled.Container>

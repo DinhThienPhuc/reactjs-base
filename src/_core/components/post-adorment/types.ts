@@ -6,7 +6,7 @@ export type TPostAdormentVariant = TVariant;
 
 export interface IPostAdormentProps {
   className?: string;
-  variant: TPostAdormentVariant;
-  content: ReactNode;
+  variant?: TPostAdormentVariant;
+  content?: ReactNode;
   clear?: TFunction<void>;
 }
