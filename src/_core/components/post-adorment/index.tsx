@@ -17,8 +17,13 @@ export const PostAdorment = ({
         variant={variant}
         className={cx("post-adorment", `post-adorment__${variant}`, className)}
         onClick={clear}
+        data-testid="post-adorment"
       >
-        <IconXCircle width={20} height={20} />
+        <IconXCircle
+          width={20}
+          height={20}
+          data-testid="post-adorment-icon__close"
+        />
       </Styled.Container>
     );
   }
@@ -31,6 +36,7 @@ export const PostAdorment = ({
     <Styled.Container
       variant={variant}
       className={cx("post-adorment", `post-adorment__${variant}`, className)}
+      data-testid="post-adorment"
     >
       {content}
     </Styled.Container>

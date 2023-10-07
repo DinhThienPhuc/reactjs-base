@@ -17,12 +17,13 @@ export const LoadingRipple = ({
         color={color}
         sizeUnit={sizeUnit}
         className={cx(
-          "loading-riple",
-          `loading-riple-size__${size}`,
-          `loading-riple-color__${color}`,
-          `loading-riple-sizeunit_${sizeUnit}`,
+          "loading-ripple",
+          `loading-ripple-size__${size}`,
+          `loading-ripple-color__${color}`,
+          `loading-ripple-size-unit__${sizeUnit}`,
           className,
         )}
+        data-testid="loading-ripple"
       >
         <div />
         <div />

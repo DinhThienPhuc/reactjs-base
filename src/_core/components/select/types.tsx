@@ -17,6 +17,7 @@ export type TSelectVariant = TVariant;
 
 export interface ISelectProps extends HTMLAttributes<HTMLElement> {
   className?: string;
+  optionGroupClassName?: string;
   options: ISelectOption[];
   label?: ReactNode;
   value?: string;

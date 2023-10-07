@@ -27,6 +27,7 @@ export const Flex = ({
         `flex-justify-content__${justifyContent}`,
         className,
       )}
+      data-testid="flex"
     >
       {children}
     </StyledTag>

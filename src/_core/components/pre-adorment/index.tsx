@@ -17,6 +17,7 @@ export const PreAdorment = ({
     <Styled.Container
       variant={variant}
       className={cx("pre-adorment", `pre-adorment__${variant}`, className)}
+      data-testid="pre-adorment"
     >
       {content}
     </Styled.Container>

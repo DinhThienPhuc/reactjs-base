@@ -2,7 +2,9 @@ import { _Components } from "components";
 
 const PageHome = () => {
   return (
-    <_Components.Flex style={{ height: "100vh" }}>Home page</_Components.Flex>
+    <_Components.Flex flexDirection="column" style={{ height: "100vh" }}>
+      React.js Base
+    </_Components.Flex>
   );
 };
 

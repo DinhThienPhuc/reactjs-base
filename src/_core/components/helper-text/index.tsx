@@ -13,6 +13,7 @@ export const HelperText = ({
     <Styled.Container
       variant={variant}
       className={cx("helper-text", `helper-text__${variant}`, className)}
+      data-testid="helper-text"
     >
       {text}
     </Styled.Container>

@@ -13,3 +13,5 @@ export const BUTTON_VARIANT: IObject<TButtonVariant> = {
   CONTAINED: "contained",
   TEXT: "text",
 };
+
+export const TEST_INNER_TEXT = "Click";

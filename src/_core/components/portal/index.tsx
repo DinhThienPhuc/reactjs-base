@@ -1,30 +1,35 @@
+import React, { useEffect } from "react";
+
 import { IPortalProps } from "./types";
-import React from "react";
 import { createPortal } from "react-dom";
-import { useEffectOnce } from "@phantomthief/react-mui.hooks";
 
-export const Portal = ({ children, id }: IPortalProps) => {
-  const element = React.useRef<HTMLDivElement | null>(null);
-  const elementContainer = React.useRef<HTMLDivElement | null>(null);
+export const Portal = ({ children, className = "" }: IPortalProps) => {
+  const elementContainer = React.useRef<Element | null>(null);
 
-  useEffectOnce(() => {
-    const portalRoot = document.getElementById("portal-root") as HTMLDivElement;
+  useEffect(() => {
+    let portalRoot = document.getElementById("portal-root") as HTMLDivElement;
 
-    if (!element.current) {
-      element.current = document.createElement("div");
+    if (!portalRoot) {
+      portalRoot = document.createElement("div");
+      portalRoot.setAttribute("id", "portal-root");
     }
 
     if (!elementContainer.current) {
       elementContainer.current = document.createElement("div");
-      elementContainer.current.id = id;
+      elementContainer.current.setAttribute("data-testid", "portal");
+      elementContainer.current.setAttribute("class", `portal ${className}`);
     }
 
-    elementContainer.current?.appendChild(element.current!);
-    portalRoot.appendChild(elementContainer.current!);
-    return () => {
-      portalRoot.removeChild(elementContainer.current!);
-    };
-  });
+    document.body.appendChild(portalRoot);
+    portalRoot.appendChild(elementContainer.current);
 
-  return createPortal(children, elementContainer.current!);
+    return () => {
+      elementContainer.current &&
+        portalRoot.removeChild(elementContainer.current);
+    };
+  }, [className]);
+
+  return elementContainer.current
+    ? createPortal(children, elementContainer.current)
+    : null;
 };
