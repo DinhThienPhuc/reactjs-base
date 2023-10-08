@@ -83,3 +83,8 @@ export type TBrowserStorage = "localStorage" | "sessionStorage";
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type TAny = any;
+
+/**
+ * Unit of element size type
+ */
+export type TSizeUnit = "px" | "rem" | "em";

@@ -1,21 +1,19 @@
 import "assets/styles/reset.css";
 import "assets/styles/global.css";
 
+import { ErrorBoundary } from "modules";
+import { LoadingEllipsis } from "components";
 import MainRoutes from "routes";
 import { Suspense } from "react";
-import { _Components } from "components";
-import { _Modules } from "modules";
-import { _Utils } from "utils";
+import { reload } from "utils";
 
 const App = () => {
   return (
-    <_Modules.ErrorBoundary onReset={_Utils.reload}>
-      <Suspense
-        fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
-      >
+    <ErrorBoundary onReset={reload}>
+      <Suspense fallback={<LoadingEllipsis color="#11dce8" fullScreen />}>
         <MainRoutes />
       </Suspense>
-    </_Modules.ErrorBoundary>
+    </ErrorBoundary>
   );
 };
 

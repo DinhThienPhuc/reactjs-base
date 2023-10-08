@@ -1,1 +1,2 @@
-export * as _Modules from "_core/modules";
+export * from "_core/modules/authenticator";
+export * from "_core/modules/error-boundary";
