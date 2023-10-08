@@ -1,4 +1,4 @@
-import { BASE_ROUTES } from "_core/modules/authenticator/base-routes";
+import { BASE_ROUTES } from "_core/modules/authenticator/_base-routes";
 
 const ROUTES = {
   ...BASE_ROUTES,

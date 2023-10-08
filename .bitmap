@@ -3,41 +3,173 @@
 /**
  * The Bitmap file is an auto generated file used by Bit to track all your Bit components. It maps the component to a folder in your file system.
  * This file should be committed to VCS(version control).
- * Components are listed using their component ID (https://bit.dev/docs/components/component-id).
+ * Components are listed using their component ID (https://bit.dev/reference/components/component-id).
  * If you want to delete components you can use the "bit remove <component-id>" command.
- * See the docs (https://bit.dev/docs/components/removing-components) for more information, or use "bit remove --help".
+ * See the docs (https://bit.dev/reference/components/removing-components) for more information, or use "bit remove --help".
  */
 
 {
-    "components": {
-        "scope": "phantomthief.react-mui",
-        "version": "0.2.0",
+    "components/button": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/components"
+        "rootDir": "src/_core/components/button"
     },
-    "hooks": {
-        "scope": "phantomthief.react-mui",
+    "components/flex": {
+        "scope": "phantomthief.react",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/hooks"
+        "rootDir": "src/_core/components/flex"
     },
-    "modules": {
-        "scope": "phantomthief.react-mui",
-        "version": "0.1.0",
+    "components/helper-text": {
+        "scope": "phantomthief.react",
+        "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/modules"
+        "rootDir": "src/_core/components/helper-text"
     },
-    "services": {
-        "scope": "phantomthief.react-mui",
+    "components/input": {
+        "scope": "phantomthief.react",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/services"
+        "rootDir": "src/_core/components/input"
     },
-    "utils": {
-        "scope": "phantomthief.react-mui",
+    "components/label": {
+        "scope": "phantomthief.react",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/label"
+    },
+    "components/loading-ellipsis": {
+        "scope": "phantomthief.react",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/loading-ellipsis"
+    },
+    "components/loading-ripple": {
+        "scope": "phantomthief.react",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/loading-ripple"
+    },
+    "components/navbar": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/navbar"
+    },
+    "components/portal": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/portal"
+    },
+    "components/post-adorment": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/post-adorment"
+    },
+    "components/pre-adorment": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/pre-adorment"
+    },
+    "components/select": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/select"
+    },
+    "components/switch": {
+        "scope": "phantomthief.react",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/utils"
+        "rootDir": "src/_core/components/switch"
     },
-    "$schema-version": "15.0.0"
+    "components/text": {
+        "scope": "phantomthief.react",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/text"
+    },
+    "hooks/effect-once": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/hooks/effect-once"
+    },
+    "hooks/event-listener": {
+        "scope": "phantomthief.react",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/hooks/event-listener"
+    },
+    "hooks/focus-with-callback": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "_hook.ts",
+        "rootDir": "src/_core/hooks/focus-with-callback"
+    },
+    "hooks/isomorphic-layout-effect": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "_hook.ts",
+        "rootDir": "src/_core/hooks/isomorphic-layout-effect"
+    },
+    "hooks/not-click-on-elements": {
+        "scope": "phantomthief.react",
+        "version": "0.0.3",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/hooks/not-click-on-elements"
+    },
+    "modules/authenticator": {
+        "scope": "phantomthief.react",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/modules/authenticator"
+    },
+    "modules/error-boundary": {
+        "scope": "phantomthief.react",
+        "version": "0.0.5",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/modules/error-boundary"
+    },
+    "services/firebase": {
+        "scope": "phantomthief.react",
+        "version": "0.0.5",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/services/firebase"
+    },
+    "services/i18n": {
+        "scope": "phantomthief.react",
+        "version": "0.0.4",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/services/i18n"
+    },
+    "services/styled-theme": {
+        "scope": "phantomthief.react",
+        "version": "0.0.6",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/services/styled-theme"
+    },
+    "utils/constants": {
+        "scope": "phantomthief.react",
+        "version": "0.0.5",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/utils/constants"
+    },
+    "utils/definations": {
+        "scope": "phantomthief.react",
+        "version": "0.1.3",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/utils/definations"
+    },
+    "utils/helpers": {
+        "scope": "phantomthief.react",
+        "version": "0.0.5",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/utils/helpers"
+    },
+    "$schema-version": "16.0.0"
 }

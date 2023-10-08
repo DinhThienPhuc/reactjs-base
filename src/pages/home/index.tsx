@@ -1,10 +1,10 @@
-import { _Components } from "components";
+import { Flex } from "components";
 
 const PageHome = () => {
   return (
-    <_Components.Flex flexDirection="column" style={{ height: "100vh" }}>
+    <Flex flexDirection="column" style={{ height: "100vh" }}>
       React.js Base
-    </_Components.Flex>
+    </Flex>
   );
 };
 

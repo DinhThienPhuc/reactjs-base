@@ -2,24 +2,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import Layout from "layouts";
+import { LoadingEllipsis } from "components";
 import ROUTES from "routes/constants";
-import { _Components } from "components";
 
 const PageHome = lazy(() => import("pages/home"));
 const PageNotFound = lazy(() => import("pages/not-found"));
 
 const SuspensedPageHome = () => (
-  <Suspense
-    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
-  >
+  <Suspense fallback={<LoadingEllipsis color="#11dce8" fullScreen />}>
     <PageHome />
   </Suspense>
 );
 
 const SuspensedPageNotFound = () => (
-  <Suspense
-    fallback={<_Components.LoadingEllipsis color="#11dce8" fullScreen />}
-  >
+  <Suspense fallback={<LoadingEllipsis color="#11dce8" fullScreen />}>
     <PageNotFound />
   </Suspense>
 );
