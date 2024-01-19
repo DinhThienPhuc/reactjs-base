@@ -1,5 +1,5 @@
 import {
-  IPosition,
+  INodePosition,
   TBrowserStorage,
   TFunction,
 } from "@phantomthief/react.utils.definations";
@@ -45,7 +45,7 @@ export const getFromSessionStorage = <T>(
 export const getPositionOfNode = (
   ref: MutableRefObject<HTMLElement | null>,
   withScrollable = true,
-): IPosition => {
+): INodePosition => {
   const bounds = ref.current?.getBoundingClientRect();
   return {
     left: bounds?.x || 0,

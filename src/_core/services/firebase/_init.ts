@@ -1,8 +1,8 @@
 import { FirebaseApp, initializeApp } from "firebase/app";
 
 import { IFirebaseConfig } from "./_types";
-import { getFirestore } from "@firebase/firestore";
-import { getStorage } from "@firebase/storage";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 export const initFirebaseApp = (config: IFirebaseConfig) => {
   return initializeApp(config);

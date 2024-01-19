@@ -15,7 +15,7 @@ import React, {
 } from "react";
 
 import { HelperText } from "@phantomthief/react.components.helper-text";
-import { IPosition } from "@phantomthief/react.utils.definations";
+import { INodePosition } from "@phantomthief/react.utils.definations";
 import { Label } from "@phantomthief/react.components.label";
 import { Portal } from "@phantomthief/react.components.portal";
 import { PostAdorment } from "@phantomthief/react.components.post-adorment";
@@ -73,7 +73,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     const boxRef = useRef<HTMLDivElement | null>(null);
     const optionGroupRef = useRef<HTMLDivElement | null>(null);
     const [isShowed, setShow] = useState(false);
-    const [position, setPosition] = useState<IPosition | null>(null);
+    const [position, setPosition] = useState<INodePosition | null>(null);
 
     useNotClickOnElements([boxRef, optionGroupRef], () => {
       setShow(false);

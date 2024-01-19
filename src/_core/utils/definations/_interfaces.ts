@@ -5,11 +5,10 @@ export interface IExtendable {
   [key: string]: unknown;
 }
 
-// TODO: Rename to INodePosition
 /**
  * Node Position interface
  */
-export interface IPosition {
+export interface INodePosition {
   left: number;
   top: number;
   width: number;
