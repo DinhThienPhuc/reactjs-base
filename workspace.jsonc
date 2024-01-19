@@ -47,5 +47,11 @@
   },
   "teambit.workspace/workspace-config-files": {
     "enableWorkspaceConfigWrite": true
+  },
+  "teambit.compositions/compositions": {
+    // Glob pattern to detect composition files. This includes all related files, like styles and JSONs.
+    "compositionFilePattern": ["**/_composition.*"],
+    // Glob pattern to select Preview files. This will only include files matched by compositionFilePattern.
+    "compositionPreviewFilePattern": ["**/*.tsx"]
   }
 }
