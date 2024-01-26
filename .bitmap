@@ -12,9 +12,16 @@
     "components/button": {
         "name": "components/button",
         "scope": "phantomthief.react",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/button"
+    },
+    "components/composition-container": {
+        "name": "components/composition-container",
+        "scope": "phantomthief.react",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/composition-container"
     },
     "components/flex": {
         "name": "components/flex",
