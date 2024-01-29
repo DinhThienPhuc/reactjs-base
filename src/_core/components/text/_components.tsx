@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import { ITextProps } from "./_types";
 import { Styled } from "./_style";
 import { capitalize } from "@phantomthief/react.utils.helpers";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const Text = ({
   variant = "span",
@@ -23,7 +23,7 @@ export const Text = ({
       size={size}
       bold={bold}
       color={color}
-      className={cx(
+      className={clsx(
         "text",
         `text-variant__${variant}`,
         `text-size__${size}`,

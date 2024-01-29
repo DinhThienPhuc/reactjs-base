@@ -1,7 +1,7 @@
 import { INavbarProps } from "./_types";
 import React from "react";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const Navbar = ({
   title,
@@ -10,7 +10,10 @@ export const Navbar = ({
   className,
 }: INavbarProps) => {
   return (
-    <Styled.Container className={cx("navbar", className)} data-testid="navbar">
+    <Styled.Container
+      className={clsx("navbar", className)}
+      data-testid="navbar"
+    >
       <Styled.LeftButton
         className="navbar-button navbar-button__left"
         data-testid="navbar-button-left"

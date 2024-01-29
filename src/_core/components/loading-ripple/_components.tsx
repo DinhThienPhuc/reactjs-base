@@ -1,7 +1,7 @@
 import { ILoadingRippleProps } from "./_types";
 import React from "react";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const LoadingRipple = ({
   size = 80,
@@ -16,7 +16,7 @@ export const LoadingRipple = ({
         size={size}
         color={color}
         sizeUnit={sizeUnit}
-        className={cx(
+        className={clsx(
           "loading-ripple",
           `loading-ripple-size__${size}`,
           `loading-ripple-color__${color}`,

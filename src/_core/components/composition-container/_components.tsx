@@ -1,20 +1,26 @@
 import React from "react";
-import { ICompositionContainer } from "./_types";
+import { ICompositionContainerProps } from "./_types";
 import { Styled } from "./_style";
 import { COMPOSITION_CONTAINER_OFFSET } from "./_constants";
 
 export const CompositionContainer = ({
   children,
   offset,
-  bgColor = "#0a1929",
-}: ICompositionContainer) => {
+  style,
+}: ICompositionContainerProps) => {
   const mergedOffset = {
     ...COMPOSITION_CONTAINER_OFFSET,
     ...offset,
   };
 
+  const mergedStyle = {
+    backgroundColor: "#0a1929",
+    padding: 24,
+    ...(style ?? {}),
+  };
+
   return (
-    <Styled.Container offset={mergedOffset} bgColor={bgColor}>
+    <Styled.Container offset={mergedOffset} style={mergedStyle}>
       {children}
     </Styled.Container>
   );

@@ -1,7 +1,7 @@
 import { InputHTMLAttributes, ReactNode } from "react";
 import { TFunction, TVariant } from "@phantomthief/react.utils.definations";
 
-export type TInputVariant = TVariant;
+export type TInputVariant = Exclude<TVariant, "contained" | "text">;
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: ReactNode;

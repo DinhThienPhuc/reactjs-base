@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo } from "react";
+import React, { forwardRef } from "react";
 
 import { HelperText } from "@phantomthief/react.components.helper-text";
 import { IInputProps } from "./_types";
@@ -7,7 +7,7 @@ import { Label } from "@phantomthief/react.components.label";
 import { PostAdorment } from "@phantomthief/react.components.post-adorment";
 import { PreAdorment } from "@phantomthief/react.components.pre-adorment";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 import useFocusWithCallback from "@phantomthief/react.hooks.focus-with-callback";
 
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
@@ -36,22 +36,15 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       onBlur,
     );
 
-    const isLabelCollapsed = useMemo(() => {
-      if (isFocused) {
-        return true;
-      }
-      if (!!preAdorment || !!value) {
-        return true;
-      }
-      return false;
-    }, [isFocused, preAdorment, value]);
+    const isLabelCollapsed =
+      isFocused || !!preAdorment || !!value ? true : false;
 
     return (
       <Styled.Container
         fullWidth={fullWidth}
         variant={variant}
         disabled={disabled}
-        className={cx(
+        className={clsx(
           "input",
           `input-fullwidth__${fullWidth}`,
           `input-disabled__${disabled}`,
@@ -80,7 +73,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
           onBlur={captureOnBlur}
           hasPreAdorment={!!preAdorment}
           hasPostAdorment={!!clear || !!postAdorment}
-          className={cx(
+          className={clsx(
             "input-box",
             `input-box__${variant}`,
             `input-box-disabled__${disabled}`,

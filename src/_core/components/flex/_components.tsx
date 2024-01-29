@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import { IFlexProps } from "./_types";
 import { Styled } from "./_style";
 import { capitalize } from "@phantomthief/react.utils.helpers";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const Flex = ({
   children,
@@ -25,7 +25,7 @@ export const Flex = ({
       flexDirection={flexDirection}
       alignItems={alignItems}
       justifyContent={justifyContent}
-      className={cx(
+      className={clsx(
         "flex",
         `flex-direction__${flexDirection}`,
         `flex-align-items__${alignItems}`,

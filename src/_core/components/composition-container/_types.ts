@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 export interface ICompositionContainerOffset {
   top?: number;
@@ -7,8 +7,8 @@ export interface ICompositionContainerOffset {
   left?: number;
 }
 
-export interface ICompositionContainer {
+export interface ICompositionContainerProps {
   children?: ReactNode;
   offset?: ICompositionContainerOffset;
-  bgColor?: string;
+  style?: CSSProperties;
 }

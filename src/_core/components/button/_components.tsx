@@ -4,10 +4,10 @@ import React, { useMemo } from "react";
 import { IButtonProps } from "./_types";
 import { LoadingRipple } from "@phantomthief/react.components.loading-ripple";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const Button = ({
-  variant = BUTTON_VARIANT["TEXT"],
+  variant = BUTTON_VARIANT.TEXT,
   size = BUTTON_SIZE["MEDIUM"],
   loading = false,
   loadingComponent,
@@ -33,7 +33,7 @@ export const Button = ({
       variant={variant}
       size={size}
       onClick={onClick}
-      className={cx(
+      className={clsx(
         "button",
         `button-size__${size}`,
         `button-variant__${variant}`,

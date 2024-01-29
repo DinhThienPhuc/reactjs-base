@@ -3,7 +3,7 @@ import { XCircle as IconXCircle } from "react-feather";
 import { POST_ADORMENT_VARIANT } from "./_constants";
 import React from "react";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const PostAdorment = ({
   className,
@@ -15,7 +15,11 @@ export const PostAdorment = ({
     return (
       <Styled.Container
         variant={variant}
-        className={cx("post-adorment", `post-adorment__${variant}`, className)}
+        className={clsx(
+          "post-adorment",
+          `post-adorment__${variant}`,
+          className,
+        )}
         onClick={clear}
         data-testid="post-adorment"
       >
@@ -35,7 +39,7 @@ export const PostAdorment = ({
   return (
     <Styled.Container
       variant={variant}
-      className={cx("post-adorment", `post-adorment__${variant}`, className)}
+      className={clsx("post-adorment", `post-adorment__${variant}`, className)}
       data-testid="post-adorment"
     >
       {content}

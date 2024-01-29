@@ -6,6 +6,8 @@ export const VARIANT: Record<string, TVariant> = {
   OUTLINED: "outlined",
   FILLED: "filled",
   STANDARD: "standard",
+  CONTAINED: "contained",
+  TEXT: "text",
 };
 
 export const SIZE: Record<string, TSize> = {
