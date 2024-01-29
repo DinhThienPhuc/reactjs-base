@@ -15,13 +15,13 @@ import React, {
 } from "react";
 
 import { HelperText } from "@phantomthief/react.components.helper-text";
-import { IPosition } from "@phantomthief/react.utils.definations";
+import { INodePosition } from "@phantomthief/react.utils.definations";
 import { Label } from "@phantomthief/react.components.label";
 import { Portal } from "@phantomthief/react.components.portal";
 import { PostAdorment } from "@phantomthief/react.components.post-adorment";
 import { SELECT_VARIANT } from "./_constants";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 import { getPositionOfNode } from "@phantomthief/react.utils.helpers";
 import useFocusWithCallback from "@phantomthief/react.hooks.focus-with-callback";
 import useNotClickOnElements from "@phantomthief/react.hooks.not-click-on-elements";
@@ -73,7 +73,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     const boxRef = useRef<HTMLDivElement | null>(null);
     const optionGroupRef = useRef<HTMLDivElement | null>(null);
     const [isShowed, setShow] = useState(false);
-    const [position, setPosition] = useState<IPosition | null>(null);
+    const [position, setPosition] = useState<INodePosition | null>(null);
 
     useNotClickOnElements([boxRef, optionGroupRef], () => {
       setShow(false);
@@ -132,7 +132,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
 
     return (
       <Styled.Container
-        className={cx("select", `select-fullwidth__${fullWidth}`, className)}
+        className={clsx("select", `select-fullwidth__${fullWidth}`, className)}
         fullWidth={fullWidth}
         data-testid="select"
       >
@@ -145,7 +145,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           tabIndex={tabIndex}
           onFocus={captureOnFocus}
           onBlur={captureOnBlur}
-          className={cx(
+          className={clsx(
             "select-box",
             `select-box-fullwidth__${fullWidth}`,
             `select-box-disabled__${disabled}`,
@@ -163,7 +163,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           />
           <Styled.FakeSelect required={required} />
           <Styled.InnerBox
-            className={cx("select-inner-box")}
+            className={clsx("select-inner-box")}
             data-testid="select-displayed-option"
           >
             {displayedOption?.label}
@@ -175,12 +175,12 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           <HelperText text={helperText} variant={variant} />
         </Styled.Box>
 
-        <Portal className={cx("portal-select", optionGroupClassName)}>
+        <Portal className={clsx("portal-select", optionGroupClassName)}>
           <Styled.OptionGroup
             ref={optionGroupRef}
             position={position}
             isShowed={isShowed}
-            className={cx(
+            className={clsx(
               "select-options",
               `select-options-position__${JSON.stringify(position)}`,
               `select-options-isShowed__${isShowed}`,

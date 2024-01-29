@@ -3,13 +3,13 @@ import { TButtonSize, TButtonVariant } from "./_types";
 import styled, { css } from "styled-components";
 
 const sizeModify = (props: { size: TButtonSize; variant: TButtonVariant }) => {
-  if (props?.size === BUTTON_SIZE["SMALL"]) {
+  if (props?.size === BUTTON_SIZE.SMALL) {
     return css`
       height: 24px;
       padding: 0 16px;
     `;
   }
-  if (props?.size === BUTTON_SIZE["MEDIUM"]) {
+  if (props?.size === BUTTON_SIZE.MEDIUM) {
     return css`
       height: 36px;
       padding: 0 20px;
@@ -25,7 +25,7 @@ const variantModify = (props: {
   size: TButtonSize;
   variant: TButtonVariant;
 }) => {
-  if (props?.variant === BUTTON_VARIANT["CONTAINED"]) {
+  if (props?.variant === BUTTON_VARIANT.CONTAINED) {
     return css`
       color: rgba(0, 0, 0, 0.87);
       background-color: rgb(144, 202, 249);
@@ -36,7 +36,7 @@ const variantModify = (props: {
       }
     `;
   }
-  if (props?.variant === BUTTON_VARIANT["OUTLINED"]) {
+  if (props?.variant === BUTTON_VARIANT.OUTLINED) {
     return css`
       color: rgb(144, 202, 249);
       background-color: transparent;

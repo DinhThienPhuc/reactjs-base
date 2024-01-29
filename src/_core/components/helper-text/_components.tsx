@@ -2,7 +2,7 @@ import { HELPER_TEXT_VARIANT } from "./_constants";
 import { IHelperTextProps } from "./_types";
 import React from "react";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const HelperText = ({
   className,
@@ -12,7 +12,7 @@ export const HelperText = ({
   return (
     <Styled.Container
       variant={variant}
-      className={cx("helper-text", `helper-text__${variant}`, className)}
+      className={clsx("helper-text", `helper-text__${variant}`, className)}
       data-testid="helper-text"
     >
       {text}

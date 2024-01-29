@@ -7,7 +7,7 @@ export const BUTTON_SIZE: Record<string, TButtonSize> = {
 };
 
 export const BUTTON_VARIANT: Record<string, TButtonVariant> = {
-  OUTLINED: "outlined",
+  OUTLINED: "contained",
   CONTAINED: "contained",
   TEXT: "text",
 };

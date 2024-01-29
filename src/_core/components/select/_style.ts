@@ -1,6 +1,6 @@
 import { ChevronDown as IconChevronLeft } from "react-feather";
 import { TSelectVariant } from "./_types";
-import { getVariantStyleModifier } from "@phantomthief/react.utils.helpers";
+import { getVariantStyle } from "@phantomthief/react.utils.helpers";
 import styled from "styled-components";
 
 export const Styled = {
@@ -50,7 +50,7 @@ export const Styled = {
     width: ${({ fullWidth }) => (fullWidth ? "100%" : "210px")};
     height: 56px;
     border-radius: 4px;
-    ${getVariantStyleModifier};
+    ${getVariantStyle};
   `,
   InnerBox: styled.div`
     position: absolute;

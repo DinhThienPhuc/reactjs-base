@@ -2,8 +2,8 @@ import React, { useMemo } from "react";
 
 import { ITextProps } from "./_types";
 import { Styled } from "./_style";
-import { capitalized } from "@phantomthief/react.utils.helpers";
-import cx from "classnames";
+import { capitalize } from "@phantomthief/react.utils.helpers";
+import clsx from "clsx";
 
 export const Text = ({
   variant = "span",
@@ -14,7 +14,7 @@ export const Text = ({
   children,
 }: ITextProps) => {
   const StyledTag = useMemo(() => {
-    const styledTagProperty = capitalized(variant) as keyof typeof Styled;
+    const styledTagProperty = capitalize(variant) as keyof typeof Styled;
     return Styled[styledTagProperty];
   }, [variant]);
 
@@ -23,7 +23,7 @@ export const Text = ({
       size={size}
       bold={bold}
       color={color}
-      className={cx(
+      className={clsx(
         "text",
         `text-variant__${variant}`,
         `text-size__${size}`,

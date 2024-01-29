@@ -1,4 +1,4 @@
-import { TTryCatchResult } from "@phantomthief/react.utils.definations";
+import { TAsyncBoundary } from "@phantomthief/react.utils.definations";
 
 /**
  * Beautiful version of try/catch block
@@ -7,7 +7,7 @@ import { TTryCatchResult } from "@phantomthief/react.utils.definations";
  */
 export const tryDo = async <T>(
   promise: Promise<T>,
-): Promise<TTryCatchResult<T>> => {
+): Promise<TAsyncBoundary<T>> => {
   try {
     const result = await promise;
     return {
@@ -43,11 +43,10 @@ export const doNothing = () => {
   return undefined;
 };
 
-// TODO: rename to capitalize
 /**
  * Capitalize word
  * @param word Word to be modify
  * @returns
  */
-export const capitalized = (word: string) =>
+export const capitalize = (word: string) =>
   word.charAt(0).toUpperCase() + word.slice(1);

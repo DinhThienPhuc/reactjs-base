@@ -2,13 +2,12 @@ import { TVariant } from "@phantomthief/react.utils.definations";
 import { VARIANT } from "@phantomthief/react.utils.constants";
 import { css } from "styled-components";
 
-// TODO: rename to getVariantStyle
 /**
  * Style for each variant of input/textare/element of form
  * @param props variant, disabled
  * @returns style sheets
  */
-export const getVariantStyleModifier = (props: {
+export const getVariantStyle = (props: {
   variant: TVariant;
   disabled: boolean;
 }) => {
@@ -78,13 +77,12 @@ export const getVariantStyleModifier = (props: {
   `;
 };
 
-// TODO: rename to getLabelStyle
 /**
  * Style for label of input/textare/element of form, depend on variant
  * @param props variant, isLabelCollapsed
  * @returns style sheets
  */
-export const getLabelStyleModifier = (props: {
+export const getLabelStyle = (props: {
   variant: TVariant;
   isLabelCollapsed: boolean;
 }) => {

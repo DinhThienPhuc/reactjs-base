@@ -1,5 +1,5 @@
 import { TLabelVariant } from "./_types";
-import { getLabelStyleModifier } from "@phantomthief/react.utils.helpers";
+import { getLabelStyle } from "@phantomthief/react.utils.helpers";
 import styled from "styled-components";
 
 export const Styled = {
@@ -15,6 +15,6 @@ export const Styled = {
     transform: translateY(-50%);
     color: ${({ disabled }) => (disabled ? "#ffffff80" : "#ffffff")};
     pointer-events: none;
-    ${getLabelStyleModifier};
+    ${getLabelStyle};
   `,
 };

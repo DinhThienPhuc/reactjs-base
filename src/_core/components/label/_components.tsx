@@ -2,7 +2,7 @@ import { ILabelProps } from "./_types";
 import { LABEL_VARIANT } from "./_constants";
 import React from "react";
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 
 export const Label = ({
   className,
@@ -22,7 +22,7 @@ export const Label = ({
       variant={variant}
       disabled={disabled}
       isLabelCollapsed={isLabelCollapsed}
-      className={cx(
+      className={clsx(
         "label",
         `label__${variant}`,
         `label-collapsed__${isLabelCollapsed}`,

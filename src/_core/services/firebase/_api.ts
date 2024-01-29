@@ -8,15 +8,15 @@ import {
   getDoc,
   getDocs,
   setDoc,
-} from "@firebase/firestore";
+} from "firebase/firestore";
 import { logger, tryDo } from "@phantomthief/react.utils.helpers";
 
-import { TTryCatchResult } from "@phantomthief/react.utils.definations";
+import { TAsyncBoundary } from "@phantomthief/react.utils.definations";
 
 export const getAllDocuments = async <T>(
   firestore: Firestore,
   c: string,
-): Promise<TTryCatchResult<T>> => {
+): Promise<TAsyncBoundary<T>> => {
   const collectionRef = collection(firestore, c);
   const { error, result } = await tryDo(getDocs(collectionRef));
 
@@ -39,7 +39,7 @@ export const getDocumentById = async <T>(
   firestore: Firestore,
   c: string,
   id: string,
-): Promise<TTryCatchResult<T>> => {
+): Promise<TAsyncBoundary<T>> => {
   const documentRef = doc(firestore, c, id);
   const { error, result } = await tryDo(getDoc(documentRef));
 
@@ -57,7 +57,7 @@ export const addDocument = async <T>(
   firestore: Firestore,
   c: string,
   data: DocumentData,
-): Promise<TTryCatchResult<T>> => {
+): Promise<TAsyncBoundary<T>> => {
   const collectionRef = collection(firestore, c);
   const { error, result } = await tryDo(addDoc(collectionRef, data));
 
@@ -75,7 +75,7 @@ export const setDocument = async (
   firestore: Firestore,
   c: string,
   data: DocumentData,
-): Promise<TTryCatchResult<void>> => {
+): Promise<TAsyncBoundary<void>> => {
   const documentRef = doc(firestore, c, data.id);
   const { error, result } = await tryDo(
     setDoc(documentRef, data, { merge: true }),
@@ -95,7 +95,7 @@ export const deleteDocument = async (
   firestore: Firestore,
   c: string,
   id: string,
-): Promise<TTryCatchResult<void>> => {
+): Promise<TAsyncBoundary<void>> => {
   const documentRef = doc(firestore, c, id);
   const { error, result } = await tryDo(deleteDoc(documentRef));
 

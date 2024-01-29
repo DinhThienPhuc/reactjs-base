@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 import { INPUT_VARIANT } from "./_constants";
 import { TInputVariant } from "./_types";
-import { getVariantStyleModifier } from "@phantomthief/react.utils.helpers";
+import { getVariantStyle } from "@phantomthief/react.utils.helpers";
 
 const inputPaddingModify = (props: {
   hasPreAdorment: boolean;
@@ -39,7 +39,7 @@ export const Styled = {
     width: ${({ fullWidth }) => (fullWidth ? "100%" : "210px")};
     height: 56px;
     border-radius: 4px;
-    ${getVariantStyleModifier};
+    ${getVariantStyle};
   `,
   Input: styled.input<{
     variant: TInputVariant;

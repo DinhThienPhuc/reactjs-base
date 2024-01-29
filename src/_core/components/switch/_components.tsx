@@ -6,7 +6,7 @@ import {
 import React, { forwardRef } from "react";
 
 import { Styled } from "./_style";
-import cx from "classnames";
+import clsx from "clsx";
 
 const LeftLabel = ({ leftLabel }: ISwitchLeftLabelProps) => {
   if (!leftLabel) {
@@ -45,12 +45,12 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
     ref,
   ) => {
     return (
-      <Styled.Container className={cx("switch", className)}>
+      <Styled.Container className={clsx("switch", className)}>
         <LeftLabel leftLabel={leftLabel} />
         <Styled.Pad
           isOn={!!value}
           disabled={disabled}
-          className={cx(
+          className={clsx(
             "switch-pad",
             `switch-pad-isOn__${!!value}`,
             `switch-pad-disabled__${disabled}`,
