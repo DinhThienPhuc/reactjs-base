@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { ICompositionContainerOffset } from "./_types";
+import styled from "styled-components";
 
 export const Styled = {
   Container: styled.div<{

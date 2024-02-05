@@ -1,7 +1,7 @@
-import React from "react";
-import { ICompositionContainerProps } from "./_types";
-import { Styled } from "./_style";
 import { COMPOSITION_CONTAINER_OFFSET } from "./_constants";
+import { ICompositionContainerProps } from "./_types";
+import React from "react";
+import { Styled } from "./_style";
 
 export const CompositionContainer = ({
   children,
