@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 export const Button = ({
   variant = BUTTON_VARIANT.TEXT,
-  size = BUTTON_SIZE.MEDIUm,
+  size = BUTTON_SIZE.MEDIUM,
   loading = false,
   loadingComponent,
   className,
