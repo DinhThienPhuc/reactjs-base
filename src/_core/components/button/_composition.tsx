@@ -1,6 +1,6 @@
-import React from "react";
 import { Button } from "./_components";
 import { CompositionContainer } from "@phantomthief/react.components.composition-container";
+import React from "react";
 import { logger } from "@phantomthief/react.utils.helpers";
 
 const onClick = () => logger.log("Click the button to perform action!");

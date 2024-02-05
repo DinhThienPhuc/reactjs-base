@@ -1,5 +1,6 @@
-import { TVariant } from "@phantomthief/react.utils.definations";
 import { HTMLAttributes, ReactNode } from "react";
+
+import { TVariant } from "@phantomthief/react.utils.definations";
 
 export type THelperTextVariant = TVariant;
 

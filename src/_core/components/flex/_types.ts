@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { IntrinsicElementsKeys } from "styled-components";
-import type { Property } from "csstype";
+import { Property } from "csstype";
 
 export interface IFlexProps extends HTMLAttributes<HTMLElement> {
   alignItems?: Property.AlignItems;

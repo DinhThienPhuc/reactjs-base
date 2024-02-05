@@ -1,8 +1,9 @@
 import * as ReactDOM from "react-dom/client";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
+import React, { StrictMode } from "react";
+
 import App from "./app";
-import { StrictMode } from "react";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,

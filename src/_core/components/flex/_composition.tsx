@@ -1,6 +1,6 @@
-import React from "react";
 import { CompositionContainer } from "@phantomthief/react.components.composition-container";
 import { Flex } from "./_components";
+import React from "react";
 
 const commonStyle = {
   width: 600,
