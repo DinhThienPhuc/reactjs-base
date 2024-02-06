@@ -5,6 +5,7 @@ import { IButtonProps } from "./_types";
 import { LoadingRipple } from "@phantomthief/react.components.loading-ripple";
 import { Styled } from "./_style";
 import clsx from "clsx";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Button = ({
   variant = BUTTON_VARIANT.TEXT,
@@ -26,6 +27,16 @@ export const Button = ({
       )
     );
   }, [children, loading, loadingComponent]);
+
+  useWhyDidYouUpdate("Button", {
+    variant,
+    size,
+    loading,
+    className,
+    loadingComponent,
+    onClick,
+    ...props,
+  });
 
   return (
     <Styled.Container

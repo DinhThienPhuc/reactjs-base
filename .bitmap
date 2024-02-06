@@ -114,6 +114,14 @@
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/text"
     },
+    "hooks/block": {
+        "name": "hooks/block",
+        "scope": "",
+        "version": "",
+        "defaultScope": "phantomthief.react",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/hooks/block"
+    },
     "hooks/effect-once": {
         "name": "hooks/effect-once",
         "scope": "phantomthief.react",
@@ -148,6 +156,14 @@
         "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/_core/hooks/not-click-on-elements"
+    },
+    "hooks/why-did-you-update": {
+        "name": "hooks/why-did-you-update",
+        "scope": "",
+        "version": "",
+        "defaultScope": "phantomthief.react",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/hooks/why-did-you-update"
     },
     "modules/authenticator": {
         "name": "modules/authenticator",

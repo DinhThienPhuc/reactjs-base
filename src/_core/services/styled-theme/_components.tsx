@@ -4,15 +4,16 @@ import React, { createContext, useContext, useMemo, useState } from "react";
 import { STYLED_THEMES } from "./_constants";
 import { ThemeProvider } from "styled-components";
 import defaultSchema from "./_schema.json";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 const ThemeContext = createContext<TStyledThemeContext>({
-  theme: STYLED_THEMES["DARK"],
+  theme: STYLED_THEMES.DARK,
   setTheme: () => "",
 });
 
 export const ThemesProvider = ({
   schema = defaultSchema,
-  defaultTheme = STYLED_THEMES["DARK"],
+  defaultTheme = STYLED_THEMES.DARK,
   children,
 }: IStyledThemeProps) => {
   const [theme, setTheme] = useState<TStyledTheme>(defaultTheme);
@@ -21,6 +22,8 @@ export const ThemesProvider = ({
     () => (theme ? schema?.data?.[theme] : schema?.data?.[defaultTheme]),
     [defaultTheme, schema?.data, theme],
   );
+
+  useWhyDidYouUpdate("ThemesProvider", { theme, schema, defaultTheme });
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

@@ -8,11 +8,6 @@ import { MutableRefObject } from "react";
 import { parseJSON } from "./_base";
 
 /**
- * Self log instead of using console for bypass linter
- */
-export const logger = { ...console };
-
-/**
  * Manually reload browser
  */
 export const reload: TFunction<void> = () => {

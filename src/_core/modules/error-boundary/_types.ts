@@ -1,6 +1,5 @@
 import { ComponentType, ReactNode } from "react";
-
-import { TFunction } from "@phantomthief/react.utils.definations";
+import { TAny, TFunction } from "@phantomthief/react.utils.definations";
 
 export interface IErrorBoundaryProps {
   onReset: TFunction<void>;
@@ -9,8 +8,6 @@ export interface IErrorBoundaryProps {
 }
 
 export interface IErrorBoundaryState {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  error: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  errorInfo: any;
+  error: TAny;
+  errorInfo: TAny;
 }

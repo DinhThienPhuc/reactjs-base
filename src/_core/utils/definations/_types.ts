@@ -1,9 +1,15 @@
 import type { ReactElement, ReactNode } from "react";
 
 /**
+ * Override any type for bypass linter
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type TAny = any;
+
+/**
  * Common Functional Component type
  */
-export type TComponent = () => ReactNode;
+export type TComponent = (...args: TAny) => ReactNode;
 
 /**
  * High Order Component type
@@ -49,12 +55,6 @@ export type TSize = "tiny" | "small" | "medium" | "large";
  * Browser storage
  */
 export type TBrowserStorage = "localStorage" | "sessionStorage";
-
-/**
- * Override any type for bypass linter
- */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type TAny = any;
 
 /**
  * Unit of element size type

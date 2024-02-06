@@ -29,9 +29,6 @@ export const Styled = {
   H6: styled.h6<ITextProps>`
     ${textModify};
   `,
-  Div: styled.div<ITextProps>`
-    ${textModify};
-  `,
   Span: styled.span<ITextProps>`
     ${textModify};
   `,

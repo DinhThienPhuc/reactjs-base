@@ -4,6 +4,7 @@ import { ITextProps } from "./_types";
 import { Styled } from "./_style";
 import { capitalize } from "@phantomthief/react.utils.helpers";
 import clsx from "clsx";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Text = ({
   variant = "span",
@@ -17,6 +18,14 @@ export const Text = ({
     const styledTagProperty = capitalize(variant) as keyof typeof Styled;
     return Styled[styledTagProperty];
   }, [variant]);
+
+  useWhyDidYouUpdate("Text", {
+    variant,
+    size,
+    bold,
+    color,
+    className,
+  });
 
   return (
     <StyledTag

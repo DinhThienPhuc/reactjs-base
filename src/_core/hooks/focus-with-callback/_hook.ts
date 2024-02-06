@@ -3,8 +3,9 @@ import { FocusEvent, FocusEventHandler, useCallback, useState } from "react";
 const useFocusWithCallback = (
   onFocus: FocusEventHandler<HTMLElement> | undefined,
   onBlur: FocusEventHandler<HTMLElement> | undefined,
+  focused = false,
 ) => {
-  const [isFocused, setFocus] = useState<boolean>(false);
+  const [isFocused, setFocus] = useState<boolean>(focused);
 
   const captureOnFocus = useCallback(
     (e: FocusEvent<HTMLElement, Element>) => {

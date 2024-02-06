@@ -1,6 +1,11 @@
 import { TAsyncBoundary } from "@phantomthief/react.utils.definations";
 
 /**
+ * Self log instead of using console for bypass linter
+ */
+export const logger = { ...console };
+
+/**
  * Beautiful version of try/catch block
  * @param promise Async task
  * @returns Object contains result and error of async task call
@@ -40,7 +45,7 @@ export const parseJSON = <T>(jsonString: string | null): T | null => {
  * @returns Safety value
  */
 export const doNothing = () => {
-  return undefined;
+  // logger.log('Do nothing')
 };
 
 /**

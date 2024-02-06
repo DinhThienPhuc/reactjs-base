@@ -11,7 +11,7 @@ export const getVariantStyle = (props: {
   variant: TVariant;
   disabled: boolean;
 }) => {
-  if (props?.variant === VARIANT["OUTLINED"]) {
+  if (props?.variant === VARIANT.OUTLINED) {
     if (!props?.disabled) {
       return css`
         border: 1px solid #ffffff3b;
@@ -32,7 +32,7 @@ export const getVariantStyle = (props: {
     `;
   }
 
-  if (props?.variant === VARIANT["FILLED"]) {
+  if (props?.variant === VARIANT.FILLED) {
     if (!props?.disabled) {
       return css`
         border-bottom: 1px solid #ffffffb3;
@@ -86,7 +86,7 @@ export const getLabelStyle = (props: {
   variant: TVariant;
   isLabelCollapsed: boolean;
 }) => {
-  if (props?.variant === VARIANT["STANDARD"]) {
+  if (props?.variant === VARIANT.STANDARD) {
     if (props?.isLabelCollapsed) {
       return css`
         font-size: 12px;
