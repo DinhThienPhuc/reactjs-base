@@ -1,8 +1,10 @@
 import { Navigate, useLocation } from "react-router-dom";
-import React, { useMemo } from "react";
 
 import { BASE_ROUTES } from "./_base-routes";
 import { IAuthenticatorProps } from "./_types";
+import React from "react";
+import useBlock from "@phantomthief/react.hooks.block";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Authenticator = ({
   children,
@@ -13,12 +15,18 @@ export const Authenticator = ({
 }: IAuthenticatorProps) => {
   const location = useLocation();
 
-  const routes = useMemo(() => {
-    return {
-      ...BASE_ROUTES,
-      ...extendRoutes,
-    };
-  }, [extendRoutes]);
+  const routes = useBlock(() => ({
+    ...BASE_ROUTES,
+    ...extendRoutes,
+  }));
+
+  useWhyDidYouUpdate("Authenticator", {
+    location,
+    isAuthenticated,
+    extendRoutes,
+    routeToGoWhenUnauthenticated,
+    routeToGoWhenAuthenticated,
+  });
 
   if (isAuthenticated && location.pathname === routes.LOGIN) {
     if (routeToGoWhenAuthenticated) {

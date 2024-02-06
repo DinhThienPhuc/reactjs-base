@@ -28,7 +28,7 @@ export const CustomBoldText = () => (
 
 export const CustomVariantText = () => (
   <CompositionContainer>
-    <Text variant="span" bold={700}>
+    <Text variant="p" bold={700}>
       Custom bold text
     </Text>
   </CompositionContainer>

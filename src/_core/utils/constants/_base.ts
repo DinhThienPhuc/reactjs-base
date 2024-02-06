@@ -16,7 +16,3 @@ export const SIZE: Record<string, TSize> = {
   MEDIUM: "medium",
   LARGE: "large",
 };
-
-export const TEST = {};
-
-export const TEST3 = 123;

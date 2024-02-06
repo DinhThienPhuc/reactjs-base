@@ -1,4 +1,5 @@
 import { RefObject, useEffect, useRef } from "react";
+
 import useIsomorphicLayoutEffect from "@phantomthief/react.hooks.isomorphic-layout-effect";
 
 // MediaQueryList Event based useEventListener interface
