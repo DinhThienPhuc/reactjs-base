@@ -1,6 +1,6 @@
+import { ITextProps, TStyledTag } from "./_types";
 import React, { useMemo } from "react";
 
-import { ITextProps } from "./_types";
 import { Styled } from "./_style";
 import { capitalize } from "@phantomthief/react.utils.helpers";
 import clsx from "clsx";
@@ -11,33 +11,39 @@ export const Text = ({
   size = 14,
   bold = 400,
   color = "inherit",
+  font = "inherit",
   className,
   children,
 }: ITextProps) => {
-  const StyledTag = useMemo(() => {
+  const StyledTag = useMemo<TStyledTag>(() => {
     const styledTagProperty = capitalize(variant) as keyof typeof Styled;
     return Styled[styledTagProperty];
   }, [variant]);
+
+  // TODO: Make any custom props to transition props
 
   useWhyDidYouUpdate("Text", {
     variant,
     size,
     bold,
     color,
+    font,
     className,
   });
 
   return (
     <StyledTag
-      size={size}
-      bold={bold}
-      color={color}
+      $size={size}
+      $color={color}
+      $bold={bold}
+      $font={font}
       className={clsx(
         "text",
-        `text-variant__${variant}`,
-        `text-size__${size}`,
-        `text-bold__${bold}`,
-        `text-color__${color}`,
+        `text__variant--${variant}`,
+        `text__size--${size}`,
+        `text__bold--${bold}`,
+        `text__color--${color}`,
+        `text__font--${font}`,
         className,
       )}
       data-testid="text"
