@@ -3,31 +3,38 @@ import { XCircle as IconXCircle } from "react-feather";
 import { POST_ADORMENT_VARIANT } from "./_constants";
 import React from "react";
 import { Styled } from "./_style";
+import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
 
 export const PostAdorment = ({
   className,
   content = null,
   variant = POST_ADORMENT_VARIANT.STANDARD,
+  clearIcon = null,
   clear,
 }: IPostAdormentProps) => {
   if (clear) {
     return (
       <Styled.Container
-        variant={variant}
+        variant="button"
+        size={16}
+        font={VERNADA_FONT}
+        adormentVariant={variant}
         className={clsx(
           "post-adorment",
-          `post-adorment__${variant}`,
+          `post-adorment__variant--${variant}`,
           className,
         )}
         onClick={clear}
         data-testid="post-adorment"
       >
-        <IconXCircle
-          width={20}
-          height={20}
-          data-testid="post-adorment-icon__close"
-        />
+        {clearIcon ?? (
+          <IconXCircle
+            width={20}
+            height={20}
+            data-testid="post-adorment-icon-close"
+          />
+        )}
       </Styled.Container>
     );
   }
@@ -38,8 +45,15 @@ export const PostAdorment = ({
 
   return (
     <Styled.Container
-      variant={variant}
-      className={clsx("post-adorment", `post-adorment__${variant}`, className)}
+      variant="span"
+      size={16}
+      font={VERNADA_FONT}
+      adormentVariant={variant}
+      className={clsx(
+        "post-adorment",
+        `post-adorment__variant--${variant}`,
+        className,
+      )}
       data-testid="post-adorment"
     >
       {content}

@@ -1,15 +1,16 @@
 import { PRE_ADORMENT_VARIANT } from "./_constants";
 import { TPreAdormentVariant } from "./_types";
+import { Text } from "@phantomthief/react.components.text";
 import styled from "styled-components";
 
 export const Styled = {
-  Container: styled.div<{
-    variant: TPreAdormentVariant;
+  Container: styled(Text)<{
+    adormentVariant: TPreAdormentVariant;
   }>`
     position: absolute;
     top: calc(50% + 6px);
     transform: translateY(-50%);
-    left: ${({ variant }) =>
-      variant === PRE_ADORMENT_VARIANT.STANDARD ? "0px" : "14px"};
+    left: ${({ adormentVariant }) =>
+      adormentVariant === PRE_ADORMENT_VARIANT.STANDARD ? "0px" : "14px"};
   `,
 };
