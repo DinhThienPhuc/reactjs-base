@@ -1,9 +1,10 @@
+import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
-import { TSize, TVariant } from "@phantomthief/react.utils.definations";
 
-export type TButtonSize = Exclude<TSize, "tiny">;
+export type TButtonSize = (typeof BUTTON_SIZE)[keyof typeof BUTTON_SIZE];
 
-export type TButtonVariant = Exclude<TVariant, "filled" | "standard">;
+export type TButtonVariant =
+  (typeof BUTTON_VARIANT)[keyof typeof BUTTON_VARIANT];
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: TButtonSize;
