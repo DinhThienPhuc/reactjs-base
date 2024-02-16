@@ -1,14 +1,9 @@
-import { InputHTMLAttributes, ReactNode } from "react";
-
-export interface ISwitchLeftLabelProps {
-  leftLabel?: ReactNode;
-}
-
-export interface ISwitchRightLabelProps {
-  rightLabel?: ReactNode;
-}
+import { ChangeEvent, InputHTMLAttributes, ReactNode } from "react";
 
 export interface ISwitchProps
-  extends InputHTMLAttributes<HTMLInputElement>,
-    ISwitchLeftLabelProps,
-    ISwitchRightLabelProps {}
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> {
+  value?: boolean;
+  leftLabel?: ReactNode;
+  rightLabel?: ReactNode;
+  onChange?: (value: boolean, e: ChangeEvent<HTMLInputElement>) => void;
+}

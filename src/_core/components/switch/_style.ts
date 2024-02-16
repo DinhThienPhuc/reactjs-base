@@ -1,18 +1,33 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { Text } from "@phantomthief/react.components.text";
+
+const disabledLabelModify = ({ $disabled }: { $disabled: boolean }) => {
+  if ($disabled) {
+    return css`
+      opacity: 0.5;
+      cursor: not-allowed;
+    `;
+  }
+
+  return css`
+    opacity: 1;
+  `;
+};
 
 export const Styled = {
   Container: styled.div`
     display: flex;
     align-items: center;
   `,
-  Pad: styled.div<{ isOn: boolean; disabled: boolean }>`
+  Pad: styled.div<{ isOn: boolean; $disabled: boolean }>`
     position: relative;
     transition: all 200ms ease-in-out;
     width: 34px;
     height: 14px;
     border-radius: 7px;
-    background-color: ${({ isOn, disabled }) => {
-      if (disabled) {
+    background-color: ${({ isOn, $disabled }) => {
+      if ($disabled) {
         if (isOn) {
           return "rgb(144, 202, 249, 0.2)";
         }
@@ -32,8 +47,8 @@ export const Styled = {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background-color: ${({ isOn, disabled }) => {
-        if (disabled) {
+      background-color: ${({ isOn, $disabled }) => {
+        if ($disabled) {
           if (isOn) {
             return "rgb(64, 90, 112)";
           }
@@ -54,12 +69,20 @@ export const Styled = {
       width: 34px;
       top: -3px;
       opacity: 0;
+      cursor: ${({ $disabled }) => {
+        if ($disabled) {
+          return "not-allowed";
+        }
+        return "pointer";
+      }};
     }
   `,
-  LeftLabel: styled.div`
+  LeftLabel: styled(Text)<{ $disabled: boolean }>`
     margin-right: 8px;
+    ${disabledLabelModify};
   `,
-  RightLabel: styled.div`
+  RightLabel: styled(Text)<{ $disabled: boolean }>`
     margin-left: 8px;
+    ${disabledLabelModify};
   `,
 };
