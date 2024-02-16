@@ -40,7 +40,7 @@
     "components/input": {
         "name": "components/input",
         "scope": "phantomthief.react",
-        "version": "0.0.17",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/input"
     },
@@ -82,21 +82,21 @@
     "components/post-adorment": {
         "name": "components/post-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.11",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/post-adorment"
     },
     "components/pre-adorment": {
         "name": "components/pre-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.11",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/pre-adorment"
     },
     "components/select": {
         "name": "components/select",
         "scope": "phantomthief.react",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/select"
     },
