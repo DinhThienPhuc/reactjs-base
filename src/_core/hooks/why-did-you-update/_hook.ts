@@ -26,9 +26,8 @@ export default function useWhyDidYouUpdate(
       });
 
       if (Object.keys(changedProps).length) {
-        logger.log(
-          `❄️ [why-did-you-update] ❄️\n${componentName}: ${changedProps}\n`,
-        );
+        logger.log("%c❄️ [why-did-you-update] ❄️", "color:#94f2f4");
+        logger.log(componentName, changedProps);
       }
     }
 

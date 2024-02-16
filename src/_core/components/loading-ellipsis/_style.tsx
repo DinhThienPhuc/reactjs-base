@@ -9,14 +9,15 @@ const motion1 = keyframes`
   }
 `;
 
-const motion2 = keyframes`
-   0% {
+const motion2Modify = ($size: number) => keyframes`
+  0% {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(19px, 0);
+    transform: ${`translate(${(5 * $size) / 3}px, 0)`};
   }
 `;
+
 const motion3 = keyframes`
   0% {
     transform: scale(1);
@@ -34,39 +35,40 @@ export const Styled = {
     width: ${({ fullScreen }) => (fullScreen ? "100vw" : "100%")};
     height: ${({ fullScreen }) => (fullScreen ? "100vh" : "100%")};
   `,
-  Spinner: styled.div<{ size: number; sizeUnit: string; color: string }>`
-    display: inline-block;
+  Spinner: styled.div<{
+    $size: number;
+    $color: string;
+  }>`
+    display: flex;
     position: relative;
-    width: ${({ size, sizeUnit }) => `${size}${sizeUnit}`};
-    height: ${({ size, sizeUnit }) => `${size}${sizeUnit}`};
+    width: ${({ $size }) => `${(17 * $size) / 3}px`};
+    height: ${({ $size }) => `${$size}px`};
 
     div {
       position: absolute;
-      top: 27px;
-      width: 11px;
-      height: 11px;
+      width: ${({ $size }) => `${$size}px`};
+      height: ${({ $size }) => `${$size}px`};
       border-radius: 50%;
-      background: ${({ color }) => color};
-      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      background: ${({ $color }) => $color};
     }
 
     div:nth-child(1) {
-      left: 6px;
+      left: ${({ $size }) => `${(2 * $size) / 3}px`};
       animation: ${motion1} 0.6s infinite;
     }
 
     div:nth-child(2) {
-      left: 6px;
-      animation: ${motion2} 0.6s infinite;
+      left: ${({ $size }) => `${(2 * $size) / 3}px`};
+      animation: ${({ $size }) => motion2Modify($size)} 0.6s infinite;
     }
 
     div:nth-child(3) {
-      left: 26px;
-      animation: ${motion2} 0.6s infinite;
+      left: ${({ $size }) => `${(7 * $size) / 3}px`};
+      animation: ${({ $size }) => motion2Modify($size)} 0.6s infinite;
     }
 
     div:nth-child(4) {
-      left: 45px;
+      left: ${({ $size }) => `${4 * $size}px`};
       animation: ${motion3} 0.6s infinite;
     }
   `,

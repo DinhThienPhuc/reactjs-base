@@ -4,6 +4,7 @@ import { IFlexProps } from "./_types";
 import { Styled } from "./_style";
 import { capitalize } from "@phantomthief/react.utils.helpers";
 import clsx from "clsx";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Flex = ({
   children,
@@ -19,6 +20,16 @@ export const Flex = ({
     return Styled[styledTagProperty];
   }, [variant]);
 
+  useWhyDidYouUpdate("Flex", {
+    children,
+    className,
+    flexDirection,
+    alignItems,
+    justifyContent,
+    variant,
+    ...props,
+  });
+
   return (
     <StyledTag
       {...props}
@@ -27,10 +38,10 @@ export const Flex = ({
       justifyContent={justifyContent}
       className={clsx(
         "flex",
-        `flex-direction__${flexDirection}`,
-        `flex-align-items__${alignItems}`,
-        `flex-justify-content__${justifyContent}`,
-        `flex-variant__${variant}`,
+        `flex__direction--${flexDirection}`,
+        `flex__alignItems--${alignItems}`,
+        `flex__justifyContent--${justifyContent}`,
+        `flex__variant--${variant}`,
         className,
       )}
       data-testid="flex"

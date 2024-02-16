@@ -12,63 +12,63 @@
     "components/button": {
         "name": "components/button",
         "scope": "phantomthief.react",
-        "version": "0.0.11",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/button"
     },
     "components/composition-container": {
         "name": "components/composition-container",
         "scope": "phantomthief.react",
-        "version": "0.0.5",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/composition-container"
     },
     "components/flex": {
         "name": "components/flex",
         "scope": "phantomthief.react",
-        "version": "0.0.10",
+        "version": "0.0.15",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/flex"
     },
     "components/helper-text": {
         "name": "components/helper-text",
         "scope": "phantomthief.react",
-        "version": "0.0.9",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/helper-text"
     },
     "components/input": {
         "name": "components/input",
         "scope": "phantomthief.react",
-        "version": "0.0.10",
+        "version": "0.0.15",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/input"
     },
     "components/label": {
         "name": "components/label",
         "scope": "phantomthief.react",
-        "version": "0.0.8",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/label"
     },
     "components/loading-ellipsis": {
         "name": "components/loading-ellipsis",
         "scope": "phantomthief.react",
-        "version": "0.0.7",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/loading-ellipsis"
     },
     "components/loading-ripple": {
         "name": "components/loading-ripple",
         "scope": "phantomthief.react",
-        "version": "0.0.7",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/loading-ripple"
     },
     "components/navbar": {
         "name": "components/navbar",
         "scope": "phantomthief.react",
-        "version": "0.0.3",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/navbar"
     },
@@ -82,49 +82,49 @@
     "components/post-adorment": {
         "name": "components/post-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.7",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/post-adorment"
     },
     "components/pre-adorment": {
         "name": "components/pre-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.7",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/pre-adorment"
     },
     "components/select": {
         "name": "components/select",
         "scope": "phantomthief.react",
-        "version": "0.0.8",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/select"
     },
     "components/switch": {
         "name": "components/switch",
         "scope": "phantomthief.react",
-        "version": "0.0.2",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/switch"
     },
     "components/text": {
         "name": "components/text",
         "scope": "phantomthief.react",
-        "version": "0.0.13",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/text"
     },
     "hooks/block": {
         "name": "hooks/block",
         "scope": "phantomthief.react",
-        "version": "0.0.1",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/_core/hooks/block"
     },
     "hooks/effect-once": {
         "name": "hooks/effect-once",
         "scope": "phantomthief.react",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/_core/hooks/effect-once"
     },
@@ -159,63 +159,63 @@
     "hooks/why-did-you-update": {
         "name": "hooks/why-did-you-update",
         "scope": "phantomthief.react",
-        "version": "0.0.1",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/_core/hooks/why-did-you-update"
     },
     "modules/authenticator": {
         "name": "modules/authenticator",
         "scope": "phantomthief.react",
-        "version": "0.0.3",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/_core/modules/authenticator"
     },
     "modules/error-boundary": {
         "name": "modules/error-boundary",
         "scope": "phantomthief.react",
-        "version": "0.0.8",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "src/_core/modules/error-boundary"
     },
     "services/firebase": {
         "name": "services/firebase",
         "scope": "phantomthief.react",
-        "version": "0.0.10",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "src/_core/services/firebase"
     },
     "services/i18n": {
         "name": "services/i18n",
         "scope": "phantomthief.react",
-        "version": "0.0.7",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/_core/services/i18n"
     },
     "services/styled-theme": {
         "name": "services/styled-theme",
         "scope": "phantomthief.react",
-        "version": "0.0.9",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "src/_core/services/styled-theme"
     },
     "utils/constants": {
         "name": "utils/constants",
         "scope": "phantomthief.react",
-        "version": "0.0.10",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "src/_core/utils/constants"
     },
     "utils/definations": {
         "name": "utils/definations",
         "scope": "phantomthief.react",
-        "version": "0.1.6",
+        "version": "0.1.9",
         "mainFile": "index.ts",
         "rootDir": "src/_core/utils/definations"
     },
     "utils/helpers": {
         "name": "utils/helpers",
         "scope": "phantomthief.react",
-        "version": "0.0.10",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "src/_core/utils/helpers"
     },

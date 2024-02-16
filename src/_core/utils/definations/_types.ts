@@ -1,3 +1,9 @@
+import {
+  BROWSER_STORAGE,
+  SIZE,
+  SIZE_UNIT,
+  VARIANT,
+} from "@phantomthief/react.utils.constants";
 import type { ReactElement, ReactNode } from "react";
 
 /**
@@ -39,24 +45,20 @@ export type TAsyncBoundary<T> = {
 /**
  * Common variants
  */
-export type TVariant =
-  | "filled"
-  | "outlined"
-  | "standard"
-  | "contained"
-  | "text";
+export type TVariant = (typeof VARIANT)[keyof typeof VARIANT];
 
 /**
  * Common size
  */
-export type TSize = "tiny" | "small" | "medium" | "large";
+export type TSize = (typeof SIZE)[keyof typeof SIZE];
 
 /**
  * Browser storage
  */
-export type TBrowserStorage = "localStorage" | "sessionStorage";
+export type TBrowserStorage =
+  (typeof BROWSER_STORAGE)[keyof typeof BROWSER_STORAGE];
 
 /**
  * Unit of element size type
  */
-export type TSizeUnit = "px" | "rem" | "em";
+export type TSizeUnit = (typeof SIZE_UNIT)[keyof typeof SIZE_UNIT];

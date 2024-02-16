@@ -1,18 +1,29 @@
-import { TSize, TVariant } from "@phantomthief/react.utils.definations";
-
 export const NOT_AVAILABLE = "N/A";
 
-export const VARIANT: Record<string, TVariant> = {
+export const VARIANT = {
   OUTLINED: "outlined",
   FILLED: "filled",
   STANDARD: "standard",
   CONTAINED: "contained",
   TEXT: "text",
-};
+} as const;
 
-export const SIZE: Record<string, TSize> = {
+export const SIZE = {
   TINY: "tiny",
   SMALL: "small",
   MEDIUM: "medium",
   LARGE: "large",
-};
+} as const;
+
+export const BROWSER_STORAGE = {
+  LOCAL: "localStorage",
+  SESSION: "sessionStorage",
+} as const;
+
+export const SIZE_UNIT = {
+  PX: "px",
+  REM: "rem",
+  EM: "em",
+} as const;
+
+export const VERNADA_FONT = "Verdana,sans-serif";
