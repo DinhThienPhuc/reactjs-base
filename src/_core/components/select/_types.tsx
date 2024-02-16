@@ -1,6 +1,6 @@
 import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
-import { TVariant } from "@phantomthief/react.utils.definations";
+import { SELECT_VARIANT } from "./_constants";
 
 export interface ISelectOption {
   value: string;
@@ -13,7 +13,8 @@ export interface ISelectOptionsProps {
   handleSelectOption: (value: string) => MouseEventHandler<HTMLDivElement>;
 }
 
-export type TSelectVariant = TVariant;
+export type TSelectVariant =
+  (typeof SELECT_VARIANT)[keyof typeof SELECT_VARIANT];
 
 export interface ISelectProps extends HTMLAttributes<HTMLElement> {
   className?: string;

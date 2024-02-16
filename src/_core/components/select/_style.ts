@@ -1,14 +1,47 @@
+import styled, { css } from "styled-components";
+
 import { ChevronDown as IconChevronLeft } from "react-feather";
+import { SELECT_VARIANT } from "./_constants";
 import { TSelectVariant } from "./_types";
+import { Text } from "@phantomthief/react.components.text";
 import { getVariantStyle } from "@phantomthief/react.utils.helpers";
-import styled from "styled-components";
+
+const selectLabelModify = (props: {
+  selectVariant: TSelectVariant;
+  isLabelCollapsed: boolean;
+}) => {
+  if (props?.selectVariant === SELECT_VARIANT.STANDARD) {
+    if (props?.isLabelCollapsed) {
+      return css`
+        font-size: 12px;
+        top: 12px;
+        left: 0px;
+        color: #90caf9;
+      `;
+    }
+    return css`
+      left: 0px;
+    `;
+  }
+  if (props?.isLabelCollapsed) {
+    return css`
+      font-size: 12px;
+      top: 12px;
+      left: 14px;
+      color: #90caf9;
+    `;
+  }
+  return css`
+    left: 14px;
+  `;
+};
 
 export const Styled = {
   Container: styled.div<{ fullWidth: boolean }>`
     position: relative;
     width: ${({ fullWidth }) => (fullWidth ? "100%" : "fit-content")};
   `,
-  Option: styled.div<{ selected: boolean }>`
+  Option: styled(Text)<{ selected: boolean }>`
     transition: all 200ms ease-in-out;
     cursor: pointer;
     display: flex;
@@ -52,6 +85,17 @@ export const Styled = {
     border-radius: 4px;
     ${getVariantStyle};
   `,
+  Label: styled(Text)<{
+    selectVariant: TSelectVariant;
+    isLabelCollapsed: boolean;
+  }>`
+    transition: all 200ms ease-in-out;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    ${selectLabelModify};
+  `,
   InnerBox: styled.div`
     position: absolute;
     transition: all 200ms ease-in-out;
@@ -73,6 +117,23 @@ export const Styled = {
     &:disabled {
       color: #ffffff80;
     }
+  `,
+  PostAdorment: styled.div<{
+    variant: TSelectVariant;
+  }>`
+    position: absolute;
+    top: calc(50% + 6px);
+    transform: translateY(-50%);
+    right: ${({ variant }) =>
+      variant === SELECT_VARIANT.STANDARD ? "0px" : "14px"};
+  `,
+  HelperText: styled(Text)<{
+    selectVariant: TSelectVariant;
+  }>`
+    position: absolute;
+    bottom: -20px;
+    left: ${({ selectVariant }) =>
+      selectVariant === SELECT_VARIANT.STANDARD ? "0px" : "14px"};
   `,
   FakeSelect: styled.select`
     width: 100%;

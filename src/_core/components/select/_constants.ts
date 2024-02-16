@@ -1,3 +1,5 @@
-import { VARIANT } from "@phantomthief/react.utils.constants";
-
-export const SELECT_VARIANT = { ...VARIANT };
+export const SELECT_VARIANT = {
+  OUTLINED: "outlined",
+  FILLED: "filled",
+  STANDARD: "standard",
+} as const;

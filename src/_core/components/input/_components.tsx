@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { ChangeEventHandler, forwardRef, useState } from "react";
 
 import { HelperText } from "@phantomthief/react.components.helper-text";
 import { IInputProps } from "./_types";
@@ -9,6 +9,9 @@ import { PreAdorment } from "@phantomthief/react.components.pre-adorment";
 import { Styled } from "./_style";
 import clsx from "clsx";
 import useFocusWithCallback from "@phantomthief/react.hooks.focus-with-callback";
+
+// TODO: Error state
+// TODO: add render check hook
 
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
   (
@@ -26,18 +29,25 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       variant = INPUT_VARIANT.STANDARD,
       onFocus,
       onBlur,
-      clear,
+      onChange,
       ...props
     },
     ref,
   ) => {
+    const [currentValue, setCurrentValue] = useState(value);
+
     const { captureOnFocus, captureOnBlur, isFocused } = useFocusWithCallback(
       onFocus,
       onBlur,
     );
 
     const isLabelCollapsed =
-      isFocused || !!preAdorment || !!value ? true : false;
+      isFocused || !!preAdorment || !!currentValue ? true : false;
+
+    const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+      setCurrentValue(e.target.value);
+      onChange?.(e);
+    };
 
     return (
       <Styled.Container
@@ -46,9 +56,9 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
         disabled={disabled}
         className={clsx(
           "input",
-          `input-fullwidth__${fullWidth}`,
-          `input-disabled__${disabled}`,
-          `input__${variant}`,
+          `input__fullwidth--${fullWidth}`,
+          `input__disabled--${disabled}`,
+          `input--${variant}`,
           className,
         )}
         data-testid="input"
@@ -65,23 +75,24 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
         <Styled.Input
           {...props}
           variant={variant}
-          value={value}
+          value={currentValue}
           ref={ref}
           disabled={disabled}
           required={required}
+          onChange={handleChange}
           onFocus={captureOnFocus}
           onBlur={captureOnBlur}
           hasPreAdorment={!!preAdorment}
-          hasPostAdorment={!!clear || !!postAdorment}
+          hasPostAdorment={!!postAdorment}
           className={clsx(
             "input-box",
-            `input-box__${variant}`,
-            `input-box-disabled__${disabled}`,
-            `input-box-required__${required}`,
+            `input-box--${variant}`,
+            `input-box__disabled--${disabled}`,
+            `input-box__required--${required}`,
           )}
           data-testid="input-box"
         />
-        <PostAdorment variant={variant} content={postAdorment} clear={clear} />
+        <PostAdorment variant={variant} content={postAdorment} />
         <HelperText text={helperText} variant={variant} />
       </Styled.Container>
     );

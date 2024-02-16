@@ -1,12 +1,6 @@
-import {
-  ISelectEventTarget,
-  ISelectOption,
-  ISelectOptionsProps,
-  ISelectProps,
-} from "./_types";
+import { ISelectEventTarget, ISelectOption, ISelectProps } from "./_types";
 import React, {
   MouseEvent,
-  MouseEventHandler,
   forwardRef,
   useCallback,
   useMemo,
@@ -14,40 +8,15 @@ import React, {
   useState,
 } from "react";
 
-import { HelperText } from "@phantomthief/react.components.helper-text";
 import { INodePosition } from "@phantomthief/react.utils.definations";
-import { Label } from "@phantomthief/react.components.label";
 import { Portal } from "@phantomthief/react.components.portal";
-import { PostAdorment } from "@phantomthief/react.components.post-adorment";
 import { SELECT_VARIANT } from "./_constants";
 import { Styled } from "./_style";
+import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
 import { getPositionOfNode } from "@phantomthief/react.utils.helpers";
 import useFocusWithCallback from "@phantomthief/react.hooks.focus-with-callback";
 import useNotClickOnElements from "@phantomthief/react.hooks.not-click-on-elements";
-
-const SelectOptions = ({
-  options,
-  displayedOption,
-  handleSelectOption,
-}: ISelectOptionsProps) => {
-  return (
-    <>
-      {options.map((option: ISelectOption) => {
-        return (
-          <Styled.Option
-            key={option.value}
-            selected={option.value === displayedOption?.value}
-            className="select-option"
-            onClick={handleSelectOption(option.value)}
-          >
-            {option.label}
-          </Styled.Option>
-        );
-      })}
-    </>
-  );
-};
 
 export const Select = forwardRef<HTMLInputElement, ISelectProps>(
   (
@@ -62,7 +31,6 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       fullWidth = false,
       hiddenLabel = false,
       required = false,
-      tabIndex = -1,
       optionGroupClassName,
       onChange,
       onFocus,
@@ -75,47 +43,43 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     const [isShowed, setShow] = useState(false);
     const [position, setPosition] = useState<INodePosition | null>(null);
 
+    // GOOD
     useNotClickOnElements([boxRef, optionGroupRef], () => {
       setShow(false);
     });
+    // GOOD
 
-    const toggleListOptions = useCallback<MouseEventHandler<HTMLDivElement>>(
-      (e) => {
-        e.preventDefault();
-        if (disabled) {
-          return;
-        }
-        if (!isShowed) {
-          const boxPosition = getPositionOfNode(boxRef);
-          setPosition({
-            ...boxPosition,
-            top: boxPosition.top + boxPosition.height,
-          });
-        }
-        setShow((prev) => !prev);
-      },
-      [disabled, isShowed],
-    );
-
+    // GOOD
     const { isFocused, captureOnFocus, captureOnBlur } = useFocusWithCallback(
       onFocus,
       onBlur,
     );
+    // GOOD
 
-    const isLabelCollapsed = useMemo(() => {
+    // GOOD
+    const toggleListOptions = (e: MouseEvent) => {
+      e.preventDefault();
       if (disabled) {
-        return true;
+        return;
       }
-      if (isFocused || !!value) {
-        return true;
+      if (!isShowed) {
+        const boxPosition = getPositionOfNode(boxRef);
+        setPosition({
+          ...boxPosition,
+          top: boxPosition.top + boxPosition.height,
+        });
       }
-      return false;
-    }, [disabled, isFocused, value]);
+      setShow((prev) => !prev);
+    };
+    // GOOD
 
-    const displayedOption = useMemo(
-      () => options.find((o) => o.value === value),
-      [options, value],
-    );
+    // GOOD
+    const isLabelCollapsed = disabled || isFocused || !!value ? true : false;
+    // GOOD
+
+    // GOOD
+    const displayedOption = options.find((o) => o.value === value);
+    // GOOD
 
     const handleSelectOption = useCallback(
       (value: string) => (e: MouseEvent<HTMLDivElement>) => {
@@ -130,9 +94,98 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       [onChange],
     );
 
+    // GOOD
+    const customLabel = useMemo(() => {
+      if (hiddenLabel || !label) {
+        return null;
+      }
+      return (
+        <Styled.Label
+          variant="span"
+          size={16}
+          font={VERNADA_FONT}
+          color={disabled ? "#ffffff80" : "#ffffff"}
+          selectVariant={variant}
+          isLabelCollapsed={isLabelCollapsed}
+          className={clsx(
+            "select-label",
+            `select-label--${variant}`,
+            `select-label__collapsed--${isLabelCollapsed}`,
+            `select-label__disabled--${disabled}`,
+            `select-label__required--${required}`,
+          )}
+          data-testid="select-label"
+        >
+          {label} {required ? "*" : ""}
+        </Styled.Label>
+      );
+    }, [disabled, hiddenLabel, isLabelCollapsed, label, required, variant]);
+    // GOOD
+
+    // GOOD
+    const customPostAdorment = useMemo(
+      () => (
+        <Styled.PostAdorment
+          variant={variant}
+          className={clsx(
+            "select-postAdorment",
+            `select-postAdorment--${variant}`,
+            className,
+          )}
+          data-testid="select-postAdorment"
+        >
+          <Styled.Arrow
+            $isShowed={isShowed}
+            color={disabled ? "#ffffff80" : "#ffffff"}
+          />
+        </Styled.PostAdorment>
+      ),
+      [className, disabled, isShowed, variant],
+    );
+    // GOOD
+
+    const customHelperText = useMemo(() => {
+      if (!helperText) {
+        return null;
+      }
+      return (
+        <Styled.HelperText
+          variant="span"
+          size={12}
+          font={VERNADA_FONT}
+          color="#ffffffb3"
+          selectVariant={variant}
+          className={clsx(
+            "select-helperText",
+            `select-helperText--${variant}`,
+            className,
+          )}
+          data-testid="select-helperText"
+        >
+          {helperText}
+        </Styled.HelperText>
+      );
+    }, [className, helperText, variant]);
+
+    const selectOptionsMenu = useMemo(() => {
+      return options.map((option: ISelectOption) => {
+        return (
+          <Styled.Option
+            key={option.value}
+            variant="button"
+            selected={option.value === displayedOption?.value}
+            className="select-option"
+            onClick={handleSelectOption(option.value)}
+          >
+            {option.label}
+          </Styled.Option>
+        );
+      });
+    }, [displayedOption?.value, handleSelectOption, options]);
+
     return (
       <Styled.Container
-        className={clsx("select", `select-fullwidth__${fullWidth}`, className)}
+        className={clsx("select", `select__fullwidth--${fullWidth}`, className)}
         fullWidth={fullWidth}
         data-testid="select"
       >
@@ -142,25 +195,17 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           variant={variant}
           disabled={disabled}
           fullWidth={fullWidth}
-          tabIndex={tabIndex}
           onFocus={captureOnFocus}
           onBlur={captureOnBlur}
           className={clsx(
             "select-box",
-            `select-box-fullwidth__${fullWidth}`,
-            `select-box-disabled__${disabled}`,
-            `select-box__${variant}`,
+            `select-box__fullwidth--${fullWidth}`,
+            `select-box__disabled--${disabled}`,
+            `select-box--${variant}`,
           )}
           data-testid="select-box"
         >
-          <Label
-            content={label}
-            required={required}
-            disabled={disabled}
-            hiddenLabel={hiddenLabel}
-            variant={variant}
-            isLabelCollapsed={isLabelCollapsed}
-          />
+          {customLabel}
           <Styled.FakeSelect required={required} />
           <Styled.InnerBox
             className={clsx("select-inner-box")}
@@ -168,11 +213,8 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           >
             {displayedOption?.label}
           </Styled.InnerBox>
-          <PostAdorment
-            variant={variant}
-            content={<Styled.Arrow $isShowed={isShowed} />}
-          />
-          <HelperText text={helperText} variant={variant} />
+          {customPostAdorment}
+          {customHelperText}
         </Styled.Box>
 
         <Portal className={clsx("portal-select", optionGroupClassName)}>
@@ -182,15 +224,11 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             isShowed={isShowed}
             className={clsx(
               "select-options",
-              `select-options-position__${JSON.stringify(position)}`,
-              `select-options-isShowed__${isShowed}`,
+              `select-options__position--${JSON.stringify(position)}`,
+              `select-options__isShowed--${isShowed}`,
             )}
           >
-            <SelectOptions
-              options={options}
-              displayedOption={displayedOption}
-              handleSelectOption={handleSelectOption}
-            />
+            {selectOptionsMenu}
           </Styled.OptionGroup>
         </Portal>
       </Styled.Container>
