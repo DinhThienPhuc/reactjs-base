@@ -2,6 +2,7 @@ import { INavbarProps } from "./_types";
 import React from "react";
 import { Styled } from "./_style";
 import clsx from "clsx";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Navbar = ({
   title,
@@ -9,6 +10,13 @@ export const Navbar = ({
   rightButton,
   className,
 }: INavbarProps) => {
+  useWhyDidYouUpdate("Navbar", {
+    title,
+    leftButton,
+    rightButton,
+    className,
+  });
+
   return (
     <Styled.Container
       className={clsx("navbar", className)}

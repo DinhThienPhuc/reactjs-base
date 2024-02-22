@@ -1,7 +1,8 @@
+import { PRE_ADORMENT_VARIANT } from "./_constants";
 import { ReactNode } from "react";
-import { TVariant } from "@phantomthief/react.utils.definations";
 
-export type TPreAdormentVariant = TVariant;
+export type TPreAdormentVariant =
+  (typeof PRE_ADORMENT_VARIANT)[keyof typeof PRE_ADORMENT_VARIANT];
 
 export interface IPreAdormentProps {
   className?: string;

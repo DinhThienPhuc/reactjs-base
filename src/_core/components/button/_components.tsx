@@ -21,19 +21,16 @@ export const Button = ({
     if (!loading) {
       return children;
     }
-    return (
-      loadingComponent ?? (
-        <LoadingRipple size={36} color="#ffffff4d" fullScreen={false} />
-      )
-    );
+    return loadingComponent ?? <LoadingRipple size={16} fullScreen={false} />;
   }, [children, loading, loadingComponent]);
 
   useWhyDidYouUpdate("Button", {
     variant,
     size,
     loading,
-    className,
     loadingComponent,
+    className,
+    children,
     onClick,
     ...props,
   });
@@ -46,9 +43,9 @@ export const Button = ({
       onClick={onClick}
       className={clsx(
         "button",
-        `button-size__${size}`,
-        `button-variant__${variant}`,
-        `button-loading__${loading}`,
+        `button__size--${size}`,
+        `button__variant--${variant}`,
+        `button__loading--${loading}`,
         className,
       )}
       data-testid="button"

@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const sectionModify = () => {
+  return css`
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  `;
+};
 
 export const Styled = {
   Container: styled.nav`
@@ -9,27 +19,16 @@ export const Styled = {
     align-items: center;
     height: 56px;
     background-color: #121212;
-    width: 100%;
+    left: 0;
+    right: 0;
   `,
   Title: styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 33%;
+    ${sectionModify};
   `,
   LeftButton: styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 33%;
+    ${sectionModify};
   `,
   RightButton: styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 33%;
+    ${sectionModify};
   `,
 };

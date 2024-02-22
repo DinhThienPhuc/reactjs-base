@@ -1,8 +1,10 @@
+import { TAny } from "./_types";
+
 /**
  * Extendable interface, can be inherited
  */
 export interface IExtendable {
-  [key: string]: unknown;
+  [key: string]: TAny;
 }
 
 /**
@@ -13,4 +15,14 @@ export interface INodePosition {
   top: number;
   width: number;
   height: number;
+}
+
+/**
+ * Common Loading Component props
+ */
+export interface ILoadingProps {
+  size?: number;
+  color?: string;
+  className?: string;
+  fullScreen?: boolean;
 }

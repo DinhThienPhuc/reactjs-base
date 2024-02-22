@@ -1,3 +1,5 @@
-import { VARIANT } from "@phantomthief/react.utils.constants";
-
-export const PRE_ADORMENT_VARIANT = { ...VARIANT };
+export const PRE_ADORMENT_VARIANT = {
+  OUTLINED: "outlined",
+  FILLED: "filled",
+  STANDARD: "standard",
+} as const;

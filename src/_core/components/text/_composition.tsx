@@ -4,7 +4,7 @@ import { Text } from "./_components";
 
 export const DefaultText = () => (
   <CompositionContainer>
-    <Text>Default text</Text>
+    <Text color="#ffffff">Default text</Text>
   </CompositionContainer>
 );
 
@@ -16,20 +16,32 @@ export const CustomColorText = () => (
 
 export const CustomSizeText = () => (
   <CompositionContainer>
-    <Text size={24}>Custom color text</Text>
+    <Text color="#ffffff" size={24}>
+      Custom size text
+    </Text>
   </CompositionContainer>
 );
 
 export const CustomBoldText = () => (
   <CompositionContainer>
-    <Text bold={700}>Custom bold text</Text>
+    <Text color="#ffffff" bold={700}>
+      Custom bold text
+    </Text>
   </CompositionContainer>
 );
 
 export const CustomVariantText = () => (
   <CompositionContainer>
-    <Text variant="p" bold={700}>
-      Custom bold text
+    <Text color="#ffffff" variant="p" bold={700}>
+      Custom variant text
+    </Text>
+  </CompositionContainer>
+);
+
+export const CustomFontText = () => (
+  <CompositionContainer>
+    <Text color="#ffffff" font="Arial, Helvetica, sans-serif">
+      Custom font text
     </Text>
   </CompositionContainer>
 );

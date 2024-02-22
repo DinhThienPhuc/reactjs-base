@@ -1,5 +1,6 @@
 import { Button } from "./_components";
 import { CompositionContainer } from "@phantomthief/react.components.composition-container";
+import { LoadingEllipsis } from "@phantomthief/react.components.loading-ellipsis";
 import React from "react";
 import { logger } from "@phantomthief/react.utils.helpers";
 
@@ -64,7 +65,7 @@ export const CustomLoadingButton = () => (
     <Button
       variant="outlined"
       loading
-      loadingComponent={<span>...</span>}
+      loadingComponent={<LoadingEllipsis size={6} fullScreen={false} />}
       onClick={onClick}
     >
       Click button!!
