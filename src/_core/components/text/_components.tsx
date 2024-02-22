@@ -20,8 +20,6 @@ export const Text = ({
     return Styled[styledTagProperty];
   }, [variant]);
 
-  // TODO: Make any custom props to transition props
-
   useWhyDidYouUpdate("Text", {
     variant,
     size,
