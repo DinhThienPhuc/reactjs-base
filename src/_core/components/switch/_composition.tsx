@@ -50,6 +50,25 @@ export const StateControllerSwitch = () => {
   );
 };
 
+export const ParentControllerSwitch = () => {
+  const [isSwitchOn, setSwitchOn] = useState(false);
+
+  const handleChange = useCallback(() => {
+    setSwitchOn((prev) => !prev);
+  }, []);
+
+  return (
+    <CompositionContainer>
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <Switch {...commonProps} value={isSwitchOn} />
+        <button style={{ marginTop: 24 }} onClick={handleChange}>
+          Change switch value
+        </button>
+      </div>
+    </CompositionContainer>
+  );
+};
+
 export const RHFControllerSwitch = () => {
   const { handleSubmit, control } = useForm<Record<string, boolean>>({
     defaultValues: {
@@ -63,7 +82,10 @@ export const RHFControllerSwitch = () => {
 
   return (
     <CompositionContainer>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        style={{ display: "inline-flex", flexDirection: "column" }}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <Controller
           control={control}
           name="switch"

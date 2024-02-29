@@ -1,9 +1,8 @@
 import { HTMLAttributes, ReactNode } from "react";
+import { IExtendable, TAny } from "@phantomthief/react.utils.definations";
 import { IntrinsicElementsKeys, StyledComponent } from "styled-components";
 
-import { TAny } from "@phantomthief/react.utils.definations";
-
-export interface ITextProps extends HTMLAttributes<HTMLElement> {
+export interface ITextProps extends HTMLAttributes<HTMLElement>, IExtendable {
   variant?: IntrinsicElementsKeys;
   children?: ReactNode;
   size?: number | string;
@@ -13,7 +12,7 @@ export interface ITextProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-export interface IStyledTextProps {
+export interface ITextStyledProps extends IExtendable {
   $size?: number | string;
   $color?: string;
   $bold?: number;
@@ -23,6 +22,6 @@ export interface IStyledTextProps {
 export type TStyledTag = StyledComponent<
   IntrinsicElementsKeys,
   TAny,
-  IStyledTextProps,
+  ITextStyledProps,
   never
 >;

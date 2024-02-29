@@ -14,6 +14,7 @@ export const Text = ({
   font = "inherit",
   className,
   children,
+  ...restProps
 }: ITextProps) => {
   const StyledTag = useMemo<TStyledTag>(() => {
     const styledTagProperty = capitalize(variant) as keyof typeof Styled;
@@ -31,6 +32,7 @@ export const Text = ({
 
   return (
     <StyledTag
+      {...restProps}
       $size={size}
       $color={color}
       $bold={bold}

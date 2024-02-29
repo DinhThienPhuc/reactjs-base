@@ -17,7 +17,7 @@ const disabledLabelModify = ({ $disabled }: { $disabled: boolean }) => {
 
 export const Styled = {
   Container: styled.div`
-    display: flex;
+    display: inline-flex;
     align-items: center;
   `,
   Pad: styled.div<{ isOn: boolean; $disabled: boolean }>`

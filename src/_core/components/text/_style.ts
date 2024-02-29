@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
-import { IStyledTextProps } from "./_types";
+import { ITextStyledProps } from "./_types";
 
-const textModify = ({ $size, $color, $bold, $font }: IStyledTextProps) => {
+const textModify = ({ $size, $color, $bold, $font }: ITextStyledProps) => {
   return css`
     font-size: ${typeof $size === "number" ? `${$size}px` : $size};
     font-weight: ${$bold};
@@ -12,42 +12,42 @@ const textModify = ({ $size, $color, $bold, $font }: IStyledTextProps) => {
 };
 
 export const Styled = {
-  H1: styled.h1<IStyledTextProps>`
+  H1: styled.h1<ITextStyledProps>`
     ${textModify};
   `,
-  H2: styled.h2<IStyledTextProps>`
+  H2: styled.h2<ITextStyledProps>`
     ${textModify};
   `,
-  H3: styled.h3<IStyledTextProps>`
+  H3: styled.h3<ITextStyledProps>`
     ${textModify};
   `,
-  H4: styled.h4<IStyledTextProps>`
+  H4: styled.h4<ITextStyledProps>`
     ${textModify};
   `,
-  H5: styled.h5<IStyledTextProps>`
+  H5: styled.h5<ITextStyledProps>`
     ${textModify};
   `,
-  H6: styled.h6<IStyledTextProps>`
+  H6: styled.h6<ITextStyledProps>`
     ${textModify};
   `,
-  Span: styled.span<IStyledTextProps>`
+  Span: styled.span<ITextStyledProps>`
     ${textModify};
   `,
-  Caption: styled.caption<IStyledTextProps>`
+  Caption: styled.caption<ITextStyledProps>`
     ${textModify};
   `,
-  Button: styled.button<IStyledTextProps>`
+  Button: styled.button<ITextStyledProps>`
     ${textModify};
     cursor: pointer;
     border: none;
     outline: 0;
     padding: 0;
   `,
-  A: styled.a<IStyledTextProps>`
+  A: styled.a<ITextStyledProps>`
     ${textModify};
     text-decoration-line: none;
   `,
-  P: styled.p<IStyledTextProps>`
+  P: styled.p<ITextStyledProps>`
     ${textModify};
     margin-block: 0;
   `,

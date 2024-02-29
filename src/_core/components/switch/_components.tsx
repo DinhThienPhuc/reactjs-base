@@ -21,6 +21,11 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
   ) => {
     const [currentValue, setCurrentValue] = useState(value);
 
+    // TODO: need to check more because it is not run properly
+    if (value !== currentValue) {
+      setCurrentValue(value);
+    }
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
       setCurrentValue(e.target.checked);
       onChange?.(e.target.checked, e);
