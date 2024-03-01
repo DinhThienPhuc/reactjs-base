@@ -38,12 +38,15 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
 
       return (
         <Styled.LeftLabel
-          variant="span"
+          $disabled={disabled}
           size={16}
           color={disabled ? "#ffffff80" : "#ffffff"}
           font={VERNADA_FONT}
-          $disabled={disabled}
-          className={clsx("switch-label", "switch-label__left")}
+          className={clsx(
+            "switch-label",
+            "switch-label__left",
+            `switch-label__left__disabled--${disabled}`,
+          )}
         >
           {leftLabel}
         </Styled.LeftLabel>
@@ -57,12 +60,15 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
 
       return (
         <Styled.RightLabel
-          variant="span"
+          $disabled={disabled}
           size={16}
           color={disabled ? "#ffffff80" : "#ffffff"}
           font={VERNADA_FONT}
-          $disabled={disabled}
-          className={clsx("switch-label", "switch-label__right")}
+          className={clsx(
+            "switch-label",
+            "switch-label__right",
+            `switch-label__right__disabled--${disabled}`,
+          )}
         >
           {rightLabel}
         </Styled.RightLabel>
@@ -83,7 +89,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
       <Styled.Container className={clsx("switch", className)}>
         {customLeftLabel}
         <Styled.Pad
-          isOn={currentValue}
+          $isOn={currentValue}
           $disabled={disabled}
           className={clsx(
             "switch-pad",

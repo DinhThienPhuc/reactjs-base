@@ -20,20 +20,20 @@ export const Styled = {
     display: inline-flex;
     align-items: center;
   `,
-  Pad: styled.div<{ isOn: boolean; $disabled: boolean }>`
+  Pad: styled.div<{ $isOn: boolean; $disabled: boolean }>`
     position: relative;
     transition: all 200ms ease-in-out;
     width: 34px;
     height: 14px;
     border-radius: 7px;
-    background-color: ${({ isOn, $disabled }) => {
+    background-color: ${({ $isOn, $disabled }) => {
       if ($disabled) {
-        if (isOn) {
+        if ($isOn) {
           return "rgb(144, 202, 249, 0.2)";
         }
         return "rgb(255, 255, 255, 0.2)";
       }
-      if (isOn) {
+      if ($isOn) {
         return "rgb(144, 202, 249, 0.5)";
       }
       return "rgb(255, 255, 255, 0.5)";
@@ -47,20 +47,20 @@ export const Styled = {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background-color: ${({ isOn, $disabled }) => {
+      background-color: ${({ $isOn, $disabled }) => {
         if ($disabled) {
-          if (isOn) {
+          if ($isOn) {
             return "rgb(64, 90, 112)";
           }
           return "rgb(117, 117, 117)";
         }
-        if (isOn) {
+        if ($isOn) {
           return "rgb(144, 202, 249)";
         }
         return "rgb(224, 224, 224)";
       }};
-      transform: ${({ isOn }) =>
-        isOn ? "translate(17px, -3px)" : "translate(-3px, -3px)"};
+      transform: ${({ $isOn }) =>
+        $isOn ? "translate(17px, -3px)" : "translate(-3px, -3px)"};
     }
 
     & > input {
