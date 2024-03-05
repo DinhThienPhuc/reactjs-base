@@ -20,9 +20,13 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
     ref,
   ) => {
     const [currentValue, setCurrentValue] = useState(value);
+    const [previousValue, setPreviousValue] = useState(value);
 
-    // TODO: need to check more because it is not run properly
-    if (value !== currentValue) {
+    /**
+     * Update state when `value` changes
+     */
+    if (value !== previousValue) {
+      setPreviousValue(value);
       setCurrentValue(value);
     }
 

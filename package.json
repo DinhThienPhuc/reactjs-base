@@ -13,7 +13,7 @@
     "test:coverage": "react-scripts test --coverage --watchAll=false --no-cache",
     "prepare": "husky install",
     "format": "npx pretty-quick --staged && npx lint-staged",
-    "bit-start": "bit start",
+    "bit-start": "bit start -p 6868",
     "postinstall": "bit import && bit compile && bit link"
   },
   "dependencies": {
