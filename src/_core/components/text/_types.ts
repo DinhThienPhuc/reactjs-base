@@ -12,7 +12,7 @@ export interface ITextProps extends HTMLAttributes<HTMLElement>, IExtendable {
   className?: string;
 }
 
-export interface ITextStyledProps extends IExtendable {
+export interface IStyledTextProps extends IExtendable {
   $size?: number | string;
   $color?: string;
   $bold?: number;
@@ -22,6 +22,6 @@ export interface ITextStyledProps extends IExtendable {
 export type TStyledTag = StyledComponent<
   IntrinsicElementsKeys,
   TAny,
-  ITextStyledProps,
+  IStyledTextProps,
   never
 >;

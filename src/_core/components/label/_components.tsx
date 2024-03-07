@@ -3,6 +3,7 @@ import { LABEL_VARIANT } from "./_constants";
 import React from "react";
 import { Styled } from "./_style";
 import clsx from "clsx";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Label = ({
   className,
@@ -12,22 +13,36 @@ export const Label = ({
   hiddenLabel = false,
   variant = LABEL_VARIANT.STANDARD,
   isLabelCollapsed,
+  ...restProps
 }: ILabelProps) => {
+  useWhyDidYouUpdate("Label", {
+    className,
+    content,
+    required,
+    disabled,
+    hiddenLabel,
+    variant,
+    isLabelCollapsed,
+    ...restProps,
+  });
+
   if (hiddenLabel) {
     return null;
   }
 
   return (
     <Styled.Container
-      variant={variant}
-      disabled={disabled}
-      isLabelCollapsed={isLabelCollapsed}
+      {...restProps}
+      $variant={variant}
+      $isLabelCollapsed={isLabelCollapsed}
+      color={disabled ? "#ffffff80" : "#ffffff"}
+      size={16}
       className={clsx(
         "label",
-        `label__${variant}`,
-        `label-collapsed__${isLabelCollapsed}`,
-        `label-disabled__${disabled}`,
-        `label-required__${required}`,
+        `label--${variant}`,
+        `label__collapsed--${isLabelCollapsed}`,
+        `label__disabled--${disabled}`,
+        `label__required--${required}`,
         className,
       )}
       data-testid="label"

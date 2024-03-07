@@ -1,10 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 
 import { IPortalProps } from "./_types";
 import { createPortal } from "react-dom";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
-export const Portal = ({ children, className = "" }: IPortalProps) => {
+export const Portal = ({
+  children,
+  className = "",
+  ...restProps
+}: IPortalProps) => {
   const elementContainer = React.useRef<Element | null>(null);
+
+  const setAttributesToElement = useCallback(
+    (element: Element | null) => {
+      element?.setAttribute("data-testid", "portal");
+      element?.setAttribute("class", `portal ${className}`);
+
+      Object.entries(restProps).forEach(([key, value]) => {
+        element?.setAttribute(key, value);
+      });
+    },
+    [className, restProps],
+  );
 
   useEffect(() => {
     let portalRoot = document.getElementById("portal-root") as HTMLDivElement;
@@ -16,8 +33,7 @@ export const Portal = ({ children, className = "" }: IPortalProps) => {
 
     if (!elementContainer.current) {
       elementContainer.current = document.createElement("div");
-      elementContainer.current.setAttribute("data-testid", "portal");
-      elementContainer.current.setAttribute("class", `portal ${className}`);
+      setAttributesToElement(elementContainer.current);
     }
 
     document.body.appendChild(portalRoot);
@@ -27,7 +43,13 @@ export const Portal = ({ children, className = "" }: IPortalProps) => {
       elementContainer.current &&
         portalRoot.removeChild(elementContainer.current);
     };
-  }, [className]);
+  }, [setAttributesToElement]);
+
+  useWhyDidYouUpdate("Portal", {
+    children,
+    className,
+    ...restProps,
+  });
 
   return elementContainer.current
     ? createPortal(children, elementContainer.current)

@@ -1,6 +1,6 @@
+import { ILoadingEllipsisProps } from "./_types";
 import React from "react";
 import { Styled } from "./_style";
-import { TLoadingEllipsisProps } from "./_types";
 import clsx from "clsx";
 import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
@@ -9,16 +9,22 @@ export const LoadingEllipsis = ({
   color = "#00bfff",
   fullScreen = false,
   className,
-}: TLoadingEllipsisProps) => {
+  ...restProps
+}: ILoadingEllipsisProps) => {
   useWhyDidYouUpdate("LoadingEllipsis", {
     size,
     color,
     fullScreen,
     className,
+    ...restProps,
   });
 
   return (
-    <Styled.Container fullScreen={fullScreen} className={className}>
+    <Styled.Container
+      {...restProps}
+      $fullScreen={fullScreen}
+      className={className}
+    >
       <Styled.Spinner
         $size={size}
         $color={color}

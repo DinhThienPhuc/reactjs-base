@@ -1,9 +1,10 @@
+import { IExtendable } from "@phantomthief/react.utils.definations";
+import { LABEL_VARIANT } from "./_constants";
 import { ReactNode } from "react";
-import { TVariant } from "@phantomthief/react.utils.definations";
 
-export type TLabelVariant = TVariant;
+export type TLabelVariant = (typeof LABEL_VARIANT)[keyof typeof LABEL_VARIANT];
 
-export interface ILabelProps {
+export interface ILabelProps extends IExtendable {
   className?: string;
   content?: ReactNode;
   required?: boolean;
@@ -11,4 +12,9 @@ export interface ILabelProps {
   hiddenLabel?: boolean;
   variant?: TLabelVariant;
   isLabelCollapsed: boolean;
+}
+
+export interface IStyledLabelProps {
+  $variant: TLabelVariant;
+  $isLabelCollapsed: boolean;
 }

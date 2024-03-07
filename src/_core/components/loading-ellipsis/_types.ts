@@ -1,3 +1,6 @@
-import { ILoadingProps } from "@phantomthief/react.utils.definations";
+import {
+  IExtendable,
+  ILoadingProps,
+} from "@phantomthief/react.utils.definations";
 
-export type TLoadingEllipsisProps = ILoadingProps;
+export interface ILoadingEllipsisProps extends ILoadingProps, IExtendable {}

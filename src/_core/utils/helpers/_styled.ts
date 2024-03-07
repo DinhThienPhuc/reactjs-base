@@ -82,12 +82,12 @@ export const getVariantStyle = (props: {
  * @param props variant, isLabelCollapsed
  * @returns style sheets
  */
-export const getLabelStyle = (props: {
-  variant: TVariant;
-  isLabelCollapsed: boolean;
+export const getLabelStyle = <TVariant>(props: {
+  $variant: TVariant;
+  $isLabelCollapsed: boolean;
 }) => {
-  if (props?.variant === VARIANT.STANDARD) {
-    if (props?.isLabelCollapsed) {
+  if (props?.$variant === VARIANT.STANDARD) {
+    if (props?.$isLabelCollapsed) {
       return css`
         font-size: 12px;
         top: 12px;
@@ -99,7 +99,7 @@ export const getLabelStyle = (props: {
       left: 0px;
     `;
   }
-  if (props?.isLabelCollapsed) {
+  if (props?.$isLabelCollapsed) {
     return css`
       font-size: 12px;
       top: 12px;

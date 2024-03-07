@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { Text } from "@phantomthief/react.components.text";
+
 const sectionModify = () => {
   return css`
     display: flex;
@@ -14,15 +16,15 @@ export const Styled = {
   Container: styled.nav`
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 56px;
     background-color: #121212;
-    left: 0;
-    right: 0;
   `,
-  Title: styled.div`
+  Title: styled(Text)`
     ${sectionModify};
   `,
   LeftButton: styled.div`

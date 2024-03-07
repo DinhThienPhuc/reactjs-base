@@ -5,12 +5,12 @@ import styled from "styled-components";
 
 export const Styled = {
   Container: styled(Text)<{
-    adormentVariant: TPreAdormentVariant;
+    $adormentVariant: TPreAdormentVariant;
   }>`
     position: absolute;
     top: calc(50% + 6px);
     transform: translateY(-50%);
-    left: ${({ adormentVariant }) =>
-      adormentVariant === PRE_ADORMENT_VARIANT.STANDARD ? "0px" : "14px"};
+    left: ${({ $adormentVariant }) =>
+      $adormentVariant === PRE_ADORMENT_VARIANT.STANDARD ? "0px" : "14px"};
   `,
 };

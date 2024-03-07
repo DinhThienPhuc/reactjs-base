@@ -32,12 +32,12 @@ const ripple = (size: number) => keyframes`
 `;
 
 export const Styled = {
-  Container: styled.div<{ fullScreen: boolean }>`
+  Container: styled.div<{ $fullScreen: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: ${({ fullScreen }) => (fullScreen ? "100vw" : "100%")};
-    height: ${({ fullScreen }) => (fullScreen ? "100vh" : "100%")};
+    width: ${({ $fullScreen }) => ($fullScreen ? "100vw" : "100%")};
+    height: ${({ $fullScreen }) => ($fullScreen ? "100vh" : "100%")};
   `,
   Ripple: styled.div<{ $size: number; $color: string }>`
     display: inline-block;

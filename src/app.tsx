@@ -18,4 +18,6 @@ const App = () => {
   );
 };
 
+// TODO: Need to check BEM all of components
+
 export default App;

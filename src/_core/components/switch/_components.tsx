@@ -14,8 +14,9 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
       rightLabel = null,
       disabled = false,
       value = false,
+      inputProps,
       onChange,
-      ...props
+      ...restProps
     },
     ref,
   ) => {
@@ -85,12 +86,13 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
       disabled,
       value,
       currentValue,
+      inputProps,
       onChange,
-      ...props,
+      ...restProps,
     });
 
     return (
-      <Styled.Container className={clsx("switch", className)}>
+      <Styled.Container {...restProps} className={clsx("switch", className)}>
         {customLeftLabel}
         <Styled.Pad
           $isOn={currentValue}
@@ -102,7 +104,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
           )}
         >
           <input
-            {...props}
+            {...inputProps}
             ref={ref}
             checked={currentValue}
             onChange={handleChange}

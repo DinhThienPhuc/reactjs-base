@@ -5,6 +5,7 @@ import React from "react";
 import { Styled } from "./_style";
 import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
+import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const PostAdorment = ({
   className,
@@ -12,22 +13,32 @@ export const PostAdorment = ({
   variant = POST_ADORMENT_VARIANT.STANDARD,
   clearIcon = null,
   clear,
+  ...restProps
 }: IPostAdormentProps) => {
+  const componentProps = {
+    ...restProps,
+    $adormentVariant: variant,
+    size: 16,
+    font: VERNADA_FONT,
+    className: clsx(
+      "post-adorment",
+      `post-adorment__variant--${variant}`,
+      className,
+    ),
+    "data-testid": "post-adorment",
+  };
+
+  useWhyDidYouUpdate("PostAdorment", {
+    className,
+    content,
+    variant,
+    clearIcon,
+    ...restProps,
+  });
+
   if (clear) {
     return (
-      <Styled.Container
-        variant="button"
-        size={16}
-        font={VERNADA_FONT}
-        adormentVariant={variant}
-        className={clsx(
-          "post-adorment",
-          `post-adorment__variant--${variant}`,
-          className,
-        )}
-        onClick={clear}
-        data-testid="post-adorment"
-      >
+      <Styled.Container {...componentProps} variant="button" onClick={clear}>
         {clearIcon ?? (
           <IconXCircle
             width={20}
@@ -43,20 +54,5 @@ export const PostAdorment = ({
     return null;
   }
 
-  return (
-    <Styled.Container
-      variant="span"
-      size={16}
-      font={VERNADA_FONT}
-      adormentVariant={variant}
-      className={clsx(
-        "post-adorment",
-        `post-adorment__variant--${variant}`,
-        className,
-      )}
-      data-testid="post-adorment"
-    >
-      {content}
-    </Styled.Container>
-  );
+  return <Styled.Container {...componentProps}>{content}</Styled.Container>;
 };
