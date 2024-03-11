@@ -33,14 +33,14 @@
     "components/helper-text": {
         "name": "components/helper-text",
         "scope": "phantomthief.react",
-        "version": "0.0.17",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/helper-text"
     },
     "components/input": {
         "name": "components/input",
         "scope": "phantomthief.react",
-        "version": "0.0.22",
+        "version": "0.0.23",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/input"
     },
@@ -96,7 +96,7 @@
     "components/select": {
         "name": "components/select",
         "scope": "phantomthief.react",
-        "version": "0.0.17",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/select"
     },
