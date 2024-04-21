@@ -1,10 +1,10 @@
 import { PRE_ADORMENT_VARIANT } from "./_constants";
 import { TPreAdormentVariant } from "./_types";
-import { Text } from "@phantomthief/react.components.text";
+import { Typography } from "@phantomthief/react.components.typography";
 import styled from "styled-components";
 
 export const Styled = {
-  Container: styled(Text)<{
+  Container: styled(Typography)<{
     $adormentVariant: TPreAdormentVariant;
   }>`
     position: absolute;

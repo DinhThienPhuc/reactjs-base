@@ -8,11 +8,11 @@ import { css } from "styled-components";
  * @returns style sheets
  */
 export const getVariantStyle = (props: {
-  variant: TVariant;
-  disabled: boolean;
+  $variant: TVariant;
+  $disabled: boolean;
 }) => {
-  if (props?.variant === VARIANT.OUTLINED) {
-    if (!props?.disabled) {
+  if (props?.$variant === VARIANT.OUTLINED) {
+    if (!props?.$disabled) {
       return css`
         border: 1px solid #ffffff3b;
 
@@ -32,10 +32,11 @@ export const getVariantStyle = (props: {
     `;
   }
 
-  if (props?.variant === VARIANT.FILLED) {
-    if (!props?.disabled) {
+  if (props?.$variant === VARIANT.FILLED) {
+    if (!props?.$disabled) {
       return css`
         border-bottom: 1px solid #ffffffb3;
+        border-radius: 4px 4px 0px 0px;
         background-color: #ffffff17;
 
         &:hover {
@@ -56,9 +57,10 @@ export const getVariantStyle = (props: {
     `;
   }
 
-  if (!props?.disabled) {
+  if (!props?.$disabled) {
     return css`
       border-bottom: 1px solid #ffffffb3;
+      border-radius: 4px 4px 0px 0px;
 
       &:hover {
         border-bottom: 1px solid #ffffff;

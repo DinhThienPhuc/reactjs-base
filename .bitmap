@@ -28,7 +28,20 @@
         "scope": "phantomthief.react",
         "version": "0.0.20",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/components/flex"
+        "rootDir": "src/_core/components/flex",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true
+            }
+        }
+    },
+    "components/flex-box": {
+        "name": "components/flex-box",
+        "scope": "",
+        "version": "",
+        "defaultScope": "phantomthief.react",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/flex-box"
     },
     "components/helper-text": {
         "name": "components/helper-text",
@@ -42,7 +55,12 @@
         "scope": "phantomthief.react",
         "version": "0.0.23",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/components/input"
+        "rootDir": "src/_core/components/input",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true
+            }
+        }
     },
     "components/label": {
         "name": "components/label",
@@ -112,7 +130,28 @@
         "scope": "phantomthief.react",
         "version": "0.0.23",
         "mainFile": "index.ts",
-        "rootDir": "src/_core/components/text"
+        "rootDir": "src/_core/components/text",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true
+            }
+        }
+    },
+    "components/text-field": {
+        "name": "components/text-field",
+        "scope": "",
+        "version": "",
+        "defaultScope": "phantomthief.react",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/text-field"
+    },
+    "components/typography": {
+        "name": "components/typography",
+        "scope": "",
+        "version": "",
+        "defaultScope": "phantomthief.react",
+        "mainFile": "index.ts",
+        "rootDir": "src/_core/components/typography"
     },
     "hooks/block": {
         "name": "hooks/block",

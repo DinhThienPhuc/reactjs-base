@@ -5,7 +5,6 @@ import { IButtonProps } from "./_types";
 import { LoadingRipple } from "@phantomthief/react.components.loading-ripple";
 import { Styled } from "./_style";
 import clsx from "clsx";
-import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Button = ({
   variant = BUTTON_VARIANT.TEXT,
@@ -15,7 +14,7 @@ export const Button = ({
   className,
   children,
   onClick,
-  ...props
+  ...restProps
 }: IButtonProps) => {
   const buttonContent = useMemo(() => {
     if (!loading) {
@@ -24,28 +23,17 @@ export const Button = ({
     return loadingComponent ?? <LoadingRipple size={16} fullScreen={false} />;
   }, [children, loading, loadingComponent]);
 
-  useWhyDidYouUpdate("Button", {
-    variant,
-    size,
-    loading,
-    loadingComponent,
-    className,
-    children,
-    onClick,
-    ...props,
-  });
-
   return (
     <Styled.Container
-      {...props}
-      variant={variant}
-      size={size}
+      {...restProps}
+      $variant={variant}
+      $size={size}
       onClick={onClick}
       className={clsx(
         "button",
-        `button__size--${size}`,
-        `button__variant--${variant}`,
-        `button__loading--${loading}`,
+        `button--size-${size}`,
+        `button--variant-${variant}`,
+        `button--loading-${loading}`,
         className,
       )}
       data-testid="button"

@@ -4,7 +4,6 @@ import React from "react";
 import { Styled } from "./_style";
 import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
-import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const PreAdorment = ({
   className,
@@ -12,13 +11,6 @@ export const PreAdorment = ({
   variant = PRE_ADORMENT_VARIANT.STANDARD,
   ...restProps
 }: IPreAdormentProps) => {
-  useWhyDidYouUpdate("PreAdorment", {
-    content,
-    variant,
-    className,
-    ...restProps,
-  });
-
   if (!content) {
     return null;
   }
@@ -31,7 +23,7 @@ export const PreAdorment = ({
       font={VERNADA_FONT}
       className={clsx(
         "pre-adorment",
-        `pre-adorment__variant--${variant}`,
+        `pre-adorment--variant-${variant}`,
         className,
       )}
       data-testid="pre-adorment"

@@ -2,14 +2,14 @@ import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { TButtonSize, TButtonVariant } from "./_types";
 import styled, { css } from "styled-components";
 
-const sizeModify = (props: { size: TButtonSize; variant: TButtonVariant }) => {
-  if (props?.size === BUTTON_SIZE.SMALL) {
+const sizeModify = (props: { $size: TButtonSize }) => {
+  if (props?.$size === BUTTON_SIZE.SMALL) {
     return css`
       height: 24px;
       padding: 0 16px;
     `;
   }
-  if (props?.size === BUTTON_SIZE.MEDIUM) {
+  if (props?.$size === BUTTON_SIZE.MEDIUM) {
     return css`
       height: 36px;
       padding: 0 20px;
@@ -21,11 +21,8 @@ const sizeModify = (props: { size: TButtonSize; variant: TButtonVariant }) => {
   `;
 };
 
-const variantModify = (props: {
-  size: TButtonSize;
-  variant: TButtonVariant;
-}) => {
-  if (props?.variant === BUTTON_VARIANT.CONTAINED) {
+const variantModify = (props: { $variant: TButtonVariant }) => {
+  if (props?.$variant === BUTTON_VARIANT.CONTAINED) {
     return css`
       color: rgba(0, 0, 0, 0.87);
       background-color: rgb(144, 202, 249);
@@ -36,7 +33,7 @@ const variantModify = (props: {
       }
     `;
   }
-  if (props?.variant === BUTTON_VARIANT.OUTLINED) {
+  if (props?.$variant === BUTTON_VARIANT.OUTLINED) {
     return css`
       color: rgb(144, 202, 249);
       background-color: transparent;
@@ -60,7 +57,7 @@ const variantModify = (props: {
 };
 
 export const Styled = {
-  Container: styled.button<{ size: TButtonSize; variant: TButtonVariant }>`
+  Container: styled.button<{ $size: TButtonSize; $variant: TButtonVariant }>`
     display: flex;
     align-items: center;
     justify-content: center;

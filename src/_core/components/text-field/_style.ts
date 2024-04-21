@@ -30,13 +30,13 @@ const inputPaddingModify = (props: {
 
 export const Styled = {
   Container: styled.div<{
-    fullWidth: boolean;
-    disabled: boolean;
-    variant: TInputVariant;
+    $fullWidth: boolean;
+    $disabled: boolean;
+    $variant: TInputVariant;
   }>`
     transition: all 200ms ease-in-out;
     position: relative;
-    width: ${({ fullWidth }) => (fullWidth ? "100%" : "210px")};
+    width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "210px")};
     height: 56px;
     border-radius: 4px;
     ${getVariantStyle};

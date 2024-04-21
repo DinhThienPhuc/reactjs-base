@@ -11,4 +11,4 @@ export * from "_core/components/post-adorment";
 export * from "_core/components/pre-adorment";
 export * from "_core/components/select";
 export * from "_core/components/switch";
-export * from "_core/components/text";
+export * from "_core/components/typography";

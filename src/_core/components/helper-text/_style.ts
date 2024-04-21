@@ -1,10 +1,9 @@
 import { HELPER_TEXT_VARIANT } from "./_constants";
 import { THelperTextVariant } from "./_types";
-import { Text } from "@phantomthief/react.components.text";
 import styled from "styled-components";
 
 export const Styled = {
-  Container: styled(Text)<{
+  Container: styled.div<{
     $variant: THelperTextVariant;
   }>`
     position: absolute;

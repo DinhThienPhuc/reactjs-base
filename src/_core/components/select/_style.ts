@@ -1,36 +1,42 @@
-import { ChevronDown as IconChevronLeft } from "react-feather";
+import { FlexBox } from "@phantomthief/react.components.flex-box";
 import { TSelectVariant } from "./_types";
+import { Typography } from "@phantomthief/react.components.typography";
 import { getVariantStyle } from "@phantomthief/react.utils.helpers";
 import styled from "styled-components";
 
 export const Styled = {
-  Container: styled.div<{ fullWidth: boolean }>`
+  Container: styled.div<{ $fullWidth: boolean }>`
     position: relative;
-    width: ${({ fullWidth }) => (fullWidth ? "100%" : "fit-content")};
+
+    width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "fit-content")};
   `,
-  Option: styled.div<{ selected: boolean }>`
+  Option: styled(Typography)<{ $selected: boolean; $disabled?: boolean }>`
     transition: all 200ms ease-in-out;
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 0px 16px;
     height: 36px;
-    background-color: ${({ selected }) =>
-      selected ? "#90caf929" : "transparent"};
+    background-color: ${({ $selected, $disabled }) => {
+      if ($disabled) {
+        return "#121212";
+      }
+      return $selected ? "#90caf929" : "transparent";
+    }};
 
     &:hover {
       background-color: #ffffff14;
     }
   `,
   OptionGroup: styled.div<{
-    isShowed: boolean;
-    position: { left: number; top: number; width: number } | null;
+    $isShowed: boolean;
+    $position: { left: number; top: number; width: number } | null;
   }>`
     position: absolute;
-    display: ${({ isShowed }) => (isShowed ? "block" : "none")};
-    top: ${({ position }) => position?.top || 0}px;
-    left: ${({ position }) => position?.left || 0}px;
-    width: ${({ position }) => position?.width || 0}px;
+    display: ${({ $isShowed }) => ($isShowed ? "block" : "none")};
+    top: ${({ $position }) => $position?.top || 0}px;
+    left: ${({ $position }) => $position?.left || 0}px;
+    width: ${({ $position }) => $position?.width || 0}px;
     padding: 6px 0px;
     z-index: 999;
     background-color: rgb(18, 18, 18);
@@ -41,27 +47,26 @@ export const Styled = {
     background-image: linear-gradient(#ffffff1f, #ffffff1f);
   `,
   Box: styled.div<{
-    fullWidth: boolean;
-    disabled: boolean;
-    variant: TSelectVariant;
+    $fullWidth: boolean;
+    $disabled: boolean;
+    $variant: TSelectVariant;
   }>`
     transition: all 200ms ease-in-out;
     position: relative;
-    width: ${({ fullWidth }) => (fullWidth ? "100%" : "210px")};
+    width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "210px")};
     height: 56px;
     border-radius: 4px;
+    cursor: pointer;
     ${getVariantStyle};
   `,
-  InnerBox: styled.div`
+  InnerBox: styled(Typography)`
     position: absolute;
     transition: all 200ms ease-in-out;
     width: 100%;
     height: 44px;
     top: 12px;
     background-color: transparent;
-    color: #ffffff;
     border: none;
-    font-size: 16px;
     display: flex;
     align-items: center;
     padding: 0px 16px;
@@ -78,11 +83,16 @@ export const Styled = {
     width: 100%;
     height: 100%;
     opacity: 0;
+    cursor: pointer;
   `,
-  Arrow: styled(IconChevronLeft)<{ $isShowed: boolean }>`
+  PostAdormentContentWrapper: styled(FlexBox)<{
+    $isShowed: boolean;
+    $disabled?: boolean;
+  }>`
     transition: all 350ms ease-in-out;
     width: 20px;
     height: 20px;
+    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
     transform: ${({ $isShowed }) => ($isShowed ? "rotate(180deg)" : "none")};
   `,
 };

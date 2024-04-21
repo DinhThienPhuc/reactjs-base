@@ -3,7 +3,6 @@ import React from "react";
 import { Styled } from "./_style";
 import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
-import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Navbar = ({
   title,
@@ -12,14 +11,6 @@ export const Navbar = ({
   className,
   ...restProps
 }: INavbarProps) => {
-  useWhyDidYouUpdate("Navbar", {
-    title,
-    leftButton,
-    rightButton,
-    className,
-    ...restProps,
-  });
-
   return (
     <Styled.Container
       {...restProps}
@@ -27,7 +18,7 @@ export const Navbar = ({
       data-testid="navbar"
     >
       <Styled.LeftButton
-        className="navbar-button navbar-button__left"
+        className="navbar__button navbar__button--left"
         data-testid="navbar-button-left"
       >
         {leftButton}
@@ -35,13 +26,13 @@ export const Navbar = ({
       <Styled.Title
         color="#ffffff"
         font={VERNADA_FONT}
-        className="navbar-title"
+        className="navbar__title"
         data-testid="navbar-title"
       >
         {title}
       </Styled.Title>
       <Styled.RightButton
-        className="navbar-button navbar-button__right"
+        className="navbar__button navbar__button--right"
         data-testid="navbar-button-right"
       >
         {rightButton}

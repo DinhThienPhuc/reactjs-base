@@ -3,13 +3,13 @@ import React, { useCallback, useState } from "react";
 
 import { CompositionContainer } from "@phantomthief/react.components.composition-container";
 import { Switch } from "./_components";
-import { Text } from "@phantomthief/react.components.text";
+import { Typography } from "@phantomthief/react.components.typography";
 import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import { logger } from "@phantomthief/react.utils.helpers";
 
 const commonProps = {
-  leftLabel: <Text font={VERNADA_FONT}>Left</Text>,
-  rightLabel: <Text font={VERNADA_FONT}>Right</Text>,
+  leftLabel: <Typography font={VERNADA_FONT}>Left</Typography>,
+  rightLabel: <Typography font={VERNADA_FONT}>Right</Typography>,
 };
 
 export const DefaultSwitch = () => {

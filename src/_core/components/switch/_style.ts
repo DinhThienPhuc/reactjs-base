@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { Text } from "@phantomthief/react.components.text";
+import { TextField } from "@phantomthief/react.components.text-field";
 
 const disabledLabelModify = ({ $disabled }: { $disabled: boolean }) => {
   if ($disabled) {
@@ -77,11 +77,11 @@ export const Styled = {
       }};
     }
   `,
-  LeftLabel: styled(Text)<{ $disabled: boolean }>`
+  LeftLabel: styled(TextField)<{ $disabled: boolean }>`
     margin-right: 8px;
     ${disabledLabelModify};
   `,
-  RightLabel: styled(Text)<{ $disabled: boolean }>`
+  RightLabel: styled(TextField)<{ $disabled: boolean }>`
     margin-left: 8px;
     ${disabledLabelModify};
   `,

@@ -1,4 +1,4 @@
-export const SELECT_VARIANT = {
+export const INPUT_VARIANT = {
   OUTLINED: "outlined",
   FILLED: "filled",
   STANDARD: "standard",

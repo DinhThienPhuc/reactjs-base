@@ -10,24 +10,24 @@ import { Styled } from "./_style";
 import clsx from "clsx";
 import useFocusWithCallback from "@phantomthief/react.hooks.focus-with-callback";
 
-export const Input = forwardRef<HTMLInputElement, IInputProps>(
+export const TextField = forwardRef<HTMLInputElement, IInputProps>(
   (
     {
       className,
-      label = "",
-      preAdorment = null,
-      postAdorment = null,
-      helperText = "",
       value = "",
       required = false,
       disabled = false,
-      hiddenLabel = false,
       fullWidth = false,
       variant = INPUT_VARIANT.STANDARD,
       onFocus,
       onBlur,
       clear,
-      ...props
+      inputBoxProps,
+      labelProps,
+      preAdormentProps,
+      postAdormentProps,
+      helperTextProps,
+      ...restProps
     },
     ref,
   ) => {
@@ -37,13 +37,14 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
     );
 
     const isLabelCollapsed =
-      isFocused || !!preAdorment || !!value ? true : false;
+      isFocused || !!preAdormentProps?.content || !!value ? true : false;
 
     return (
       <Styled.Container
-        fullWidth={fullWidth}
-        variant={variant}
-        disabled={disabled}
+        {...restProps}
+        $fullWidth={fullWidth}
+        $variant={variant}
+        $disabled={disabled}
         className={clsx(
           "input",
           `input-fullwidth__${fullWidth}`,
@@ -54,16 +55,15 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
         data-testid="input"
       >
         <Label
+          {...labelProps}
           variant={variant}
           disabled={disabled}
-          isLabelCollapsed={isLabelCollapsed}
-          content={label}
           required={required}
-          hiddenLabel={hiddenLabel}
+          isLabelCollapsed={isLabelCollapsed}
         />
-        <PreAdorment variant={variant} content={preAdorment} />
+        <PreAdorment {...preAdormentProps} />
         <Styled.Input
-          {...props}
+          {...inputBoxProps}
           variant={variant}
           value={value}
           ref={ref}
@@ -71,8 +71,8 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
           required={required}
           onFocus={captureOnFocus}
           onBlur={captureOnBlur}
-          hasPreAdorment={!!preAdorment}
-          hasPostAdorment={!!clear || !!postAdorment}
+          hasPreAdorment={!!preAdormentProps?.content}
+          hasPostAdorment={!!clear || !!postAdormentProps?.content}
           className={clsx(
             "input-box",
             `input-box__${variant}`,
@@ -81,11 +81,11 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
           )}
           data-testid="input-box"
         />
-        <PostAdorment variant={variant} content={postAdorment} clear={clear} />
-        <HelperText text={helperText} variant={variant} />
+        <PostAdorment {...postAdormentProps} clear={clear} />
+        <HelperText {...helperTextProps} variant={variant} />
       </Styled.Container>
     );
   },
 );
 
-Input.displayName = "Input";
+TextField.displayName = "TextField";

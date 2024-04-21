@@ -1,32 +1,35 @@
 import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
+import { IHelperTextProps, ILabelProps, IPostAdormentProps } from "components";
 
-import { TVariant } from "@phantomthief/react.utils.definations";
+import { IExtendable } from "@phantomthief/react.utils.definations";
+import { SELECT_VARIANT } from "./_constants";
 
-export interface ISelectOption {
+export interface ISelectOption extends IExtendable {
   value: string;
   label: ReactNode;
+  disabled?: boolean;
 }
 
-export interface ISelectOptionsProps {
-  options: ISelectOption[];
-  displayedOption?: ISelectOption;
+export interface ISelectOptionProps extends ISelectOption {
+  displayedValue?: string;
   handleSelectOption: (value: string) => MouseEventHandler<HTMLDivElement>;
 }
 
-export type TSelectVariant = TVariant;
+export type TSelectVariant =
+  (typeof SELECT_VARIANT)[keyof typeof SELECT_VARIANT];
 
-export interface ISelectProps extends HTMLAttributes<HTMLElement> {
+export interface ISelectProps extends HTMLAttributes<HTMLElement>, IExtendable {
   className?: string;
   optionGroupClassName?: string;
   options: ISelectOption[];
-  label?: ReactNode;
   value?: string;
   fullWidth?: boolean;
   variant?: TSelectVariant;
-  helperText?: ReactNode;
   disabled?: boolean;
   required?: boolean;
-  hiddenLabel?: boolean;
+  labelProps?: ILabelProps;
+  postAdormentProps?: IPostAdormentProps;
+  helperTextProps?: IHelperTextProps;
 }
 
 export interface ISelectEventTarget extends EventTarget {

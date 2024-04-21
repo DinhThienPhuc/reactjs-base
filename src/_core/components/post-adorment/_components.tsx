@@ -5,7 +5,6 @@ import React from "react";
 import { Styled } from "./_style";
 import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
-import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const PostAdorment = ({
   className,
@@ -22,19 +21,11 @@ export const PostAdorment = ({
     font: VERNADA_FONT,
     className: clsx(
       "post-adorment",
-      `post-adorment__variant--${variant}`,
+      `post-adorment--variant-${variant}`,
       className,
     ),
     "data-testid": "post-adorment",
   };
-
-  useWhyDidYouUpdate("PostAdorment", {
-    className,
-    content,
-    variant,
-    clearIcon,
-    ...restProps,
-  });
 
   if (clear) {
     return (

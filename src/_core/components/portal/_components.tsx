@@ -2,7 +2,6 @@ import React, { useCallback, useEffect } from "react";
 
 import { IPortalProps } from "./_types";
 import { createPortal } from "react-dom";
-import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Portal = ({
   children,
@@ -44,12 +43,6 @@ export const Portal = ({
         portalRoot.removeChild(elementContainer.current);
     };
   }, [setAttributesToElement]);
-
-  useWhyDidYouUpdate("Portal", {
-    children,
-    className,
-    ...restProps,
-  });
 
   return elementContainer.current
     ? createPortal(children, elementContainer.current)

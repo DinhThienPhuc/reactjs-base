@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { Text } from "@phantomthief/react.components.text";
+import { TextField } from "@phantomthief/react.components.text-field";
 
 const sectionModify = () => {
   return css`
@@ -24,7 +24,7 @@ export const Styled = {
     height: 56px;
     background-color: #121212;
   `,
-  Title: styled(Text)`
+  Title: styled(TextField)`
     ${sectionModify};
   `,
   LeftButton: styled.div`

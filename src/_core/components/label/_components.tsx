@@ -2,8 +2,8 @@ import { ILabelProps } from "./_types";
 import { LABEL_VARIANT } from "./_constants";
 import React from "react";
 import { Styled } from "./_style";
+import { Typography } from "@phantomthief/react.components.typography";
 import clsx from "clsx";
-import useWhyDidYouUpdate from "@phantomthief/react.hooks.why-did-you-update";
 
 export const Label = ({
   className,
@@ -15,18 +15,7 @@ export const Label = ({
   isLabelCollapsed,
   ...restProps
 }: ILabelProps) => {
-  useWhyDidYouUpdate("Label", {
-    className,
-    content,
-    required,
-    disabled,
-    hiddenLabel,
-    variant,
-    isLabelCollapsed,
-    ...restProps,
-  });
-
-  if (hiddenLabel) {
+  if (hiddenLabel || !content) {
     return null;
   }
 
@@ -35,19 +24,19 @@ export const Label = ({
       {...restProps}
       $variant={variant}
       $isLabelCollapsed={isLabelCollapsed}
-      color={disabled ? "#ffffff80" : "#ffffff"}
-      size={16}
       className={clsx(
         "label",
         `label--${variant}`,
-        `label__collapsed--${isLabelCollapsed}`,
-        `label__disabled--${disabled}`,
-        `label__required--${required}`,
+        `label--collapsed-${isLabelCollapsed}`,
+        `label--disabled-${disabled}`,
+        `label--required-${required}`,
         className,
       )}
       data-testid="label"
     >
-      {content} {required ? "*" : ""}
+      <Typography color={disabled ? "#ffffff80" : "#ffffff"} size={16}>
+        {content} {required ? "*" : ""}
+      </Typography>
     </Styled.Container>
   );
 };
