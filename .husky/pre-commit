@@ -3,6 +3,3 @@
 
 # Format lint + prettier
 pnpm format
-
-# Tag bit components
-bit-simple tag
