@@ -25,9 +25,8 @@
     },
     "components/flex-box": {
         "name": "components/flex-box",
-        "scope": "",
+        "scope": "phantomthief.react",
         "version": "0.0.1",
-        "defaultScope": "phantomthief.react",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/flex-box"
     },
@@ -103,17 +102,15 @@
     },
     "components/text-field": {
         "name": "components/text-field",
-        "scope": "",
+        "scope": "phantomthief.react",
         "version": "0.0.1",
-        "defaultScope": "phantomthief.react",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/text-field"
     },
     "components/typography": {
         "name": "components/typography",
-        "scope": "",
+        "scope": "phantomthief.react",
         "version": "0.0.1",
-        "defaultScope": "phantomthief.react",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/typography"
     },
