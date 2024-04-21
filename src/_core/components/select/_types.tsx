@@ -1,7 +1,9 @@
 import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
-import { IHelperTextProps, ILabelProps, IPostAdormentProps } from "components";
 
 import { IExtendable } from "@phantomthief/react.utils.definations";
+import { IHelperTextProps } from "@phantomthief/react.components.helper-text";
+import { ILabelProps } from "@phantomthief/react.components.label";
+import { IPostAdormentProps } from "@phantomthief/react.components.post-adorment";
 import { SELECT_VARIANT } from "./_constants";
 
 export interface ISelectOption extends IExtendable {
