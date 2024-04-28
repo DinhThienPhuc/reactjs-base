@@ -2,7 +2,7 @@ import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { TButtonSize, TButtonVariant } from "./_types";
 import styled, { css } from "styled-components";
 
-const sizeModify = (props: { $size: TButtonSize }) => {
+const modifySize = (props: { $size: TButtonSize }) => {
   if (props?.$size === BUTTON_SIZE.SMALL) {
     return css`
       height: 24px;
@@ -21,7 +21,7 @@ const sizeModify = (props: { $size: TButtonSize }) => {
   `;
 };
 
-const variantModify = (props: { $variant: TButtonVariant }) => {
+const modifyVariant = (props: { $variant: TButtonVariant }) => {
   if (props?.$variant === BUTTON_VARIANT.CONTAINED) {
     return css`
       color: rgba(0, 0, 0, 0.87);
@@ -71,8 +71,8 @@ export const Styled = {
     padding: 6px 12px;
     font-weight: 500;
     cursor: pointer;
-    ${sizeModify};
-    ${variantModify};
+    ${modifySize};
+    ${modifyVariant};
 
     &:hover,
     &:focus {

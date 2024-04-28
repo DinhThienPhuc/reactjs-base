@@ -12,7 +12,7 @@
     "components/button": {
         "name": "components/button",
         "scope": "phantomthief.react",
-        "version": "0.0.22",
+        "version": "0.0.23",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/button"
     },
@@ -26,21 +26,21 @@
     "components/flex-box": {
         "name": "components/flex-box",
         "scope": "phantomthief.react",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/flex-box"
     },
     "components/helper-text": {
         "name": "components/helper-text",
         "scope": "phantomthief.react",
-        "version": "0.0.19",
+        "version": "0.0.20",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/helper-text"
     },
     "components/label": {
         "name": "components/label",
         "scope": "phantomthief.react",
-        "version": "0.0.17",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/label"
     },
@@ -61,7 +61,7 @@
     "components/navbar": {
         "name": "components/navbar",
         "scope": "phantomthief.react",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/navbar"
     },
@@ -75,42 +75,42 @@
     "components/post-adorment": {
         "name": "components/post-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.17",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/post-adorment"
     },
     "components/pre-adorment": {
         "name": "components/pre-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.17",
+        "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/pre-adorment"
     },
     "components/select": {
         "name": "components/select",
         "scope": "phantomthief.react",
-        "version": "0.0.19",
+        "version": "0.0.20",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/select"
     },
     "components/switch": {
         "name": "components/switch",
         "scope": "phantomthief.react",
-        "version": "0.0.15",
+        "version": "0.0.16",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/switch"
     },
     "components/text-field": {
         "name": "components/text-field",
         "scope": "phantomthief.react",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/text-field"
     },
     "components/typography": {
         "name": "components/typography",
         "scope": "phantomthief.react",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/typography"
     },
@@ -138,7 +138,7 @@
     "hooks/focus-with-callback": {
         "name": "hooks/focus-with-callback",
         "scope": "phantomthief.react",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "_hook.ts",
         "rootDir": "src/_core/hooks/focus-with-callback"
     },
@@ -159,14 +159,14 @@
     "hooks/why-did-you-update": {
         "name": "hooks/why-did-you-update",
         "scope": "phantomthief.react",
-        "version": "0.0.10",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "src/_core/hooks/why-did-you-update"
     },
     "modules/authenticator": {
         "name": "modules/authenticator",
         "scope": "phantomthief.react",
-        "version": "0.0.13",
+        "version": "0.0.14",
         "mainFile": "index.ts",
         "rootDir": "src/_core/modules/authenticator"
     },
@@ -180,7 +180,7 @@
     "services/firebase": {
         "name": "services/firebase",
         "scope": "phantomthief.react",
-        "version": "0.0.16",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "src/_core/services/firebase"
     },
@@ -194,7 +194,7 @@
     "services/styled-theme": {
         "name": "services/styled-theme",
         "scope": "phantomthief.react",
-        "version": "0.0.19",
+        "version": "0.0.20",
         "mainFile": "index.ts",
         "rootDir": "src/_core/services/styled-theme"
     },
@@ -215,7 +215,7 @@
     "utils/helpers": {
         "name": "utils/helpers",
         "scope": "phantomthief.react",
-        "version": "0.0.16",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "src/_core/utils/helpers"
     },

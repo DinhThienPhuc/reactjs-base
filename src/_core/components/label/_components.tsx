@@ -3,7 +3,9 @@ import { LABEL_VARIANT } from "./_constants";
 import React from "react";
 import { Styled } from "./_style";
 import { Typography } from "@phantomthief/react.components.typography";
+import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
+import useBlock from "@phantomthief/react.hooks.block";
 
 export const Label = ({
   className,
@@ -11,10 +13,25 @@ export const Label = ({
   required = false,
   disabled = false,
   hiddenLabel = false,
+  isFocused = false,
+  isError = false,
   variant = LABEL_VARIANT.STANDARD,
   isLabelCollapsed,
   ...restProps
 }: ILabelProps) => {
+  const textColor = useBlock(() => {
+    if (disabled) {
+      return "#ffffff80";
+    }
+    if (isError) {
+      return "#f44336";
+    }
+    if (isFocused) {
+      return "#90caf9";
+    }
+    return "#ffffff";
+  });
+
   if (hiddenLabel || !content) {
     return null;
   }
@@ -34,7 +51,11 @@ export const Label = ({
       )}
       data-testid="label"
     >
-      <Typography color={disabled ? "#ffffff80" : "#ffffff"} size={16}>
+      <Typography
+        color={textColor}
+        size={isLabelCollapsed ? 12 : 16}
+        font={VERNADA_FONT}
+      >
         {content} {required ? "*" : ""}
       </Typography>
     </Styled.Container>

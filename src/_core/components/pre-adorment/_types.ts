@@ -9,4 +9,5 @@ export interface IPreAdormentProps extends IExtendable {
   className?: string;
   variant?: TPreAdormentVariant;
   content?: ReactNode;
+  hasLabel?: boolean;
 }

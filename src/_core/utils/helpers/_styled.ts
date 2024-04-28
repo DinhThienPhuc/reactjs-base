@@ -7,11 +7,17 @@ import { css } from "styled-components";
  * @param props variant, disabled
  * @returns style sheets
  */
-export const getVariantStyle = (props: {
+export const modifyVariant = (props: {
   $variant: TVariant;
   $disabled: boolean;
+  $isError: boolean;
 }) => {
   if (props?.$variant === VARIANT.OUTLINED) {
+    if (props?.$isError) {
+      return css`
+        border: 1px solid #f44336;
+      `;
+    }
     if (!props?.$disabled) {
       return css`
         border: 1px solid #ffffff3b;
@@ -33,6 +39,17 @@ export const getVariantStyle = (props: {
   }
 
   if (props?.$variant === VARIANT.FILLED) {
+    if (props?.$isError) {
+      return css`
+        border-bottom: 1px solid #f44336;
+        border-radius: 4px 4px 0px 0px;
+        background-color: #ffffff17;
+
+        &:hover {
+          background-color: #ffffff21;
+        }
+      `;
+    }
     if (!props?.$disabled) {
       return css`
         border-bottom: 1px solid #ffffffb3;
@@ -53,7 +70,15 @@ export const getVariantStyle = (props: {
     }
     return css`
       border-bottom: 1px solid #ffffff80;
+      border-radius: 4px 4px 0px 0px;
       background-color: #ffffff17;
+    `;
+  }
+
+  if (props?.$isError) {
+    return css`
+      border-bottom: 1px solid #f44336;
+      border-radius: 4px 4px 0px 0px;
     `;
   }
 
@@ -76,40 +101,6 @@ export const getVariantStyle = (props: {
 
   return css`
     border-bottom: 1px solid #ffffff80;
-  `;
-};
-
-/**
- * Style for label of input/textare/element of form, depend on variant
- * @param props variant, isLabelCollapsed
- * @returns style sheets
- */
-export const getLabelStyle = <TVariant>(props: {
-  $variant: TVariant;
-  $isLabelCollapsed: boolean;
-}) => {
-  if (props?.$variant === VARIANT.STANDARD) {
-    if (props?.$isLabelCollapsed) {
-      return css`
-        font-size: 12px;
-        top: 12px;
-        left: 0px;
-        color: #90caf9;
-      `;
-    }
-    return css`
-      left: 0px;
-    `;
-  }
-  if (props?.$isLabelCollapsed) {
-    return css`
-      font-size: 12px;
-      top: 12px;
-      left: 14px;
-      color: #90caf9;
-    `;
-  }
-  return css`
-    left: 14px;
+    border-radius: 4px 4px 0px 0px;
   `;
 };

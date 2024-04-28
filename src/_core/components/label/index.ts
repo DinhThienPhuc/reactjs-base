@@ -3,3 +3,4 @@ export * from "./_constants";
 export * from "./_types";
 
 // TODO: Remove redundent useMemo, useCallback, useEffect and check re-render
+// TODO: fix label flash on blur

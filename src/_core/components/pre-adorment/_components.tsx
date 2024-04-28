@@ -9,6 +9,7 @@ export const PreAdorment = ({
   className,
   content = null,
   variant = PRE_ADORMENT_VARIANT.STANDARD,
+  hasLabel = false,
   ...restProps
 }: IPreAdormentProps) => {
   if (!content) {
@@ -19,6 +20,7 @@ export const PreAdorment = ({
     <Styled.Container
       {...restProps}
       $adormentVariant={variant}
+      $hasLabel={hasLabel}
       size={16}
       font={VERNADA_FONT}
       className={clsx(

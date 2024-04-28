@@ -11,4 +11,5 @@ export interface IHelperTextProps
     IExtendable {
   variant?: THelperTextVariant;
   text?: ReactNode;
+  isError?: boolean;
 }

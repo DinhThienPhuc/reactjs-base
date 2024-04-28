@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 import { IStyledFlexBoxProps } from "./_types";
 
-const flexBoxModify = ({
+const modifyFlexBox = ({
   $alignItems,
   $justifyContent,
   $flexDirection,
@@ -17,9 +17,9 @@ const flexBoxModify = ({
 
 export const Styled = {
   Div: styled.div<IStyledFlexBoxProps>`
-    ${flexBoxModify};
+    ${modifyFlexBox};
   `,
   Span: styled.span<IStyledFlexBoxProps>`
-    ${flexBoxModify};
+    ${modifyFlexBox};
   `,
 };

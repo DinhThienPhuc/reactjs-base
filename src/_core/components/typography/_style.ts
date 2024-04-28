@@ -4,6 +4,7 @@ import { IStyledTextProps } from "./_types";
 
 const textModify = ({ $size, $color, $bold, $font }: IStyledTextProps) => {
   return css`
+    transition: inherit;
     font-size: ${typeof $size === "number" ? `${$size}px` : $size};
     font-weight: ${$bold};
     color: ${$color};

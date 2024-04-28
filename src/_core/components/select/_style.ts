@@ -1,28 +1,42 @@
-import { FlexBox } from "@phantomthief/react.components.flex-box";
+import styled, { css } from "styled-components";
+
+import { SELECT_VARIANT } from "./_constants";
 import { TSelectVariant } from "./_types";
-import { Typography } from "@phantomthief/react.components.typography";
-import { getVariantStyle } from "@phantomthief/react.utils.helpers";
-import styled from "styled-components";
+import { modifyVariant } from "@phantomthief/react.utils.helpers";
+
+const modifyInnerBoxPadding = (props: { $variant: TSelectVariant }) => {
+  if (props.$variant === SELECT_VARIANT.STANDARD) {
+    return css`
+      padding: 0px 35px 0px 0px;
+    `;
+  }
+
+  return css`
+    padding: 0px 35px 0px 14px;
+  `;
+};
 
 export const Styled = {
   Container: styled.div<{ $fullWidth: boolean }>`
     position: relative;
-
     width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "fit-content")};
   `,
-  Option: styled(Typography)<{ $selected: boolean; $disabled?: boolean }>`
+  Option: styled.div<{ $selected: boolean; $disabled?: boolean }>`
     transition: all 200ms ease-in-out;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 0px 16px;
+    padding: 0px 14px;
     height: 36px;
+    line-height: 36px;
     background-color: ${({ $selected, $disabled }) => {
       if ($disabled) {
         return "#121212";
       }
       return $selected ? "#90caf929" : "transparent";
     }};
+    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     &:hover {
       background-color: #ffffff14;
@@ -50,33 +64,39 @@ export const Styled = {
     $fullWidth: boolean;
     $disabled: boolean;
     $variant: TSelectVariant;
+    $isError: boolean;
   }>`
     transition: all 200ms ease-in-out;
     position: relative;
     width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "210px")};
     height: 56px;
     border-radius: 4px;
-    cursor: pointer;
-    ${getVariantStyle};
+    cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
+    ${modifyVariant};
   `,
-  InnerBox: styled(Typography)`
+  InnerBox: styled.span<{
+    $hasLabel: boolean;
+    $variant: TSelectVariant;
+    $disabled: boolean;
+  }>`
     position: absolute;
     transition: all 200ms ease-in-out;
+    box-sizing: border-box;
     width: 100%;
-    height: 44px;
-    top: 12px;
+    height: ${({ $hasLabel }) => ($hasLabel ? "44px" : "56px")};
+    line-height: ${({ $hasLabel }) => ($hasLabel ? "44px" : "56px")};
+    top: ${({ $hasLabel }) => ($hasLabel ? "12px" : "0px")};
+    left: 0px;
     background-color: transparent;
     border: none;
-    display: flex;
-    align-items: center;
-    padding: 0px 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
+    ${modifyInnerBoxPadding};
 
     &:focus-visible {
       outline: none;
-    }
-
-    &:disabled {
-      color: #ffffff80;
     }
   `,
   FakeSelect: styled.select`
@@ -85,10 +105,11 @@ export const Styled = {
     opacity: 0;
     cursor: pointer;
   `,
-  PostAdormentContentWrapper: styled(FlexBox)<{
+  PostAdormentContentWrapper: styled.div<{
     $isShowed: boolean;
     $disabled?: boolean;
   }>`
+    display: flex;
     transition: all 350ms ease-in-out;
     width: 20px;
     height: 20px;

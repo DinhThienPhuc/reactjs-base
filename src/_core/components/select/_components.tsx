@@ -22,6 +22,7 @@ import { Portal } from "@phantomthief/react.components.portal";
 import { PostAdorment } from "@phantomthief/react.components.post-adorment";
 import { SELECT_VARIANT } from "./_constants";
 import { Styled } from "./_style";
+import { Typography } from "@phantomthief/react.components.typography";
 import { VERNADA_FONT } from "@phantomthief/react.utils.constants";
 import clsx from "clsx";
 import { getPositionOfNode } from "@phantomthief/react.utils.helpers";
@@ -39,17 +40,21 @@ const SelectOption = ({
   <Styled.Option
     $selected={value === displayedValue}
     $disabled={disabled}
-    size={16}
-    font={VERNADA_FONT}
-    color={disabled ? "#ffffff80" : "#ffffff"}
     key={value}
     className={clsx(
       "select-option",
       `select-option--selected-${value === displayedValue}`,
+      "select-option--lines-1",
     )}
     onClick={handleSelectOption(value)}
   >
-    {label}
+    <Typography
+      size={16}
+      font={VERNADA_FONT}
+      color={disabled ? "#ffffff80" : "#ffffff"}
+    >
+      {label}
+    </Typography>
   </Styled.Option>
 );
 
@@ -64,6 +69,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       fullWidth = false,
       required = false,
       tabIndex = -1,
+      isError = false,
       optionGroupClassName,
       labelProps,
       postAdormentProps,
@@ -80,6 +86,12 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     const [isShowed, setShow] = useState(false);
     const [position, setPosition] = useState<INodePosition | null>(null);
     const [currentValue, setCurrentValue] = useState(value);
+    const previousValueRef = useRef(value);
+
+    if (value !== previousValueRef.current) {
+      previousValueRef.current = value;
+      setCurrentValue(value);
+    }
 
     useNotClickOnElements([boxRef, optionGroupRef], () => {
       setShow(false);
@@ -100,10 +112,11 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       setShow((prev) => !prev);
     };
 
-    const { isFocused, captureOnFocus, captureOnBlur } = useFocusWithCallback(
+    const { isFocused, captureOnFocus, captureOnBlur } = useFocusWithCallback({
       onFocus,
       onBlur,
-    );
+      disabled,
+    });
 
     const isLabelCollapsed = useBlock(() => {
       if (disabled) {
@@ -180,12 +193,52 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
         <Styled.PostAdormentContentWrapper
           $isShowed={isShowed}
           $disabled={disabled}
-          variant="span"
         >
           {postAdormentProps?.content ?? <IconChevronLeft />}
         </Styled.PostAdormentContentWrapper>
       );
     }, [disabled, isShowed, postAdormentProps?.content]);
+
+    const label = useMemo(
+      () => (
+        <Label
+          {...labelProps}
+          required={required}
+          disabled={disabled}
+          variant={variant}
+          isLabelCollapsed={isLabelCollapsed}
+          isFocused={isFocused}
+          isError={isError}
+        />
+      ),
+      [
+        disabled,
+        isError,
+        isFocused,
+        isLabelCollapsed,
+        labelProps,
+        required,
+        variant,
+      ],
+    );
+
+    const postAdorment = useMemo(
+      () => (
+        <PostAdorment
+          {...postAdormentProps}
+          variant={variant}
+          content={postAdormentContent}
+        />
+      ),
+      [postAdormentContent, postAdormentProps, variant],
+    );
+
+    const helperText = useMemo(
+      () => (
+        <HelperText {...helperTextProps} isError={isError} variant={variant} />
+      ),
+      [helperTextProps, isError, variant],
+    );
 
     return (
       <Styled.Container
@@ -198,6 +251,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           $variant={variant}
           $disabled={disabled}
           $fullWidth={fullWidth}
+          $isError={isError}
           ref={boxRef}
           onClick={toggleListOptions}
           tabIndex={tabIndex}
@@ -207,35 +261,34 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             "select-box",
             `select-box--fullwidth--${fullWidth}`,
             `select-box--disabled-${disabled}`,
+            `select-box--isError-${isError}`,
             `select-box--${variant}`,
           )}
           data-testid="select-box"
         >
-          <Label
-            {...labelProps}
-            color={disabled ? "#ffffff80" : "#ffffff"}
-            font={VERNADA_FONT}
-            required={required}
-            disabled={disabled}
-            variant={variant}
-            isLabelCollapsed={isLabelCollapsed}
-          />
-          <Styled.FakeSelect required={required} />
+          {label}
+          <Styled.FakeSelect required={required} disabled={disabled} />
           <Styled.InnerBox
-            color={disabled ? "#ffffff80" : "#ffffff"}
-            font={VERNADA_FONT}
-            size={16}
-            className={clsx("select-inner-box")}
+            $hasLabel={!!labelProps?.content}
+            $variant={variant}
+            $disabled={disabled}
+            className={clsx(
+              "select-inner-box",
+              `select-inner-box--hasLabel-${!!labelProps?.content}`,
+              `select-inner-box--disabled-${disabled}`,
+            )}
             data-testid="select-displayed-option"
           >
-            {displayedOption?.label}
+            <Typography
+              size={16}
+              font={VERNADA_FONT}
+              color={disabled ? "#ffffff80" : "#ffffff"}
+            >
+              {displayedOption?.label}
+            </Typography>
           </Styled.InnerBox>
-          <PostAdorment
-            {...postAdormentProps}
-            variant={variant}
-            content={postAdormentContent}
-          />
-          <HelperText {...helperTextProps} variant={variant} />
+          {postAdorment}
+          {helperText}
         </Styled.Box>
 
         {portal}

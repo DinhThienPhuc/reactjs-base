@@ -31,10 +31,10 @@ export const TextField = forwardRef<HTMLInputElement, IInputProps>(
     },
     ref,
   ) => {
-    const { captureOnFocus, captureOnBlur, isFocused } = useFocusWithCallback(
+    const { captureOnFocus, captureOnBlur, isFocused } = useFocusWithCallback({
       onFocus,
       onBlur,
-    );
+    });
 
     const isLabelCollapsed =
       isFocused || !!preAdormentProps?.content || !!value ? true : false;

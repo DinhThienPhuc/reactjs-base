@@ -9,9 +9,11 @@ export interface ILabelProps extends IExtendable {
   content?: ReactNode;
   required?: boolean;
   disabled?: boolean;
+  isFocused?: boolean;
   hiddenLabel?: boolean;
   variant?: TLabelVariant;
   isLabelCollapsed: boolean;
+  isError?: boolean;
 }
 
 export interface IStyledLabelProps {

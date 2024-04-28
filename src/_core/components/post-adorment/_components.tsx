@@ -11,12 +11,14 @@ export const PostAdorment = ({
   content = null,
   variant = POST_ADORMENT_VARIANT.STANDARD,
   clearIcon = null,
+  hasLabel = false,
   clear,
   ...restProps
 }: IPostAdormentProps) => {
   const componentProps = {
     ...restProps,
     $adormentVariant: variant,
+    $hasLabel: hasLabel,
     size: 16,
     font: VERNADA_FONT,
     className: clsx(
