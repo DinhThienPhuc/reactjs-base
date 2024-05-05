@@ -89,7 +89,7 @@
     "components/select": {
         "name": "components/select",
         "scope": "phantomthief.react",
-        "version": "0.0.21",
+        "version": "0.0.22",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/select"
     },

@@ -258,6 +258,11 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             <Styled.PostAdormentContentWrapper
               $isShowed={isShowed}
               $disabled={disabled}
+              className={clsx(
+                "select-post-adorment-content",
+                `select-post-adorment-content--isShowed-${isShowed}`,
+                `select-post-adorment-content--disabled-${disabled}`,
+              )}
             >
               {postAdormentChild}
             </Styled.PostAdormentContentWrapper>
