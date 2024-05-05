@@ -7,12 +7,12 @@ import clsx from "clsx";
 
 export const PreAdorment = ({
   className,
-  content = null,
+  children = null,
   variant = PRE_ADORMENT_VARIANT.STANDARD,
   hasLabel = false,
   ...restProps
 }: IPreAdormentProps) => {
-  if (!content) {
+  if (!children) {
     return null;
   }
 
@@ -26,11 +26,12 @@ export const PreAdorment = ({
       className={clsx(
         "pre-adorment",
         `pre-adorment--variant-${variant}`,
+        `pre-adorment--hasLabel-${hasLabel}`,
         className,
       )}
       data-testid="pre-adorment"
     >
-      {content}
+      {children}
     </Styled.Container>
   );
 };

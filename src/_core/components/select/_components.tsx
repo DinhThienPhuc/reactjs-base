@@ -44,6 +44,7 @@ const SelectOption = ({
     className={clsx(
       "select-option",
       `select-option--selected-${value === displayedValue}`,
+      `select-option--disabled-${disabled}`,
       "select-option--lines-1",
     )}
     onClick={handleSelectOption(value)}
@@ -118,6 +119,10 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       disabled,
     });
 
+    // TODO: Check why select double render
+    // eslint-disable-next-line no-console
+    console.log("CAC: ", isFocused, position, isShowed);
+
     const isLabelCollapsed = useBlock(() => {
       if (disabled) {
         return true;
@@ -188,56 +193,9 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       );
     }, [isShowed, optionGroupClassName, position, selectOptions]);
 
-    const postAdormentContent = useMemo(() => {
-      return (
-        <Styled.PostAdormentContentWrapper
-          $isShowed={isShowed}
-          $disabled={disabled}
-        >
-          {postAdormentProps?.content ?? <IconChevronLeft />}
-        </Styled.PostAdormentContentWrapper>
-      );
-    }, [disabled, isShowed, postAdormentProps?.content]);
-
-    const label = useMemo(
-      () => (
-        <Label
-          {...labelProps}
-          required={required}
-          disabled={disabled}
-          variant={variant}
-          isLabelCollapsed={isLabelCollapsed}
-          isFocused={isFocused}
-          isError={isError}
-        />
-      ),
-      [
-        disabled,
-        isError,
-        isFocused,
-        isLabelCollapsed,
-        labelProps,
-        required,
-        variant,
-      ],
-    );
-
-    const postAdorment = useMemo(
-      () => (
-        <PostAdorment
-          {...postAdormentProps}
-          variant={variant}
-          content={postAdormentContent}
-        />
-      ),
-      [postAdormentContent, postAdormentProps, variant],
-    );
-
-    const helperText = useMemo(
-      () => (
-        <HelperText {...helperTextProps} isError={isError} variant={variant} />
-      ),
-      [helperTextProps, isError, variant],
+    const postAdormentChild = useMemo(
+      () => postAdormentProps?.children ?? <IconChevronLeft />,
+      [postAdormentProps?.children],
     );
 
     return (
@@ -266,7 +224,15 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           )}
           data-testid="select-box"
         >
-          {label}
+          <Label
+            {...labelProps}
+            required={required}
+            disabled={disabled}
+            variant={variant}
+            isLabelCollapsed={isLabelCollapsed}
+            isFocused={isFocused}
+            isError={isError}
+          />
           <Styled.FakeSelect required={required} disabled={disabled} />
           <Styled.InnerBox
             $hasLabel={!!labelProps?.content}
@@ -274,6 +240,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             $disabled={disabled}
             className={clsx(
               "select-inner-box",
+              `select-inner-box--${variant}`,
               `select-inner-box--hasLabel-${!!labelProps?.content}`,
               `select-inner-box--disabled-${disabled}`,
             )}
@@ -287,8 +254,19 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
               {displayedOption?.label}
             </Typography>
           </Styled.InnerBox>
-          {postAdorment}
-          {helperText}
+          <PostAdorment {...postAdormentProps} variant={variant}>
+            <Styled.PostAdormentContentWrapper
+              $isShowed={isShowed}
+              $disabled={disabled}
+            >
+              {postAdormentChild}
+            </Styled.PostAdormentContentWrapper>
+          </PostAdorment>
+          <HelperText
+            {...helperTextProps}
+            isError={isError}
+            variant={variant}
+          />
         </Styled.Box>
 
         {portal}

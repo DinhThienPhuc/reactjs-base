@@ -9,7 +9,7 @@ export type TPostAdormentVariant =
 export interface IPostAdormentProps extends IExtendable {
   className?: string;
   variant?: TPostAdormentVariant;
-  content?: ReactNode;
+  children?: ReactNode;
   clearIcon?: ReactNode;
   hasLabel?: boolean;
   clear?: TFunction<void>;

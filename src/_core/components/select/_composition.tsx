@@ -26,15 +26,15 @@ const options = [
 ];
 
 const labelProps = {
-  content: "Label",
+  children: "Label",
 };
 
 const postAdormentProps = {
-  content: <IconArrowDownCircle />,
+  children: <IconArrowDownCircle />,
 };
 
 const helperTextProps = {
-  text: "helper text",
+  children: "helper text",
 };
 
 const commonProps = {
@@ -208,14 +208,16 @@ export const RHFControllerSelect = () => {
               message: "This field is required!",
             },
           }}
-          render={({ field }) => (
-            <Select
-              {...field}
-              {...commonProps}
-              isError={!!errors.select}
-              variant="outlined"
-            />
-          )}
+          render={({ field }) => {
+            return (
+              <Select
+                {...field}
+                {...commonProps}
+                isError={!!errors.select}
+                variant="outlined"
+              />
+            );
+          }}
         />
 
         <input type="submit" style={{ marginTop: 48 }} />

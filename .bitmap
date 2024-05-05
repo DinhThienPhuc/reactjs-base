@@ -12,7 +12,7 @@
     "components/button": {
         "name": "components/button",
         "scope": "phantomthief.react",
-        "version": "0.0.23",
+        "version": "0.0.24",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/button"
     },
@@ -26,91 +26,91 @@
     "components/flex-box": {
         "name": "components/flex-box",
         "scope": "phantomthief.react",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/flex-box"
     },
     "components/helper-text": {
         "name": "components/helper-text",
         "scope": "phantomthief.react",
-        "version": "0.0.20",
+        "version": "0.0.21",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/helper-text"
     },
     "components/label": {
         "name": "components/label",
         "scope": "phantomthief.react",
-        "version": "0.0.18",
+        "version": "0.0.19",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/label"
     },
     "components/loading-ellipsis": {
         "name": "components/loading-ellipsis",
         "scope": "phantomthief.react",
-        "version": "0.0.16",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/loading-ellipsis"
     },
     "components/loading-ripple": {
         "name": "components/loading-ripple",
         "scope": "phantomthief.react",
-        "version": "0.0.16",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/loading-ripple"
     },
     "components/navbar": {
         "name": "components/navbar",
         "scope": "phantomthief.react",
-        "version": "0.0.13",
+        "version": "0.0.14",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/navbar"
     },
     "components/portal": {
         "name": "components/portal",
         "scope": "phantomthief.react",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/portal"
     },
     "components/post-adorment": {
         "name": "components/post-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.18",
+        "version": "0.0.19",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/post-adorment"
     },
     "components/pre-adorment": {
         "name": "components/pre-adorment",
         "scope": "phantomthief.react",
-        "version": "0.0.18",
+        "version": "0.0.19",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/pre-adorment"
     },
     "components/select": {
         "name": "components/select",
         "scope": "phantomthief.react",
-        "version": "0.0.20",
+        "version": "0.0.21",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/select"
     },
     "components/switch": {
         "name": "components/switch",
         "scope": "phantomthief.react",
-        "version": "0.0.16",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/switch"
     },
     "components/text-field": {
         "name": "components/text-field",
         "scope": "phantomthief.react",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/text-field"
     },
     "components/typography": {
         "name": "components/typography",
         "scope": "phantomthief.react",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/_core/components/typography"
     },

@@ -6,7 +6,7 @@ export type TLabelVariant = (typeof LABEL_VARIANT)[keyof typeof LABEL_VARIANT];
 
 export interface ILabelProps extends IExtendable {
   className?: string;
-  content?: ReactNode;
+  children?: ReactNode;
   required?: boolean;
   disabled?: boolean;
   isFocused?: boolean;

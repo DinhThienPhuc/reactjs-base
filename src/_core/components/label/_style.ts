@@ -31,7 +31,7 @@ const modifyLabelPosition = (props: {
 
 export const Styled = {
   Container: styled.div<IStyledLabelProps>`
-    transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out 100ms;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

@@ -10,6 +10,6 @@ export interface IHelperTextProps
   extends HTMLAttributes<HTMLElement>,
     IExtendable {
   variant?: THelperTextVariant;
-  text?: ReactNode;
+  children?: ReactNode;
   isError?: boolean;
 }

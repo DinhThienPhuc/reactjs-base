@@ -8,6 +8,6 @@ export type TPreAdormentVariant =
 export interface IPreAdormentProps extends IExtendable {
   className?: string;
   variant?: TPreAdormentVariant;
-  content?: ReactNode;
+  children?: ReactNode;
   hasLabel?: boolean;
 }

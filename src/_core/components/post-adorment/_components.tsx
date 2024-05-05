@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 export const PostAdorment = ({
   className,
-  content = null,
+  children = null,
   variant = POST_ADORMENT_VARIANT.STANDARD,
   clearIcon = null,
   hasLabel = false,
@@ -24,6 +24,7 @@ export const PostAdorment = ({
     className: clsx(
       "post-adorment",
       `post-adorment--variant-${variant}`,
+      `post-adorment--hasLabel-${hasLabel}`,
       className,
     ),
     "data-testid": "post-adorment",
@@ -43,9 +44,9 @@ export const PostAdorment = ({
     );
   }
 
-  if (!content) {
+  if (!children) {
     return null;
   }
 
-  return <Styled.Container {...componentProps}>{content}</Styled.Container>;
+  return <Styled.Container {...componentProps}>{children}</Styled.Container>;
 };
