@@ -1,0 +1,17 @@
+#!/bin/bash
+. "$(dirname "$0")/_/husky.sh"
+
+# Validate commit message
+pnpm exec commitlint --edit ${1}
+
+# Check if commit message contains change, require a changeset
+message="$(cat $1)"
+requiredPatterns=('fix' 'feat' 'revert' 'refactor')
+for requiredPattern in ${requiredPatterns[@]}; do
+  if [[ $message == $requiredPattern* ]]; then
+    echo "Commit message starts with $requiredPattern"
+    echo "Checking changeset..."
+    pnpm exec changeset status
+    break
+  fi
+done
