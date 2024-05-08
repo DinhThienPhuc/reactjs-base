@@ -1,0 +1,7 @@
+pnpm-lock.yaml
+node_modules/
+**/node_modules/
+/**/node_modules/*
+.next
+next.config.js
+.changeset
