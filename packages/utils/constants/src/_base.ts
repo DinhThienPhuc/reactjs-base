@@ -26,4 +26,6 @@ export const SIZE_UNIT = {
   EM: "em",
 } as const;
 
-export const VERNADA_FONT = "Verdana,sans-serif";
+export const FONT = {
+  VERNADA: "Verdana,sans-serif",
+};

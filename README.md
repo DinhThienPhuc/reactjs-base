@@ -20,8 +20,8 @@ We use `monorepo` structure and `pnpm` as the package manager because `pnpm` has
 The packages will look like that:
 
 ```js
-@phantomthief-react.components.button
-@phantomthief-react.hooks.useEffectOnce
+@phantomthief-react-components/button
+@phantomthief-react-hooks/useEffectOnce
 ...
 ```
 
