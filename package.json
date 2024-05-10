@@ -1,10 +1,16 @@
 {
   "name": "reactjs-base",
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "bump": "changeset version",
     "format": "npx pretty-quick --staged && npx lint-staged",
     "dev": "pnpm --filter ./apps/$0 --stream --parallel dev",
-    "rmnpm": "rimraf ./node_modules && rimraf ./pnpm-lock.yaml && pnpm --filter \"./packages/**/**\"  --filter \"./apps/**\" -r exec rimraf ./node_modules && rimraf ./pnpm-lock.yaml"
+    "dev:storybook": "pnpm --filter base-ui-storybook storybook",
+    "start": "pnpm --filter ./apps/$0 --stream --parallel start",
+    "build": "pnpm --filter \"./packages/**/**\" -r build",
+    "publish": "pnpm --filter \"./packages/**/**\" -r publish --access public --no-git-checks",
+    "rmnpm": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rm -rf ./node_modules && rm -rf ./pnpm-lock.yaml"
   },
   "keywords": [],
   "author": "",
