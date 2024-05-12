@@ -5,4 +5,7 @@ node_modules/
 .next
 next.config.js
 .changeset/*
-.commitlintrc.json
+dist/
+**/dist/
+/**/dist/*
+eslint.config.mjs
