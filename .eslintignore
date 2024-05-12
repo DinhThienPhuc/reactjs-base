@@ -5,3 +5,7 @@ node_modules/
 .next
 next.config.js
 .changeset/*
+dist/
+**/dist/
+/**/dist/*
+eslint.config.mjs

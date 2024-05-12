@@ -9,7 +9,7 @@ const generatePackage = (packageName: string) => {
   /**
    * Create package directory
    */
-  const dirPath = `packages/${packageName}`;
+  const dirPath = `packages/${packageName.replace(".", "/")}`;
   fs.mkdirSync(dirPath, { recursive: true });
 
   /**
@@ -58,7 +58,7 @@ export default defineConfig(config);
    */
   const packageContent = `
 {
-  "name": "@phantomthief-react-${packageName}",
+  "name": "@phantomthief-react/${packageName}",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",
@@ -102,7 +102,8 @@ export default defineConfig(config);
   /**
    * Generate `src` directory for package
    */
-  fs.mkdirSync(path.join(dirPath, "src", "index.ts"), { recursive: true });
+  fs.mkdirSync(path.join(dirPath, "src"), { recursive: true });
+  fs.writeFileSync(path.join(dirPath, "src", "index.ts"), "");
 };
 
 /**
@@ -111,3 +112,5 @@ export default defineConfig(config);
 const [, , packageName] = process.argv;
 
 generatePackage(packageName);
+
+console.log(`Package ${packageName} has been generated successfully!`);

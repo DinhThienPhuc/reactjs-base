@@ -3,7 +3,7 @@ import {
   SIZE,
   SIZE_UNIT,
   VARIANT,
-} from "@phantomthief/react.utils.constants";
+} from "@phantomthief-react/utils.constants";
 import type { ReactElement, ReactNode } from "react";
 
 /**

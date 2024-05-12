@@ -20,8 +20,8 @@ We use `monorepo` structure and `pnpm` as the package manager because `pnpm` has
 The packages will look like that:
 
 ```js
-@phantomthief-react-components/button
-@phantomthief-react-hooks/useEffectOnce
+@phantomthief-react/components.button
+@phantomthief-react/hooks.useEffectOnce
 ...
 ```
 
@@ -30,17 +30,97 @@ Each package will have its own version.
 ## Install packages for the entire workspaces
 
 ```bash
-pnpm install
+pnpm i
 ```
 
-## Build and Test
+## Naming packages
+
+Noted that packages are named:
 
 ```bash
-# Build all packages
-pnpm build
+<package-scope>.<package-name>
 
-# Perform an action to a specific package
-pnpm --filter [package_name] [action_name]
+// For example, with `constants` package laid inside `utils` scope
+utils.constants
+```
+
+This is required when you run some pnpm command like below
+
+## Commands execution
+
+### Run an application in develop mode
+
+```bash
+// Run single application
+pnpm dev --apps=demo
+
+// Run multi applications at once
+pnpm dev --apps=demo,demo2
+
+// Run all available applications at once
+pnpm dev:all
+```
+
+### Generate package
+
+This command will create a new package with basic template.
+
+```bash
+// Create a new component
+pnpm generate components.flex
+
+// Create a new service
+pnpm generate services.styled-theme
+```
+
+### Run storybook
+
+```bash
+pnpm dev:storybook
+```
+
+### Build applications or packages
+
+You can build multi apps or packages at once
+
+Note that packages always have scope prefix
+
+```bash
+pnpm build --apps=demo --packages=components.flex,utils.constants
+```
+
+You can build all packages at once
+
+```bash
+pnpm build:all
+```
+
+### Start applications
+
+After building, you can start single or multi apps at once
+
+```bash
+pnpm start --apps=demo,demo2
+```
+
+You can start all applications
+
+```bash
+pnpm start:all
+```
+
+### Publish packages
+
+Before you publish packages, please ensure to update the CHANGELOG file by running [`pnpm bump`](#bump-the-version-of-packages)
+
+```bash
+pnpm publish --packages=demo,demo2
+```
+
+You can publish all bumped packages at once
+
+```bash
+pnpm publish:all
 ```
 
 ## Style Guide

@@ -9,7 +9,7 @@ const resolveExternal = (pkg: Record<string, unknown>) => {
     "react",
     "react/jsx-runtime",
     "react-dom",
-    /^@phantomthief-react-(.*)/,
+    /^@phantomthief-react\/(.*)/,
   ];
 
   return [

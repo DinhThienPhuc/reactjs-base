@@ -18,19 +18,23 @@ const runPnpmCommand = () => {
 
   if (pnpmInfor.packages.length) {
     for (const pkg of pnpmInfor.packages) {
-      command += `--filter ./packages/${pkg} `;
+      command += `--filter ./packages/${pkg.replace(".", "/")} `;
     }
   }
 
-  console.log("cpommand", pnpmInfor);
+  if (pnpmInfor.rest) {
+    command = `${command} ${pnpmInfor.rest}`;
+  }
+
+  console.log(`Running command: ${command}`);
 
   const options: ExecSyncOptions = { stdio: "inherit" };
 
-  // try {
-  //   execSync(command, options);
-  // } catch (error) {
-  //   console.error(error);
-  // }
+  try {
+    execSync(command, options);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 /**
