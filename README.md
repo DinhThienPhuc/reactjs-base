@@ -21,7 +21,7 @@ The packages will look like that:
 
 ```js
 @phantomthief-react/components.button
-@phantomthief-react/hooks.useEffectOnce
+@phantomthief-react/hooks.useOnMounted
 ...
 ```
 
