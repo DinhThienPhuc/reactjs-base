@@ -4,6 +4,8 @@
     "prepare": "husky install",
     "changeset": "changeset",
     "bump": "changeset version",
+    "ia": "pnpm install",
+    "is": "ts-node ./scripts/run-pnpm-command.ts -r install",
     "format": "npx pretty-quick --staged && npx lint-staged",
     "generate": "ts-node ./scripts/generate-package.ts",
     "dev": "ts-node ./scripts/run-pnpm-command.ts --stream --parallel dev",
