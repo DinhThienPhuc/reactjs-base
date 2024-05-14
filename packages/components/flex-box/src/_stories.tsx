@@ -3,14 +3,52 @@ import { FlexBox } from "./_components";
 import { fn } from "@storybook/test";
 
 const meta = {
-  title: "FlexBox",
+  title: "Components/FlexBox",
   component: FlexBox,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
-    backgroundColor: { control: "color" },
+    alignItems: {
+      control: {
+        type: "select",
+        options: ["flex-start", "center", "flex-end"],
+      },
+      description: "Align items in the cross-axis",
+    },
+    justifyContent: {
+      control: {
+        type: "select",
+        options: ["flex-start", "center", "flex-end"],
+      },
+      description: "Align items in the main-axis",
+    },
+    flexDirection: {
+      control: {
+        type: "select",
+        options: ["row", "column"],
+      },
+      description: "Direction of the flex items",
+    },
+    variant: {
+      control: {
+        type: "select",
+        options: ["div", "span"],
+      },
+      description: "HTML tag to render",
+    },
+    onClick: {
+      table: {
+        disable: true,
+      },
+    },
+    style: {
+      description: "CSS style object",
+    },
+    children: {
+      description: "Content to render",
+    },
   },
   args: {
     onClick: fn(),
