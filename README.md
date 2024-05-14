@@ -220,3 +220,5 @@ The steps to perform an releasing:
 - Checkout to new branch with formated name as `release/\*`.
 - Review the version of package and the ChangeLogs.
 - Push `release/*` branch to the npm registry.
+
+<!-- TODO: add instruction to bump before create release and push (auto publish ) -->
