@@ -29,3 +29,5 @@ export type TStyledTag = IStyledComponentBase<
   >
 > &
   string;
+
+export type TTestCI = "ci" | "cd";
