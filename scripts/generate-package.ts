@@ -20,7 +20,7 @@ const generatePackage = (packageName: string) => {
 {
   "extends": "../../tsconfig.base.json",
   "include": ["./src"],
-  "exclude": ["./src/*.stories.tsx"]
+  "exclude": ["./src/_stories.tsx"]
 }
 `
     : `
@@ -31,7 +31,6 @@ const generatePackage = (packageName: string) => {
 `;
 
   const tsConfigFilePath = path.join(dirPath, "tsconfig.json");
-
   fs.writeFileSync(tsConfigFilePath, tsconfigContent);
 
   /**
@@ -50,7 +49,6 @@ export default defineConfig(config);
 `;
 
   const filePath = path.join(dirPath, "vite.config.ts");
-
   fs.writeFileSync(filePath, viteConfigContent);
 
   /**
@@ -96,13 +94,34 @@ export default defineConfig(config);
 `;
 
   const packageFilePath = path.join(dirPath, "package.json");
-
   fs.writeFileSync(packageFilePath, packageContent);
 
   /**
    * Generate `src` directory for package
    */
   fs.mkdirSync(path.join(dirPath, "src"), { recursive: true });
+
+  /**
+   * Generate files for component package
+   */
+  if (packageName.includes("components.")) {
+    fs.writeFileSync(path.join(dirPath, "src", "_components.tsx"), "");
+    fs.writeFileSync(path.join(dirPath, "src", "_constants.ts"), "");
+    fs.writeFileSync(path.join(dirPath, "src", "_stories.tsx"), "");
+    fs.writeFileSync(path.join(dirPath, "src", "_style.ts"), "");
+    fs.writeFileSync(path.join(dirPath, "src", "_types.ts"), "");
+  }
+
+  /**
+   * Generate files for hook package
+   */
+  if (packageName.includes("hooks.")) {
+    fs.writeFileSync(path.join(dirPath, "src", "_hook.ts"), "");
+  }
+
+  /**
+   * Always generate index.ts file for package
+   */
   fs.writeFileSync(path.join(dirPath, "src", "index.ts"), "");
 };
 
