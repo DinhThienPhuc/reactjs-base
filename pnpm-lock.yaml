@@ -301,6 +301,21 @@ importers:
         specifier: workspace:*
         version: link:../../utils/constants
 
+  packages/components/portal:
+    dependencies:
+      "@phantomthief-react/utils.definations":
+        specifier: workspace:*
+        version: link:../../utils/definations
+      react:
+        specifier: "*"
+        version: 18.3.1
+      react-dom:
+        specifier: "*"
+        version: 18.3.1(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
   packages/components/typography:
     dependencies:
       "@phantomthief-react/utils.definations":
@@ -9912,7 +9927,6 @@ packages:
         integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==,
         tarball: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz,
       }
-    version: 18.3.1
     peerDependencies:
       react: ^18.3.1
 
@@ -13958,21 +13972,21 @@ snapshots:
     dependencies:
       "@babel/core": https://registry.npmjs.org/@babel/core/-/core-7.24.5.tgz
       "@mdx-js/react": https://registry.npmjs.org/@mdx-js/react/-/react-3.0.1.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react@18.3.1)
-      "@storybook/blocks": https://registry.npmjs.org/@storybook/blocks/-/blocks-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/blocks": https://registry.npmjs.org/@storybook/blocks/-/blocks-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/client-logger": https://registry.npmjs.org/@storybook/client-logger/-/client-logger-8.0.10.tgz
-      "@storybook/components": https://registry.npmjs.org/@storybook/components/-/components-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/components": https://registry.npmjs.org/@storybook/components/-/components-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/csf-plugin": https://registry.npmjs.org/@storybook/csf-plugin/-/csf-plugin-8.0.10.tgz
       "@storybook/csf-tools": https://registry.npmjs.org/@storybook/csf-tools/-/csf-tools-8.0.10.tgz
       "@storybook/global": https://registry.npmjs.org/@storybook/global/-/global-5.0.0.tgz
       "@storybook/node-logger": https://registry.npmjs.org/@storybook/node-logger/-/node-logger-8.0.10.tgz
       "@storybook/preview-api": https://registry.npmjs.org/@storybook/preview-api/-/preview-api-8.0.10.tgz
-      "@storybook/react-dom-shim": https://registry.npmjs.org/@storybook/react-dom-shim/-/react-dom-shim-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
-      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/react-dom-shim": https://registry.npmjs.org/@storybook/react-dom-shim/-/react-dom-shim-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/types": https://registry.npmjs.org/@storybook/types/-/types-8.0.10.tgz
       "@types/react": https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz
       fs-extra: https://registry.npmjs.org/fs-extra/-/fs-extra-11.2.0.tgz
       react: 18.3.1
-      react-dom: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
       rehype-external-links: https://registry.npmjs.org/rehype-external-links/-/rehype-external-links-3.0.0.tgz
       rehype-slug: https://registry.npmjs.org/rehype-slug/-/rehype-slug-6.0.0.tgz
       ts-dedent: https://registry.npmjs.org/ts-dedent/-/ts-dedent-2.2.0.tgz
@@ -14050,19 +14064,19 @@ snapshots:
     dependencies:
       memoizerific: https://registry.npmjs.org/memoizerific/-/memoizerific-1.11.3.tgz
 
-  "@storybook/blocks@https://registry.npmjs.org/@storybook/blocks/-/blocks-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)":
+  "@storybook/blocks@https://registry.npmjs.org/@storybook/blocks/-/blocks-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
     dependencies:
       "@storybook/channels": https://registry.npmjs.org/@storybook/channels/-/channels-8.0.10.tgz
       "@storybook/client-logger": https://registry.npmjs.org/@storybook/client-logger/-/client-logger-8.0.10.tgz
-      "@storybook/components": https://registry.npmjs.org/@storybook/components/-/components-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/components": https://registry.npmjs.org/@storybook/components/-/components-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/core-events": https://registry.npmjs.org/@storybook/core-events/-/core-events-8.0.10.tgz
       "@storybook/csf": https://registry.npmjs.org/@storybook/csf/-/csf-0.1.7.tgz
       "@storybook/docs-tools": https://registry.npmjs.org/@storybook/docs-tools/-/docs-tools-8.0.10.tgz
       "@storybook/global": https://registry.npmjs.org/@storybook/global/-/global-5.0.0.tgz
-      "@storybook/icons": https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
-      "@storybook/manager-api": https://registry.npmjs.org/@storybook/manager-api/-/manager-api-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/icons": https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      "@storybook/manager-api": https://registry.npmjs.org/@storybook/manager-api/-/manager-api-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/preview-api": https://registry.npmjs.org/@storybook/preview-api/-/preview-api-8.0.10.tgz
-      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/types": https://registry.npmjs.org/@storybook/types/-/types-8.0.10.tgz
       "@types/lodash": https://registry.npmjs.org/@types/lodash/-/lodash-4.17.1.tgz
       color-convert: https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz
@@ -14071,14 +14085,14 @@ snapshots:
       markdown-to-jsx: https://registry.npmjs.org/markdown-to-jsx/-/markdown-to-jsx-7.3.2.tgz(react@18.3.1)
       memoizerific: https://registry.npmjs.org/memoizerific/-/memoizerific-1.11.3.tgz
       polished: https://registry.npmjs.org/polished/-/polished-4.3.1.tgz
-      react-colorful: https://registry.npmjs.org/react-colorful/-/react-colorful-5.6.1.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      react-colorful: https://registry.npmjs.org/react-colorful/-/react-colorful-5.6.1.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       telejson: https://registry.npmjs.org/telejson/-/telejson-7.2.0.tgz
       tocbot: https://registry.npmjs.org/tocbot/-/tocbot-4.27.20.tgz
       ts-dedent: https://registry.npmjs.org/ts-dedent/-/ts-dedent-2.2.0.tgz
       util-deprecate: https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz
     optionalDependencies:
       react: 18.3.1
-      react-dom: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - "@types/react"
       - encoding
@@ -14243,18 +14257,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@storybook/components@https://registry.npmjs.org/@storybook/components/-/components-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)":
+  "@storybook/components@https://registry.npmjs.org/@storybook/components/-/components-8.0.10.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
     dependencies:
       "@radix-ui/react-slot": https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.0.2.tgz(@types/react@https://registry.npmjs.org/@types/react/-/react-18.3.2.tgz)(react@18.3.1)
       "@storybook/client-logger": https://registry.npmjs.org/@storybook/client-logger/-/client-logger-8.0.10.tgz
       "@storybook/csf": https://registry.npmjs.org/@storybook/csf/-/csf-0.1.7.tgz
       "@storybook/global": https://registry.npmjs.org/@storybook/global/-/global-5.0.0.tgz
-      "@storybook/icons": https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
-      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/icons": https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/types": https://registry.npmjs.org/@storybook/types/-/types-8.0.10.tgz
       memoizerific: https://registry.npmjs.org/memoizerific/-/memoizerific-1.11.3.tgz
       react: 18.3.1
-      react-dom: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
       util-deprecate: https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz
     transitivePeerDependencies:
       - "@types/react"
@@ -14415,10 +14429,10 @@ snapshots:
   "@storybook/global@https://registry.npmjs.org/@storybook/global/-/global-5.0.0.tgz":
     {}
 
-  "@storybook/icons@https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)":
+  "@storybook/icons@https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
     dependencies:
       react: 18.3.1
-      react-dom: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
 
   "@storybook/icons@https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz))(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz)":
     dependencies:
@@ -14435,16 +14449,16 @@ snapshots:
       "@vitest/utils": https://registry.npmjs.org/@vitest/utils/-/utils-1.6.0.tgz
       util: https://registry.npmjs.org/util/-/util-0.12.5.tgz
 
-  "@storybook/manager-api@https://registry.npmjs.org/@storybook/manager-api/-/manager-api-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)":
+  "@storybook/manager-api@https://registry.npmjs.org/@storybook/manager-api/-/manager-api-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
     dependencies:
       "@storybook/channels": https://registry.npmjs.org/@storybook/channels/-/channels-8.0.10.tgz
       "@storybook/client-logger": https://registry.npmjs.org/@storybook/client-logger/-/client-logger-8.0.10.tgz
       "@storybook/core-events": https://registry.npmjs.org/@storybook/core-events/-/core-events-8.0.10.tgz
       "@storybook/csf": https://registry.npmjs.org/@storybook/csf/-/csf-0.1.7.tgz
       "@storybook/global": https://registry.npmjs.org/@storybook/global/-/global-5.0.0.tgz
-      "@storybook/icons": https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/icons": https://registry.npmjs.org/@storybook/icons/-/icons-1.2.9.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/router": https://registry.npmjs.org/@storybook/router/-/router-8.0.10.tgz
-      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)
+      "@storybook/theming": https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@storybook/types": https://registry.npmjs.org/@storybook/types/-/types-8.0.10.tgz
       dequal: https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz
       lodash: https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz
@@ -14503,10 +14517,10 @@ snapshots:
   "@storybook/preview@https://registry.npmjs.org/@storybook/preview/-/preview-8.0.10.tgz":
     {}
 
-  "@storybook/react-dom-shim@https://registry.npmjs.org/@storybook/react-dom-shim/-/react-dom-shim-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)":
+  "@storybook/react-dom-shim@https://registry.npmjs.org/@storybook/react-dom-shim/-/react-dom-shim-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
     dependencies:
       react: 18.3.1
-      react-dom: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
 
   "@storybook/react-dom-shim@https://registry.npmjs.org/@storybook/react-dom-shim/-/react-dom-shim-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz))(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz)":
     dependencies:
@@ -14606,7 +14620,7 @@ snapshots:
       - jest
       - vitest
 
-  "@storybook/theming@https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1)":
+  "@storybook/theming@https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
     dependencies:
       "@emotion/use-insertion-effect-with-fallbacks": https://registry.npmjs.org/@emotion/use-insertion-effect-with-fallbacks/-/use-insertion-effect-with-fallbacks-1.0.1.tgz(react@18.3.1)
       "@storybook/client-logger": https://registry.npmjs.org/@storybook/client-logger/-/client-logger-8.0.10.tgz
@@ -14614,7 +14628,7 @@ snapshots:
       memoizerific: https://registry.npmjs.org/memoizerific/-/memoizerific-1.11.3.tgz
     optionalDependencies:
       react: 18.3.1
-      react-dom: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
 
   "@storybook/theming@https://registry.npmjs.org/@storybook/theming/-/theming-8.0.10.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz))(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz)":
     dependencies:
@@ -17613,10 +17627,10 @@ snapshots:
       iconv-lite: https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz
       unpipe: https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz
 
-  react-colorful@https://registry.npmjs.org/react-colorful/-/react-colorful-5.6.1.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1))(react@18.3.1):
+  react-colorful@https://registry.npmjs.org/react-colorful/-/react-colorful-5.6.1.tgz(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
-      react-dom: https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
 
   react-colorful@https://registry.npmjs.org/react-colorful/-/react-colorful-5.6.1.tgz(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz))(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz):
     dependencies:
@@ -17647,17 +17661,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  react-dom@18.3.1(react@18.3.1):
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.3.1
+      scheduler: 0.23.2
+
   react-dom@18.3.1(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz):
     dependencies:
       loose-envify: 1.4.0
       react: https://registry.npmjs.org/react/-/react-18.3.1.tgz
       scheduler: 0.23.2
-
-  react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@18.3.1):
-    dependencies:
-      loose-envify: https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz
-      react: 18.3.1
-      scheduler: https://registry.npmjs.org/scheduler/-/scheduler-0.23.2.tgz
 
   react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz):
     dependencies:
