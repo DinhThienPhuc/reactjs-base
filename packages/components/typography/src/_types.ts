@@ -1,4 +1,3 @@
-import { IStyledComponentBase, Substitute } from "styled-components/dist/types";
 import { IExtendable } from "@phantomthief-react/utils.definations";
 import { HTMLAttributes, ReactNode } from "react";
 
@@ -20,14 +19,3 @@ export interface IStyledTypographyProps extends IExtendable {
   $bold?: number;
   $font?: string;
 }
-
-export type TStyledTag = IStyledComponentBase<
-  "web",
-  Substitute<
-    React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
-    IStyledTypographyProps
-  >
-> &
-  string;
-
-export type TTestCI = "ci" | "cd";

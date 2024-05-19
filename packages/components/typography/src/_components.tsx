@@ -1,5 +1,5 @@
-import { ITypographyProps, TStyledTag } from "./_types";
-import React, { useMemo } from "react";
+import { IStyledTypographyProps, ITypographyProps } from "./_types";
+import React, { FC, useMemo } from "react";
 
 import { capitalize } from "@phantomthief-react/utils.helpers";
 import { Styled } from "./_style";
@@ -15,7 +15,7 @@ export const Typography = ({
   children,
   ...restProps
 }: ITypographyProps) => {
-  const StyledTag = useMemo<TStyledTag>(() => {
+  const StyledTag = useMemo<FC<IStyledTypographyProps>>(() => {
     const styledTagProperty = capitalize(variant) as keyof typeof Styled;
     return Styled[styledTagProperty];
   }, [variant]);

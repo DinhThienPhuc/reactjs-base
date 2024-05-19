@@ -82,6 +82,9 @@ importers:
       eslint-plugin-promise:
         specifier: ^6.1.1
         version: https://registry.npmjs.org/eslint-plugin-promise/-/eslint-plugin-promise-6.1.1.tgz(eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz)
+      eslint-plugin-react-hooks:
+        specifier: ^4.6.2
+        version: 4.6.2(eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz)
       eslint-plugin-storybook:
         specifier: ^0.8.0
         version: https://registry.npmjs.org/eslint-plugin-storybook/-/eslint-plugin-storybook-0.8.0.tgz(eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz)(typescript@https://registry.npmjs.org/typescript/-/typescript-5.4.5.tgz)
@@ -118,6 +121,9 @@ importers:
       react-feather:
         specifier: ^2.0.10
         version: 2.0.10(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz)
+      react-hook-form:
+        specifier: "*"
+        version: 7.51.4(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz)
       react-i18next:
         specifier: ^14.1.1
         version: https://registry.npmjs.org/react-i18next/-/react-i18next-14.1.1.tgz(i18next@https://registry.npmjs.org/i18next/-/i18next-23.11.4.tgz)(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz))(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz)
@@ -369,6 +375,34 @@ importers:
       typescript:
         specifier: "*"
         version: 5.4.5
+
+  packages/components/switch:
+    dependencies:
+      "@phantomthief-react/components.typography":
+        specifier: workspace:*
+        version: link:../typography
+      "@phantomthief-react/utils.constants":
+        specifier: workspace:*
+        version: link:../../utils/constants
+      "@phantomthief-react/utils.definations":
+        specifier: workspace:*
+        version: link:../../utils/definations
+      clsx:
+        specifier: "*"
+        version: 2.1.1
+      react:
+        specifier: "*"
+        version: 18.3.1
+      styled-components:
+        specifier: "*"
+        version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+    devDependencies:
+      react-hook-form:
+        specifier: "*"
+        version: 7.51.4(react@18.3.1)
 
   packages/components/typography:
     dependencies:
@@ -6571,6 +6605,17 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
 
+  eslint-plugin-react-hooks@4.6.2:
+    resolution:
+      {
+        integrity: sha512-QzliNJq4GinDBcD8gPB5v0wh6g8q3SUi6EFF0x8N/BL9PoVs0atuGc47ozMRyOWAKdwaZ5OnbOEa3WR+dSGKuQ==,
+        tarball: https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.2.tgz,
+      }
+    version: 4.6.2
+    engines: { node: ">=10" }
+    peerDependencies:
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
+
   eslint-plugin-storybook@https://registry.npmjs.org/eslint-plugin-storybook/-/eslint-plugin-storybook-0.8.0.tgz:
     resolution:
       {
@@ -10109,6 +10154,17 @@ packages:
     version: 2.0.10
     peerDependencies:
       react: ">=16.8.6"
+
+  react-hook-form@7.51.4:
+    resolution:
+      {
+        integrity: sha512-V14i8SEkh+V1gs6YtD0hdHYnoL4tp/HX/A45wWQN15CYr9bFRmmRdYStSO5L65lCCZRF+kYiSKhm9alqbcdiVA==,
+        tarball: https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.51.4.tgz,
+      }
+    version: 7.51.4
+    engines: { node: ">=12.22.0" }
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
 
   react-i18next@https://registry.npmjs.org/react-i18next/-/react-i18next-14.1.1.tgz:
     resolution:
@@ -16254,6 +16310,10 @@ snapshots:
     dependencies:
       eslint: https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz
 
+  eslint-plugin-react-hooks@4.6.2(eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz):
+    dependencies:
+      eslint: https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz
+
   eslint-plugin-storybook@https://registry.npmjs.org/eslint-plugin-storybook/-/eslint-plugin-storybook-0.8.0.tgz(eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz)(typescript@https://registry.npmjs.org/typescript/-/typescript-5.4.5.tgz):
     dependencies:
       "@storybook/csf": https://registry.npmjs.org/@storybook/csf/-/csf-0.0.1.tgz
@@ -17939,6 +17999,14 @@ snapshots:
   react-feather@2.0.10(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz):
     dependencies:
       prop-types: 15.8.1
+      react: https://registry.npmjs.org/react/-/react-18.3.1.tgz
+
+  react-hook-form@7.51.4(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+  react-hook-form@7.51.4(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz):
+    dependencies:
       react: https://registry.npmjs.org/react/-/react-18.3.1.tgz
 
   react-i18next@https://registry.npmjs.org/react-i18next/-/react-i18next-14.1.1.tgz(i18next@https://registry.npmjs.org/i18next/-/i18next-23.11.4.tgz)(react-dom@https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz))(react@https://registry.npmjs.org/react/-/react-18.3.1.tgz):
