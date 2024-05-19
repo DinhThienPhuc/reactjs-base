@@ -60,6 +60,7 @@
     "pretty-quick": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
     "react-i18next": "^14.1.1",
     "rimraf": "^5.0.5",
     "storybook": "^8.0.10",

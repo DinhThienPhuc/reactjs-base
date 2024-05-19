@@ -44,6 +44,7 @@ export const Styled = {
   `,
   Button: styled.button<IStyledTypographyProps>`
     ${typographyModify};
+    background-color: transparent;
     cursor: pointer;
     border: none;
     outline: 0;
@@ -51,6 +52,7 @@ export const Styled = {
   `,
   A: styled.a<IStyledTypographyProps>`
     ${typographyModify};
+    cursor: pointer;
     text-decoration-line: none;
   `,
   P: styled.p<IStyledTypographyProps>`
