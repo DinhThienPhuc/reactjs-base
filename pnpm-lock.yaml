@@ -376,6 +376,61 @@ importers:
         specifier: "*"
         version: 5.4.5
 
+  packages/components/select:
+    dependencies:
+      "@phantomthief-react/components.helper-text":
+        specifier: workspace:*
+        version: link:../helper-text
+      "@phantomthief-react/components.label":
+        specifier: workspace:*
+        version: link:../label
+      "@phantomthief-react/components.portal":
+        specifier: workspace:*
+        version: link:../portal
+      "@phantomthief-react/components.post-adorment":
+        specifier: workspace:*
+        version: link:../post-adorment
+      "@phantomthief-react/components.typography":
+        specifier: workspace:*
+        version: link:../typography
+      "@phantomthief-react/hooks.block":
+        specifier: workspace:*
+        version: link:../../hooks/block
+      "@phantomthief-react/hooks.focus-with-callback":
+        specifier: workspace:*
+        version: link:../../hooks/focus-with-callback
+      "@phantomthief-react/hooks.not-click-on-elements":
+        specifier: workspace:*
+        version: link:../../hooks/not-click-on-elements
+      "@phantomthief-react/utils.constants":
+        specifier: workspace:*
+        version: link:../../utils/constants
+      "@phantomthief-react/utils.definations":
+        specifier: workspace:*
+        version: link:../../utils/definations
+      "@phantomthief-react/utils.helpers":
+        specifier: workspace:*
+        version: link:../../utils/helpers
+      clsx:
+        specifier: "*"
+        version: 2.1.1
+      react:
+        specifier: "*"
+        version: 18.3.1
+      styled-components:
+        specifier: "*"
+        version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+    devDependencies:
+      react-feather:
+        specifier: "*"
+        version: 2.0.10(react@18.3.1)
+      react-hook-form:
+        specifier: "*"
+        version: 7.51.4(react@18.3.1)
+
   packages/components/switch:
     dependencies:
       "@phantomthief-react/components.typography":
@@ -5260,14 +5315,6 @@ packages:
         tarball: https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz,
       }
 
-  camelize@https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz:
-    resolution:
-      {
-        integrity: sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==,
-        tarball: https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz,
-      }
-    version: 1.0.1
-
   caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001618.tgz:
     resolution:
       {
@@ -5798,15 +5845,6 @@ packages:
         integrity: sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==,
         tarball: https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz,
       }
-    engines: { node: ">=4" }
-
-  css-color-keywords@https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz:
-    resolution:
-      {
-        integrity: sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==,
-        tarball: https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz,
-      }
-    version: 1.0.0
     engines: { node: ">=4" }
 
   css-to-react-native@3.2.0:
@@ -9800,14 +9838,6 @@ packages:
         integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==,
         tarball: https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz,
       }
-
-  postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz:
-    resolution:
-      {
-        integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==,
-        tarball: https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz,
-      }
-    version: 4.2.0
 
   postcss@8.4.38:
     resolution:
@@ -15604,8 +15634,6 @@ snapshots:
 
   camelize@1.0.1: {}
 
-  camelize@https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz: {}
-
   caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001618.tgz:
     {}
 
@@ -15844,9 +15872,6 @@ snapshots:
 
   css-color-keywords@1.0.0: {}
 
-  css-color-keywords@https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz:
-    {}
-
   css-to-react-native@3.2.0:
     dependencies:
       camelize: 1.0.1
@@ -15855,9 +15880,9 @@ snapshots:
 
   css-to-react-native@https://registry.npmjs.org/css-to-react-native/-/css-to-react-native-3.2.0.tgz:
     dependencies:
-      camelize: https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz
-      css-color-keywords: https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz
-      postcss-value-parser: https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz
+      camelize: 1.0.1
+      css-color-keywords: 1.0.0
+      postcss-value-parser: 4.2.0
 
   css.escape@https://registry.npmjs.org/css.escape/-/css.escape-1.5.1.tgz: {}
 
@@ -17784,9 +17809,6 @@ snapshots:
     {}
 
   postcss-value-parser@4.2.0: {}
-
-  postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz:
-    {}
 
   postcss@8.4.38:
     dependencies:
