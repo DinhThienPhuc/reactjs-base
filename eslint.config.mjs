@@ -1,3 +1,4 @@
+import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginPromise from "eslint-plugin-promise";
 import pluginImport from "eslint-plugin-import";
 import config from "eslint-config-standard";
@@ -21,6 +22,7 @@ const pluginsObject = {
   import: pluginImport,
   n: pluginN,
   promise: pluginPromise,
+  "react-hooks": pluginReactHooks,
 };
 
 export default [

@@ -8,11 +8,11 @@ import { css } from "styled-components";
  * @returns style sheets
  */
 export const getVariantStyle = (props: {
-  variant: TVariant;
-  disabled: boolean;
+  $variant: TVariant;
+  $disabled: boolean;
 }) => {
-  if (props?.variant === VARIANT.OUTLINED) {
-    if (!props?.disabled) {
+  if (props?.$variant === VARIANT.OUTLINED) {
+    if (!props?.$disabled) {
       return css`
         border: 1px solid #ffffff3b;
 
@@ -32,11 +32,12 @@ export const getVariantStyle = (props: {
     `;
   }
 
-  if (props?.variant === VARIANT.FILLED) {
-    if (!props?.disabled) {
+  if (props?.$variant === VARIANT.FILLED) {
+    if (!props?.$disabled) {
       return css`
         border-bottom: 1px solid #ffffffb3;
         background-color: #ffffff17;
+        border-radius: 4px 4px 0px 0px;
 
         &:hover {
           border-bottom: 1px solid #ffffff;
@@ -53,12 +54,14 @@ export const getVariantStyle = (props: {
     return css`
       border-bottom: 1px solid #ffffff80;
       background-color: #ffffff17;
+      border-radius: 4px 4px 0px 0px;
     `;
   }
 
-  if (!props?.disabled) {
+  if (!props?.$disabled) {
     return css`
       border-bottom: 1px solid #ffffffb3;
+      border-radius: 0px;
 
       &:hover {
         border-bottom: 1px solid #ffffff;
@@ -74,40 +77,6 @@ export const getVariantStyle = (props: {
 
   return css`
     border-bottom: 1px solid #ffffff80;
-  `;
-};
-
-/**
- * Style for label of input/textare/element of form, depend on variant
- * @param props variant, isLabelCollapsed
- * @returns style sheets
- */
-export const getLabelStyle = (props: {
-  variant: TVariant;
-  isLabelCollapsed: boolean;
-}) => {
-  if (props?.variant === VARIANT.STANDARD) {
-    if (props?.isLabelCollapsed) {
-      return css`
-        font-size: 12px;
-        top: 12px;
-        left: 0px;
-        color: #90caf9;
-      `;
-    }
-    return css`
-      left: 0px;
-    `;
-  }
-  if (props?.isLabelCollapsed) {
-    return css`
-      font-size: 12px;
-      top: 12px;
-      left: 14px;
-      color: #90caf9;
-    `;
-  }
-  return css`
-    left: 14px;
+    border-radius: 0px;
   `;
 };

@@ -20,41 +20,43 @@ const typographyModify = ({
 export const Styled = {
   H1: styled.h1<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   H2: styled.h2<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   H3: styled.h3<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   H4: styled.h4<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   H5: styled.h5<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   H6: styled.h6<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   Span: styled.span<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   Caption: styled.caption<IStyledTypographyProps>`
     ${typographyModify};
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   Button: styled.button<IStyledTypographyProps>`
     ${typographyModify};
+    background-color: transparent;
     cursor: pointer;
     border: none;
     outline: 0;
     padding: 0;
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   A: styled.a<IStyledTypographyProps>`
     ${typographyModify};
+    cursor: pointer;
     text-decoration-line: none;
-  `,
+  ` as React.FC<IStyledTypographyProps>,
   P: styled.p<IStyledTypographyProps>`
     ${typographyModify};
     margin-block: 0;
-  `,
+  ` as React.FC<IStyledTypographyProps>,
 };
