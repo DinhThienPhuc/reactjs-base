@@ -56,6 +56,7 @@
     "husky": "^9.0.11",
     "i18next": "^23.11.4",
     "lint-staged": "^15.2.2",
+    "pnpm": "^9.1.2",
     "prettier": "^3.2.5",
     "prettier-plugin-sort-imports": "^1.8.5",
     "pretty-quick": "^4.0.0",
@@ -65,6 +66,7 @@
     "react-hook-form": "*",
     "react-i18next": "^14.1.1",
     "rimraf": "^5.0.5",
+    "rollup-plugin-visualizer": "^5.12.0",
     "storybook": "^8.0.10",
     "styled-components": "^6.1.10",
     "ts-node": "^10.9.2",
@@ -77,6 +79,5 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  },
-  "packageManager": "pnpm@9.1.2+sha512.127dc83b9ea10c32be65d22a8efb4a65fb952e8fefbdfded39bdc3c97efc32d31b48b00420df2c1187ace28c921c902f0cb5a134a4d032b8b5295cbfa2c681e2"
+  }
 }

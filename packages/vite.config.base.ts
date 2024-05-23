@@ -1,7 +1,7 @@
-import { Plugin, UserConfig } from "vite";
-
+import { visualizer } from "rollup-plugin-visualizer"; // Uncomment this line to generate statistics.html
 import { PluginOptions } from "vite-plugin-dts";
 import viteReact from "@vitejs/plugin-react";
+import { Plugin, UserConfig } from "vite";
 import { resolve } from "path";
 
 const resolveExternal = (pkg: Record<string, unknown>) => {
@@ -25,8 +25,18 @@ const createConfig = (
   pkg: Record<string, unknown>,
   entries = [resolve("src/index.ts")],
 ): UserConfig => {
+  console.log(
+    "process.env.ENABLE_ANALYZE, process.env.ENABLE_ANALYZE",
+    process.env.ENABLE_ANALYZE,
+  );
   return {
-    plugins: [reactPlugin(), dtsPlugin({ include: ["src"] })],
+    plugins: [
+      reactPlugin(),
+      dtsPlugin({ include: ["src"] }),
+      process.env.ENABLE_ANALYZE
+        ? visualizer({ filename: "./statistics.html" })
+        : null,
+    ],
     resolve: {
       alias: {
         "@": resolve("src"),
