@@ -9,7 +9,7 @@ import {
   getDocs,
   setDoc,
 } from "firebase/firestore";
-import { logger, tryDo } from "@phantomthief-react/utils.helpers";
+import { tryDo } from "@phantomthief-react/utils.helpers";
 
 import { TAsyncBoundary } from "@phantomthief-react/utils.definations";
 
@@ -26,7 +26,7 @@ export const getAllDocuments = async <T>(
   })) as unknown as T;
 
   if (error) {
-    logger.error(error);
+    console.error(error);
   }
 
   return {
@@ -44,7 +44,7 @@ export const getDocumentById = async <T>(
   const { error, result } = await tryDo(getDoc(documentRef));
 
   if (error) {
-    logger.error(error);
+    console.error(error);
   }
 
   return {
@@ -62,7 +62,7 @@ export const addDocument = async <T>(
   const { error, result } = await tryDo(addDoc(collectionRef, data));
 
   if (error) {
-    logger.error(error);
+    console.error(error);
   }
 
   return {
@@ -82,7 +82,7 @@ export const setDocument = async (
   );
 
   if (error) {
-    logger.error(error);
+    console.error(error);
   }
 
   return {
@@ -100,7 +100,7 @@ export const deleteDocument = async (
   const { error, result } = await tryDo(deleteDoc(documentRef));
 
   if (error) {
-    logger.error(error);
+    console.error(error);
   }
 
   return {

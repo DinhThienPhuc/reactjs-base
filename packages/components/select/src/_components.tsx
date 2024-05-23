@@ -120,8 +120,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     });
 
     // TODO: Check why select double render
-    // eslint-disable-next-line no-console
-    console.log("CAC: ", isFocused, position, isShowed);
+    console.log("RENDER SELECT: ", isFocused, position, isShowed);
 
     const isLabelCollapsed = useBlock(() => {
       if (disabled) {

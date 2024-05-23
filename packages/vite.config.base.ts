@@ -25,10 +25,6 @@ const createConfig = (
   pkg: Record<string, unknown>,
   entries = [resolve("src/index.ts")],
 ): UserConfig => {
-  console.log(
-    "process.env.ENABLE_ANALYZE, process.env.ENABLE_ANALYZE",
-    process.env.ENABLE_ANALYZE,
-  );
   return {
     plugins: [
       reactPlugin(),
