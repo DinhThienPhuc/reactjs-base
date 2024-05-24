@@ -1,5 +1,13 @@
 # @phantomthief-react/modules.authenticator
 
+## 0.0.3
+
+### Patch Changes
+
+- Bump to one higher version to update the package
+- Updated dependencies
+  - @phantomthief-react/hooks.block@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @phantomthief-react/hooks.isomorphic-layout-effect
 
+## 0.0.3
+
+### Patch Changes
+
+- Bump to one higher version to update the package
+
 ## 0.0.2
 
 ### Patch Changes

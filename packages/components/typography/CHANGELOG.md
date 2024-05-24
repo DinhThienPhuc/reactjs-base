@@ -1,5 +1,14 @@
 # @phantomthief-react/components.typography
 
+## 0.0.6
+
+### Patch Changes
+
+- Bump to one higher version to update the package
+- Updated dependencies
+  - @phantomthief-react/utils.definations@0.0.3
+  - @phantomthief-react/utils.helpers@0.0.4
+
 ## 0.0.5
 
 ### Patch Changes

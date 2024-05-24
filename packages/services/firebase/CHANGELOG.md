@@ -1,5 +1,14 @@
 # @phantomthief-react/services.firebase
 
+## 0.0.4
+
+### Patch Changes
+
+- Bump to one higher version to update the package
+- Updated dependencies
+  - @phantomthief-react/utils.definations@0.0.3
+  - @phantomthief-react/utils.helpers@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
