@@ -1,5 +1,15 @@
 # @phantomthief-react/components.typography
 
+## 0.0.5
+
+### Patch Changes
+
+- 9ffa7d7: Release first version of components.switch and modify components.typography
+- e2ed92d: Release first version of components.post-adorment and modify components.typography
+- Updated dependencies [73ccde8]
+- Updated dependencies [78157dd]
+  - @phantomthief-react/utils.helpers@0.0.3
+
 ## 0.0.4
 
 ### Patch Changes

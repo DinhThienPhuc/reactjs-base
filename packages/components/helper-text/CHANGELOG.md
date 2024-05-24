@@ -1,5 +1,13 @@
 # @phantomthief-react/components.helper-text
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [9ffa7d7]
+- Updated dependencies [e2ed92d]
+  - @phantomthief-react/components.typography@0.0.5
+
 ## 0.0.2
 
 ### Patch Changes
