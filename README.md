@@ -123,6 +123,21 @@ You can publish all bumped packages at once
 pnpm publish:all
 ```
 
+### Analyze built package
+
+To have the look at how package contains, please run the command below to enable the analyze bundle folder:
+
+```bash
+// window
+env ENABLE_ANALYZE=true pnpm build -p=<package.name>
+
+// unix/linux
+ENABLE_ANALYZE=true pnpm build:all
+
+```
+
+This will generate a `statistics.html` file to explore the structure and the size of the package
+
 ## Style Guide
 
 We use tools: ESLint, Prettier, TypeScript to automatically enforce parts of our style guide.
