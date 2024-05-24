@@ -1,5 +1,13 @@
 # @phantomthief-react/hooks.not-click-on-elements
 
+## 0.0.3
+
+### Patch Changes
+
+- Bump to one higher version to update the package
+- Updated dependencies
+  - @phantomthief-react/hooks.event-listener@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
