@@ -46,11 +46,11 @@ export const Label = memo(
         className={clsx(
           "label",
           `label--${variant}`,
-          `label--collapsed-${isLabelCollapsed}`,
-          `label--disabled-${disabled}`,
-          `label--required-${required}`,
-          `label--isFocused-${isFocused}`,
-          `label--isError-${isError}`,
+          isLabelCollapsed && "label--collapsed",
+          disabled && "label--disabled",
+          required && "label--required",
+          isFocused && "label--focused",
+          isError && "label--error",
           className,
         )}
         data-testid="label"

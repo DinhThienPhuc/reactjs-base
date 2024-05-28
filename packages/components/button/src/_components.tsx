@@ -33,7 +33,7 @@ export const Button = ({
         "button",
         `button--size-${size}`,
         `button--variant-${variant}`,
-        `button--loading-${loading}`,
+        loading && "button--loading",
         className,
       )}
       data-testid="button"

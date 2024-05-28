@@ -22,7 +22,7 @@ export const LoadingEllipsis = ({
         "loading-ellipsis",
         `loading-ellipsis--size-${size}`,
         `loading-ellipsis--color-${color}`,
-        `loading-ellipsis--fullScreen-${fullScreen}`,
+        fullScreen && "loading-ellipsis--fullScreen",
         className,
       )}
       data-testid="loading-ellipsis"

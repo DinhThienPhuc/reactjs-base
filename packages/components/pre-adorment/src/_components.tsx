@@ -25,7 +25,7 @@ export const PreAdorment = ({
       className={clsx(
         "pre-adorment",
         `pre-adorment--variant-${variant}`,
-        `pre-adorment--hasLabel-${hasLabel}`,
+        hasLabel && "pre-adorment--hasLabel",
         className,
       )}
       data-testid="pre-adorment"

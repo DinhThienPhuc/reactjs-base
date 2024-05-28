@@ -24,7 +24,7 @@ export const PostAdorment = ({
     className: clsx(
       "post-adorment",
       `post-adorment--variant-${variant}`,
-      `post-adorment--hasLabel-${hasLabel}`,
+      hasLabel && "post-adorment--hasLabel",
       className,
     ),
     "data-testid": "post-adorment",

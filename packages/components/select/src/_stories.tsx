@@ -1,6 +1,5 @@
 import { ArrowDownCircle as IconArrowDownCircle } from "react-feather";
 import React, { ChangeEvent, useCallback, useState } from "react";
-import { FONT } from "@phantomthief-react/utils.constants";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useForm, Controller } from "react-hook-form";
 import { Select } from "./_components";
@@ -144,7 +143,7 @@ export const HelperTextFilled: Story = {
 };
 
 export const ParentController: Story = {
-  render: (args) => {
+  render: function Render(args) {
     const [value, setValue] = useState(args.options[1].value);
 
     const handleChange = useCallback(
@@ -177,7 +176,7 @@ export const ParentController: Story = {
 };
 
 export const PropsControllerSelect: Story = {
-  render: (args) => {
+  render: function Render(args) {
     const [value, setValue] = useState(args.options[2].value);
 
     const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -200,7 +199,7 @@ export const PropsControllerSelect: Story = {
 };
 
 export const RHFController: Story = {
-  render: (args) => {
+  render: function Render(args) {
     const {
       handleSubmit,
       control,

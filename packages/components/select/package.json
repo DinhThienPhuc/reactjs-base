@@ -37,7 +37,6 @@
     "@phantomthief-react/components.label": "workspace:*",
     "@phantomthief-react/utils.helpers": "workspace:*",
     "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
-    "@phantomthief-react/hooks.focus-with-callback": "workspace:*",
     "@phantomthief-react/components.typography": "workspace:*",
     "@phantomthief-react/utils.constants": "workspace:*",
     "@phantomthief-react/components.portal": "workspace:*",

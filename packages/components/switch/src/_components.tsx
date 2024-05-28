@@ -47,7 +47,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
           className={clsx(
             "switch-label",
             "switch-label__right",
-            `switch-label__right__disabled--${disabled}`,
+            disabled && "switch-label__right__disabled",
           )}
         >
           <Typography
@@ -73,7 +73,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
           className={clsx(
             "switch-label",
             "switch-label__left",
-            `switch-label__left--disabled-${disabled}`,
+            disabled && "switch-label__left--disabled",
           )}
         >
           <Typography
@@ -96,8 +96,8 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
           $disabled={disabled}
           className={clsx(
             "switch-pad",
-            `switch-pad__isOn--${currentValue}`,
-            `switch-pad__disabled--${disabled}`,
+            !!currentValue && "switch-pad__on",
+            disabled && "switch-pad__disabled",
           )}
         >
           <input
