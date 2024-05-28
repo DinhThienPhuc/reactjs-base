@@ -22,7 +22,7 @@ export const LoadingRipple = ({
         "loading-ripple",
         `loading-ripple--size-${size}`,
         `loading-ripple--color-${color}`,
-        `loading-ripple--fullScreen-${fullScreen}`,
+        fullScreen && "loading-ripple--fullScreen",
         className,
       )}
       data-testid="loading-ripple"

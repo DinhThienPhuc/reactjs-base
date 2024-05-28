@@ -40,7 +40,7 @@ export const StateController: Story = {
     leftLabel: <Typography font={FONT.VERNADA}>Left</Typography>,
     rightLabel: <Typography font={FONT.VERNADA}>Right</Typography>,
   },
-  render: (args) => {
+  render: function Render(args) {
     const [isSwitchOn, setSwitchOn] = useState(false);
 
     const handleChange = useCallback((value: boolean) => {
@@ -58,7 +58,7 @@ export const RHFController: Story = {
     leftLabel: <Typography font={FONT.VERNADA}>Left</Typography>,
     rightLabel: <Typography font={FONT.VERNADA}>Right</Typography>,
   },
-  render: (args) => {
+  render: function Render(args) {
     const { handleSubmit, control } = useForm<Record<string, boolean>>({
       defaultValues: {
         switch: false,

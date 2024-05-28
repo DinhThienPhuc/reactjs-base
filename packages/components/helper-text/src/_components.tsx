@@ -34,7 +34,7 @@ export const HelperText = memo(
         className={clsx(
           "helper-text",
           `helper-text--variant-${variant}`,
-          `helper-text--isError-${isError}`,
+          isError && "helper-text--error",
           className,
         )}
         data-testid="helper-text"

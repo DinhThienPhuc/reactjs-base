@@ -42,8 +42,8 @@ const SelectOption = ({
     key={value}
     className={clsx(
       "select-option",
-      `select-option--selected-${value === displayedValue}`,
-      `select-option--disabled-${disabled}`,
+      value === displayedValue && "select-option--selected",
+      disabled && "select-option--disabled",
       "select-option--lines-1",
     )}
     onClick={handleSelectOption(value)}
@@ -161,19 +161,14 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             ref={optionGroupRef}
             className={clsx(
               "select-options",
-              position?.top
-                ? `select-options--position-top-${position.top}`
-                : "",
-              position?.left
-                ? `select-options--position-left-${position.left}`
-                : "",
-              position?.height
-                ? `select-options--position-height-${position.height}`
-                : "",
-              position?.width
-                ? `select-options--position-width-${position.width}`
-                : "",
-              `select-options--isShowed-${isShowed}`,
+              !!position?.top && `select-options--position-top-${position.top}`,
+              !!position?.left &&
+                `select-options--position-left-${position.left}`,
+              !!position?.height &&
+                `select-options--position-height-${position.height}`,
+              !!position?.width &&
+                `select-options--position-width-${position.width}`,
+              isShowed && "select-options--showed",
             )}
           >
             {selectOptions}
@@ -191,7 +186,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       <Styled.Container
         {...restProps}
         $fullWidth={fullWidth}
-        className={clsx("select", `select--fullwidth-${fullWidth}`, className)}
+        className={clsx("select", fullWidth && "select--fullWidth", className)}
         data-testid="select"
       >
         <Styled.Box
@@ -204,9 +199,9 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           tabIndex={tabIndex}
           className={clsx(
             "select-box",
-            `select-box--fullwidth--${fullWidth}`,
-            `select-box--disabled-${disabled}`,
-            `select-box--isError-${isError}`,
+            fullWidth && "select-box--fullwidth",
+            disabled && "select-box--disabled",
+            isError && "select-box--error",
             `select-box--${variant}`,
           )}
           data-testid="select-box"
@@ -228,8 +223,8 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             className={clsx(
               "select-inner-box",
               `select-inner-box--${variant}`,
-              `select-inner-box--hasLabel-${!!labelProps?.children}`,
-              `select-inner-box--disabled-${disabled}`,
+              !!labelProps?.children && "select-inner-box--hasLabel",
+              disabled && "select-inner-box--disabled",
             )}
             data-testid="select-displayed-option"
           >
@@ -247,8 +242,8 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
               $disabled={disabled}
               className={clsx(
                 "select-post-adorment-content",
-                `select-post-adorment-content--isShowed-${isShowed}`,
-                `select-post-adorment-content--disabled-${disabled}`,
+                isShowed && "select-post-adorment-content--showed",
+                disabled && "select-post-adorment-content--disabled",
               )}
             >
               {postAdormentChild}
