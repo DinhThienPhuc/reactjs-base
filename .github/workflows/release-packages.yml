@@ -22,7 +22,7 @@ jobs:
         run: npm i -g pnpm
 
       - name: Install dependencies
-        run: pnpm ia
+        run: pnpm i
 
       - name: Build packages
         run: pnpm build:all
