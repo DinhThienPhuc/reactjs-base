@@ -454,9 +454,6 @@ importers:
       "@phantomthief-react/hooks.block":
         specifier: workspace:*
         version: link:../../hooks/block
-      "@phantomthief-react/hooks.focus-with-callback":
-        specifier: workspace:*
-        version: link:../../hooks/focus-with-callback
       "@phantomthief-react/hooks.not-click-on-elements":
         specifier: workspace:*
         version: link:../../hooks/not-click-on-elements
