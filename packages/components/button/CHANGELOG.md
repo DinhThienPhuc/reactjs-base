@@ -1,5 +1,13 @@
 # @phantomthief-react/components.button
 
+## 0.0.4
+
+### Patch Changes
+
+- f1429b4: Update internal classes followed BEM
+- Updated dependencies [f1429b4]
+  - @phantomthief-react/components.loading-ripple@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
