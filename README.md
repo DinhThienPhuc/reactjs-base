@@ -232,8 +232,13 @@ Once this action is done, you can commit the version change and push it to the r
 The steps to perform an releasing:
 
 - Pull the latest develop source code.
-- Checkout to new branch with formated name as `release/\*`.
-- Review the version of package and the ChangeLogs.
-- Push `release/*` branch to the npm registry.
+- Checkout to new branch with formated name as `release/packages/*`.
+- Run the command to create Changelog for each publish components
 
-<!-- TODO: add instruction to bump before create release and push (auto publish ) -->
+```bash
+pnpm bump
+```
+
+- Review the version of package and the ChangeLogs.
+- Push `release/packages/*` branch to the remote git.
+- Let the github actions does the job :D
