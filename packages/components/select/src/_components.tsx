@@ -15,7 +15,6 @@ import {
 } from "./_types";
 
 import useNotClickOnElements from "@phantomthief-react/hooks.not-click-on-elements";
-import useFocusWithCallback from "@phantomthief-react/hooks.focus-with-callback";
 import { PostAdorment } from "@phantomthief-react/components.post-adorment";
 import { HelperText } from "@phantomthief-react/components.helper-text";
 import { Typography } from "@phantomthief-react/components.typography";
@@ -76,8 +75,6 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       postAdormentProps,
       helperTextProps,
       onChange,
-      onFocus,
-      onBlur,
       ...restProps
     },
     _ref,
@@ -95,7 +92,9 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     }
 
     useNotClickOnElements([boxRef, optionGroupRef], () => {
-      setShow(false);
+      if (isShowed) {
+        setShow(false);
+      }
     });
 
     const toggleListOptions: MouseEventHandler<HTMLDivElement> = (e) => {
@@ -113,20 +112,11 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       setShow((prev) => !prev);
     };
 
-    const { isFocused, captureOnFocus, captureOnBlur } = useFocusWithCallback({
-      onFocus,
-      onBlur,
-      disabled,
-    });
-
-    // TODO: Check why select double render
-    console.log("RENDER SELECT: ", isFocused, position, isShowed);
-
     const isLabelCollapsed = useBlock(() => {
       if (disabled) {
         return true;
       }
-      if (isFocused || !!currentValue) {
+      if (isShowed || !!currentValue) {
         return true;
       }
       return false;
@@ -212,8 +202,6 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           ref={boxRef}
           onClick={toggleListOptions}
           tabIndex={tabIndex}
-          onFocus={captureOnFocus}
-          onBlur={captureOnBlur}
           className={clsx(
             "select-box",
             `select-box--fullwidth--${fullWidth}`,
@@ -229,18 +217,18 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             disabled={disabled}
             variant={variant}
             isLabelCollapsed={isLabelCollapsed}
-            isFocused={isFocused}
+            isFocused={isShowed}
             isError={isError}
           />
           <Styled.FakeSelect required={required} disabled={disabled} />
           <Styled.InnerBox
-            $hasLabel={!!labelProps?.content}
+            $hasLabel={!!labelProps?.children}
             $variant={variant}
             $disabled={disabled}
             className={clsx(
               "select-inner-box",
               `select-inner-box--${variant}`,
-              `select-inner-box--hasLabel-${!!labelProps?.content}`,
+              `select-inner-box--hasLabel-${!!labelProps?.children}`,
               `select-inner-box--disabled-${disabled}`,
             )}
             data-testid="select-displayed-option"
