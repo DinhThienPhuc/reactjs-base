@@ -1,5 +1,11 @@
 # @phantomthief-react/components.post-adorment
 
+## 0.0.4
+
+### Patch Changes
+
+- f1429b4: Update internal classes followed BEM
+
 ## 0.0.3
 
 ### Patch Changes

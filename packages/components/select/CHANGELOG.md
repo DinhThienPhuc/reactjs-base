@@ -1,5 +1,16 @@
 # @phantomthief-react/components.select
 
+## 0.0.4
+
+### Patch Changes
+
+- f1429b4: Update internal classes followed BEM
+- 2dad3c4: Fix render twice of components.select when toggle select menu
+- Updated dependencies [f1429b4]
+  - @phantomthief-react/components.post-adorment@0.0.4
+  - @phantomthief-react/components.helper-text@0.0.5
+  - @phantomthief-react/components.label@0.0.5
+
 ## 0.0.3
 
 ### Patch Changes
