@@ -33,6 +33,7 @@ export interface ISelectProps extends HTMLAttributes<HTMLElement>, IExtendable {
   postAdormentProps?: IPostAdormentProps;
   helperTextProps?: IHelperTextProps;
   isError?: boolean;
+  isStandalone?: boolean;
 }
 
 export interface ISelectEventTarget extends EventTarget {

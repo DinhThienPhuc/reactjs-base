@@ -70,6 +70,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       required = false,
       tabIndex = -1,
       isError = false,
+      isStandalone = false,
       optionGroupClassName,
       labelProps,
       postAdormentProps,
@@ -84,12 +85,8 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     const [isShowed, setShow] = useState(false);
     const [position, setPosition] = useState<INodePosition | null>(null);
     const [currentValue, setCurrentValue] = useState(value);
-    const previousValueRef = useRef(value);
 
-    if (value !== previousValueRef.current) {
-      previousValueRef.current = value;
-      setCurrentValue(value);
-    }
+    const internalValue = isStandalone ? currentValue : value;
 
     useNotClickOnElements([boxRef, optionGroupRef], () => {
       if (isShowed) {
@@ -116,13 +113,13 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       if (disabled) {
         return true;
       }
-      if (isShowed || !!currentValue) {
+      if (isShowed || !!internalValue) {
         return true;
       }
       return false;
     });
 
-    const displayedOption = options.find((o) => o.value === currentValue);
+    const displayedOption = options.find((o) => o.value === internalValue);
 
     const handleSelectOption = useCallback(
       (value: string) => (e: MouseEvent<HTMLDivElement>) => {
@@ -133,9 +130,9 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
         e.target = target;
         onChange?.(e);
         setShow(false);
-        setCurrentValue(value);
+        isStandalone && setCurrentValue(value);
       },
-      [onChange],
+      [isStandalone, onChange],
     );
 
     const selectOptions = useMemo(() => {
@@ -145,12 +142,12 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             key={option.value}
             value={option.value}
             label={option.label}
-            displayedValue={currentValue}
+            displayedValue={internalValue}
             handleSelectOption={handleSelectOption}
           />
         );
       });
-    }, [currentValue, handleSelectOption, options]);
+    }, [handleSelectOption, internalValue, options]);
 
     const portal = useMemo(() => {
       return (
