@@ -1,7 +1,6 @@
-import React, { useMemo } from "react";
-
-import { capitalize } from "@phantomthief-react/utils.helpers";
+import { capitalize } from "@phantomthief-react/utils";
 import { IFlexBoxProps } from "./_types";
+import React, { useMemo } from "react";
 import { Styled } from "./_style";
 import clsx from "clsx";
 

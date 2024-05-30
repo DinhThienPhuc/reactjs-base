@@ -1,10 +1,9 @@
-import React, { memo } from "react";
-
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
-import useBlock from "@phantomthief-react/hooks.block";
+import { useBlock } from "@phantomthief-react/hooks";
 import { HELPER_TEXT_VARIANT } from "./_constants";
+import { FONT } from "@phantomthief-react/utils";
 import { IHelperTextProps } from "./_types";
+import React, { memo } from "react";
 import { Styled } from "./_style";
 import clsx from "clsx";
 

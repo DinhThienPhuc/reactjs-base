@@ -1,4 +1,4 @@
-import { IExtendable } from "@phantomthief-react/utils.definations";
+import { IExtendable } from "@phantomthief-react/utils";
 import { HTMLAttributes, ReactNode } from "react";
 
 export interface ITypographyProps

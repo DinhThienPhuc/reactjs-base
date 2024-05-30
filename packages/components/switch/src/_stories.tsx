@@ -1,8 +1,8 @@
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useForm, Controller } from "react-hook-form";
 import React, { useCallback, useState } from "react";
+import { FONT } from "@phantomthief-react/utils";
 import { Switch } from "./_components";
 
 const meta = {

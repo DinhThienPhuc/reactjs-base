@@ -29,8 +29,7 @@
     "typescript": "*",
     "react": "*",
     "firebase": "*",
-    "@phantomthief-react/utils.helpers": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

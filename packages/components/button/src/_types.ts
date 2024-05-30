@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
-
-import { IExtendable } from "@phantomthief-react/utils.definations";
+import { IExtendable } from "@phantomthief-react/utils";
 
 export type TButtonSize = (typeof BUTTON_SIZE)[keyof typeof BUTTON_SIZE];
 

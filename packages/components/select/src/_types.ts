@@ -1,11 +1,7 @@
-import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
-
-import {
-  IExtendable,
-  IFormFieldProps,
-} from "@phantomthief-react/utils.definations";
 import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
 import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
+import { IExtendable, IFormFieldProps } from "@phantomthief-react/utils";
+import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 import { ILabelProps } from "@phantomthief-react/components.label";
 import { SELECT_VARIANT } from "./_constants";
 

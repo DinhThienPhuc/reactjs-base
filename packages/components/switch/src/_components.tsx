@@ -1,7 +1,6 @@
 import React, { ChangeEvent, forwardRef, useMemo, useState } from "react";
-
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
+import { FONT } from "@phantomthief-react/utils";
 import { ISwitchProps } from "./_types";
 import { Styled } from "./_style";
 import clsx from "clsx";

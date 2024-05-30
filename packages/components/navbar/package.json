@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@phantomthief-react/components.typography": "workspace:*",
-    "@phantomthief-react/utils.constants": "workspace:*",
-    "@phantomthief-react/components.button": "workspace:*"
+    "@phantomthief-react/components.button": "workspace:*",
+    "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

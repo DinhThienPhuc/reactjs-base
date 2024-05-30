@@ -31,10 +31,7 @@
     "clsx": "*",
     "styled-components": "*",
     "@phantomthief-react/components.loading-ripple": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*"
-  },
-  "devDependencies": {
-    "@phantomthief-react/components.loading-ellipsis": "workspace:*"
+    "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

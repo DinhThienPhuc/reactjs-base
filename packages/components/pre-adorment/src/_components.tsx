@@ -1,6 +1,6 @@
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
 import { PRE_ADORMENT_VARIANT } from "./_constants";
+import { FONT } from "@phantomthief-react/utils";
 import { IPreAdormentProps } from "./_types";
 import { Styled } from "./_style";
 import React from "react";

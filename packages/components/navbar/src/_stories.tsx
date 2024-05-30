@@ -1,7 +1,7 @@
 import { Typography } from "@phantomthief-react/components.typography";
 import { Button } from "@phantomthief-react/components.button";
-import { FONT } from "@phantomthief-react/utils.constants";
 import type { Meta, StoryObj } from "@storybook/react";
+import { FONT } from "@phantomthief-react/utils";
 import { Navbar } from "./_components";
 import React from "react";
 

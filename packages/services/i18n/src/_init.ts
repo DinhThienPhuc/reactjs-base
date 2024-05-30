@@ -1,4 +1,4 @@
-import { TAny } from "@phantomthief-react/utils.definations";
+import { TAny } from "@phantomthief-react/utils";
 import { initReactI18next } from "react-i18next";
 import i18next from "i18next";
 

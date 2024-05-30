@@ -4,11 +4,7 @@ import {
   InputHTMLAttributes,
   ReactNode,
 } from "react";
-
-import {
-  IExtendable,
-  IFormFieldProps,
-} from "@phantomthief-react/utils.definations";
+import { IExtendable, IFormFieldProps } from "@phantomthief-react/utils";
 
 export interface ISwitchProps
   extends Omit<HTMLAttributes<HTMLDivElement>, "onChange">,

@@ -30,7 +30,7 @@
     "react": "*",
     "react-i18next": "*",
     "i18next": "*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

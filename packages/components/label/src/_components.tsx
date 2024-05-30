@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
-import useBlock from "@phantomthief-react/hooks.block";
+import { useBlock } from "@phantomthief-react/hooks";
+import { FONT } from "@phantomthief-react/utils";
 import { LABEL_VARIANT } from "./_constants";
 import { ILabelProps } from "./_types";
 import { Styled } from "./_style";
