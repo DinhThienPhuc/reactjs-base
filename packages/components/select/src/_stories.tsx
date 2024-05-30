@@ -172,7 +172,7 @@ export const ParentController: Story = {
       [],
     );
 
-    console.log("ParentControllerSelect: ", value);
+    console.log("ParentController: ", value);
 
     return (
       <div style={{ display: "inline-flex", flexDirection: "column" }}>

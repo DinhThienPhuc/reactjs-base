@@ -1,3 +1,4 @@
+import { FieldError } from "react-hook-form";
 import { TAny } from "./_types";
 
 /**
@@ -25,4 +26,16 @@ export interface ILoadingProps {
   color?: string;
   className?: string;
   fullScreen?: boolean;
+}
+
+/**
+ * Form Field Props
+ */
+export interface IFormFieldProps {
+  isStandalone?: boolean;
+  className?: string;
+  fullWidth?: boolean;
+  disabled?: boolean;
+  required?: boolean;
+  error?: FieldError;
 }

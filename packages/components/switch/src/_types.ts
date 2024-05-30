@@ -5,10 +5,14 @@ import {
   ReactNode,
 } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils.definations";
+import {
+  IExtendable,
+  IFormFieldProps,
+} from "@phantomthief-react/utils.definations";
 
 export interface ISwitchProps
   extends Omit<HTMLAttributes<HTMLDivElement>, "onChange">,
+    IFormFieldProps,
     IExtendable {
   value?: boolean;
   leftLabel?: ReactNode;
