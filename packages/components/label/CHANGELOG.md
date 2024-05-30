@@ -1,5 +1,16 @@
 # @phantomthief-react/components.label
 
+## 0.0.6
+
+### Patch Changes
+
+- 528ff47: Update load stradge
+- Updated dependencies [528ff47]
+- Updated dependencies [afaa6eb]
+  - @phantomthief-react/components.typography@0.0.7
+  - @phantomthief-react/hooks@0.0.2
+  - @phantomthief-react/utils@0.0.2
+
 ## 0.0.5
 
 ### Patch Changes

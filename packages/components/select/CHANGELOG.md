@@ -1,5 +1,27 @@
 # @phantomthief-react/components.select
 
+## 0.0.5
+
+### Patch Changes
+
+- 3b3d39e: Update error property and render optimize
+- 2975f0b: Update style for components.helper-text and helper-text for components.select
+- 578514e: Update components.select to render less
+- 528ff47: Update load stradge
+- e513057: Group form interface into one to re-use
+- Updated dependencies [3b3d39e]
+- Updated dependencies [2975f0b]
+- Updated dependencies [528ff47]
+- Updated dependencies [e513057]
+- Updated dependencies [afaa6eb]
+  - @phantomthief-react/components.helper-text@0.0.6
+  - @phantomthief-react/components.post-adorment@0.0.5
+  - @phantomthief-react/components.typography@0.0.7
+  - @phantomthief-react/components.label@0.0.6
+  - @phantomthief-react/hooks@0.0.2
+  - @phantomthief-react/utils@0.0.2
+  - @phantomthief-react/components.portal@0.0.4
+
 ## 0.0.4
 
 ### Patch Changes

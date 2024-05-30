@@ -1,5 +1,19 @@
 # @phantomthief-react/components.helper-text
 
+## 0.0.6
+
+### Patch Changes
+
+- 3b3d39e: Update error property and render optimize
+- 2975f0b: Update style for components.helper-text and helper-text for components.select
+- 528ff47: Update load stradge
+- e513057: Group form interface into one to re-use
+- Updated dependencies [528ff47]
+- Updated dependencies [afaa6eb]
+  - @phantomthief-react/components.typography@0.0.7
+  - @phantomthief-react/hooks@0.0.2
+  - @phantomthief-react/utils@0.0.2
+
 ## 0.0.5
 
 ### Patch Changes

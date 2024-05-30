@@ -1,5 +1,14 @@
 # @phantomthief-react/components.flex-box
 
+## 0.0.7
+
+### Patch Changes
+
+- 528ff47: Update load stradge
+- Updated dependencies [528ff47]
+- Updated dependencies [afaa6eb]
+  - @phantomthief-react/utils@0.0.2
+
 ## 0.0.6
 
 ### Patch Changes
