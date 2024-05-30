@@ -12,5 +12,5 @@ export interface IHelperTextProps
   variant?: THelperTextVariant;
   children?: ReactNode;
   isError?: boolean;
-  order?: number;
+  hasLabel?: boolean;
 }

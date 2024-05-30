@@ -14,7 +14,7 @@ export const HelperText = memo(
     children = "",
     variant = HELPER_TEXT_VARIANT.STANDARD,
     isError = false,
-    order = 0,
+    hasLabel = false,
     ...restProps
   }: IHelperTextProps) => {
     const textColor = useBlock(() => {
@@ -32,11 +32,11 @@ export const HelperText = memo(
       <Styled.Container
         {...restProps}
         $variant={variant}
-        $order={order}
+        $hasLabel={hasLabel}
         className={clsx(
           "helper-text",
           `helper-text--variant-${variant}`,
-          `helper-text--order-${order}`,
+          hasLabel && "helper-text--hasLabel",
           isError && "helper-text--error",
           className,
         )}

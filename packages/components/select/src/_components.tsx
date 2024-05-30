@@ -246,14 +246,8 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
               {postAdormentChild}
             </Styled.PostAdormentContentWrapper>
           </PostAdorment>
-          <HelperText {...helperTextProps} variant={variant} />
-          <HelperText
-            {...helperTextProps}
-            isError={!!error}
-            variant={variant}
-            order={1}
-          >
-            {error?.message ?? ""}
+          <HelperText {...helperTextProps} isError={!!error} variant={variant}>
+            {error?.message ?? helperTextProps?.children ?? ""}
           </HelperText>
         </Styled.Box>
 

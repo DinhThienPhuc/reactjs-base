@@ -249,6 +249,10 @@ export const RHFController: Story = {
                 return "Option must be less than 5 characters";
               },
             },
+            required: {
+              value: true,
+              message: "This field is required!",
+            },
           }}
           render={({ field, formState: { errors } }) => {
             return (

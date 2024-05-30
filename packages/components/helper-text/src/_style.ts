@@ -5,11 +5,10 @@ import styled from "styled-components";
 export const Styled = {
   Container: styled.div<{
     $variant: THelperTextVariant;
-    $order: number;
+    $hasLabel: boolean;
   }>`
     position: absolute;
-    bottom: -20px;
-    bottom: ${({ $order }) => -20 - $order * 16}px;
+    top: ${({ $hasLabel }) => 4 + ($hasLabel ? 44 : 56)}px;
     left: ${({ $variant }) =>
       $variant === HELPER_TEXT_VARIANT.STANDARD ? "0px" : "14px"};
   `,
