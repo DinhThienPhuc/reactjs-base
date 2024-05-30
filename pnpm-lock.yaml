@@ -346,6 +346,42 @@ importers:
         specifier: "*"
         version: 5.4.5
 
+  packages/components/main:
+    dependencies:
+      "@phantomthief-react/components.button":
+        specifier: workspace:*
+        version: link:../button
+      "@phantomthief-react/components.flex-box":
+        specifier: workspace:*
+        version: link:../flex-box
+      "@phantomthief-react/components.loading-ellipsis":
+        specifier: workspace:*
+        version: link:../loading-ellipsis
+      "@phantomthief-react/components.loading-ripple":
+        specifier: workspace:*
+        version: link:../loading-ripple
+      "@phantomthief-react/components.navbar":
+        specifier: workspace:*
+        version: link:../navbar
+      "@phantomthief-react/components.portal":
+        specifier: workspace:*
+        version: link:../portal
+      "@phantomthief-react/components.select":
+        specifier: workspace:*
+        version: link:../select
+      "@phantomthief-react/components.switch":
+        specifier: workspace:*
+        version: link:../switch
+      "@phantomthief-react/components.typography":
+        specifier: workspace:*
+        version: link:../typography
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
   packages/components/navbar:
     dependencies:
       clsx:
@@ -577,6 +613,33 @@ importers:
         specifier: "*"
         version: 5.4.5
 
+  packages/hooks/main:
+    dependencies:
+      "@phantomthief-react/hooks.block":
+        specifier: workspace:*
+        version: link:../block
+      "@phantomthief-react/hooks.event-listener":
+        specifier: workspace:*
+        version: link:../event-listener
+      "@phantomthief-react/hooks.focus-with-callback":
+        specifier: workspace:*
+        version: link:../focus-with-callback
+      "@phantomthief-react/hooks.isomorphic-layout-effect":
+        specifier: workspace:*
+        version: link:../isomorphic-layout-effect
+      "@phantomthief-react/hooks.not-click-on-elements":
+        specifier: workspace:*
+        version: link:../not-click-on-elements
+      "@phantomthief-react/hooks.on-mounted":
+        specifier: workspace:*
+        version: link:../on-mounted
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
   packages/hooks/not-click-on-elements:
     dependencies:
       "@phantomthief-react/hooks.event-listener":
@@ -628,6 +691,21 @@ importers:
         specifier: "*"
         version: 5.4.5
 
+  packages/modules/main:
+    dependencies:
+      "@phantomthief-react/modules.authenticator":
+        specifier: workspace:*
+        version: link:../authenticator
+      "@phantomthief-react/modules.error-boundary":
+        specifier: workspace:*
+        version: link:../error-boundary
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
   packages/services/firebase:
     dependencies:
       "@phantomthief-react/utils.definations":
@@ -660,6 +738,24 @@ importers:
       react-i18next:
         specifier: "*"
         version: 14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
+  packages/services/main:
+    dependencies:
+      "@phantomthief-react/services.firebase":
+        specifier: workspace:*
+        version: link:../firebase
+      "@phantomthief-react/services.i18n":
+        specifier: workspace:*
+        version: link:../i18n
+      "@phantomthief-react/services.styled-theme":
+        specifier: workspace:*
+        version: link:../styled-theme
+      react:
+        specifier: "*"
+        version: 18.3.1
       typescript:
         specifier: "*"
         version: 5.4.5
@@ -710,6 +806,24 @@ importers:
       styled-components:
         specifier: "*"
         version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
+  packages/utils/main:
+    dependencies:
+      "@phantomthief-react/utils.constants":
+        specifier: workspace:*
+        version: link:../constants
+      "@phantomthief-react/utils.definations":
+        specifier: workspace:*
+        version: link:../definations
+      "@phantomthief-react/utils.helpers":
+        specifier: workspace:*
+        version: link:../helpers
+      react:
+        specifier: "*"
+        version: 18.3.1
       typescript:
         specifier: "*"
         version: 5.4.5

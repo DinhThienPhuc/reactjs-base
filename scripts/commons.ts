@@ -46,9 +46,13 @@ export const getPnpmInfor = (): IReturnTypeGetPnpmInfor => {
   }
 
   if (argv.p && typeof argv.p === "string") {
-    result.packages = argv.p.split(" ");
+    result.packages = argv.p.split(/\s|,/g).map((pkg) => {
+      return pkg.includes(".") ? pkg : `${pkg}.main`;
+    });
   } else if (argv.packages && typeof argv.packages === "string") {
-    result.packages = argv.packages.split(" ");
+    result.packages = argv.packages
+      .split(/\s|,/g)
+      .map((pkg) => (pkg.includes(".") ? pkg : `${pkg}.main`));
   }
 
   result.rest = restArgvString;

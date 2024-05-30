@@ -6,10 +6,19 @@ import * as fs from "fs";
  * @param packageName string
  */
 const generatePackage = (packageName: string) => {
+  if (!packageName) {
+    throw new Error("Package name is required!");
+  }
+
+  let packageFolder = packageName;
+  if (!packageName.includes(".")) {
+    packageFolder = `${packageName}.main`;
+  }
+
   /**
    * Create package directory
    */
-  const dirPath = `packages/${packageName.replace(".", "/")}`;
+  const dirPath = `packages/${packageFolder.replace(".", "/")}`;
   fs.mkdirSync(dirPath, { recursive: true });
 
   /**
@@ -123,6 +132,8 @@ export default defineConfig(config);
    * Always generate index.ts file for package
    */
   fs.writeFileSync(path.join(dirPath, "src", "index.ts"), "");
+
+  console.log(`Package ${packageName} has been generated successfully!`);
 };
 
 /**
@@ -131,5 +142,3 @@ export default defineConfig(config);
 const [, , packageName] = process.argv;
 
 generatePackage(packageName);
-
-console.log(`Package ${packageName} has been generated successfully!`);
