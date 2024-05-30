@@ -40,15 +40,15 @@ export const getPnpmInfor = (): IReturnTypeGetPnpmInfor => {
   };
 
   if (argv.a && typeof argv.a === "string") {
-    result.apps = argv.a.split(",");
+    result.apps = argv.a.split(" ");
   } else if (argv.apps && typeof argv.apps === "string") {
-    result.apps = argv.apps.split(",");
+    result.apps = argv.apps.split(" ");
   }
 
   if (argv.p && typeof argv.p === "string") {
-    result.packages = argv.p.split(",");
+    result.packages = argv.p.split(" ");
   } else if (argv.packages && typeof argv.packages === "string") {
-    result.packages = argv.packages.split(",");
+    result.packages = argv.packages.split(" ");
   }
 
   result.rest = restArgvString;

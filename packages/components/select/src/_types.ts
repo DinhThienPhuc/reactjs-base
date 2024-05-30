@@ -5,6 +5,7 @@ import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
 import { IExtendable } from "@phantomthief-react/utils.definations";
 import { ILabelProps } from "@phantomthief-react/components.label";
 import { SELECT_VARIANT } from "./_constants";
+import { FieldError } from "react-hook-form";
 
 export interface ISelectOption extends IExtendable {
   value: string;
@@ -34,6 +35,7 @@ export interface ISelectProps extends HTMLAttributes<HTMLElement>, IExtendable {
   helperTextProps?: IHelperTextProps;
   isError?: boolean;
   isStandalone?: boolean;
+  error?: FieldError;
 }
 
 export interface ISelectEventTarget extends EventTarget {

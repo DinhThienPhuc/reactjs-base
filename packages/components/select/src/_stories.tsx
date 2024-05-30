@@ -234,8 +234,6 @@ export const RHFController: Story = {
       console.log("RHFController form data: ", data);
     };
 
-    console.log("WHY RENDER");
-
     return (
       <form
         style={{ display: "inline-flex", flexDirection: "column" }}
@@ -245,9 +243,11 @@ export const RHFController: Story = {
           control={control}
           name="select"
           rules={{
-            required: {
-              value: true,
-              message: "This field is required!",
+            validate: {
+              max: (value) => {
+                if (!value && value.length < 5) return true;
+                return "Option must be less than 5 characters";
+              },
             },
           }}
           render={({ field, formState: { errors } }) => {
@@ -255,7 +255,7 @@ export const RHFController: Story = {
               <Select
                 {...args}
                 {...field}
-                isError={!!errors.select}
+                error={errors.select}
                 variant="outlined"
               />
             );

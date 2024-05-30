@@ -58,7 +58,7 @@ const SelectOption = ({
   </Styled.Option>
 );
 
-export const Select = forwardRef<HTMLInputElement, ISelectProps>(
+export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
   (
     {
       className,
@@ -69,7 +69,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       fullWidth = false,
       required = false,
       tabIndex = -1,
-      isError = false,
+      error = null,
       isStandalone = false,
       optionGroupClassName,
       labelProps,
@@ -190,7 +190,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           $variant={variant}
           $disabled={disabled}
           $fullWidth={fullWidth}
-          $isError={isError}
+          $isError={!!error}
           ref={boxRef}
           onClick={toggleListOptions}
           tabIndex={tabIndex}
@@ -198,7 +198,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             "select-box",
             fullWidth && "select-box--fullwidth",
             disabled && "select-box--disabled",
-            isError && "select-box--error",
+            !!error && "select-box--error",
             `select-box--${variant}`,
           )}
           data-testid="select-box"
@@ -210,7 +210,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             variant={variant}
             isLabelCollapsed={isLabelCollapsed}
             isFocused={isShowed}
-            isError={isError}
+            isError={!!error}
           />
           <Styled.FakeSelect required={required} disabled={disabled} />
           <Styled.InnerBox
@@ -246,11 +246,15 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
               {postAdormentChild}
             </Styled.PostAdormentContentWrapper>
           </PostAdorment>
+          <HelperText {...helperTextProps} variant={variant} />
           <HelperText
             {...helperTextProps}
-            isError={isError}
+            isError={!!error}
             variant={variant}
-          />
+            order={1}
+          >
+            {error?.message ?? ""}
+          </HelperText>
         </Styled.Box>
 
         {portal}
