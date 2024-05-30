@@ -1,5 +1,11 @@
 # @phantomthief-react/components.navbar
 
+## 0.0.4
+
+### Patch Changes
+
+- 528ff47: Update load stradge
+
 ## 0.0.3
 
 ### Patch Changes

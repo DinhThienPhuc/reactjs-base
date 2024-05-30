@@ -1,5 +1,14 @@
 # @phantomthief-react/modules.authenticator
 
+## 0.0.4
+
+### Patch Changes
+
+- 528ff47: Update load stradge
+- Updated dependencies [528ff47]
+- Updated dependencies [afaa6eb]
+  - @phantomthief-react/hooks@0.0.2
+
 ## 0.0.3
 
 ### Patch Changes
