@@ -47,7 +47,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    isStandalone: true,
+  },
+};
 
 export const Outlined: Story = {
   args: {
@@ -55,6 +59,7 @@ export const Outlined: Story = {
     labelProps: null,
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -64,6 +69,7 @@ export const Filled: Story = {
     labelProps: null,
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -73,6 +79,7 @@ export const Disabled: Story = {
     labelProps: null,
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -83,6 +90,7 @@ export const FullWidth: Story = {
     labelProps: null,
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -93,6 +101,7 @@ export const Required: Story = {
     labelProps: null,
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -100,6 +109,7 @@ export const LabeledDefault: Story = {
   args: {
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -108,6 +118,7 @@ export const LabeledOutlined: Story = {
     variant: "outlined",
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -116,6 +127,7 @@ export const LabeledFilled: Story = {
     variant: "filled",
     postAdormentProps: null,
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
@@ -123,22 +135,25 @@ export const CustomPostAdorment: Story = {
   args: {
     variant: "outlined",
     helperTextProps: null,
+    isStandalone: true,
   },
 };
 
 export const HelperTextDefault: Story = {
-  args: {},
+  args: { isStandalone: true },
 };
 
 export const HelperTextOutlined: Story = {
   args: {
     variant: "outlined",
+    isStandalone: true,
   },
 };
 
 export const HelperTextFilled: Story = {
   args: {
     variant: "filled",
+    isStandalone: true,
   },
 };
 
@@ -146,27 +161,36 @@ export const ParentController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[1].value);
 
-    const handleChange = useCallback(
+    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    }, []);
+
+    const handleParentChange = useCallback(
       (value: string) => () => {
         setValue(value);
       },
       [],
     );
 
-    console.log("ParentControllerSelect: ", value);
+    console.log("ParentController: ", value);
 
     return (
       <div style={{ display: "inline-flex", flexDirection: "column" }}>
-        <Select {...args} variant="filled" value={value} />
+        <Select
+          {...args}
+          variant="filled"
+          value={value}
+          onChange={handleChange}
+        />
         <button
           style={{ marginTop: 48 }}
-          onClick={handleChange(args.options[0].value)}
+          onClick={handleParentChange(args.options[0].value)}
         >
           Change to first option
         </button>
         <button
           style={{ marginTop: 24 }}
-          onClick={handleChange(args.options[3].value)}
+          onClick={handleParentChange(args.options[3].value)}
         >
           Change to fourth option
         </button>
@@ -200,21 +224,15 @@ export const PropsControllerSelect: Story = {
 
 export const RHFController: Story = {
   render: function Render(args) {
-    const {
-      handleSubmit,
-      control,
-      formState: { errors },
-    } = useForm<Record<string, string>>({
+    const { handleSubmit, control } = useForm<Record<string, string>>({
       defaultValues: {
         select: "",
       },
     });
 
     const onSubmit = (data: Record<string, string>) => {
-      console.log("RHF form data: ", data);
+      console.log("RHFController form data: ", data);
     };
-
-    console.log("errors", errors);
 
     return (
       <form
@@ -225,17 +243,23 @@ export const RHFController: Story = {
           control={control}
           name="select"
           rules={{
+            validate: {
+              max: (value) => {
+                if (!value && value.length < 5) return true;
+                return "Option must be less than 5 characters";
+              },
+            },
             required: {
               value: true,
               message: "This field is required!",
             },
           }}
-          render={({ field }) => {
+          render={({ field, formState: { errors } }) => {
             return (
               <Select
                 {...args}
                 {...field}
-                isError={!!errors.select}
+                error={errors.select}
                 variant="outlined"
               />
             );

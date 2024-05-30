@@ -1,10 +1,9 @@
-import React, { memo } from "react";
-
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
-import useBlock from "@phantomthief-react/hooks.block";
+import { useBlock } from "@phantomthief-react/hooks";
 import { HELPER_TEXT_VARIANT } from "./_constants";
+import { FONT } from "@phantomthief-react/utils";
 import { IHelperTextProps } from "./_types";
+import React, { memo } from "react";
 import { Styled } from "./_style";
 import clsx from "clsx";
 
@@ -14,6 +13,7 @@ export const HelperText = memo(
     children = "",
     variant = HELPER_TEXT_VARIANT.STANDARD,
     isError = false,
+    hasLabel = false,
     ...restProps
   }: IHelperTextProps) => {
     const textColor = useBlock(() => {
@@ -31,9 +31,11 @@ export const HelperText = memo(
       <Styled.Container
         {...restProps}
         $variant={variant}
+        $hasLabel={hasLabel}
         className={clsx(
           "helper-text",
           `helper-text--variant-${variant}`,
+          hasLabel && "helper-text--hasLabel",
           isError && "helper-text--error",
           className,
         )}

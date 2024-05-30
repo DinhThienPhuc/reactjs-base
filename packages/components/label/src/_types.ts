@@ -1,4 +1,4 @@
-import { IExtendable } from "@phantomthief-react/utils.definations";
+import { IExtendable } from "@phantomthief-react/utils";
 import { LABEL_VARIANT } from "./_constants";
 import { ReactNode } from "react";
 

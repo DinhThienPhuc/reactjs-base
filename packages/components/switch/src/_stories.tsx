@@ -1,8 +1,8 @@
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useForm, Controller } from "react-hook-form";
 import React, { useCallback, useState } from "react";
+import { FONT } from "@phantomthief-react/utils";
 import { Switch } from "./_components";
 
 const meta = {
@@ -20,22 +20,57 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    isStandalone: true,
+  },
+};
 
 export const CustomLabel: Story = {
   args: {
     leftLabel: "Off",
     rightLabel: "On",
+    isStandalone: true,
   },
 };
 
 export const Disabled: Story = {
   args: {
     disabled: true,
+    isStandalone: true,
   },
 };
 
-export const StateController: Story = {
+export const ParentController: Story = {
+  args: {
+    leftLabel: <Typography font={FONT.VERNADA}>Left</Typography>,
+    rightLabel: <Typography font={FONT.VERNADA}>Right</Typography>,
+  },
+  render: function Render(args) {
+    const [value, setValue] = useState(true);
+
+    const handleChange = useCallback((value: boolean) => {
+      setValue(value);
+    }, []);
+
+    const handleParentChange = useCallback(() => {
+      setValue((prev) => !prev);
+    }, []);
+
+    console.log("ParentController: ", value);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <Switch {...args} value={value} onChange={handleChange} />
+        <button style={{ marginTop: 48 }} onClick={handleParentChange}>
+          Toggle switch
+        </button>
+      </div>
+    );
+  },
+};
+
+export const PropsControllerSelect: Story = {
   args: {
     leftLabel: <Typography font={FONT.VERNADA}>Left</Typography>,
     rightLabel: <Typography font={FONT.VERNADA}>Right</Typography>,
@@ -47,7 +82,7 @@ export const StateController: Story = {
       setSwitchOn(value);
     }, []);
 
-    console.log("isSwitchOn", isSwitchOn);
+    console.log("PropsControllerSelect", isSwitchOn);
 
     return <Switch {...args} value={isSwitchOn} onChange={handleChange} />;
   },
@@ -66,7 +101,7 @@ export const RHFController: Story = {
     });
 
     const onSubmit = (data: Record<string, boolean>) => {
-      console.log("RHF form data: ", data);
+      console.log("RHFController form data: ", data);
     };
 
     return (

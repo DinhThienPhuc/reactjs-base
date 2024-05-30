@@ -1,7 +1,7 @@
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
 import { XCircle as IconXCircle } from "react-feather";
 import { POST_ADORMENT_VARIANT } from "./_constants";
+import { FONT } from "@phantomthief-react/utils";
 import { IPostAdormentProps } from "./_types";
 import { Styled } from "./_style";
 import React from "react";

@@ -1,4 +1,4 @@
-import { LoadingEllipsis } from "@phantomthief-react/components.loading-ellipsis";
+import { LoadingRipple } from "@phantomthief-react/components.loading-ripple";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./_components";
 import React from "react";
@@ -67,6 +67,6 @@ export const CustomLoading: Story = {
   args: {
     variant: "outlined",
     loading: true,
-    loadingComponent: <LoadingEllipsis size={6} fullScreen={false} />,
+    loadingComponent: <LoadingRipple size={6} fullScreen={false} />,
   },
 };

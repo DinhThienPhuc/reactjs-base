@@ -215,9 +215,9 @@ importers:
       "@phantomthief-react/components.loading-ripple":
         specifier: workspace:*
         version: link:../loading-ripple
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -230,19 +230,12 @@ importers:
       typescript:
         specifier: "*"
         version: 5.4.5
-    devDependencies:
-      "@phantomthief-react/components.loading-ellipsis":
-        specifier: workspace:*
-        version: link:../loading-ellipsis
 
   packages/components/flex-box:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
-        specifier: workspace:*
-        version: link:../../utils/helpers
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -264,15 +257,12 @@ importers:
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/hooks.block":
+      "@phantomthief-react/hooks":
         specifier: workspace:*
-        version: link:../../hooks/block
-      "@phantomthief-react/utils.constants":
+        version: link:../../hooks/main
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
-        specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -291,15 +281,12 @@ importers:
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/hooks.block":
+      "@phantomthief-react/hooks":
         specifier: workspace:*
-        version: link:../../hooks/block
-      "@phantomthief-react/utils.constants":
+        version: link:../../hooks/main
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
-        specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -315,9 +302,9 @@ importers:
 
   packages/components/loading-ellipsis:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       react:
         specifier: "*"
         version: 18.3.1
@@ -330,9 +317,9 @@ importers:
 
   packages/components/loading-ripple:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -342,6 +329,42 @@ importers:
       styled-components:
         specifier: "*"
         version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
+  packages/components/main:
+    dependencies:
+      "@phantomthief-react/components.button":
+        specifier: workspace:*
+        version: link:../button
+      "@phantomthief-react/components.flex-box":
+        specifier: workspace:*
+        version: link:../flex-box
+      "@phantomthief-react/components.loading-ellipsis":
+        specifier: workspace:*
+        version: link:../loading-ellipsis
+      "@phantomthief-react/components.loading-ripple":
+        specifier: workspace:*
+        version: link:../loading-ripple
+      "@phantomthief-react/components.navbar":
+        specifier: workspace:*
+        version: link:../navbar
+      "@phantomthief-react/components.portal":
+        specifier: workspace:*
+        version: link:../portal
+      "@phantomthief-react/components.select":
+        specifier: workspace:*
+        version: link:../select
+      "@phantomthief-react/components.switch":
+        specifier: workspace:*
+        version: link:../switch
+      "@phantomthief-react/components.typography":
+        specifier: workspace:*
+        version: link:../typography
+      react:
+        specifier: "*"
+        version: 18.3.1
       typescript:
         specifier: "*"
         version: 5.4.5
@@ -364,9 +387,9 @@ importers:
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/utils.constants":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/constants
+        version: link:../../utils/main
 
   packages/components/portal:
     dependencies:
@@ -388,12 +411,9 @@ importers:
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/utils.constants":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
-        specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -415,12 +435,9 @@ importers:
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/utils.constants":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
-        specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -451,21 +468,12 @@ importers:
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/hooks.block":
+      "@phantomthief-react/hooks":
         specifier: workspace:*
-        version: link:../../hooks/block
-      "@phantomthief-react/hooks.not-click-on-elements":
+        version: link:../../hooks/main
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../hooks/not-click-on-elements
-      "@phantomthief-react/utils.constants":
-        specifier: workspace:*
-        version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
-        specifier: workspace:*
-        version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
-        specifier: workspace:*
-        version: link:../../utils/helpers
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -491,12 +499,9 @@ importers:
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/utils.constants":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
-        specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -516,12 +521,9 @@ importers:
 
   packages/components/typography:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
-        specifier: workspace:*
-        version: link:../../utils/helpers
+        version: link:../../utils/main
       clsx:
         specifier: "*"
         version: 2.1.1
@@ -537,9 +539,9 @@ importers:
 
   packages/hooks/block:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       react:
         specifier: "*"
         version: 18.3.1
@@ -577,6 +579,33 @@ importers:
         specifier: "*"
         version: 5.4.5
 
+  packages/hooks/main:
+    dependencies:
+      "@phantomthief-react/hooks.block":
+        specifier: workspace:*
+        version: link:../block
+      "@phantomthief-react/hooks.event-listener":
+        specifier: workspace:*
+        version: link:../event-listener
+      "@phantomthief-react/hooks.focus-with-callback":
+        specifier: workspace:*
+        version: link:../focus-with-callback
+      "@phantomthief-react/hooks.isomorphic-layout-effect":
+        specifier: workspace:*
+        version: link:../isomorphic-layout-effect
+      "@phantomthief-react/hooks.not-click-on-elements":
+        specifier: workspace:*
+        version: link:../not-click-on-elements
+      "@phantomthief-react/hooks.on-mounted":
+        specifier: workspace:*
+        version: link:../on-mounted
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
   packages/hooks/not-click-on-elements:
     dependencies:
       "@phantomthief-react/hooks.event-listener":
@@ -600,9 +629,9 @@ importers:
 
   packages/modules/authenticator:
     dependencies:
-      "@phantomthief-react/hooks.block":
+      "@phantomthief-react/hooks":
         specifier: workspace:*
-        version: link:../../hooks/block
+        version: link:../../hooks/main
       react:
         specifier: "*"
         version: 18.3.1
@@ -615,9 +644,9 @@ importers:
 
   packages/modules/error-boundary:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       react:
         specifier: "*"
         version: 18.3.1
@@ -628,14 +657,26 @@ importers:
         specifier: "*"
         version: 5.4.5
 
+  packages/modules/main:
+    dependencies:
+      "@phantomthief-react/modules.authenticator":
+        specifier: workspace:*
+        version: link:../authenticator
+      "@phantomthief-react/modules.error-boundary":
+        specifier: workspace:*
+        version: link:../error-boundary
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
   packages/services/firebase:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
-        specifier: workspace:*
-        version: link:../../utils/helpers
+        version: link:../../utils/main
       firebase:
         specifier: "*"
         version: 10.12.2
@@ -648,9 +689,9 @@ importers:
 
   packages/services/i18n:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       i18next:
         specifier: "*"
         version: 23.11.5
@@ -664,11 +705,29 @@ importers:
         specifier: "*"
         version: 5.4.5
 
+  packages/services/main:
+    dependencies:
+      "@phantomthief-react/services.firebase":
+        specifier: workspace:*
+        version: link:../firebase
+      "@phantomthief-react/services.i18n":
+        specifier: workspace:*
+        version: link:../i18n
+      "@phantomthief-react/services.styled-theme":
+        specifier: workspace:*
+        version: link:../styled-theme
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
   packages/services/styled-theme:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       react:
         specifier: "*"
         version: 18.3.1
@@ -689,6 +748,9 @@ importers:
       react:
         specifier: "*"
         version: 18.3.1
+      react-hook-form:
+        specifier: "*"
+        version: 7.51.5(react@18.3.1)
       typescript:
         specifier: "*"
         version: 5.4.5
@@ -707,6 +769,24 @@ importers:
       styled-components:
         specifier: "*"
         version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
+  packages/utils/main:
+    dependencies:
+      "@phantomthief-react/utils.constants":
+        specifier: workspace:*
+        version: link:../constants
+      "@phantomthief-react/utils.definations":
+        specifier: workspace:*
+        version: link:../definations
+      "@phantomthief-react/utils.helpers":
+        specifier: workspace:*
+        version: link:../helpers
+      react:
+        specifier: "*"
+        version: 18.3.1
       typescript:
         specifier: "*"
         version: 5.4.5

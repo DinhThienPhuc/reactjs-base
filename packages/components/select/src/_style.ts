@@ -1,6 +1,5 @@
+import { getVariantStyle } from "@phantomthief-react/utils";
 import styled, { css } from "styled-components";
-
-import { getVariantStyle } from "@phantomthief-react/utils.helpers";
 import { SELECT_VARIANT } from "./_constants";
 import { TSelectVariant } from "./_types";
 

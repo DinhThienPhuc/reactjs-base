@@ -1,7 +1,6 @@
 import React, { ChangeEvent, forwardRef, useMemo, useState } from "react";
-
 import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils.constants";
+import { FONT } from "@phantomthief-react/utils";
 import { ISwitchProps } from "./_types";
 import { Styled } from "./_style";
 import clsx from "clsx";
@@ -14,6 +13,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
       rightLabel = null,
       disabled = false,
       value = false,
+      isStandalone = false,
       inputProps,
       onChange,
       ...restProps
@@ -21,15 +21,8 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
     ref,
   ) => {
     const [currentValue, setCurrentValue] = useState(value);
-    const [previousValue, setPreviousValue] = useState(value);
 
-    /**
-     * Update state when `value` changes
-     */
-    if (value !== previousValue) {
-      setPreviousValue(value);
-      setCurrentValue(value);
-    }
+    const internalValue = isStandalone ? currentValue : value;
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
       setCurrentValue(e.target.checked);
@@ -88,22 +81,24 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
       );
     }, [disabled, leftLabel]);
 
+    console.log("RENDER");
+
     return (
       <Styled.Container {...restProps} className={clsx("switch", className)}>
         {customLeftLabel}
         <Styled.Pad
-          $isOn={currentValue}
+          $isOn={internalValue}
           $disabled={disabled}
           className={clsx(
             "switch-pad",
-            !!currentValue && "switch-pad__on",
+            !!internalValue && "switch-pad__on",
             disabled && "switch-pad__disabled",
           )}
         >
           <input
             {...inputProps}
             ref={ref}
-            checked={currentValue}
+            checked={internalValue}
             onChange={handleChange}
             disabled={disabled}
             type="checkbox"

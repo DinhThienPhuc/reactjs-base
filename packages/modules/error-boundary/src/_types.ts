@@ -1,4 +1,4 @@
-import { TAny, TFunction } from "@phantomthief-react/utils.definations";
+import { TAny, TFunction } from "@phantomthief-react/utils";
 import { ComponentType, ReactNode } from "react";
 
 export interface IErrorBoundaryProps {

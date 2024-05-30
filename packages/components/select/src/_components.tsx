@@ -13,18 +13,18 @@ import {
   ISelectOptionProps,
   ISelectProps,
 } from "./_types";
-
-import useNotClickOnElements from "@phantomthief-react/hooks.not-click-on-elements";
+import {
+  FONT,
+  INodePosition,
+  getPositionOfNode,
+} from "@phantomthief-react/utils";
 import { PostAdorment } from "@phantomthief-react/components.post-adorment";
+import { useBlock, useNotClickOnElements } from "@phantomthief-react/hooks";
 import { HelperText } from "@phantomthief-react/components.helper-text";
 import { Typography } from "@phantomthief-react/components.typography";
-import { INodePosition } from "@phantomthief-react/utils.definations";
-import { getPositionOfNode } from "@phantomthief-react/utils.helpers";
 import { Portal } from "@phantomthief-react/components.portal";
 import { ChevronDown as IconChevronLeft } from "react-feather";
 import { Label } from "@phantomthief-react/components.label";
-import { FONT } from "@phantomthief-react/utils.constants";
-import useBlock from "@phantomthief-react/hooks.block";
 import { SELECT_VARIANT } from "./_constants";
 import { Styled } from "./_style";
 import clsx from "clsx";
@@ -58,7 +58,7 @@ const SelectOption = ({
   </Styled.Option>
 );
 
-export const Select = forwardRef<HTMLInputElement, ISelectProps>(
+export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
   (
     {
       className,
@@ -69,7 +69,8 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       fullWidth = false,
       required = false,
       tabIndex = -1,
-      isError = false,
+      error = null,
+      isStandalone = false,
       optionGroupClassName,
       labelProps,
       postAdormentProps,
@@ -84,12 +85,8 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
     const [isShowed, setShow] = useState(false);
     const [position, setPosition] = useState<INodePosition | null>(null);
     const [currentValue, setCurrentValue] = useState(value);
-    const previousValueRef = useRef(value);
 
-    if (value !== previousValueRef.current) {
-      previousValueRef.current = value;
-      setCurrentValue(value);
-    }
+    const internalValue = isStandalone ? currentValue : value;
 
     useNotClickOnElements([boxRef, optionGroupRef], () => {
       if (isShowed) {
@@ -116,13 +113,13 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
       if (disabled) {
         return true;
       }
-      if (isShowed || !!currentValue) {
+      if (isShowed || !!internalValue) {
         return true;
       }
       return false;
     });
 
-    const displayedOption = options.find((o) => o.value === currentValue);
+    const displayedOption = options.find((o) => o.value === internalValue);
 
     const handleSelectOption = useCallback(
       (value: string) => (e: MouseEvent<HTMLDivElement>) => {
@@ -133,9 +130,9 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
         e.target = target;
         onChange?.(e);
         setShow(false);
-        setCurrentValue(value);
+        isStandalone && setCurrentValue(value);
       },
-      [onChange],
+      [isStandalone, onChange],
     );
 
     const selectOptions = useMemo(() => {
@@ -145,12 +142,12 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             key={option.value}
             value={option.value}
             label={option.label}
-            displayedValue={currentValue}
+            displayedValue={internalValue}
             handleSelectOption={handleSelectOption}
           />
         );
       });
-    }, [currentValue, handleSelectOption, options]);
+    }, [handleSelectOption, internalValue, options]);
 
     const portal = useMemo(() => {
       return (
@@ -193,7 +190,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
           $variant={variant}
           $disabled={disabled}
           $fullWidth={fullWidth}
-          $isError={isError}
+          $isError={!!error}
           ref={boxRef}
           onClick={toggleListOptions}
           tabIndex={tabIndex}
@@ -201,7 +198,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             "select-box",
             fullWidth && "select-box--fullwidth",
             disabled && "select-box--disabled",
-            isError && "select-box--error",
+            !!error && "select-box--error",
             `select-box--${variant}`,
           )}
           data-testid="select-box"
@@ -213,7 +210,7 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
             variant={variant}
             isLabelCollapsed={isLabelCollapsed}
             isFocused={isShowed}
-            isError={isError}
+            isError={!!error}
           />
           <Styled.FakeSelect required={required} disabled={disabled} />
           <Styled.InnerBox
@@ -249,11 +246,9 @@ export const Select = forwardRef<HTMLInputElement, ISelectProps>(
               {postAdormentChild}
             </Styled.PostAdormentContentWrapper>
           </PostAdorment>
-          <HelperText
-            {...helperTextProps}
-            isError={isError}
-            variant={variant}
-          />
+          <HelperText {...helperTextProps} isError={!!error} variant={variant}>
+            {error?.message ?? helperTextProps?.children ?? ""}
+          </HelperText>
         </Styled.Box>
 
         {portal}

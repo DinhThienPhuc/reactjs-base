@@ -33,14 +33,11 @@
     "clsx": "*",
     "@phantomthief-react/components.post-adorment": "workspace:*",
     "@phantomthief-react/components.helper-text": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*",
     "@phantomthief-react/components.label": "workspace:*",
-    "@phantomthief-react/utils.helpers": "workspace:*",
-    "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
     "@phantomthief-react/components.typography": "workspace:*",
-    "@phantomthief-react/utils.constants": "workspace:*",
     "@phantomthief-react/components.portal": "workspace:*",
-    "@phantomthief-react/hooks.block": "workspace:*"
+    "@phantomthief-react/hooks": "workspace:*",
+    "@phantomthief-react/utils": "workspace:*"
   },
   "devDependencies": {
     "react-hook-form": "*",

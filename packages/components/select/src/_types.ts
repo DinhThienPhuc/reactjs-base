@@ -1,8 +1,7 @@
-import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
-
 import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
 import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
-import { IExtendable } from "@phantomthief-react/utils.definations";
+import { IExtendable, IFormFieldProps } from "@phantomthief-react/utils";
+import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 import { ILabelProps } from "@phantomthief-react/components.label";
 import { SELECT_VARIANT } from "./_constants";
 
@@ -20,19 +19,17 @@ export interface ISelectOptionProps extends ISelectOption {
 export type TSelectVariant =
   (typeof SELECT_VARIANT)[keyof typeof SELECT_VARIANT];
 
-export interface ISelectProps extends HTMLAttributes<HTMLElement>, IExtendable {
-  className?: string;
+export interface ISelectProps
+  extends HTMLAttributes<HTMLElement>,
+    IFormFieldProps,
+    IExtendable {
   optionGroupClassName?: string;
   options: ISelectOption[];
   value?: string;
-  fullWidth?: boolean;
   variant?: TSelectVariant;
-  disabled?: boolean;
-  required?: boolean;
   labelProps?: ILabelProps;
   postAdormentProps?: IPostAdormentProps;
   helperTextProps?: IHelperTextProps;
-  isError?: boolean;
 }
 
 export interface ISelectEventTarget extends EventTarget {

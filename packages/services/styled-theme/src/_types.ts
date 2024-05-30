@@ -1,4 +1,4 @@
-import { TAny } from "@phantomthief-react/utils.definations";
+import { TAny } from "@phantomthief-react/utils";
 import { ReactNode } from "react";
 
 export type TStyledTheme = "light" | "dark";
