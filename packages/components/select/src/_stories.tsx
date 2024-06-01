@@ -1,8 +1,10 @@
+import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
 import { ArrowDownCircle as IconArrowDownCircle } from "react-feather";
-import React, { ChangeEvent, useCallback, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
 import { Select } from "./_components";
+import * as yup from "yup";
 
 const meta = {
   title: "Components/Select",
@@ -16,7 +18,7 @@ const meta = {
     options: [
       {
         label: "Option 1 1 opiep oasi poeop aspoi posi",
-        value: "option-1",
+        value: "option-1-1-2-3-4--5--6-67",
       },
       {
         label: "Option 2",
@@ -224,13 +226,27 @@ export const PropsControllerSelect: Story = {
 
 export const RHFController: Story = {
   render: function Render(args) {
-    const { handleSubmit, control } = useForm<Record<string, string>>({
+    const validationSchema = useMemo(
+      () =>
+        yup
+          .object({
+            select: yup
+              .string()
+              .required("This field is required!")
+              .max(10, "Text must be less than 10 characters"),
+          })
+          .required(),
+      [],
+    );
+
+    const { handleSubmit, control } = useForm<{ select: string }>({
+      resolver: yupResolver(validationSchema),
       defaultValues: {
         select: "",
       },
     });
 
-    const onSubmit = (data: Record<string, string>) => {
+    const onSubmit = (data: { select: string }) => {
       console.log("RHFController form data: ", data);
     };
 
@@ -242,18 +258,6 @@ export const RHFController: Story = {
         <Controller
           control={control}
           name="select"
-          rules={{
-            validate: {
-              max: (value) => {
-                if (!value && value.length < 5) return true;
-                return "Option must be less than 5 characters";
-              },
-            },
-            required: {
-              value: true,
-              message: "This field is required!",
-            },
-          }}
           render={({ field, formState: { errors } }) => {
             return (
               <Select
