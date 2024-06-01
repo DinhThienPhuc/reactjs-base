@@ -1,49 +1,34 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
-import { ArrowDownCircle as IconArrowDownCircle } from "react-feather";
+import { Info as IconInfo, Anchor as IconAnchor } from "react-feather";
 import type { Meta, StoryObj } from "@storybook/react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
-import { Select } from "./_components";
+import { TextField } from "./_components";
 import * as yup from "yup";
 
 const meta = {
-  title: "Components/Select",
-  component: Select,
+  title: "Components/Text Field",
+  component: TextField,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {},
   args: {
-    options: [
-      {
-        label: "Option 1 1 opiep oasi poeop aspoi posi",
-        value: "option-1-1-2-3-4--5--6-67",
-      },
-      {
-        label: "Option 2",
-        value: "option-2",
-      },
-      {
-        label: "Option 3",
-        value: "option-3",
-      },
-      {
-        label: "Option 4",
-        value: "option-4",
-      },
-    ],
     labelProps: {
-      children: "Label",
+      children: "Username",
+    },
+    preAdormentProps: {
+      children: <IconAnchor color="#ffffff" width={16} height={16} />,
     },
     postAdormentProps: {
-      children: <IconArrowDownCircle />,
+      children: <IconInfo color="#ffffff" width={16} height={16} />,
     },
     helperTextProps: {
-      children: "helper text",
+      children: "This is a text field",
     },
   },
-} satisfies Meta<typeof Select>;
+} satisfies Meta<typeof TextField>;
 
 export default meta;
 
@@ -52,36 +37,32 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     isStandalone: true,
+    labelProps: null,
+    preAdormentProps: null,
+    postAdormentProps: null,
+    helperTextProps: null,
   },
 };
 
 export const Outlined: Story = {
   args: {
+    isStandalone: true,
     variant: "outlined",
     labelProps: null,
+    preAdormentProps: null,
     postAdormentProps: null,
     helperTextProps: null,
-    isStandalone: true,
   },
 };
 
 export const Filled: Story = {
   args: {
+    isStandalone: true,
     variant: "filled",
     labelProps: null,
+    preAdormentProps: null,
     postAdormentProps: null,
     helperTextProps: null,
-    isStandalone: true,
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    disabled: true,
-    labelProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
-    isStandalone: true,
   },
 };
 
@@ -90,6 +71,7 @@ export const FullWidth: Story = {
     variant: "outlined",
     fullWidth: true,
     labelProps: null,
+    preAdormentProps: null,
     postAdormentProps: null,
     helperTextProps: null,
     isStandalone: true,
@@ -101,6 +83,7 @@ export const Required: Story = {
     variant: "filled",
     required: true,
     labelProps: null,
+    preAdormentProps: null,
     postAdormentProps: null,
     helperTextProps: null,
     isStandalone: true,
@@ -109,6 +92,7 @@ export const Required: Story = {
 
 export const LabeledDefault: Story = {
   args: {
+    preAdormentProps: null,
     postAdormentProps: null,
     helperTextProps: null,
     isStandalone: true,
@@ -118,6 +102,7 @@ export const LabeledDefault: Story = {
 export const LabeledOutlined: Story = {
   args: {
     variant: "outlined",
+    preAdormentProps: null,
     postAdormentProps: null,
     helperTextProps: null,
     isStandalone: true,
@@ -127,6 +112,16 @@ export const LabeledOutlined: Story = {
 export const LabeledFilled: Story = {
   args: {
     variant: "filled",
+    preAdormentProps: null,
+    postAdormentProps: null,
+    helperTextProps: null,
+    isStandalone: true,
+  },
+};
+
+export const CustomPreAdorment: Story = {
+  args: {
+    variant: "outlined",
     postAdormentProps: null,
     helperTextProps: null,
     isStandalone: true,
@@ -136,6 +131,7 @@ export const LabeledFilled: Story = {
 export const CustomPostAdorment: Story = {
   args: {
     variant: "outlined",
+    preAdormentProps: null,
     helperTextProps: null,
     isStandalone: true,
   },
@@ -160,41 +156,35 @@ export const HelperTextFilled: Story = {
 };
 
 export const ParentController: Story = {
+  args: {},
   render: function Render(args) {
-    const [value, setValue] = useState(args.options[1].value);
+    const [value, setValue] = useState("");
 
     const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
       setValue(e.target.value);
     }, []);
 
     const handleParentChange = useCallback(
-      (value: string) => () => {
-        setValue(value);
+      (text: string) => () => {
+        setValue(text);
       },
       [],
     );
 
-    console.log("ParentController: ", value);
-
     return (
       <div style={{ display: "inline-flex", flexDirection: "column" }}>
-        <Select
-          {...args}
-          variant="filled"
-          value={value}
-          onChange={handleChange}
-        />
+        <TextField {...args} value={value} onChange={handleChange} />
         <button
           style={{ marginTop: 48 }}
-          onClick={handleParentChange(args.options[0].value)}
+          onClick={handleParentChange("Text first or init")}
         >
-          Change to first option
+          Update text 1
         </button>
         <button
-          style={{ marginTop: 24 }}
-          onClick={handleParentChange(args.options[3].value)}
+          style={{ marginTop: 48 }}
+          onClick={handleParentChange("Text 2")}
         >
-          Change to fourth option
+          Update text 2
         </button>
       </div>
     );
@@ -202,51 +192,42 @@ export const ParentController: Story = {
 };
 
 export const PropsControllerSelect: Story = {
+  args: {},
   render: function Render(args) {
-    const [value, setValue] = useState(args.options[2].value);
+    const [value, setValue] = useState("");
 
     const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
       setValue(e.target.value);
     }, []);
 
-    console.log("PropsControllerSelect: ", value);
-
-    return (
-      <div style={{ display: "inline-flex", flexDirection: "column" }}>
-        <Select
-          {...args}
-          variant="outlined"
-          value={value}
-          onChange={handleChange}
-        />
-      </div>
-    );
+    return <TextField {...args} value={value} onChange={handleChange} />;
   },
 };
 
 export const RHFController: Story = {
+  args: {},
   render: function Render(args) {
     const validationSchema = useMemo(
       () =>
         yup
           .object({
-            select: yup
+            textField: yup
               .string()
               .required("This field is required!")
-              .max(10, "Text must be less than 10 characters"),
+              .min(10, "Text must be greater than 10 characters"),
           })
           .required(),
       [],
     );
 
-    const { handleSubmit, control } = useForm<{ select: string }>({
+    const { handleSubmit, control } = useForm<{ textField: string }>({
       resolver: yupResolver(validationSchema),
       defaultValues: {
-        select: "",
+        textField: "",
       },
     });
 
-    const onSubmit = (data: { select: string }) => {
+    const onSubmit = (data: Record<string, string>) => {
       console.log("RHFController form data: ", data);
     };
 
@@ -257,17 +238,10 @@ export const RHFController: Story = {
       >
         <Controller
           control={control}
-          name="select"
-          render={({ field, formState: { errors } }) => {
-            return (
-              <Select
-                {...args}
-                {...field}
-                error={errors.select}
-                variant="outlined"
-              />
-            );
-          }}
+          name="textField"
+          render={({ field, formState: { errors } }) => (
+            <TextField {...args} {...field} error={errors.textField} />
+          )}
         />
 
         <input type="submit" style={{ marginTop: 48 }} />

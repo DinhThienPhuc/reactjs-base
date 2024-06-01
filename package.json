@@ -15,7 +15,7 @@
     "build:all": "pnpm --filter \"./packages/**/**\" -r build",
     "publish": "ts-node ./scripts/run-pnpm-command.ts -r publish --access public --no-git-checks",
     "publish:all": "pnpm --filter \"./packages/**/**\" -r publish --access public --no-git-checks",
-    "rmnpm": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rm -rf ./node_modules && rm -rf ./pnpm-lock.yaml",
+    "rmnpm": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rimraf ./node_modules && rimraf ./pnpm-lock.yaml",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
@@ -27,6 +27,8 @@
     "@chromatic-com/storybook": "1.3.5",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@hookform/resolvers": "^3.4.2",
+    "@storybook/addon-a11y": "^8.1.5",
     "@storybook/addon-essentials": "^8.0.10",
     "@storybook/addon-interactions": "^8.0.10",
     "@storybook/addon-links": "^8.0.10",
@@ -76,6 +78,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.9.1",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "yup": "^1.4.0"
   }
 }

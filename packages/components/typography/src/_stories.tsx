@@ -26,3 +26,32 @@ export const CustomColor: Story = {
     color: "#c5cbce",
   },
 };
+
+export const CustomSize: Story = {
+  args: {
+    color: "#ffffff",
+    size: 24,
+  },
+};
+
+export const CustomBold: Story = {
+  args: {
+    color: "#ffffff",
+    bold: 700,
+  },
+};
+
+export const CustomVariant: Story = {
+  args: {
+    color: "#ffffff",
+    bold: 700,
+    variant: "p",
+  },
+};
+
+export const CustomFontText: Story = {
+  args: {
+    color: "#ffffff",
+    font: "Arial, Helvetica, sans-serif",
+  },
+};

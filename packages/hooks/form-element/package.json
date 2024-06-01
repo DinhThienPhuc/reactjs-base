@@ -1,6 +1,6 @@
 {
-  "name": "@phantomthief-react/hooks",
-  "version": "0.0.2",
+  "name": "@phantomthief-react/hooks.form-element",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -27,14 +27,7 @@
   },
   "peerDependencies": {
     "typescript": "*",
-    "react": "*",
-    "@phantomthief-react/hooks.block": "workspace:*",
-    "@phantomthief-react/hooks.event-listener": "workspace:*",
-    "@phantomthief-react/hooks.focus-with-callback": "workspace:*",
-    "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*",
-    "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
-    "@phantomthief-react/hooks.on-mounted": "workspace:*",
-    "@phantomthief-react/hooks.form-element": "workspace:*"
+    "react": "*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

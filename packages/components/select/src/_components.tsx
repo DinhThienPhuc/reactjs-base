@@ -14,12 +14,16 @@ import {
   ISelectProps,
 } from "./_types";
 import {
+  useBlock,
+  useFormElement,
+  useNotClickOnElements,
+} from "@phantomthief-react/hooks";
+import {
   FONT,
   INodePosition,
   getPositionOfNode,
 } from "@phantomthief-react/utils";
 import { PostAdorment } from "@phantomthief-react/components.post-adorment";
-import { useBlock, useNotClickOnElements } from "@phantomthief-react/hooks";
 import { HelperText } from "@phantomthief-react/components.helper-text";
 import { Typography } from "@phantomthief-react/components.typography";
 import { Portal } from "@phantomthief-react/components.portal";
@@ -84,9 +88,10 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
     const optionGroupRef = useRef<HTMLDivElement | null>(null);
     const [isShowed, setShow] = useState(false);
     const [position, setPosition] = useState<INodePosition | null>(null);
-    const [currentValue, setCurrentValue] = useState(value);
 
-    const internalValue = isStandalone ? currentValue : value;
+    const { currentValue, setCurrentValue } = useFormElement<
+      string | undefined
+    >(value, isStandalone);
 
     useNotClickOnElements([boxRef, optionGroupRef], () => {
       if (isShowed) {
@@ -113,13 +118,13 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
       if (disabled) {
         return true;
       }
-      if (isShowed || !!internalValue) {
+      if (isShowed || !!currentValue) {
         return true;
       }
       return false;
     });
 
-    const displayedOption = options.find((o) => o.value === internalValue);
+    const displayedOption = options.find((o) => o.value === currentValue);
 
     const handleSelectOption = useCallback(
       (value: string) => (e: MouseEvent<HTMLDivElement>) => {
@@ -130,9 +135,9 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
         e.target = target;
         onChange?.(e);
         setShow(false);
-        isStandalone && setCurrentValue(value);
+        setCurrentValue(value);
       },
-      [isStandalone, onChange],
+      [onChange, setCurrentValue],
     );
 
     const selectOptions = useMemo(() => {
@@ -142,12 +147,12 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
             key={option.value}
             value={option.value}
             label={option.label}
-            displayedValue={internalValue}
+            displayedValue={currentValue}
             handleSelectOption={handleSelectOption}
           />
         );
       });
-    }, [handleSelectOption, internalValue, options]);
+    }, [currentValue, handleSelectOption, options]);
 
     const portal = useMemo(() => {
       return (
