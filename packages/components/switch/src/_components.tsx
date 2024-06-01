@@ -1,5 +1,6 @@
-import React, { ChangeEvent, forwardRef, useMemo, useState } from "react";
 import { Typography } from "@phantomthief-react/components.typography";
+import React, { ChangeEvent, forwardRef, useMemo } from "react";
+import { useFormElement } from "@phantomthief-react/hooks";
 import { FONT } from "@phantomthief-react/utils";
 import { ISwitchProps } from "./_types";
 import { Styled } from "./_style";
@@ -20,9 +21,10 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
     },
     ref,
   ) => {
-    const [currentValue, setCurrentValue] = useState(value);
-
-    const internalValue = isStandalone ? currentValue : value;
+    const { currentValue, setCurrentValue } = useFormElement<boolean>(
+      value,
+      isStandalone,
+    );
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
       setCurrentValue(e.target.checked);
@@ -81,24 +83,22 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
       );
     }, [disabled, leftLabel]);
 
-    console.log("RENDER");
-
     return (
       <Styled.Container {...restProps} className={clsx("switch", className)}>
         {customLeftLabel}
         <Styled.Pad
-          $isOn={internalValue}
+          $isOn={currentValue}
           $disabled={disabled}
           className={clsx(
             "switch-pad",
-            !!internalValue && "switch-pad__on",
+            currentValue && "switch-pad__on",
             disabled && "switch-pad__disabled",
           )}
         >
           <input
             {...inputProps}
             ref={ref}
-            checked={internalValue}
+            checked={currentValue}
             onChange={handleChange}
             disabled={disabled}
             type="checkbox"

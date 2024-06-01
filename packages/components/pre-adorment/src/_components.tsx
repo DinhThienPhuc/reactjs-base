@@ -1,6 +1,4 @@
-import { Typography } from "@phantomthief-react/components.typography";
 import { PRE_ADORMENT_VARIANT } from "./_constants";
-import { FONT } from "@phantomthief-react/utils";
 import { IPreAdormentProps } from "./_types";
 import { Styled } from "./_style";
 import React from "react";
@@ -30,9 +28,7 @@ export const PreAdorment = ({
       )}
       data-testid="pre-adorment"
     >
-      <Typography size={16} font={FONT.VERNADA} className="pre-adorment__text">
-        {children}
-      </Typography>
+      {children}
     </Styled.Container>
   );
 };

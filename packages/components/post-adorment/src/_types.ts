@@ -1,4 +1,3 @@
-import { ITypographyProps } from "@phantomthief-react/components.typography";
 import { IExtendable, TFunction } from "@phantomthief-react/utils";
 
 import { POST_ADORMENT_VARIANT } from "./_constants";
@@ -14,5 +13,4 @@ export interface IPostAdormentProps extends IExtendable {
   clearIcon?: ReactNode;
   hasLabel?: boolean;
   clear?: TFunction<void>;
-  typographyProps?: ITypographyProps;
 }

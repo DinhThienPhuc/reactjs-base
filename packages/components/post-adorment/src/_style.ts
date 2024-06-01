@@ -7,6 +7,7 @@ export const Styled = {
     $adormentVariant: TPostAdormentVariant;
     $hasLabel: boolean;
   }>`
+    display: flex;
     position: absolute;
     top: ${({ $hasLabel }) => ($hasLabel ? "calc(50% + 6px)" : "50%")};
     transform: translateY(-50%);

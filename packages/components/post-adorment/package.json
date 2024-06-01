@@ -31,8 +31,7 @@
     "styled-components": "*",
     "react-feather": "*",
     "clsx": "*",
-    "@phantomthief-react/utils": "workspace:*",
-    "@phantomthief-react/components.typography": "workspace:*"
+    "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

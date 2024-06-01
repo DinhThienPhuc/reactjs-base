@@ -1,6 +1,6 @@
 {
-  "name": "@phantomthief-react/hooks",
-  "version": "0.0.2",
+  "name": "@phantomthief-react/components.text-field",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -28,13 +28,19 @@
   "peerDependencies": {
     "typescript": "*",
     "react": "*",
-    "@phantomthief-react/hooks.block": "workspace:*",
-    "@phantomthief-react/hooks.event-listener": "workspace:*",
-    "@phantomthief-react/hooks.focus-with-callback": "workspace:*",
-    "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*",
-    "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
-    "@phantomthief-react/hooks.on-mounted": "workspace:*",
-    "@phantomthief-react/hooks.form-element": "workspace:*"
+    "styled-components": "*",
+    "clsx": "*",
+    "@phantomthief-react/utils": "workspace:*",
+    "@phantomthief-react/hooks": "workspace:*",
+    "@phantomthief-react/components.post-adorment": "workspace:*",
+    "@phantomthief-react/components.pre-adorment": "workspace:*",
+    "@phantomthief-react/components.helper-text": "workspace:*",
+    "@phantomthief-react/components.label": "workspace:*"
+  },
+  "devDependencies": {
+    "react-hook-form": "*",
+    "yup": "*",
+    "@hookform/resolvers": "*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",
