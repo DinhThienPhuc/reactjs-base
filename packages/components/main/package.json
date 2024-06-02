@@ -25,9 +25,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
-  "peerDependencies": {
-    "typescript": "*",
-    "react": "*",
+  "dependencies": {
     "@phantomthief-react/components.button": "workspace:*",
     "@phantomthief-react/components.flex-box": "workspace:*",
     "@phantomthief-react/components.loading-ellipsis": "workspace:*",
@@ -37,6 +35,10 @@
     "@phantomthief-react/components.select": "workspace:*",
     "@phantomthief-react/components.switch": "workspace:*",
     "@phantomthief-react/components.typography": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "*",
+    "react": "*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

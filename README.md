@@ -148,6 +148,37 @@ It is recommended to use Visual Studio Code with the following extensions to ens
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 
+### Media queries
+
+We should follow these media queries for consistency
+
+```css
+/* Mobile (Smartphones, Portrait) */
+@media (max-width: 480px) {
+  /* styles */
+}
+
+/* Mobile (Smartphones, Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* styles */
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* styles */
+}
+
+/* Desktop */
+@media (min-width: 1024px) and (max-width: 1215px) {
+  /* styles */
+}
+
+/* Wide Screen */
+@media (min-width: 1216px) {
+  /* styles */
+}
+```
+
 ## Commit Guide
 
 ### Fix eslint error
