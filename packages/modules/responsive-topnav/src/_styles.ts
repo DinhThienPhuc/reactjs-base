@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Styled = {
-  Container: styled.div<{ $isMobileMenuExpanded: boolean }>`
+  Container: styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,7 @@ export const Styled = {
     width: 100%;
   `,
   Item: styled.a<{ $isMobileMenuExpanded: boolean }>`
+    transition: all 200ms ease-in-out;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -23,7 +24,16 @@ export const Styled = {
     padding-right: 16px;
     width: 100%;
     height: 56px;
-    border-bottom: 1px solid #ffffff1f;
+    overflow: hidden;
+
+    &:not(:first-child) {
+      border-top: ${({ $isMobileMenuExpanded }) =>
+        $isMobileMenuExpanded ? "1px solid #ffffff1f" : "0px"};
+      height: ${({ $isMobileMenuExpanded }) =>
+        $isMobileMenuExpanded ? "56px" : "0px"};
+      opacity: ${({ $isMobileMenuExpanded }) =>
+        $isMobileMenuExpanded ? 1 : 0};
+    }
 
     &:hover {
       cursor: pointer;
@@ -34,45 +44,11 @@ export const Styled = {
       padding-left: 24px;
       padding-right: 24px;
     }
-    /* display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-
-    &:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    &.icon {
-      display: none;
-    }
-
-    @media screen and (max-width: 600px) {
-      &:not(:first-child) {
-        display: none;
-      }
-
-      &.icon {
-        float: right;
-        display: block;
-      }
-
-      ${({ $isMobileMenuExpanded }) =>
-      $isMobileMenuExpanded &&
-      css`
-        float: none;
-        display: block;
-        text-align: left;
-
-        &.icon {
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-      `};
-    } */
+  `,
+  MenuIconWrapper: styled.div`
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    transform: translate(50%, -50%);
   `,
 };

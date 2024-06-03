@@ -1,13 +1,10 @@
+import { HamburgerMenu } from "@phantomthief-react/components";
 import { IResponsiveTopnavProps } from "./_types";
 import React, { useMemo, useState } from "react";
 import { Styled } from "./_styles";
 
 export const ResponsiveTopnav = ({ items }: IResponsiveTopnavProps) => {
   const [isMobileMenuExpanded, setMobileMenuExpand] = useState(false);
-
-  const handleClick = () => {
-    setMobileMenuExpand((prev) => !prev);
-  };
 
   const customItem = useMemo(() => {
     return items.map((item) => (
@@ -17,15 +14,22 @@ export const ResponsiveTopnav = ({ items }: IResponsiveTopnavProps) => {
     ));
   }, [isMobileMenuExpanded, items]);
 
+  const menuIcon = useMemo(
+    () => (
+      <HamburgerMenu
+        width={24}
+        height={24}
+        gap={4}
+        onClick={setMobileMenuExpand}
+      />
+    ),
+    [],
+  );
+
   return (
-    <Styled.Container $isMobileMenuExpanded={isMobileMenuExpanded}>
+    <Styled.Container>
       {customItem}
-      <Styled.Item
-        $isMobileMenuExpanded={isMobileMenuExpanded}
-        onClick={handleClick}
-      >
-        X
-      </Styled.Item>
+      <Styled.MenuIconWrapper>{menuIcon}</Styled.MenuIconWrapper>
     </Styled.Container>
   );
 };

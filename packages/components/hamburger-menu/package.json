@@ -28,6 +28,7 @@
   "peerDependencies": {
     "typescript": "*",
     "react": "*",
+    "styled-components": "*",
     "clsx": "*",
     "@phantomthief-react/utils": "workspace:*"
   },

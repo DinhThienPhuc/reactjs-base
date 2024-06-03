@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HumburgerMenu } from "./_components";
+import { HamburgerMenu } from "./_components";
 
 const meta = {
-  title: "Components/Humburger Menu",
-  component: HumburgerMenu,
+  title: "Components/Hamburger Menu",
+  component: HamburgerMenu,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {},
   args: {},
-} satisfies Meta<typeof HumburgerMenu>;
+} satisfies Meta<typeof HamburgerMenu>;
 
 export default meta;
 

@@ -1,17 +1,20 @@
 import styled, { css } from "styled-components";
 
 export const Styled = {
-  Container: styled.div`
-    display: inline-block;
+  Container: styled.button`
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: 0;
   `,
-  Bar: styled.div<{
+  Bar: styled.span<{
     $isOpened: boolean;
     $gap: number;
     $width: number;
     $height: number;
     $borderRadius: number;
   }>`
+    display: block;
     width: ${({ $width }) => $width}px;
     height: ${({ $height, $gap }) => ($height - 4 * $gap) / 3}px;
     background-color: #ffffff;
