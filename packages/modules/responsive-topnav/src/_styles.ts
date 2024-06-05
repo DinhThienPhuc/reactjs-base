@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Styled = {
-  Container: styled.div`
-    position: relative;
+  Container: styled.div<{ $isMobileMenuExpanded: boolean }>`
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,9 +15,19 @@ export const Styled = {
       #0000001f 0px 1px 10px 0px;
     background-image: linear-gradient(#ffffff17, #ffffff17);
     width: 100%;
+    height: ${({ $isMobileMenuExpanded }) =>
+      $isMobileMenuExpanded ? "100vh" : "auto"};
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   `,
-  Item: styled.a<{ $isMobileMenuExpanded: boolean }>`
-    transition: all 200ms ease-in-out;
+  Item: styled.button<{
+    $isMobileMenuExpanded: boolean;
+    $isActivated: boolean;
+  }>`
+    position: relative;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -25,6 +36,10 @@ export const Styled = {
     width: 100%;
     height: 56px;
     overflow: hidden;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    color: ${({ $isActivated }) => ($isActivated ? "#90caf9" : "#ffffff")};
 
     &:not(:first-child) {
       border-top: ${({ $isMobileMenuExpanded }) =>
@@ -39,16 +54,43 @@ export const Styled = {
       cursor: pointer;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      border-radius: 4px;
+      background-color: #90caf9;
+      transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      width: ${({ $isActivated }) => ($isActivated ? "100%" : 0)};
+    }
+
     @media (min-width: 768px) {
       height: 64px;
       padding-left: 24px;
       padding-right: 24px;
+      width: auto;
+
+      &:not(:first-child) {
+        opacity: 1;
+        height: 64px;
+      }
     }
   `,
+  Left: styled.div``,
+  Center: styled.div``,
+  Right: styled.div``,
   MenuIconWrapper: styled.div`
+    display: flex;
     position: absolute;
     top: 28px;
     right: 28px;
     transform: translate(50%, -50%);
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   `,
 };
