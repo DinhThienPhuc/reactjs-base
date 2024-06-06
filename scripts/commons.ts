@@ -31,7 +31,7 @@ export const getPnpmInfor = (): IReturnTypeGetPnpmInfor => {
   const [, , ...restArgv] = process.argv;
   const restArgvString = ignoreParts(
     restArgv.join(" "),
-    /--apps=.+|--packages=.+|-a=.+|-p=.+/g,
+    /--apps=[a-zA-Z1-9-_\.]+|--packages=[a-zA-Z1-9-_\.]+|-a=[a-zA-Z1-9-_\.]+|-p=[a-zA-Z1-9-_\.]+/g,
   ).trim();
 
   const result: IReturnTypeGetPnpmInfor = {

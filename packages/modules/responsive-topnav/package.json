@@ -1,6 +1,6 @@
 {
-  "name": "@phantomthief-react/utils",
-  "version": "0.0.2",
+  "name": "@phantomthief-react/modules.responsive-topnav",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -25,14 +25,14 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
-  "dependencies": {
-    "@phantomthief-react/utils.constants": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*",
-    "@phantomthief-react/utils.helpers": "workspace:*"
-  },
   "peerDependencies": {
+    "react": "*",
     "typescript": "*",
-    "react": "*"
+    "styled-components": "*",
+    "clsx": "*",
+    "@phantomthief-react/utils": "workspace:*",
+    "@phantomthief-react/hooks": "workspace:*",
+    "@phantomthief-react/components": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

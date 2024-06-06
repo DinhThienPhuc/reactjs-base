@@ -25,11 +25,14 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
+  "dependencies": {
+    "@phantomthief-react/modules.authenticator": "workspace:*",
+    "@phantomthief-react/modules.error-boundary": "workspace:*",
+    "@phantomthief-react/modules.responsive-topnav": "workspace:*"
+  },
   "peerDependencies": {
     "typescript": "*",
-    "react": "*",
-    "@phantomthief-react/modules.authenticator": "workspace:*",
-    "@phantomthief-react/modules.error-boundary": "workspace:*"
+    "react": "*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

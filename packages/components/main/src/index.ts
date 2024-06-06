@@ -1,5 +1,6 @@
 export * from "@phantomthief-react/components.button";
 export * from "@phantomthief-react/components.flex-box";
+export * from "@phantomthief-react/components.hamburger-menu";
 export * from "@phantomthief-react/components.loading-ellipsis";
 export * from "@phantomthief-react/components.loading-ripple";
 export * from "@phantomthief-react/components.navbar";
