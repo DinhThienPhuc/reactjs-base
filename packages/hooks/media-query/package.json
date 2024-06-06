@@ -1,6 +1,6 @@
 {
-  "name": "@phantomthief-react/hooks",
-  "version": "0.0.2",
+  "name": "@phantomthief-react/hooks.media-query",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -25,19 +25,9 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
-  "dependencies": {
-    "@phantomthief-react/hooks.block": "workspace:*",
-    "@phantomthief-react/hooks.event-listener": "workspace:*",
-    "@phantomthief-react/hooks.focus-with-callback": "workspace:*",
-    "@phantomthief-react/hooks.form-element": "workspace:*",
-    "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*",
-    "@phantomthief-react/hooks.media-query": "workspace:*",
-    "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
-    "@phantomthief-react/hooks.on-mounted": "workspace:*"
-  },
   "peerDependencies": {
-    "react": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "react": "*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",
