@@ -684,12 +684,24 @@ importers:
       "@phantomthief-react/hooks.isomorphic-layout-effect":
         specifier: workspace:*
         version: link:../isomorphic-layout-effect
+      "@phantomthief-react/hooks.media-query":
+        specifier: workspace:*
+        version: link:../media-query
       "@phantomthief-react/hooks.not-click-on-elements":
         specifier: workspace:*
         version: link:../not-click-on-elements
       "@phantomthief-react/hooks.on-mounted":
         specifier: workspace:*
         version: link:../on-mounted
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
+  packages/hooks/media-query:
+    dependencies:
       react:
         specifier: "*"
         version: 18.3.1

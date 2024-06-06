@@ -6,7 +6,7 @@ pnpm exec commitlint --edit ${1}
 
 # Check if commit message contains change, require a changeset
 message="$(cat $1)"
-requiredPatterns=('fix' 'feat' 'revert' 'refactor')
+requiredPatterns=('fix' 'feat' 'revert' 'refactor' 'chore')
 for requiredPattern in ${requiredPatterns[@]}; do
   if [[ $message == $requiredPattern* ]]; then
     echo "Commit message starts with $requiredPattern"

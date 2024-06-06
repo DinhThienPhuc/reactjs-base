@@ -10,7 +10,8 @@ const Styled = {
       width: 280px;
       height: 275px;
       flex-grow: 0;
-      padding: 5px 97px 246px 42px;
+      top: 69px;
+      padding: 12px 41px 81px 42px;
       transform: rotate(-94deg);
       opacity: 0.4;
       -webkit-filter: blur(174px);
@@ -24,7 +25,8 @@ const Styled = {
       width: 264px;
       height: 329px;
       flex-grow: 0;
-      bottom: 0px;
+      bottom: 86px;
+      left: 62px;
       transform: rotate(-346deg);
       opacity: 0.4;
       -webkit-filter: blur(174px);
