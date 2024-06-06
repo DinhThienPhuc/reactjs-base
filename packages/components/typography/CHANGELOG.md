@@ -1,5 +1,13 @@
 # @phantomthief-react/components.typography
 
+## 0.0.8
+
+### Patch Changes
+
+- fc1a4bb: Add hooks.form-element, components.text-field and update content for components.pre-adorment and components.post-adorment
+- Updated dependencies [c95f6e6]
+  - @phantomthief-react/utils@0.0.3
+
 ## 0.0.7
 
 ### Patch Changes

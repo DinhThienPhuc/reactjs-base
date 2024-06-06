@@ -1,5 +1,12 @@
 # @phantomthief-react/modules.error-boundary
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [c95f6e6]
+  - @phantomthief-react/utils@0.0.3
+
 ## 0.0.4
 
 ### Patch Changes
