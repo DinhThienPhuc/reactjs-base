@@ -1,5 +1,12 @@
 # @phantomthief-react/components.flex-box
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [c95f6e6]
+  - @phantomthief-react/utils@0.0.3
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @phantomthief-react/modules.authenticator
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [4c216ed]
+- Updated dependencies [c95f6e6]
+- Updated dependencies [fc1a4bb]
+  - @phantomthief-react/hooks@0.0.3
+
 ## 0.0.4
 
 ### Patch Changes
