@@ -29,10 +29,16 @@ export interface ILoadingProps {
 }
 
 /**
+ * Sync State with Props interface
+ */
+export interface ISyncStateWithProps {
+  isStandalone?: boolean;
+}
+
+/**
  * Form Field Props
  */
-export interface IFormFieldProps {
-  isStandalone?: boolean;
+export interface IFormFieldProps extends ISyncStateWithProps {
   className?: string;
   fullWidth?: boolean;
   disabled?: boolean;
