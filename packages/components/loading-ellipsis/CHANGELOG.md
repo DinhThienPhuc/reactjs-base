@@ -1,5 +1,13 @@
 # @phantomthief-react/components.loading-ellipsis
 
+## 0.0.7
+
+### Patch Changes
+
+- d4002f6: Do not know why
+- Updated dependencies [d4002f6]
+  - @phantomthief-react/utils@0.0.4
+
 ## 0.0.6
 
 ### Patch Changes

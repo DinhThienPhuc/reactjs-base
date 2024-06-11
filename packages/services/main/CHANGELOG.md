@@ -1,5 +1,15 @@
 # @phantomthief-react/services
 
+## 0.0.4
+
+### Patch Changes
+
+- d4002f6: Do not know why
+- Updated dependencies [d4002f6]
+  - @phantomthief-react/services.styled-theme@0.0.6
+  - @phantomthief-react/services.firebase@0.0.7
+  - @phantomthief-react/services.i18n@0.0.6
+
 ## 0.0.3
 
 ### Patch Changes

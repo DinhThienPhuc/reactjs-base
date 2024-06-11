@@ -1,5 +1,27 @@
 # @phantomthief-react/components
 
+## 0.0.4
+
+### Patch Changes
+
+- d4002f6: Do not know why
+- Updated dependencies [538ad37]
+- Updated dependencies [ff15021]
+- Updated dependencies [49b765c]
+- Updated dependencies [57b304e]
+- Updated dependencies [d4002f6]
+- Updated dependencies [4c6865d]
+  - @phantomthief-react/components.hamburger-menu@0.0.3
+  - @phantomthief-react/components.typography@0.0.9
+  - @phantomthief-react/components.loading-ellipsis@0.0.7
+  - @phantomthief-react/components.loading-ripple@0.0.7
+  - @phantomthief-react/components.flex-box@0.0.9
+  - @phantomthief-react/components.button@0.0.7
+  - @phantomthief-react/components.select@0.0.7
+  - @phantomthief-react/components.switch@0.0.7
+  - @phantomthief-react/components.navbar@0.0.4
+  - @phantomthief-react/components.portal@0.0.5
+
 ## 0.0.3
 
 ### Patch Changes
