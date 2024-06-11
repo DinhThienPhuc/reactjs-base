@@ -6,7 +6,6 @@ const Styled = {
     position: relative;
     padding: 15px;
     background-color: #010c15;
-    color: #ffffff;
 
     &::before {
       content: "";
@@ -39,14 +38,16 @@ const Styled = {
     }
   `,
   InnerContainer: styled.div`
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
     border: solid 1px #1e2d3d;
     background-color: #011627;
     height: calc(100vh - 30px);
     overflow: hidden;
   `,
-  ResponsiveTopnav: styled(ResponsiveTopnav)`
-    position: relative;
+  Topnav: styled(ResponsiveTopnav)`
+    z-index: 1;
     background: #011627;
     box-shadow: none;
 
@@ -54,13 +55,38 @@ const Styled = {
       height: calc(100vh - 30px);
     }
 
-    /* &.responsive-topnav--mobile-expanded {
-      height: calc(100vh - 30px);
-    } */
+    & .responsive-topnav-item {
+      color: #607b96;
+    }
+
+    & .responsive-topnav-item--active {
+      color: #ffffff;
+    }
+
+    & .responsive-topnav-item--active::after {
+      background-color: #fea55f;
+      border-radius: 0px;
+      height: 3px;
+    }
 
     &.responsive-topnav--mobile-expanded .responsive-topnav-item {
       border-top-color: #1e2d3d;
     }
+  `,
+  Content: styled.div`
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 134px);
+    width: 100%;
+  `,
+  Footer: styled.div`
+    border-top: 1px solid #1e2d3d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    padding-left: 18px;
+    color: #607b96;
   `,
 };
 

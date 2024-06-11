@@ -1,52 +1,14 @@
+html,
+body {
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-}
-
-@font-face {
-  font-family: "FiraCode-Bold";
-  font-style: normal;
-  font-weight: 700;
-  src:
-    local("FiraCode-Bold"),
-    url("../fonts/FiraCode-Bold.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "FiraCode-Light";
-  font-style: normal;
-  font-weight: 300;
-  src:
-    local("FiraCode-Light"),
-    url("../fonts/FiraCode-Light.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "FiraCode-Medium";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    local("FiraCode-Medium"),
-    url("../fonts/FiraCode-Medium.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "FiraCode-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    local("FiraCode-Regular"),
-    url("../fonts/FiraCode-Regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "FiraCode-SemiBold";
-  font-style: normal;
-  font-weight: 600;
-  src:
-    local("FiraCode-SemiBold"),
-    url("../fonts/FiraCode-SemiBold.ttf") format("ttf");
 }
