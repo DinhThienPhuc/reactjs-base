@@ -1,18 +1,25 @@
+import { useBlock, useSyncStateWithProps } from "@phantomthief-react/hooks";
 import { HamburgerMenu } from "@phantomthief-react/components";
-import { useBlock } from "@phantomthief-react/hooks";
 import { IResponsiveTopnavProps } from "./_types";
-import React, { useMemo, useState } from "react";
 import { Styled } from "./_styles";
+import React from "react";
 import clsx from "clsx";
 
 export const ResponsiveTopnav = ({
   items,
   activeKey = items[0].key,
   firstItemSelectable = false,
+  collapseAfterSelectItem = true,
+  mobileMenuExpanded = false,
+  isStandalone = false,
+  hamburgerProps,
   onClick,
   className,
 }: IResponsiveTopnavProps) => {
-  const [isMobileMenuExpanded, setMobileMenuExpand] = useState(false);
+  const {
+    currentValue: isMobileMenuExpanded,
+    setCurrentValue: setMobileMenuExpand,
+  } = useSyncStateWithProps<boolean>(mobileMenuExpanded, isStandalone);
 
   const customItems = useBlock(() => {
     return items.map((item, index) => (
@@ -21,6 +28,7 @@ export const ResponsiveTopnav = ({
         $isMobileMenuExpanded={isMobileMenuExpanded}
         $isActivated={activeKey === item.key}
         onClick={(e) => {
+          collapseAfterSelectItem && setMobileMenuExpand(false);
           if (firstItemSelectable || index !== 0) {
             return onClick?.(e, item.key);
           }
@@ -38,18 +46,6 @@ export const ResponsiveTopnav = ({
     ));
   });
 
-  const menuIcon = useMemo(
-    () => (
-      <HamburgerMenu
-        width={24}
-        height={24}
-        gap={4}
-        onClick={setMobileMenuExpand}
-      />
-    ),
-    [],
-  );
-
   return (
     <Styled.Container
       $isMobileMenuExpanded={isMobileMenuExpanded}
@@ -60,7 +56,20 @@ export const ResponsiveTopnav = ({
       )}
     >
       {customItems}
-      <Styled.MenuIconWrapper>{menuIcon}</Styled.MenuIconWrapper>
+      <Styled.MenuIconWrapper>
+        <HamburgerMenu
+          {...hamburgerProps}
+          isStandalone={false}
+          width={hamburgerProps?.width ?? 24}
+          height={hamburgerProps?.height ?? 24}
+          gap={hamburgerProps?.gap ?? 4}
+          active={isMobileMenuExpanded}
+          onClick={(expanded) => {
+            setMobileMenuExpand(expanded);
+            hamburgerProps?.onClick?.(expanded);
+          }}
+        />
+      </Styled.MenuIconWrapper>
     </Styled.Container>
   );
 };

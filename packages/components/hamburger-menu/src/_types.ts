@@ -1,12 +1,15 @@
-import { IExtendable } from "../../../utils/definations/dist";
+import { IExtendable, ISyncStateWithProps } from "@phantomthief-react/utils";
 import { ButtonHTMLAttributes } from "react";
 
 export interface IHamburgerMenuProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick">,
-    IExtendable {
+    IExtendable,
+    ISyncStateWithProps {
   gap?: number;
   width?: number;
   height?: number;
   borderRadius?: number;
-  onClick?: (isOpened: boolean) => void;
+  onClick?: (active: boolean) => void;
+  color?: string;
+  active?: boolean;
 }

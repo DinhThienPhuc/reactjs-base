@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import React, { useCallback, useState } from "react";
 import { HamburgerMenu } from "./_components";
 
 const meta = {
@@ -17,3 +18,60 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const ParentController: Story = {
+  render: function Render() {
+    const [value, setValue] = useState(false);
+
+    const handleClick = useCallback((isActivated: boolean) => {
+      setValue(isActivated);
+    }, []);
+
+    const handleParentChange = useCallback(
+      (value: boolean) => () => {
+        setValue(value);
+      },
+      [],
+    );
+
+    console.log("ParentController: ", value);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <HamburgerMenu
+          isStandalone={false}
+          active={value}
+          onClick={handleClick}
+        />
+        <button style={{ marginTop: 48 }} onClick={handleParentChange(false)}>
+          Trigger hamburger inactive
+        </button>
+        <button style={{ marginTop: 24 }} onClick={handleParentChange(true)}>
+          Trigger hamburger active
+        </button>
+      </div>
+    );
+  },
+};
+
+export const PropsControllerSelect: Story = {
+  render: function Render() {
+    const [value, setValue] = useState(false);
+
+    const handleClick = useCallback((isActivated: boolean) => {
+      setValue(isActivated);
+    }, []);
+
+    console.log("PropsControllerSelect: ", value);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <HamburgerMenu
+          isStandalone={false}
+          active={value}
+          onClick={handleClick}
+        />
+      </div>
+    );
+  },
+};

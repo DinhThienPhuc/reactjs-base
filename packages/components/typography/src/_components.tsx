@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 export const Typography = ({
   variant = "span",
-  size = 14,
+  size = "inherit",
   bold = 400,
   color = "inherit",
   font = "inherit",

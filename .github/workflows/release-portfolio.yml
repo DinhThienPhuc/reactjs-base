@@ -1,0 +1,33 @@
+name: Release Portfolio
+on:
+  push:
+    branches:
+      - release/apps/portfolio
+
+jobs:
+  release-portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: "16"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Build project 👷
+        run: |
+          cd apps/my-portfolio
+          npm ci
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: apps/my-portfolio/dist # The folder the action should deploy.
+          repository: dinhthienphuc/dinhthienphuc.github.io # The repository the action should deploy to.
+          clean: true # Automatically remove old files from the deployment branch
+          token: ${{ secrets.PORTFOLIO_GITHUB_TOKEN }} # The GITHUB_TOKEN secret

@@ -272,6 +272,9 @@ importers:
 
   packages/components/hamburger-menu:
     dependencies:
+      "@phantomthief-react/hooks":
+        specifier: workspace:*
+        version: link:../../hooks/main
       "@phantomthief-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
@@ -693,6 +696,9 @@ importers:
       "@phantomthief-react/hooks.on-mounted":
         specifier: workspace:*
         version: link:../on-mounted
+      "@phantomthief-react/hooks.sync-state-with-props":
+        specifier: workspace:*
+        version: link:../sync-state-with-props
       react:
         specifier: "*"
         version: 18.3.1
@@ -722,6 +728,15 @@ importers:
         version: 5.4.5
 
   packages/hooks/on-mounted:
+    dependencies:
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.4.5
+
+  packages/hooks/sync-state-with-props:
     dependencies:
       react:
         specifier: "*"

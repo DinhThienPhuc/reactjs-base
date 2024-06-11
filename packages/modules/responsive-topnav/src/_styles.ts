@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Styled = {
   Container: styled.div<{ $isMobileMenuExpanded: boolean }>`
-    position: fixed;
-    top: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,8 +30,7 @@ export const Styled = {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0px 16px;
     width: 100%;
     height: 56px;
     overflow: hidden;

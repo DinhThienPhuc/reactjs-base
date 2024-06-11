@@ -33,7 +33,8 @@
     "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*",
     "@phantomthief-react/hooks.media-query": "workspace:*",
     "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
-    "@phantomthief-react/hooks.on-mounted": "workspace:*"
+    "@phantomthief-react/hooks.on-mounted": "workspace:*",
+    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*"
   },
   "peerDependencies": {
     "react": "*",
