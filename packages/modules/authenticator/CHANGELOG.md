@@ -1,5 +1,17 @@
 # @phantomthief-react/modules.authenticator
 
+## 0.0.6
+
+### Patch Changes
+
+- d4002f6: Do not know why
+- Updated dependencies [2ca9917]
+- Updated dependencies [538ad37]
+- Updated dependencies [ff15021]
+- Updated dependencies [49b765c]
+- Updated dependencies [d4002f6]
+  - @phantomthief-react/hooks@0.0.4
+
 ## 0.0.5
 
 ### Patch Changes

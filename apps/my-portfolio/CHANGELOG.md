@@ -1,5 +1,25 @@
 # my-portfolio
 
+## 0.0.2
+
+### Patch Changes
+
+- 538ad37: Update responsive top navigation menu title and styling
+- ff15021: Update responsive top navigation menu with collapsible functionality
+- 49b765c: Add new pages for About Me, Projects, and Contact Me
+- 644dd13: Build app my-portfolio
+- d4002f6: Do not know why
+- Updated dependencies [2ca9917]
+- Updated dependencies [538ad37]
+- Updated dependencies [ff15021]
+- Updated dependencies [49b765c]
+- Updated dependencies [d4002f6]
+  - @phantomthief-react/hooks@0.0.4
+  - @phantomthief-react/components@0.0.4
+  - @phantomthief-react/services@0.0.4
+  - @phantomthief-react/modules@0.0.4
+  - @phantomthief-react/utils@0.0.4
+
 ## 0.0.1
 
 ### Patch Changes

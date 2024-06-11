@@ -1,5 +1,18 @@
 # @phantomthief-react/modules
 
+## 0.0.4
+
+### Patch Changes
+
+- d4002f6: Do not know why
+- Updated dependencies [538ad37]
+- Updated dependencies [ff15021]
+- Updated dependencies [49b765c]
+- Updated dependencies [d4002f6]
+  - @phantomthief-react/modules.responsive-topnav@0.0.3
+  - @phantomthief-react/modules.error-boundary@0.0.6
+  - @phantomthief-react/modules.authenticator@0.0.6
+
 ## 0.0.3
 
 ### Patch Changes

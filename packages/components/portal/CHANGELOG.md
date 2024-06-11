@@ -1,5 +1,15 @@
 # @phantomthief-react/components.portal
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [538ad37]
+- Updated dependencies [ff15021]
+- Updated dependencies [49b765c]
+- Updated dependencies [1782675]
+  - @phantomthief-react/utils.definations@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes

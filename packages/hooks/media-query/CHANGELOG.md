@@ -1,5 +1,11 @@
 # @phantomthief-react/hooks.media-query
 
+## 0.0.3
+
+### Patch Changes
+
+- d4002f6: Do not know why
+
 ## 0.0.2
 
 ### Patch Changes

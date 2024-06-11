@@ -1,5 +1,17 @@
 # @phantomthief-react/components.typography
 
+## 0.0.9
+
+### Patch Changes
+
+- 538ad37: Update responsive top navigation menu title and styling
+- ff15021: Update responsive top navigation menu with collapsible functionality
+- 49b765c: Add new pages for About Me, Projects, and Contact Me
+- 57b304e: Update typography component size prop to "inherit"
+- d4002f6: Do not know why
+- Updated dependencies [d4002f6]
+  - @phantomthief-react/utils@0.0.4
+
 ## 0.0.8
 
 ### Patch Changes

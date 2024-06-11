@@ -1,5 +1,23 @@
 # @phantomthief-react/hooks
 
+## 0.0.4
+
+### Patch Changes
+
+- 2ca9917: Add useSyncStateWithProps hook for syncing state with props
+- 538ad37: Update responsive top navigation menu title and styling
+- ff15021: Update responsive top navigation menu with collapsible functionality
+- 49b765c: Add new pages for About Me, Projects, and Contact Me
+- d4002f6: Do not know why
+- Updated dependencies [2ca9917]
+- Updated dependencies [538ad37]
+- Updated dependencies [ff15021]
+- Updated dependencies [49b765c]
+- Updated dependencies [d4002f6]
+  - @phantomthief-react/hooks.sync-state-with-props@0.0.2
+  - @phantomthief-react/hooks.media-query@0.0.3
+  - @phantomthief-react/hooks.block@0.0.6
+
 ## 0.0.3
 
 ### Patch Changes
