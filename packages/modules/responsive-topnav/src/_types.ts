@@ -4,7 +4,8 @@ import {
   ReactNode,
   MouseEvent,
 } from "react";
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable, ISyncStateWithProps } from "@phantomthief-react/utils";
+import { IHamburgerMenuProps } from "@phantomthief-react/components";
 
 export interface IResponsiveTopnavItem
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "content"> {
@@ -14,9 +15,12 @@ export interface IResponsiveTopnavItem
 
 export interface IResponsiveTopnavProps
   extends Omit<HTMLAttributes<HTMLDivElement>, "onClick">,
-    IExtendable {
+    IExtendable,
+    ISyncStateWithProps {
   items: IResponsiveTopnavItem[];
   activeKey?: string;
   onClick?: (e: MouseEvent<HTMLButtonElement>, key?: string) => void;
   firstItemSelectable?: boolean;
+  mobileMenuExpanded?: boolean;
+  hamburgerProps?: IHamburgerMenuProps;
 }
