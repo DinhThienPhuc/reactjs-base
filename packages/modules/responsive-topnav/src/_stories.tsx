@@ -5,11 +5,11 @@ import { FONT } from "@phantomthief-react/utils";
 import { ResponsiveTopnav } from "./_components";
 
 const meta = {
-  title: "Components/Responsive Topnav",
+  title: "Modules/Responsive Topnav",
   component: ResponsiveTopnav,
   decorators: [
     (StoryComponent) => (
-      <div style={{ margin: "-50vw" }}>
+      <div style={{ marginLeft: "-50vw", marginRight: "-50vw" }}>
         <StoryComponent />
       </div>
     ),
