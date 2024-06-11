@@ -17,11 +17,14 @@ jobs:
           node-version: "16"
           registry-url: "https://registry.npmjs.org"
 
-      - name: Build project 👷
-        run: |
-          cd apps/my-portfolio
-          npm ci
-          npm run build
+      - name: Install global packages
+        run: npm i -g pnpm ts-node
+
+      - name: Install dependencies for portfolio
+        run: pnpm is --apps=my-portfolio --frozen-lockfile
+
+      - name: Build portfolio
+        run: pnpm build --apps=my-portfolio
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
