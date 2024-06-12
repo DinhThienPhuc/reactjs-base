@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import { LoadingEllipsis } from "@phantomthief-react/components";
 import PageContacMe from "./pages/contact-me";
 import PageProjects from "./pages/projects";
@@ -6,7 +10,7 @@ import PageAboutMe from "./pages/about-me";
 import { LayoutDefault } from "./layouts";
 import PageHome from "./pages/home";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     Component: LayoutDefault,
@@ -29,7 +33,12 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router =
+  process.env.NODE_ENV === "production"
+    ? createHashRouter(routes)
+    : createBrowserRouter(routes);
 
 const App = () => (
   <RouterProvider
