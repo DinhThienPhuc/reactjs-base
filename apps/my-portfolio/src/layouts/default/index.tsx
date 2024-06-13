@@ -1,6 +1,11 @@
+import {
+  Linkedin as IconLinkedIn,
+  GitHub as IconGitHub,
+  Facebook as IconFacebook,
+} from "react-feather";
+import { FlexBox, Typography } from "@phantomthief-react/components";
 import { IResponsiveTopnavItem } from "@phantomthief-react/modules";
-import { Typography } from "@phantomthief-react/components";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useMemo } from "react";
 import Styled from "./style";
 
@@ -48,6 +53,23 @@ const LayoutDefault = () => {
     return (
       <Styled.Footer>
         <Typography>find me in:</Typography>
+        <FlexBox>
+          <Link to="">
+            <Styled.BottomLink variant="span">
+              <IconGitHub />
+            </Styled.BottomLink>
+          </Link>
+          <Link to="">
+            <Styled.BottomLink variant="span">
+              <IconLinkedIn />
+            </Styled.BottomLink>
+          </Link>
+          <Link to="">
+            <Styled.BottomLink variant="span">
+              <IconFacebook />
+            </Styled.BottomLink>
+          </Link>
+        </FlexBox>
       </Styled.Footer>
     );
   }, []);
