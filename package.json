@@ -16,7 +16,9 @@
     "build:all": "pnpm --filter \"./packages/**/**\" -r build",
     "publish": "ts-node ./scripts/run-pnpm-command.ts -r publish --access public --no-git-checks",
     "publish:all": "pnpm --filter \"./packages/**/**\" -r publish --access public --no-git-checks",
-    "rmnpm": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rimraf ./node_modules && rimraf ./pnpm-lock.yaml",
+    "rm:packages": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rimraf ./node_modules && rimraf ./pnpm-lock.yaml",
+    "rm:builds": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf dist && pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf build",
+    "rm:all": "pnpm rm:packages && pnpm rm:builds",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
