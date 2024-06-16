@@ -29,7 +29,6 @@
     "@phantomthief-react/hooks.block": "workspace:*",
     "@phantomthief-react/hooks.event-listener": "workspace:*",
     "@phantomthief-react/hooks.focus-with-callback": "workspace:*",
-    "@phantomthief-react/hooks.form-element": "workspace:*",
     "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*",
     "@phantomthief-react/hooks.media-query": "workspace:*",
     "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",

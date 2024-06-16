@@ -1,6 +1,6 @@
 import { Typography } from "@phantomthief-react/components.typography";
+import { useSyncStateWithProps } from "@phantomthief-react/hooks";
 import React, { ChangeEvent, forwardRef, useMemo } from "react";
-import { useFormElement } from "@phantomthief-react/hooks";
 import { FONT } from "@phantomthief-react/utils";
 import { ISwitchProps } from "./_types";
 import { Styled } from "./_style";
@@ -21,7 +21,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
     },
     ref,
   ) => {
-    const { currentValue, setCurrentValue } = useFormElement<boolean>(
+    const { currentValue, setCurrentValue } = useSyncStateWithProps<boolean>(
       value,
       isStandalone,
     );

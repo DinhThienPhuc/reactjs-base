@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { LoadingRipple } from "./_components";
 
 const meta = {
-  title: "Components/LoadingRipple",
+  title: "Components/Loading Ripple",
   component: LoadingRipple,
   parameters: {
     layout: "centered",

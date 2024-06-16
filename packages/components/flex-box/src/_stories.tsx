@@ -3,7 +3,7 @@ import { FlexBox } from "./_components";
 import { fn } from "@storybook/test";
 
 const meta = {
-  title: "Components/FlexBox",
+  title: "Components/Flex Box",
   component: FlexBox,
   parameters: {
     layout: "centered",

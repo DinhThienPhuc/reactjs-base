@@ -2,7 +2,7 @@ import React, { ChangeEvent, forwardRef, useMemo } from "react";
 
 import {
   useFocusWithCallback,
-  useFormElement,
+  useSyncStateWithProps,
 } from "@phantomthief-react/hooks";
 import { PostAdorment } from "@phantomthief-react/components.post-adorment";
 import { PreAdorment } from "@phantomthief-react/components.pre-adorment";
@@ -37,7 +37,7 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
     },
     ref,
   ) => {
-    const { currentValue, setCurrentValue } = useFormElement<
+    const { currentValue, setCurrentValue } = useSyncStateWithProps<
       string | undefined
     >(value, isStandalone);
 
