@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/hooks.form-element",
+  "name": "@phantomthief-react/modules.accordion",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",
@@ -27,7 +27,15 @@
   },
   "peerDependencies": {
     "typescript": "*",
-    "react": "*"
+    "react": "*",
+    "styled-components": "*",
+    "clsx": "*",
+    "zustand": "*",
+    "@phantomthief-react/hooks": "workspace:*",
+    "@phantomthief-react/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@phantomthief-react/components": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

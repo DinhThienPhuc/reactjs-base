@@ -8,16 +8,16 @@ import React, {
   useState,
 } from "react";
 import {
+  useBlock,
+  useSyncStateWithProps,
+  useNotClickOnElements,
+} from "@phantomthief-react/hooks";
+import {
   ISelectEventTarget,
   ISelectOption,
   ISelectOptionProps,
   ISelectProps,
 } from "./_types";
-import {
-  useBlock,
-  useFormElement,
-  useNotClickOnElements,
-} from "@phantomthief-react/hooks";
 import {
   FONT,
   INodePosition,
@@ -89,7 +89,7 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
     const [isShowed, setShow] = useState(false);
     const [position, setPosition] = useState<INodePosition | null>(null);
 
-    const { currentValue, setCurrentValue } = useFormElement<
+    const { currentValue, setCurrentValue } = useSyncStateWithProps<
       string | undefined
     >(value, isStandalone);
 

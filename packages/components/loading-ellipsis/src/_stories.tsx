@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { LoadingEllipsis } from "./_components";
 
 const meta = {
-  title: "Components/LoadingEllipsis",
+  title: "Components/Loading Ellipsis",
   component: LoadingEllipsis,
   parameters: {
     layout: "centered",

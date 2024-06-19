@@ -29,7 +29,6 @@ const Topnav = () => {
     <Styled.Container
       firstItemSelectable={false}
       items={topnavItems}
-      isStandalone={true}
       activeKey="hello"
       hamburgerProps={{
         color: "#607b96",

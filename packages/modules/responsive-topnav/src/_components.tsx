@@ -1,8 +1,8 @@
-import { useBlock, useSyncStateWithProps } from "@phantomthief-react/hooks";
 import { HamburgerMenu } from "@phantomthief-react/components";
+import { useBlock } from "@phantomthief-react/hooks";
 import { IResponsiveTopnavProps } from "./_types";
+import React, { useState } from "react";
 import { Styled } from "./_styles";
-import React from "react";
 import clsx from "clsx";
 
 export const ResponsiveTopnav = ({
@@ -11,15 +11,12 @@ export const ResponsiveTopnav = ({
   firstItemSelectable = false,
   collapseAfterSelectItem = true,
   mobileMenuExpanded = false,
-  isStandalone = false,
   hamburgerProps,
   onClick,
   className,
 }: IResponsiveTopnavProps) => {
-  const {
-    currentValue: isMobileMenuExpanded,
-    setCurrentValue: setMobileMenuExpand,
-  } = useSyncStateWithProps<boolean>(mobileMenuExpanded, isStandalone);
+  const [isMobileMenuExpanded, setMobileMenuExpand] =
+    useState<boolean>(mobileMenuExpanded);
 
   const customItems = useBlock(() => {
     return items.map((item, index) => (
