@@ -50,3 +50,10 @@ export const doNothing = () => {
  */
 export const capitalize = (word: string) =>
   word.charAt(0).toUpperCase() + word.slice(1);
+
+/**
+ * Checks if `value` is `null` or `undefined`.
+ * @param value The value to check.
+ * @returns Returns `true` if `value` is nullish, else `false`.
+ */
+export const isNil = (value: unknown) => value == null;
