@@ -1,5 +1,11 @@
 # @phantomthief-react/utils.helpers
 
+## 0.0.7
+
+### Patch Changes
+
+- c2a2304: Add accordion module with components and types
+
 ## 0.0.6
 
 ### Patch Changes

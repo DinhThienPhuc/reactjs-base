@@ -1,5 +1,13 @@
 # @phantomthief-react/services
 
+## 0.0.5
+
+### Patch Changes
+
+- @phantomthief-react/services.firebase@0.0.8
+- @phantomthief-react/services.i18n@0.0.7
+- @phantomthief-react/services.styled-theme@0.0.7
+
 ## 0.0.4
 
 ### Patch Changes

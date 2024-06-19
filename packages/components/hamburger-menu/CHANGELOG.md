@@ -1,5 +1,14 @@
 # @phantomthief-react/components.hamburger-menu
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [6f55d43]
+- Updated dependencies [c2a2304]
+  - @phantomthief-react/hooks@0.0.5
+  - @phantomthief-react/utils@0.0.5
+
 ## 0.0.3
 
 ### Patch Changes

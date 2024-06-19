@@ -1,5 +1,18 @@
 # my-portfolio
 
+## 0.0.3
+
+### Patch Changes
+
+- c2a2304: Add accordion module with components and types
+- Updated dependencies [6f55d43]
+- Updated dependencies [c2a2304]
+  - @phantomthief-react/hooks@0.0.5
+  - @phantomthief-react/components@0.0.5
+  - @phantomthief-react/modules@0.0.5
+  - @phantomthief-react/utils@0.0.5
+  - @phantomthief-react/services@0.0.5
+
 ## 0.0.2
 
 ### Patch Changes

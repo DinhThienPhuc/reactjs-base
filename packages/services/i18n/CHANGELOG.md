@@ -1,5 +1,11 @@
 # @phantomthief-react/services.i18n
 
+## 0.0.7
+
+### Patch Changes
+
+- @phantomthief-react/utils@0.0.5
+
 ## 0.0.6
 
 ### Patch Changes
