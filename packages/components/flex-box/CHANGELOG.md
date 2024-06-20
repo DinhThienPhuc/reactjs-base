@@ -1,5 +1,11 @@
 # @phantomthief-react/components.flex-box
 
+## 0.0.11
+
+### Patch Changes
+
+- d52a677: Add gap property for FlexBox component and update Accodrdion module
+
 ## 0.0.10
 
 ### Patch Changes

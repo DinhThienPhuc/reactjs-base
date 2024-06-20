@@ -1,5 +1,12 @@
 # my-portfolio
 
+## 0.0.4
+
+### Patch Changes
+
+- @phantomthief-react/components@0.0.6
+- @phantomthief-react/modules@0.0.6
+
 ## 0.0.3
 
 ### Patch Changes
