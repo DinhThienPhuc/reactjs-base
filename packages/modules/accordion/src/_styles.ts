@@ -1,4 +1,5 @@
 import { IStyledAccordionItemContainerProps } from "./_types";
+import { FlexBox } from "@phantomthief-react/components";
 import styled, { css } from "styled-components";
 
 export const Styled = {
@@ -29,15 +30,46 @@ export const Styled = {
       margin-bottom: 0px;
     }
   `,
-  ItemHeader: styled.button`
-    background-color: transparent;
+  ItemHeader: styled.button<{ $disabled?: boolean }>`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     outline: 0;
     border: none;
-    width: 100%;
-    height: 48px;
-    cursor: pointer;
     color: inherit;
     padding: 0px 16px;
+    width: 100%;
+    height: 48px;
+    ${({ $disabled }) =>
+      $disabled
+        ? css`
+            background-color: #ffffff1f;
+            pointer-events: none;
+            cursor: default;
+          `
+        : css`
+            background-color: transparent;
+            cursor: pointer;
+          `};
+  `,
+  ItemHeaderSection: styled(FlexBox)<{ $disabled?: boolean }>`
+    opacity: ${({ $disabled }) => ($disabled ? 0.38 : 1)};
+  `,
+  ItemHeaderPreIcon: styled.span`
+    margin-right: 16px;
+  `,
+  ItemHeaderExpandIcon: styled.span<{
+    $isExpanded: boolean;
+    $disabled?: boolean;
+  }>`
+    display: flex;
+    transition: all 250ms ease-in-out;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
+    transform: ${({ $isExpanded }) =>
+      $isExpanded ? "rotate(180deg)" : "none"};
   `,
   ItemContent: styled.div<{ $isExpanded: boolean }>`
     transition:

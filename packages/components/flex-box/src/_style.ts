@@ -6,12 +6,14 @@ const modifyFlexBox = ({
   $alignItems,
   $justifyContent,
   $flexDirection,
+  $gap,
 }: IStyledFlexBoxProps) => {
   return css`
     display: flex;
     justify-content: ${$justifyContent};
     align-items: ${$alignItems};
     flex-direction: ${$flexDirection};
+    gap: ${$gap};
   `;
 };
 
