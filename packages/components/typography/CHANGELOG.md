@@ -1,5 +1,11 @@
 # @phantomthief-react/components.typography
 
+## 0.0.10
+
+### Patch Changes
+
+- @phantomthief-react/utils@0.0.5
+
 ## 0.0.9
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @phantomthief-react/components.switch
 
+## 0.0.8
+
+### Patch Changes
+
+- 6f55d43: Remove form-element package and its dependencies
+- c2a2304: Add accordion module with components and types
+- Updated dependencies [6f55d43]
+- Updated dependencies [c2a2304]
+  - @phantomthief-react/hooks@0.0.5
+  - @phantomthief-react/utils@0.0.5
+  - @phantomthief-react/components.typography@0.0.10
+
 ## 0.0.7
 
 ### Patch Changes

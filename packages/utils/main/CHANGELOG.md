@@ -1,5 +1,12 @@
 # @phantomthief-react/utils
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [c2a2304]
+  - @phantomthief-react/utils.helpers@0.0.7
+
 ## 0.0.4
 
 ### Patch Changes

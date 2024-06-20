@@ -1,5 +1,13 @@
 # @phantomthief-react/hooks
 
+## 0.0.5
+
+### Patch Changes
+
+- 6f55d43: Remove form-element package and its dependencies
+- c2a2304: Add accordion module with components and types
+  - @phantomthief-react/hooks.block@0.0.7
+
 ## 0.0.4
 
 ### Patch Changes

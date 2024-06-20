@@ -1,5 +1,13 @@
 # @phantomthief-react/components.flex-box
 
+## 0.0.10
+
+### Patch Changes
+
+- 6f55d43: Remove form-element package and its dependencies
+- c2a2304: Add accordion module with components and types
+  - @phantomthief-react/utils@0.0.5
+
 ## 0.0.9
 
 ### Patch Changes

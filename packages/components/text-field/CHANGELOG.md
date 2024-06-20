@@ -1,5 +1,20 @@
 # @phantomthief-react/components.text-field
 
+## 0.0.4
+
+### Patch Changes
+
+- 6f55d43: Remove form-element package and its dependencies
+- c2a2304: Add accordion module with components and types
+- Updated dependencies [6f55d43]
+- Updated dependencies [c2a2304]
+  - @phantomthief-react/hooks@0.0.5
+  - @phantomthief-react/components.helper-text@0.0.9
+  - @phantomthief-react/components.label@0.0.9
+  - @phantomthief-react/utils@0.0.5
+  - @phantomthief-react/components.post-adorment@0.0.8
+  - @phantomthief-react/components.pre-adorment@0.0.8
+
 ## 0.0.3
 
 ### Patch Changes

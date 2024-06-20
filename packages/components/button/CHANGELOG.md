@@ -1,5 +1,14 @@
 # @phantomthief-react/components.button
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [6f55d43]
+- Updated dependencies [c2a2304]
+  - @phantomthief-react/components.loading-ripple@0.0.8
+  - @phantomthief-react/utils@0.0.5
+
 ## 0.0.7
 
 ### Patch Changes
