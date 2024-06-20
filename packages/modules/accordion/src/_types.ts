@@ -4,14 +4,13 @@ import { IExtendable } from "@phantomthief-react/utils";
 export interface IAccordionItemProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     IExtendable {
-  key: string;
+  key?: string;
   itemKey?: string;
   preIcon?: ReactNode;
   postIcon?: ReactNode;
   expandIcon?: ReactNode;
   label?: ReactNode;
   body?: ReactNode;
-  isExpanded?: boolean;
   isOnlyOneExpand?: boolean;
 }
 
@@ -33,5 +32,4 @@ export interface IStyledAccordionItemContainerProps
   $preIcon?: ReactNode;
   $postIcon?: ReactNode;
   $expandIcon?: ReactNode;
-  $isExpanded?: boolean;
 }

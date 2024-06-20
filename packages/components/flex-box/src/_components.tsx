@@ -11,6 +11,7 @@ export const FlexBox = ({
   alignItems = "center",
   justifyContent = "center",
   variant = "div",
+  gap = "0px",
   ...restProps
 }: IFlexBoxProps) => {
   const StyledTag = useMemo(() => {
@@ -24,11 +25,13 @@ export const FlexBox = ({
       $flexDirection={flexDirection}
       $alignItems={alignItems}
       $justifyContent={justifyContent}
+      $gap={gap}
       className={clsx(
         "flex-box",
         `flex-box--direction-${flexDirection}`,
         `flex-box--alignItems-${alignItems}`,
         `flex-box--justifyContent-${justifyContent}`,
+        `flex-box--gap-${gap}`,
         `flex-box--variant-${variant}`,
         className,
       )}

@@ -744,6 +744,9 @@ importers:
 
   packages/modules/accordion:
     dependencies:
+      "@phantomthief-react/components":
+        specifier: workspace:*
+        version: link:../../components/main
       "@phantomthief-react/hooks":
         specifier: workspace:*
         version: link:../../hooks/main
@@ -766,9 +769,9 @@ importers:
         specifier: "*"
         version: 4.5.2(@types/react@18.3.3)(react@18.3.1)
     devDependencies:
-      "@phantomthief-react/components":
-        specifier: workspace:*
-        version: link:../../components/main
+      react-feather:
+        specifier: "*"
+        version: 2.0.10(react@18.3.1)
 
   packages/modules/authenticator:
     dependencies:

@@ -3,12 +3,30 @@ import { create } from "zustand";
 
 export interface IAccordionState {
   itemKeys: Record<string, boolean>;
+  initKeys: (expandKeys: string[], isOnlyOneExpand?: boolean) => void;
   toggleKey: (itemKey: string) => void;
   toggleOnlyKey: (itemKey: string) => void;
 }
 
 export const useAccordionState = create<IAccordionState>()((set) => ({
   itemKeys: {},
+  initKeys: (expandKeys: string[], isOnlyOneExpand = false) => {
+    if (expandKeys.length === 1 || isOnlyOneExpand) {
+      return set(() => ({
+        itemKeys: { [expandKeys[0]]: true },
+      }));
+    }
+
+    set((state) => ({
+      itemKeys: expandKeys.reduce(
+        (acc: Record<string, boolean>, key: string) => {
+          acc[key] = true;
+          return acc;
+        },
+        state.itemKeys,
+      ),
+    }));
+  },
   toggleKey: (itemKey: string) =>
     set((state) => ({
       itemKeys: {

@@ -31,10 +31,9 @@
     "styled-components": "*",
     "clsx": "*",
     "zustand": "*",
+    "react-feather": "*",
     "@phantomthief-react/hooks": "workspace:*",
-    "@phantomthief-react/utils": "workspace:*"
-  },
-  "devDependencies": {
+    "@phantomthief-react/utils": "workspace:*",
     "@phantomthief-react/components": "workspace:*"
   },
   "author": "@DinhThienPhuc",
