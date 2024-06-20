@@ -1,5 +1,11 @@
 # @phantomthief-react/modules
 
+## 0.0.6
+
+### Patch Changes
+
+- @phantomthief-react/modules.responsive-topnav@0.0.5
+
 ## 0.0.5
 
 ### Patch Changes
