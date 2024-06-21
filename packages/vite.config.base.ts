@@ -9,6 +9,7 @@ const resolveExternal = (pkg: Record<string, unknown>) => {
     "react",
     "react/jsx-runtime",
     "react-dom",
+    "styled-components",
     /^@phantomthief-react\/(.*)/,
   ];
 
@@ -27,7 +28,19 @@ const createConfig = (
 ): UserConfig => {
   return {
     plugins: [
-      reactPlugin(),
+      reactPlugin({
+        babel: {
+          plugins: [
+            [
+              "babel-plugin-styled-components",
+              {
+                displayName: true,
+                pure: true,
+              },
+            ],
+          ],
+        },
+      }),
       dtsPlugin({ include: ["src"] }),
       process.env.ENABLE_ANALYZE
         ? visualizer({ filename: "./statistics.html" })
