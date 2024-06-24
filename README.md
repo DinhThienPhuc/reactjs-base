@@ -288,4 +288,4 @@ pnpm bump
 - Push `release/packages/*` branch to the remote git.
 - Let the github actions does the job :D
 
-<!-- TODO: Add a watch script command to dynamically build and install the dependency -->
+<!-- TODO: Implement theme feature for each component -->
