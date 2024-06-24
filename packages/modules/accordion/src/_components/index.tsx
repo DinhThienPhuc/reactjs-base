@@ -27,6 +27,7 @@ export const Accordion = ({
         <AccordionItem
           {...item}
           key={item.key}
+          itemKey={item.key}
           isOnlyOneExpand={isOnlyOneExpand}
           preIcon={item.preIcon ?? preIcon}
           postIcon={item.postIcon ?? postIcon}
