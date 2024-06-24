@@ -5,10 +5,10 @@ import { Styled } from "../_styles";
 import React from "react";
 
 export const AccordionItemExpandIcon = ({
-  itemKey = "",
+  key = "",
   expandIcon,
 }: IAccordionItemProps) => {
-  const isExpanded = useAccordionState((state) => !!state.itemKeys[itemKey]);
+  const isExpanded = useAccordionState((state) => !!state.itemKeys[key]);
 
   return (
     <Styled.ItemHeaderExpandIcon

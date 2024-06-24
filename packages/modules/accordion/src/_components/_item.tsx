@@ -9,7 +9,7 @@ export const AccordionItem = ({
   label,
   body,
   className,
-  itemKey = "",
+  key,
   isOnlyOneExpand,
   preIcon,
   postIcon,
@@ -17,7 +17,7 @@ export const AccordionItem = ({
   disabled,
   ...restProps
 }: IAccordionItemProps) => {
-  const isExpanded = useAccordionState((state) => !!state.itemKeys[itemKey]);
+  const isExpanded = useAccordionState((state) => !!state.itemKeys[key]);
 
   return (
     <Styled.ItemContainer
@@ -31,7 +31,7 @@ export const AccordionItem = ({
     >
       <AccordionItemHeader
         label={label}
-        itemKey={itemKey}
+        key={key}
         isOnlyOneExpand={isOnlyOneExpand}
         preIcon={preIcon}
         postIcon={postIcon}

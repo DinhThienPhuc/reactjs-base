@@ -7,7 +7,7 @@ import React, { memo } from "react";
 export const AccordionItemHeader = memo(
   ({
     label,
-    itemKey = "",
+    key = "",
     isOnlyOneExpand,
     preIcon,
     postIcon,
@@ -21,9 +21,7 @@ export const AccordionItemHeader = memo(
       <Styled.ItemHeader
         $disabled={disabled}
         className="accordion-item__header"
-        onClick={() =>
-          isOnlyOneExpand ? toggleOnlyKey(itemKey) : toggleKey(itemKey)
-        }
+        onClick={() => (isOnlyOneExpand ? toggleOnlyKey(key) : toggleKey(key))}
       >
         <Styled.ItemHeaderSection
           $disabled={disabled}
@@ -41,7 +39,7 @@ export const AccordionItemHeader = memo(
           className="accordion-item__header__right"
         >
           {postIcon}
-          <AccordionItemExpandIcon expandIcon={expandIcon} itemKey={itemKey} />
+          <AccordionItemExpandIcon expandIcon={expandIcon} key={key} />
         </Styled.ItemHeaderSection>
       </Styled.ItemHeader>
     );

@@ -4,8 +4,7 @@ import { IExtendable } from "@phantomthief-react/utils";
 export interface IAccordionItemProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     IExtendable {
-  key?: string;
-  itemKey?: string;
+  key: string;
   preIcon?: ReactNode;
   postIcon?: ReactNode;
   expandIcon?: ReactNode;
