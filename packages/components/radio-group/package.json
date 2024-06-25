@@ -30,6 +30,7 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
+    "@phantomthief-react/components.typography": "workspace:*",
     "@phantomthief-react/hooks": "workspace:*",
     "@phantomthief-react/utils": "workspace:*"
   },

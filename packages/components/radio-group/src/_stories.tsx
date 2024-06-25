@@ -1,6 +1,11 @@
-import React, { ChangeEvent, useCallback, useState } from "react";
+import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
+import { Typography } from "@phantomthief-react/components.typography";
 import type { Meta, StoryObj } from "@storybook/react";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm, Controller } from "react-hook-form";
+import { FONT } from "@phantomthief-react/utils";
 import { RadioGroup } from "./_components";
+import * as yup from "yup";
 
 const meta = {
   title: "Components/Radio Group",
@@ -22,12 +27,23 @@ const meta = {
     options: [
       { key: "option-1", value: "option-1", label: "Option 1" },
       { key: "option-2", value: "option-2", label: "Option 2" },
-      { key: "option-3", value: "option-3", label: "Option 3" },
+      {
+        key: "option-3",
+        value: "option-3",
+        label: "Option Long text will be this one",
+      },
       { key: "option-4", value: "option-4", label: "Option 4" },
+      {
+        key: "option-5",
+        value: "option-5",
+        label: (
+          <Typography font={FONT.FIRA_CODE} color="green">
+            Option with custom font + color
+          </Typography>
+        ),
+      },
     ],
-    helperTextProps: {
-      children: "helper text",
-    },
+    label: "Label of radio group",
     onChange: (e: ChangeEvent<HTMLInputElement>) => {
       console.log("e", e.target.value);
     },
@@ -41,13 +57,21 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     isStandalone: true,
+    label: null,
   },
 };
 
-export const WithDefaultValue: Story = {
+export const CustomDefaultValue: Story = {
   args: {
     isStandalone: true,
     value: "option-2",
+    label: null,
+  },
+};
+
+export const CustomLabel: Story = {
+  args: {
+    isStandalone: true,
   },
 };
 
@@ -215,54 +239,47 @@ export const PropsControllerSelect: Story = {
   },
 };
 
-// export const RHFController: Story = {
-//   render: function Render(args) {
-//     const validationSchema = useMemo(
-//       () =>
-//         yup
-//           .object({
-//             select: yup
-//               .string()
-//               .required("This field is required!")
-//               .max(10, "Text must be less than 10 characters"),
-//           })
-//           .required(),
-//       [],
-//     );
+export const RHFController: Story = {
+  render: function Render(args) {
+    const validationSchema = useMemo(
+      () =>
+        yup
+          .object({
+            option: yup
+              .string()
+              .required("This field is required!")
+              .max(10, "Text must be less than 10 characters"),
+          })
+          .required(),
+      [],
+    );
 
-//     const { handleSubmit, control } = useForm<{ select: string }>({
-//       resolver: yupResolver(validationSchema),
-//       defaultValues: {
-//         select: "",
-//       },
-//     });
+    const { handleSubmit, control } = useForm<{ option: string }>({
+      resolver: yupResolver(validationSchema),
+      defaultValues: {
+        option: "",
+      },
+    });
 
-//     const onSubmit = (data: { select: string }) => {
-//       console.log("RHFController form data: ", data);
-//     };
+    const onSubmit = (data: { option: string }) => {
+      console.log("RHFController form data: ", data);
+    };
 
-//     return (
-//       <form
-//         style={{ display: "inline-flex", flexDirection: "column" }}
-//         onSubmit={handleSubmit(onSubmit)}
-//       >
-//         <Controller
-//           control={control}
-//           name="select"
-//           render={({ field, formState: { errors } }) => {
-//             return (
-//               <Select
-//                 {...args}
-//                 {...field}
-//                 error={errors.select}
-//                 variant="outlined"
-//               />
-//             );
-//           }}
-//         />
+    return (
+      <form
+        style={{ display: "inline-flex", flexDirection: "column" }}
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <Controller
+          control={control}
+          name="option"
+          render={({ field, formState: { errors } }) => {
+            return <RadioGroup {...args} {...field} error={errors.option} />;
+          }}
+        />
 
-//         <input type="submit" style={{ marginTop: 48 }} />
-//       </form>
-//     );
-//   },
-// };
+        <input type="submit" style={{ marginTop: 48 }} />
+      </form>
+    );
+  },
+};

@@ -55,6 +55,13 @@ export const Default: Story = {
   },
 };
 
+export const CustomDefaultValue: Story = {
+  args: {
+    isStandalone: true,
+    value: "option-4",
+  },
+};
+
 export const Outlined: Story = {
   args: {
     variant: "outlined",

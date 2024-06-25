@@ -498,6 +498,9 @@ importers:
 
   packages/components/radio-group:
     dependencies:
+      "@phantomthief-react/components.typography":
+        specifier: workspace:*
+        version: link:../typography
       "@phantomthief-react/hooks":
         specifier: workspace:*
         version: link:../../hooks/main

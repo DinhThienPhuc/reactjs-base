@@ -57,3 +57,31 @@ export const capitalize = (word: string) =>
  * @returns Returns `true` if `value` is nullish, else `false`.
  */
 export const isNil = (value: unknown) => value == null;
+
+/**
+ * Shallow compare a field in objects, used in React.memo
+ * @param keys fields to be deep compare
+ * @param callback callback to compare the fields
+ * @returns boolean
+ */
+export const arePropsShallowEqual =
+  (
+    keys: string[],
+    callback: (
+      key: string,
+      prevFieldValue: unknown,
+      nextFieldValue: unknown,
+    ) => boolean | undefined,
+  ) =>
+  (prevProps: Record<string, unknown>, nextProps: Record<string, unknown>) => {
+    const areSpecificPropsEqual = keys.every(
+      (k: string) => callback(k, prevProps[k], nextProps[k]) ?? true,
+    );
+
+    const areOtherPropsEqual = Object.keys(prevProps).every((k: string) => {
+      if (keys.includes(k)) return true;
+      return prevProps[k] === nextProps[k];
+    });
+
+    return areSpecificPropsEqual && areOtherPropsEqual;
+  };
