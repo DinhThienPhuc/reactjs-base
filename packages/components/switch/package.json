@@ -33,6 +33,9 @@
     "@phantomthief-react/utils": "workspace:*",
     "@phantomthief-react/hooks": "workspace:*"
   },
+  "devDependencies": {
+    "@phantomthief-react/components.typography": "workspace:*"
+  },
   "author": "@DinhThienPhuc",
   "license": "ISC",
   "description": "",

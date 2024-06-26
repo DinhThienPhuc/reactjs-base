@@ -1,4 +1,4 @@
-import { XCircle as IconXCircle } from "react-feather";
+import { Icon } from "@phantomthief-react/components.icon";
 import { POST_ADORMENT_VARIANT } from "./_constants";
 import { IPostAdormentProps } from "./_types";
 import { Styled } from "./_style";
@@ -30,7 +30,7 @@ export const PostAdorment = ({
   if (clear) {
     return (
       <Styled.ButtonContainer {...containerProps} onClick={clear}>
-        {clearIcon ?? <IconXCircle width={20} height={20} />}
+        {clearIcon ?? <Icon name="X" />}
       </Styled.ButtonContainer>
     );
   }

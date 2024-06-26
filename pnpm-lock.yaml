@@ -318,6 +318,21 @@ importers:
         specifier: "*"
         version: 5.5.2
 
+  packages/components/icon:
+    dependencies:
+      "@phantomthief-react/components.loading-ellipsis":
+        specifier: workspace:*
+        version: link:../loading-ellipsis
+      "@phantomthief-react/utils":
+        specifier: workspace:*
+        version: link:../../utils/main
+      react:
+        specifier: "*"
+        version: 18.3.1
+      typescript:
+        specifier: "*"
+        version: 5.5.2
+
   packages/components/label:
     dependencies:
       "@phantomthief-react/utils":
@@ -380,6 +395,9 @@ importers:
       "@phantomthief-react/components.hamburger-menu":
         specifier: workspace:*
         version: link:../hamburger-menu
+      "@phantomthief-react/components.icon":
+        specifier: workspace:*
+        version: link:../icon
       "@phantomthief-react/components.loading-ellipsis":
         specifier: workspace:*
         version: link:../loading-ellipsis
@@ -425,6 +443,16 @@ importers:
       typescript:
         specifier: "*"
         version: 5.5.2
+    devDependencies:
+      "@phantomthief-react/components.button":
+        specifier: workspace:*
+        version: link:../button
+      "@phantomthief-react/components.typography":
+        specifier: workspace:*
+        version: link:../typography
+      "@phantomthief-react/utils":
+        specifier: workspace:*
+        version: link:../../utils/main
 
   packages/components/portal:
     dependencies:
@@ -443,6 +471,9 @@ importers:
 
   packages/components/post-adorment:
     dependencies:
+      "@phantomthief-react/components.icon":
+        specifier: workspace:*
+        version: link:../icon
       "@phantomthief-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
@@ -560,6 +591,10 @@ importers:
       typescript:
         specifier: "*"
         version: 5.5.2
+    devDependencies:
+      "@phantomthief-react/components.typography":
+        specifier: workspace:*
+        version: link:../typography
 
   packages/components/text-field:
     dependencies:

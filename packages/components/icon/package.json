@@ -1,6 +1,6 @@
 {
-  "name": "@phantomthief-react/components.navbar",
-  "version": "0.0.4",
+  "name": "@phantomthief-react/components.icon",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -28,11 +28,7 @@
   "peerDependencies": {
     "typescript": "*",
     "react": "*",
-    "clsx": "*"
-  },
-  "devDependencies": {
-    "@phantomthief-react/components.typography": "workspace:*",
-    "@phantomthief-react/components.button": "workspace:*",
+    "@phantomthief-react/components.loading-ellipsis": "workspace:*",
     "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",

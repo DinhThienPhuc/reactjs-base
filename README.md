@@ -297,7 +297,6 @@ pnpm bump
 - Let the github actions does the job :D
 
 <!-- TODO: Implement theme feature for each component -->
-<!-- TODO: Reduce the HTML nested DOM Node by overide the style of component with styled-component, reduce the use of ReactNode -->
 <!-- TODO: Remove zustand and use memo with compare callback to prevent re-render -->
 <!-- TODO: Improve to load component on demand -->
 <!-- TODO: Implement a list of svg icon in React component -->

@@ -44,12 +44,22 @@ export const doNothing = () => {
 };
 
 /**
- * Capitalize word
- * @param word Word to be modify
+ * Capitalize the first character of string
+ * @param str String to be modify
  * @returns
  */
-export const capitalize = (word: string) =>
-  word.charAt(0).toUpperCase() + word.slice(1);
+export const capitalize = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+/**
+ * Converts a string to CamelCase, capitalizes the first letter, and allows for dynamic splitting based on a regex pattern.
+ * @param str The string to convert.
+ * @param divider The regex pattern used to split the string.
+ * @returns The CamelCase string.
+ */
+export const toCamelCase = (str: string, divider: RegExp = /-/): string => {
+  return str.split(divider).map(capitalize).join("");
+};
 
 /**
  * Checks if `value` is `null` or `undefined`.

@@ -29,6 +29,7 @@
     "@phantomthief-react/components.button": "workspace:*",
     "@phantomthief-react/components.flex-box": "workspace:*",
     "@phantomthief-react/components.hamburger-menu": "workspace:*",
+    "@phantomthief-react/components.icon": "workspace:*",
     "@phantomthief-react/components.loading-ellipsis": "workspace:*",
     "@phantomthief-react/components.loading-ripple": "workspace:*",
     "@phantomthief-react/components.navbar": "workspace:*",
