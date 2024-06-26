@@ -30,12 +30,8 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/components.typography": "workspace:*",
     "@phantomthief-react/utils": "workspace:*",
     "@phantomthief-react/hooks": "workspace:*"
-  },
-  "devDependencies": {
-    "react-hook-form": "*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

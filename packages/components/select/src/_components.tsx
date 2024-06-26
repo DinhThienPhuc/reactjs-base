@@ -9,8 +9,8 @@ import React, {
 } from "react";
 import {
   useBlock,
-  useSyncStateWithProps,
   useNotClickOnElements,
+  useSyncStateWithProps,
 } from "@phantomthief-react/hooks";
 import {
   ISelectEventTarget,
@@ -18,14 +18,9 @@ import {
   ISelectOptionProps,
   ISelectProps,
 } from "./_types";
-import {
-  FONT,
-  INodePosition,
-  getPositionOfNode,
-} from "@phantomthief-react/utils";
+import { INodePosition, getPositionOfNode } from "@phantomthief-react/utils";
 import { PostAdorment } from "@phantomthief-react/components.post-adorment";
 import { HelperText } from "@phantomthief-react/components.helper-text";
-import { Typography } from "@phantomthief-react/components.typography";
 import { Portal } from "@phantomthief-react/components.portal";
 import { ChevronDown as IconChevronLeft } from "react-feather";
 import { Label } from "@phantomthief-react/components.label";
@@ -48,17 +43,10 @@ const SelectOption = ({
       "select-option",
       value === displayedValue && "select-option--selected",
       disabled && "select-option--disabled",
-      "select-option--lines-1",
     )}
     onClick={handleSelectOption(value)}
   >
-    <Typography
-      size={16}
-      font={FONT.VERNADA}
-      color={disabled ? "#ffffff80" : "#ffffff"}
-    >
-      {label}
-    </Typography>
+    {label}
   </Styled.Option>
 );
 
@@ -179,11 +167,6 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
       );
     }, [isShowed, optionGroupClassName, position, selectOptions]);
 
-    const postAdormentChild = useMemo(
-      () => postAdormentProps?.children ?? <IconChevronLeft />,
-      [postAdormentProps?.children],
-    );
-
     return (
       <Styled.Container
         {...restProps}
@@ -204,7 +187,7 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
             fullWidth && "select-box--fullwidth",
             disabled && "select-box--disabled",
             !!error && "select-box--error",
-            `select-box--${variant}`,
+            `select-box--variant-${variant}`,
           )}
           data-testid="select-box"
         >
@@ -224,19 +207,13 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
             $disabled={disabled}
             className={clsx(
               "select-inner-box",
-              `select-inner-box--${variant}`,
+              `select-inner-box--variant-${variant}`,
               !!labelProps?.children && "select-inner-box--hasLabel",
               disabled && "select-inner-box--disabled",
             )}
             data-testid="select-displayed-option"
           >
-            <Typography
-              size={16}
-              font={FONT.VERNADA}
-              color={disabled ? "#ffffff80" : "#ffffff"}
-            >
-              {displayedOption?.label}
-            </Typography>
+            {displayedOption?.label}
           </Styled.InnerBox>
           <PostAdorment {...postAdormentProps} variant={variant}>
             <Styled.PostAdormentContentWrapper
@@ -248,7 +225,7 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
                 disabled && "select-post-adorment-content--disabled",
               )}
             >
-              {postAdormentChild}
+              {postAdormentProps?.children ?? <IconChevronLeft />}
             </Styled.PostAdormentContentWrapper>
           </PostAdorment>
           <HelperText {...helperTextProps} isError={!!error} variant={variant}>

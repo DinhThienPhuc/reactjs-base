@@ -1,3 +1,4 @@
+import { getInvisibleButton } from "@phantomthief-react/utils";
 import styled from "styled-components";
 
 export const Styled = {
@@ -34,10 +35,8 @@ export const Styled = {
     width: 100%;
     height: 56px;
     overflow: hidden;
-    outline: 0;
-    border: none;
-    background-color: transparent;
     color: ${({ $isActivated }) => ($isActivated ? "#90caf9" : "#ffffff")};
+    ${getInvisibleButton};
 
     &:not(:first-child) {
       border-top: ${({ $isMobileMenuExpanded }) =>

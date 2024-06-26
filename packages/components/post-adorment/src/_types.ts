@@ -14,3 +14,8 @@ export interface IPostAdormentProps extends IExtendable {
   hasLabel?: boolean;
   clear?: TFunction<void>;
 }
+
+export interface IStyledContainerProps {
+  $adormentVariant: TPostAdormentVariant;
+  $hasLabel: boolean;
+}

@@ -1,6 +1,4 @@
-import { Typography } from "@phantomthief-react/components.typography";
 import { IRadioGroupOptionProps } from "../_types";
-import { FONT } from "@phantomthief-react/utils";
 import { Styled } from "../_style";
 import React from "react";
 import clsx from "clsx";
@@ -12,7 +10,6 @@ export const RadioGroupOption = ({
   labelProps,
   isStandalone,
   currentValue,
-  onChange,
   ...restProps
 }: IRadioGroupOptionProps) => {
   const val = isStandalone ? undefined : currentValue === value;
@@ -31,12 +28,11 @@ export const RadioGroupOption = ({
         )}
         type="radio"
         value={value}
-        checked={isStandalone ? undefined : currentValue === value}
-        onChange={onChange}
+        checked={val}
       />
-      <Typography className="radio-group-option-label" font={FONT.VERNADA}>
+      <Styled.OptionLabelText className="radio-group-option-label">
         {label}
-      </Typography>
+      </Styled.OptionLabelText>
     </Styled.OptionLabel>
   );
 };

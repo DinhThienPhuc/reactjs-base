@@ -1,9 +1,7 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
-import { Typography } from "@phantomthief-react/components.typography";
 import type { Meta, StoryObj } from "@storybook/react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm, Controller } from "react-hook-form";
-import { FONT } from "@phantomthief-react/utils";
+import { Controller, useForm } from "react-hook-form";
 import { RadioGroup } from "./_components";
 import * as yup from "yup";
 
@@ -33,15 +31,6 @@ const meta = {
         label: "Option Long text will be this one",
       },
       { key: "option-4", value: "option-4", label: "Option 4" },
-      {
-        key: "option-5",
-        value: "option-5",
-        label: (
-          <Typography font={FONT.FIRA_CODE} color="green">
-            Option with custom font + color
-          </Typography>
-        ),
-      },
     ],
     label: "Label of radio group",
     onChange: (e: ChangeEvent<HTMLInputElement>) => {
@@ -61,165 +50,53 @@ export const Default: Story = {
   },
 };
 
-export const CustomDefaultValue: Story = {
+export const HorizontalAlign: Story = {
   args: {
     isStandalone: true,
-    value: "option-2",
     label: null,
+    direction: "horizontal",
   },
 };
 
-export const CustomLabel: Story = {
+export const ParentController: Story = {
   args: {
-    isStandalone: true,
+    direction: "horizontal",
+  },
+  render: function Render(args) {
+    const [value, setValue] = useState(args.options[1].value);
+
+    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    }, []);
+
+    const handleParentChange = useCallback(
+      (value: string) => () => {
+        setValue(value);
+      },
+      [],
+    );
+
+    console.log("ParentController: ", value);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <RadioGroup {...args} value={value} onChange={handleChange} />
+        <button
+          style={{ marginTop: 48 }}
+          onClick={handleParentChange(args.options[0].value)}
+        >
+          Change to first option
+        </button>
+        <button
+          style={{ marginTop: 24 }}
+          onClick={handleParentChange(args.options[3].value)}
+        >
+          Change to fourth option
+        </button>
+      </div>
+    );
   },
 };
-
-// export const Outlined: Story = {
-//   args: {
-//     variant: "outlined",
-//     labelProps: null,
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const Filled: Story = {
-//   args: {
-//     variant: "filled",
-//     labelProps: null,
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const Disabled: Story = {
-//   args: {
-//     disabled: true,
-//     labelProps: null,
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const FullWidth: Story = {
-//   args: {
-//     variant: "outlined",
-//     fullWidth: true,
-//     labelProps: null,
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const Required: Story = {
-//   args: {
-//     variant: "filled",
-//     required: true,
-//     labelProps: null,
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const LabeledDefault: Story = {
-//   args: {
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const LabeledOutlined: Story = {
-//   args: {
-//     variant: "outlined",
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const LabeledFilled: Story = {
-//   args: {
-//     variant: "filled",
-//     postAdormentProps: null,
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const CustomPostAdorment: Story = {
-//   args: {
-//     variant: "outlined",
-//     helperTextProps: null,
-//     isStandalone: true,
-//   },
-// };
-
-// export const HelperTextDefault: Story = {
-//   args: { isStandalone: true },
-// };
-
-// export const HelperTextOutlined: Story = {
-//   args: {
-//     variant: "outlined",
-//     isStandalone: true,
-//   },
-// };
-
-// export const HelperTextFilled: Story = {
-//   args: {
-//     variant: "filled",
-//     isStandalone: true,
-//   },
-// };
-
-// export const ParentController: Story = {
-//   render: function Render(args) {
-//     const [value, setValue] = useState(args.options[1].value);
-
-//     const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-//       setValue(e.target.value);
-//     }, []);
-
-//     const handleParentChange = useCallback(
-//       (value: string) => () => {
-//         setValue(value);
-//       },
-//       [],
-//     );
-
-//     console.log("ParentController: ", value);
-
-//     return (
-//       <div style={{ display: "inline-flex", flexDirection: "column" }}>
-//         <Select
-//           {...args}
-//           variant="filled"
-//           value={value}
-//           onChange={handleChange}
-//         />
-//         <button
-//           style={{ marginTop: 48 }}
-//           onClick={handleParentChange(args.options[0].value)}
-//         >
-//           Change to first option
-//         </button>
-//         <button
-//           style={{ marginTop: 24 }}
-//           onClick={handleParentChange(args.options[3].value)}
-//         >
-//           Change to fourth option
-//         </button>
-//       </div>
-//     );
-//   },
-// };
 
 export const PropsControllerSelect: Story = {
   render: function Render(args) {
@@ -257,7 +134,7 @@ export const RHFController: Story = {
     const { handleSubmit, control } = useForm<{ option: string }>({
       resolver: yupResolver(validationSchema),
       defaultValues: {
-        option: "",
+        option: args.options[1].value,
       },
     });
 

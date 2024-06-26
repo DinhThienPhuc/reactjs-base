@@ -29,15 +29,9 @@ export const PostAdorment = ({
 
   if (clear) {
     return (
-      <Styled.Container {...containerProps} onClick={clear}>
-        {clearIcon ?? (
-          <IconXCircle
-            width={20}
-            height={20}
-            data-testid="post-adorment-icon-close"
-          />
-        )}
-      </Styled.Container>
+      <Styled.ButtonContainer {...containerProps} onClick={clear}>
+        {clearIcon ?? <IconXCircle width={20} height={20} />}
+      </Styled.ButtonContainer>
     );
   }
 

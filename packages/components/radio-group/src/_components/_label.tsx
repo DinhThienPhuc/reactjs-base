@@ -1,4 +1,4 @@
-import { FONT, arePropsShallowEqual } from "@phantomthief-react/utils";
+import { arePropsShallowEqual } from "@phantomthief-react/utils";
 import { IRadioGroupLabelProps } from "../_types";
 import React, { memo } from "react";
 import { Styled } from "../_style";
@@ -9,7 +9,6 @@ export const RadioGroupLabel = memo(
     return (
       <Styled.Label
         $hasValue={hasValue}
-        font={FONT.VERNADA}
         className={clsx(
           "radio-group-label",
           hasValue && "radio-group-label--hasValue",

@@ -1,7 +1,5 @@
-import { Typography } from "@phantomthief-react/components.typography";
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
 import React, { ChangeEvent, forwardRef, useMemo } from "react";
-import { FONT } from "@phantomthief-react/utils";
 import { ISwitchProps } from "./_types";
 import { Styled } from "./_style";
 import clsx from "clsx";
@@ -42,17 +40,10 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
           className={clsx(
             "switch-label",
             "switch-label__right",
-            disabled && "switch-label__right__disabled",
+            disabled && "switch-label__right--disabled",
           )}
         >
-          <Typography
-            size={16}
-            color={disabled ? "#ffffff80" : "#ffffff"}
-            font={FONT.VERNADA}
-            className="switch-label__text--right"
-          >
-            {rightLabel}
-          </Typography>
+          {rightLabel}
         </Styled.RightLabel>
       );
     }, [disabled, rightLabel]);
@@ -71,14 +62,7 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
             disabled && "switch-label__left--disabled",
           )}
         >
-          <Typography
-            size={16}
-            color={disabled ? "#ffffff80" : "#ffffff"}
-            font={FONT.VERNADA}
-            className="switch-label-text-left"
-          >
-            {leftLabel}
-          </Typography>
+          {leftLabel}
         </Styled.LeftLabel>
       );
     }, [disabled, leftLabel]);
@@ -91,8 +75,8 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
           $disabled={disabled}
           className={clsx(
             "switch-pad",
-            currentValue && "switch-pad__on",
-            disabled && "switch-pad__disabled",
+            currentValue && "switch-pad--on",
+            disabled && "switch-pad--disabled",
           )}
         >
           <input

@@ -22,13 +22,13 @@ export const Styled = {
     height: 56px;
     background-color: #121212;
   `,
-  Title: styled.div`
+  Title: styled.span`
     ${sectionModify};
   `,
-  LeftButton: styled.div`
+  LeftButton: styled.span`
     ${sectionModify};
   `,
-  RightButton: styled.div`
+  RightButton: styled.span`
     ${sectionModify};
   `,
 };

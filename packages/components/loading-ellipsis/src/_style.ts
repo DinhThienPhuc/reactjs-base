@@ -28,14 +28,14 @@ const motion3 = keyframes`
 `;
 
 export const Styled = {
-  Container: styled.div<{ $fullScreen: boolean }>`
+  Container: styled.span<{ $fullScreen: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
     width: ${({ $fullScreen }) => ($fullScreen ? "100vw" : "100%")};
     height: ${({ $fullScreen }) => ($fullScreen ? "100vh" : "100%")};
   `,
-  Spinner: styled.div<{
+  Spinner: styled.span<{
     $size: number;
     $color: string;
   }>`
@@ -44,7 +44,7 @@ export const Styled = {
     width: ${({ $size }) => `${(17 * $size) / 3}px`};
     height: ${({ $size }) => `${$size}px`};
 
-    div {
+    span {
       position: absolute;
       width: ${({ $size }) => `${$size}px`};
       height: ${({ $size }) => `${$size}px`};
@@ -52,22 +52,22 @@ export const Styled = {
       background: ${({ $color }) => $color};
     }
 
-    div:nth-child(1) {
+    span:nth-child(1) {
       left: ${({ $size }) => `${(2 * $size) / 3}px`};
       animation: ${motion1} 0.6s infinite;
     }
 
-    div:nth-child(2) {
+    span:nth-child(2) {
       left: ${({ $size }) => `${(2 * $size) / 3}px`};
       animation: ${({ $size }) => motion2Modify($size)} 0.6s infinite;
     }
 
-    div:nth-child(3) {
+    span:nth-child(3) {
       left: ${({ $size }) => `${(7 * $size) / 3}px`};
       animation: ${({ $size }) => motion2Modify($size)} 0.6s infinite;
     }
 
-    div:nth-child(4) {
+    span:nth-child(4) {
       left: ${({ $size }) => `${4 * $size}px`};
       animation: ${motion3} 0.6s infinite;
     }

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+import { getInvisibleButton } from "@phantomthief-react/utils";
 import { IStyledTypographyProps } from "./_types";
 
 const typographyModify = ({
@@ -44,10 +45,7 @@ export const Styled = {
   ` as React.FC<IStyledTypographyProps>,
   Button: styled.button<IStyledTypographyProps>`
     ${typographyModify};
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    outline: 0;
+    ${getInvisibleButton};
     padding: 0;
   ` as React.FC<IStyledTypographyProps>,
   A: styled.a<IStyledTypographyProps>`

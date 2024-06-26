@@ -1,14 +1,18 @@
-import { Typography } from "@phantomthief-react/components.typography";
-import { TRadioGroupDirection } from "./_types";
+import { FONT } from "@phantomthief-react/utils";
 import styled from "styled-components";
 
 export const Styled = {
-  Container: styled.div<{ $direction: TRadioGroupDirection }>`
+  Container: styled.div`
     display: flex;
+    flex-direction: column;
     gap: 16px;
-    flex-direction: ${({ $direction }) => $direction};
   `,
-  Label: styled(Typography)``,
+  Label: styled.span<{ $hasValue?: boolean }>`
+    transition: color 200ms ease-in-out;
+    color: ${({ $hasValue }) => ($hasValue ? "#90caf9" : "#ffffffb3")};
+    font-size: 16px;
+    font-family: ${FONT.VERNADA};
+  `,
   OptionLabel: styled.label`
     display: flex;
     align-items: center;
@@ -42,5 +46,10 @@ export const Styled = {
     &[type="radio" i] {
       margin: 0;
     }
+  `,
+  OptionLabelText: styled.span`
+    font-family: ${FONT.VERNADA};
+    font-size: 16px;
+    color: #ffffff;
   `,
 };

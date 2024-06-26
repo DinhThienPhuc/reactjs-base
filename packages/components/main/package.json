@@ -33,8 +33,10 @@
     "@phantomthief-react/components.loading-ripple": "workspace:*",
     "@phantomthief-react/components.navbar": "workspace:*",
     "@phantomthief-react/components.portal": "workspace:*",
+    "@phantomthief-react/components.radio-group": "workspace:*",
     "@phantomthief-react/components.select": "workspace:*",
     "@phantomthief-react/components.switch": "workspace:*",
+    "@phantomthief-react/components.text-field": "workspace:*",
     "@phantomthief-react/components.typography": "workspace:*"
   },
   "peerDependencies": {

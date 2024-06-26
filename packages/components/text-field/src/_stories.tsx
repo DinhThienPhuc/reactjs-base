@@ -205,7 +205,7 @@ export const PropsControllerSelect: Story = {
 };
 
 export const RHFController: Story = {
-  args: {},
+  args: { clear: () => "" },
   render: function Render(args) {
     const validationSchema = useMemo(
       () =>

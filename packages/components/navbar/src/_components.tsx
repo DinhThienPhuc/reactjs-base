@@ -16,19 +16,11 @@ export const Navbar = ({
       className={clsx("navbar", className)}
       data-testid="navbar"
     >
-      <Styled.LeftButton
-        className="navbar__button navbar__button--left"
-        data-testid="navbar-button-left"
-      >
+      <Styled.LeftButton className="navbar__button navbar__button--left">
         {leftButton}
       </Styled.LeftButton>
-      <Styled.Title className="navbar__title" data-testid="navbar-title">
-        {title}
-      </Styled.Title>
-      <Styled.RightButton
-        className="navbar__button navbar__button--right"
-        data-testid="navbar-button-right"
-      >
+      <Styled.Title className="navbar__title">{title}</Styled.Title>
+      <Styled.RightButton className="navbar__button navbar__button--right">
         {rightButton}
       </Styled.RightButton>
     </Styled.Container>

@@ -37,11 +37,6 @@
     "@phantomthief-react/components.helper-text": "workspace:*",
     "@phantomthief-react/components.label": "workspace:*"
   },
-  "devDependencies": {
-    "react-hook-form": "*",
-    "yup": "*",
-    "@hookform/resolvers": "*"
-  },
   "author": "@DinhThienPhuc",
   "license": "ISC",
   "description": "",

@@ -302,12 +302,6 @@ importers:
 
   packages/components/helper-text:
     dependencies:
-      "@phantomthief-react/components.typography":
-        specifier: workspace:*
-        version: link:../typography
-      "@phantomthief-react/hooks":
-        specifier: workspace:*
-        version: link:../../hooks/main
       "@phantomthief-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
@@ -326,12 +320,6 @@ importers:
 
   packages/components/label:
     dependencies:
-      "@phantomthief-react/components.typography":
-        specifier: workspace:*
-        version: link:../typography
-      "@phantomthief-react/hooks":
-        specifier: workspace:*
-        version: link:../../hooks/main
       "@phantomthief-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
@@ -404,12 +392,18 @@ importers:
       "@phantomthief-react/components.portal":
         specifier: workspace:*
         version: link:../portal
+      "@phantomthief-react/components.radio-group":
+        specifier: workspace:*
+        version: link:../radio-group
       "@phantomthief-react/components.select":
         specifier: workspace:*
         version: link:../select
       "@phantomthief-react/components.switch":
         specifier: workspace:*
         version: link:../switch
+      "@phantomthief-react/components.text-field":
+        specifier: workspace:*
+        version: link:../text-field
       "@phantomthief-react/components.typography":
         specifier: workspace:*
         version: link:../typography
@@ -431,22 +425,12 @@ importers:
       typescript:
         specifier: "*"
         version: 5.5.2
-    devDependencies:
-      "@phantomthief-react/components.button":
-        specifier: workspace:*
-        version: link:../button
-      "@phantomthief-react/components.typography":
-        specifier: workspace:*
-        version: link:../typography
-      "@phantomthief-react/utils":
-        specifier: workspace:*
-        version: link:../../utils/main
 
   packages/components/portal:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantomthief-react/utils":
         specifier: workspace:*
-        version: link:../../utils/definations
+        version: link:../../utils/main
       react:
         specifier: "*"
         version: 18.3.1
@@ -498,9 +482,9 @@ importers:
 
   packages/components/radio-group:
     dependencies:
-      "@phantomthief-react/components.typography":
+      "@phantomthief-react/components.flex-box":
         specifier: workspace:*
-        version: link:../typography
+        version: link:../flex-box
       "@phantomthief-react/hooks":
         specifier: workspace:*
         version: link:../../hooks/main
@@ -534,9 +518,6 @@ importers:
       "@phantomthief-react/components.post-adorment":
         specifier: workspace:*
         version: link:../post-adorment
-      "@phantomthief-react/components.typography":
-        specifier: workspace:*
-        version: link:../typography
       "@phantomthief-react/hooks":
         specifier: workspace:*
         version: link:../../hooks/main
@@ -549,25 +530,18 @@ importers:
       react:
         specifier: "*"
         version: 18.3.1
-      styled-components:
-        specifier: "*"
-        version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      typescript:
-        specifier: "*"
-        version: 5.5.2
-    devDependencies:
       react-feather:
         specifier: "*"
         version: 2.0.10(react@18.3.1)
-      react-hook-form:
+      styled-components:
         specifier: "*"
-        version: 7.52.0(react@18.3.1)
+        version: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: "*"
+        version: 5.5.2
 
   packages/components/switch:
     dependencies:
-      "@phantomthief-react/components.typography":
-        specifier: workspace:*
-        version: link:../typography
       "@phantomthief-react/hooks":
         specifier: workspace:*
         version: link:../../hooks/main
@@ -586,10 +560,6 @@ importers:
       typescript:
         specifier: "*"
         version: 5.5.2
-    devDependencies:
-      react-hook-form:
-        specifier: "*"
-        version: 7.52.0(react@18.3.1)
 
   packages/components/text-field:
     dependencies:
@@ -623,16 +593,6 @@ importers:
       typescript:
         specifier: "*"
         version: 5.5.2
-    devDependencies:
-      "@hookform/resolvers":
-        specifier: "*"
-        version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
-      react-hook-form:
-        specifier: "*"
-        version: 7.52.0(react@18.3.1)
-      yup:
-        specifier: "*"
-        version: 1.4.0
 
   packages/components/typography:
     dependencies:

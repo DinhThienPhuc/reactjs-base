@@ -3,7 +3,7 @@ import { TPreAdormentVariant } from "./_types";
 import styled from "styled-components";
 
 export const Styled = {
-  Container: styled.div<{
+  Container: styled.span<{
     $adormentVariant: TPreAdormentVariant;
     $hasLabel: boolean;
   }>`

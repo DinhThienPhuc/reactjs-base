@@ -2,7 +2,6 @@ import {
   HTMLAttributes,
   InputHTMLAttributes,
   LabelHTMLAttributes,
-  ReactNode,
 } from "react";
 import { IExtendable, ISyncStateWithProps } from "@phantomthief-react/utils";
 import { RADIO_GROUP_DIRECTION } from "./_constants";
@@ -16,13 +15,13 @@ export interface IRadioGroupOptionProps
     IExtendable {
   key: string;
   value: string;
-  label?: ReactNode;
+  label?: string;
   labelProps?: LabelHTMLAttributes<HTMLLabelElement>;
   currentValue?: string;
 }
 
 export interface IRadioGroupLabelProps extends IExtendable {
-  label?: ReactNode;
+  label?: string;
   hasValue?: boolean;
 }
 
@@ -32,7 +31,7 @@ export interface IRadioGroupProps
     IExtendable {
   options: IRadioGroupOptionProps[];
   value?: string;
-  label?: ReactNode;
+  label?: string;
   name: string;
   direction?: TRadioGroupDirection;
 }

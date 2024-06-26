@@ -1,11 +1,9 @@
+import { getInvisibleButton } from "@phantomthief-react/utils";
 import styled, { css } from "styled-components";
 
 export const Styled = {
   Container: styled.button`
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    outline: 0;
+    ${getInvisibleButton}
   `,
   Bar: styled.span<{
     $isActivated: boolean;

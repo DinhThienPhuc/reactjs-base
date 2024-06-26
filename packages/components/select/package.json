@@ -34,14 +34,9 @@
     "@phantomthief-react/components.post-adorment": "workspace:*",
     "@phantomthief-react/components.helper-text": "workspace:*",
     "@phantomthief-react/components.label": "workspace:*",
-    "@phantomthief-react/components.typography": "workspace:*",
     "@phantomthief-react/components.portal": "workspace:*",
     "@phantomthief-react/hooks": "workspace:*",
     "@phantomthief-react/utils": "workspace:*"
-  },
-  "devDependencies": {
-    "react-hook-form": "*",
-    "react-feather": "*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

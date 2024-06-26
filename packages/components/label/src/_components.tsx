@@ -1,8 +1,5 @@
 import React, { memo } from "react";
 
-import { Typography } from "@phantomthief-react/components.typography";
-import { useBlock } from "@phantomthief-react/hooks";
-import { FONT } from "@phantomthief-react/utils";
 import { LABEL_VARIANT } from "./_constants";
 import { ILabelProps } from "./_types";
 import { Styled } from "./_style";
@@ -21,19 +18,6 @@ export const Label = memo(
     isLabelCollapsed,
     ...restProps
   }: ILabelProps) => {
-    const textColor = useBlock(() => {
-      if (disabled) {
-        return "#ffffff80";
-      }
-      if (isError) {
-        return "#f44336";
-      }
-      if (isFocused) {
-        return "#90caf9";
-      }
-      return "#ffffff";
-    });
-
     if (hiddenLabel || !children) {
       return null;
     }
@@ -43,25 +27,23 @@ export const Label = memo(
         {...restProps}
         $variant={variant}
         $isLabelCollapsed={isLabelCollapsed}
+        $disabled={disabled}
+        $isError={isError}
+        $isFocused={isFocused}
         className={clsx(
           "label",
-          `label--${variant}`,
+          `label--variant-${variant}`,
           isLabelCollapsed && "label--collapsed",
           disabled && "label--disabled",
           required && "label--required",
           isFocused && "label--focused",
           isError && "label--error",
+          hiddenLabel && "label--hidden",
           className,
         )}
         data-testid="label"
       >
-        <Typography
-          color={textColor}
-          size={isLabelCollapsed ? 12 : 16}
-          font={FONT.VERNADA}
-        >
-          {children} {required ? "*" : ""}
-        </Typography>
+        {children} {required ? "*" : ""}
       </Styled.Container>
     );
   },

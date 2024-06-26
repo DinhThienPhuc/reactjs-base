@@ -1,4 +1,5 @@
 import React, { ChangeEvent, forwardRef, useCallback } from "react";
+import { FlexBox } from "@phantomthief-react/components.flex-box";
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
 import { RADIO_GROUP_DIRECTION } from "../_constants";
 import { IRadioGroupProps } from "../_types";
@@ -37,21 +38,30 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
     return (
       <Styled.Container
         {...restProps}
-        $direction={direction}
-        className={clsx("radio-group", `radio-group--${direction}`, className)}
+        className={clsx("radio-group", className)}
         data-testid="radio-group"
       >
         <RadioGroupLabel hasValue={!!currentValue} label={label} />
-        {options?.map((option) => (
-          <RadioGroupOption
-            {...option}
-            name={name}
-            key={option.key}
-            isStandalone={isStandalone}
-            currentValue={currentValue}
-            onChange={handleChange}
-          />
-        ))}
+        <FlexBox
+          gap="16px"
+          flexDirection={direction}
+          alignItems={
+            direction === RADIO_GROUP_DIRECTION.COLUMN
+              ? "flex-start"
+              : undefined
+          }
+        >
+          {options?.map((option) => (
+            <RadioGroupOption
+              {...option}
+              name={name}
+              key={option.key}
+              isStandalone={isStandalone}
+              currentValue={currentValue}
+              onChange={handleChange}
+            />
+          ))}
+        </FlexBox>
       </Styled.Container>
     );
   },
