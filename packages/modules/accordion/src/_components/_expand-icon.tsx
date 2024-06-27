@@ -1,4 +1,4 @@
-import { ChevronDown as IconChevronDown } from "react-feather";
+import { Icon } from "@phantomthief-react/components";
 import { IAccordionItemProps } from "../_types";
 import { useAccordionState } from "../_states";
 import { Styled } from "../_styles";
@@ -15,7 +15,7 @@ export const AccordionItemExpandIcon = ({
       $isExpanded={isExpanded}
       className="accordion-item__header__right__expand-icon"
     >
-      {expandIcon ?? <IconChevronDown />}
+      {expandIcon ?? <Icon name="chevron-down" />}
     </Styled.ItemHeaderExpandIcon>
   );
 };

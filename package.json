@@ -31,6 +31,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@hookform/resolvers": "^3.4.2",
+    "@rollup/plugin-dynamic-import-vars": "^2.1.2",
     "@storybook/addon-a11y": "^8.1.9",
     "@storybook/addon-essentials": "^8.1.9",
     "@storybook/addon-interactions": "^8.1.9",

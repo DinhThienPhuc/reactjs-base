@@ -1,3 +1,4 @@
+import dynamicImportVars from "@rollup/plugin-dynamic-import-vars";
 import { visualizer } from "rollup-plugin-visualizer"; // Uncomment this line to generate statistics.html
 import { PluginOptions } from "vite-plugin-dts";
 import viteReact from "@vitejs/plugin-react";
@@ -42,6 +43,7 @@ const createConfig = (
         },
       }),
       dtsPlugin({ include: ["src"] }),
+      dynamicImportVars({}),
       process.env.ENABLE_ANALYZE
         ? visualizer({ filename: "./statistics.html" })
         : null,

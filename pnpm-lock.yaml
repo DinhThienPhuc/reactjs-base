@@ -22,6 +22,9 @@ importers:
       "@hookform/resolvers":
         specifier: ^3.4.2
         version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
+      "@rollup/plugin-dynamic-import-vars":
+        specifier: ^2.1.2
+        version: 2.1.2(rollup@4.18.0)
       "@storybook/addon-a11y":
         specifier: ^8.1.9
         version: 8.1.10
@@ -3846,6 +3849,19 @@ packages:
       }
     engines: { node: ">=14.0.0" }
 
+  "@rollup/plugin-dynamic-import-vars@2.1.2":
+    resolution:
+      {
+        integrity: sha512-4lr2oXxs9hcxtGGaK8s0i9evfjzDrAs7ngw28TqruWKTEm0+U4Eljb+F6HXGYdFv8xRojQlrQwV7M/yxeh3yzQ==,
+        tarball: https://registry.npmjs.org/@rollup/plugin-dynamic-import-vars/-/plugin-dynamic-import-vars-2.1.2.tgz,
+      }
+    engines: { node: ">=14.0.0" }
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
   "@rollup/pluginutils@5.1.0":
     resolution:
       {
@@ -5490,6 +5506,14 @@ packages:
         tarball: https://registry.npmjs.org/ast-types/-/ast-types-0.16.1.tgz,
       }
     engines: { node: ">=4" }
+
+  astring@1.8.6:
+    resolution:
+      {
+        integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==,
+        tarball: https://registry.npmjs.org/astring/-/astring-1.8.6.tgz,
+      }
+    hasBin: true
 
   async@3.2.5:
     resolution:
@@ -14170,6 +14194,16 @@ snapshots:
 
   "@remix-run/router@1.16.1": {}
 
+  "@rollup/plugin-dynamic-import-vars@2.1.2(rollup@4.18.0)":
+    dependencies:
+      "@rollup/pluginutils": 5.1.0(rollup@4.18.0)
+      astring: 1.8.6
+      estree-walker: 2.0.2
+      fast-glob: 3.3.2
+      magic-string: 0.30.10
+    optionalDependencies:
+      rollup: 4.18.0
+
   "@rollup/pluginutils@5.1.0(rollup@4.18.0)":
     dependencies:
       "@types/estree": 1.0.5
@@ -15516,6 +15550,8 @@ snapshots:
   ast-types@0.16.1:
     dependencies:
       tslib: 2.6.3
+
+  astring@1.8.6: {}
 
   async@3.2.5: {}
 
