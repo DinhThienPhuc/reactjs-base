@@ -1,3 +1,4 @@
+import dynamicImportVars from "@rollup/plugin-dynamic-import-vars";
 import { visualizer } from "rollup-plugin-visualizer"; // Uncomment this line to generate statistics.html
 import { PluginOptions } from "vite-plugin-dts";
 import viteReact from "@vitejs/plugin-react";
@@ -9,6 +10,7 @@ const resolveExternal = (pkg: Record<string, unknown>) => {
     "react",
     "react/jsx-runtime",
     "react-dom",
+    "styled-components",
     /^@phantomthief-react\/(.*)/,
   ];
 
@@ -27,8 +29,21 @@ const createConfig = (
 ): UserConfig => {
   return {
     plugins: [
-      reactPlugin(),
+      reactPlugin({
+        babel: {
+          plugins: [
+            [
+              "babel-plugin-styled-components",
+              {
+                displayName: true,
+                pure: true,
+              },
+            ],
+          ],
+        },
+      }),
       dtsPlugin({ include: ["src"] }),
+      dynamicImportVars({}),
       process.env.ENABLE_ANALYZE
         ? visualizer({ filename: "./statistics.html" })
         : null,

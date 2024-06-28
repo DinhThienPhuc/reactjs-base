@@ -1,3 +1,4 @@
+import { getInvisibleButton } from "@phantomthief-react/utils";
 import { IStyledAccordionItemContainerProps } from "./_types";
 import { FlexBox } from "@phantomthief-react/components";
 import styled, { css } from "styled-components";
@@ -34,12 +35,11 @@ export const Styled = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    outline: 0;
-    border: none;
     color: inherit;
     padding: 0px 16px;
     width: 100%;
     height: 48px;
+    ${getInvisibleButton}
     ${({ $disabled }) =>
       $disabled
         ? css`

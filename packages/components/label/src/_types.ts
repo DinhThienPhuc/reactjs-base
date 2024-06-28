@@ -19,4 +19,7 @@ export interface ILabelProps extends IExtendable {
 export interface IStyledLabelProps {
   $variant: TLabelVariant;
   $isLabelCollapsed: boolean;
+  $disabled: boolean;
+  $isError: boolean;
+  $isFocused: boolean;
 }

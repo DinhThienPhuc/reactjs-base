@@ -1,17 +1,27 @@
+import { getInvisibleButton } from "@phantomthief-react/utils";
 import { POST_ADORMENT_VARIANT } from "./_constants";
-import { TPostAdormentVariant } from "./_types";
-import styled from "styled-components";
+import { IStyledContainerProps } from "./_types";
+import styled, { css } from "styled-components";
 
-export const Styled = {
-  Container: styled.div<{
-    $adormentVariant: TPostAdormentVariant;
-    $hasLabel: boolean;
-  }>`
+const modifyContainer = (props: IStyledContainerProps) => {
+  return css`
     display: flex;
     position: absolute;
-    top: ${({ $hasLabel }) => ($hasLabel ? "calc(50% + 6px)" : "50%")};
     transform: translateY(-50%);
-    right: ${({ $adormentVariant }) =>
-      $adormentVariant === POST_ADORMENT_VARIANT.STANDARD ? "0px" : "14px"};
+    color: #ffffff;
+    top: ${props.$hasLabel ? "calc(50% + 6px)" : "50%"};
+    right: ${props.$adormentVariant === POST_ADORMENT_VARIANT.STANDARD
+      ? "0px"
+      : "14px"};
+  `;
+};
+
+export const Styled = {
+  Container: styled.span<IStyledContainerProps>`
+    ${modifyContainer};
+  `,
+  ButtonContainer: styled.button<IStyledContainerProps>`
+    ${getInvisibleButton};
+    ${modifyContainer};
   `,
 };

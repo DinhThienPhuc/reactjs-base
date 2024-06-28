@@ -1,9 +1,4 @@
-import {
-  Facebook as IconFacebook,
-  GitHub as IconGitHub,
-  Linkedin as IconLinkedIn,
-} from "react-feather";
-import { FlexBox, Typography } from "@phantomthief-react/components";
+import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
 import { Link, Outlet } from "react-router-dom";
 import Topnav from "./topnav";
 import Styled from "./style";
@@ -21,17 +16,17 @@ const LayoutDefault = () => {
           <FlexBox>
             <Link to="https://github.com/DinhThienPhuc" target="_blank">
               <Styled.BottomLink variant="span">
-                <IconGitHub />
+                <Icon name="git-hub" />
               </Styled.BottomLink>
             </Link>
             <Link to="/" target="_blank">
               <Styled.BottomLink variant="span">
-                <IconLinkedIn />
+                <Icon name="linked-in" />
               </Styled.BottomLink>
             </Link>
             <Link to="/" target="_blank">
               <Styled.BottomLink variant="span">
-                <IconFacebook />
+                <Icon name="facebook" />
               </Styled.BottomLink>
             </Link>
           </FlexBox>

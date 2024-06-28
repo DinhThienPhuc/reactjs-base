@@ -13,24 +13,24 @@ export const LoadingEllipsis = ({
   <Styled.Container
     {...restProps}
     $fullScreen={fullScreen}
-    className={className}
+    className={clsx(
+      "loading-ellipsis",
+      `loading-ellipsis--size-${size}`,
+      `loading-ellipsis--color-${color}`,
+      fullScreen && "loading-ellipsis--fullScreen",
+      className,
+    )}
+    data-testid="loading-ellipsis"
   >
     <Styled.Spinner
       $size={size}
       $color={color}
-      className={clsx(
-        "loading-ellipsis",
-        `loading-ellipsis--size-${size}`,
-        `loading-ellipsis--color-${color}`,
-        fullScreen && "loading-ellipsis--fullScreen",
-        className,
-      )}
-      data-testid="loading-ellipsis"
+      className="loading-ellipsis-inner"
     >
-      <div />
-      <div />
-      <div />
-      <div />
+      <span />
+      <span />
+      <span />
+      <span />
     </Styled.Spinner>
   </Styled.Container>
 );

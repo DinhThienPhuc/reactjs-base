@@ -44,12 +44,22 @@ export const doNothing = () => {
 };
 
 /**
- * Capitalize word
- * @param word Word to be modify
+ * Capitalize the first character of string
+ * @param str String to be modify
  * @returns
  */
-export const capitalize = (word: string) =>
-  word.charAt(0).toUpperCase() + word.slice(1);
+export const capitalize = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+/**
+ * Converts a string to CamelCase, capitalizes the first letter, and allows for dynamic splitting based on a regex pattern.
+ * @param str The string to convert.
+ * @param divider The regex pattern used to split the string.
+ * @returns The CamelCase string.
+ */
+export const toCamelCase = (str: string, divider: RegExp = /-/): string => {
+  return str.split(divider).map(capitalize).join("");
+};
 
 /**
  * Checks if `value` is `null` or `undefined`.
@@ -57,3 +67,31 @@ export const capitalize = (word: string) =>
  * @returns Returns `true` if `value` is nullish, else `false`.
  */
 export const isNil = (value: unknown) => value == null;
+
+/**
+ * Shallow compare a field in objects, used in React.memo
+ * @param keys fields to be deep compare
+ * @param callback callback to compare the fields
+ * @returns boolean
+ */
+export const arePropsShallowEqual =
+  (
+    keys: string[],
+    callback: (
+      key: string,
+      prevFieldValue: unknown,
+      nextFieldValue: unknown,
+    ) => boolean | undefined,
+  ) =>
+  (prevProps: Record<string, unknown>, nextProps: Record<string, unknown>) => {
+    const areSpecificPropsEqual = keys.every(
+      (k: string) => callback(k, prevProps[k], nextProps[k]) ?? true,
+    );
+
+    const areOtherPropsEqual = Object.keys(prevProps).every((k: string) => {
+      if (keys.includes(k)) return true;
+      return prevProps[k] === nextProps[k];
+    });
+
+    return areSpecificPropsEqual && areOtherPropsEqual;
+  };

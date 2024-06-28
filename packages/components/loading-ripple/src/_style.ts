@@ -32,20 +32,20 @@ const ripple = (size: number) => keyframes`
 `;
 
 export const Styled = {
-  Container: styled.div<{ $fullScreen: boolean }>`
+  Container: styled.span<{ $fullScreen: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
     width: ${({ $fullScreen }) => ($fullScreen ? "100vw" : "100%")};
     height: ${({ $fullScreen }) => ($fullScreen ? "100vh" : "100%")};
   `,
-  Ripple: styled.div<{ $size: number; $color: string }>`
+  Ripple: styled.span<{ $size: number; $color: string }>`
     display: inline-block;
     position: relative;
     width: ${({ $size }) => `${$size + 8}px`};
     height: ${({ $size }) => `${$size + 8}px`};
 
-    div {
+    span {
       position: absolute;
       border: 4px solid ${({ $color }) => $color};
       opacity: 1;
@@ -54,7 +54,7 @@ export const Styled = {
         infinite;
     }
 
-    div:nth-child(2) {
+    span:nth-child(2) {
       animation-delay: -0.5s;
     }
   `,

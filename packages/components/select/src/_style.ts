@@ -1,4 +1,4 @@
-import { getVariantStyle } from "@phantomthief-react/utils";
+import { FONT, FONT_SIZE, getVariantStyle } from "@phantomthief-react/utils";
 import styled, { css } from "styled-components";
 import { SELECT_VARIANT } from "./_constants";
 import { TSelectVariant } from "./_types";
@@ -21,7 +21,8 @@ export const Styled = {
     width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "fit-content")};
     min-width: 210px;
   `,
-  Option: styled.div<{ $selected: boolean; $disabled?: boolean }>`
+  Option: styled.span<{ $selected: boolean; $disabled?: boolean }>`
+    display: block;
     transition: all 200ms ease-in-out;
     cursor: pointer;
     padding: 0px 14px;
@@ -37,6 +38,8 @@ export const Styled = {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-family: ${FONT.VERNADA};
+    font-size: ${FONT_SIZE.MEDIUM};
 
     &:hover {
       background-color: #ffffff14;
@@ -95,6 +98,8 @@ export const Styled = {
     white-space: nowrap;
     text-overflow: ellipsis;
     color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
+    font-family: ${FONT.VERNADA};
+    font-size: ${FONT_SIZE.MEDIUM};
     ${modifyInnerBoxPadding};
 
     &:focus-visible {

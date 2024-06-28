@@ -115,8 +115,10 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
         className={clsx(
           "text-field",
           fullWidth && "text-field--fullwidth",
+          required && "text-field--required",
           disabled && "text-field--disabled",
-          `text-field--${variant}`,
+          error && "text-field--error",
+          `text-field--variant-${variant}`,
           className,
         )}
         data-testid="text-field"
@@ -138,11 +140,10 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
           onBlur={captureOnBlur}
           className={clsx(
             "text-field-input",
-            `text-field-input--${variant}`,
+            `text-field-input--variant-${variant}`,
             disabled && "text-field-input--disabled",
             required && "text-field-input--required",
           )}
-          data-testid="text-field-input"
         />
         {customPostAdorment}
         {customHelperText}

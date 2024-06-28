@@ -80,3 +80,16 @@ export const getVariantStyle = (props: {
     border-radius: 0px;
   `;
 };
+
+/**
+ * Style for invisible button
+ * @returns style sheets
+ */
+export const getInvisibleButton = () => {
+  return css`
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: 0;
+  `;
+};

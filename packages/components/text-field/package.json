@@ -38,9 +38,7 @@
     "@phantomthief-react/components.label": "workspace:*"
   },
   "devDependencies": {
-    "react-hook-form": "*",
-    "yup": "*",
-    "@hookform/resolvers": "*"
+    "@phantomthief-react/components.icon": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

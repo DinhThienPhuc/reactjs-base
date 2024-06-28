@@ -148,6 +148,14 @@ It is recommended to use Visual Studio Code with the following extensions to ens
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 
+### Transient props and classNames
+
+We should follow these rules:
+
+- Add all classNames to the container of the component, relative with the component's props.
+- No need to add classNames for the atom components unless a limited cases.
+- Add classNames to styled section of component, relative with the transient props.
+
 ### Media queries
 
 We should follow these media queries for consistency
@@ -288,4 +296,7 @@ pnpm bump
 - Push `release/packages/*` branch to the remote git.
 - Let the github actions does the job :D
 
-<!-- TODO: Add a watch script command to dynamically build and install the dependency -->
+<!-- TODO: Implement theme feature for each component -->
+<!-- TODO: Remove zustand and use memo with compare callback to prevent re-render -->
+<!-- TODO: Improve to load component on demand -->
+<!-- TODO: Implement a list of svg icon in React component -->

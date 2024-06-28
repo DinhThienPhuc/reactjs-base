@@ -35,20 +35,23 @@ export const HamburgerMenu = ({
     $color: color,
     className: clsx(
       "hamburger-menu__bar",
-      isActivated && "hamburger-mene__bar--active",
-      `hambuger-menu__bar--gap-${gap}`,
-      `hambuger-menu__bar--width-${width}`,
-      `hambuger-menu__bar--height-${height}`,
-      `hambuger-menu__bar--border-radius-${borderRadius}`,
-      `hambuger-menu__bar--color-${color}`,
-      className,
+      isActivated && "hamburger-menu__bar--active",
     ),
   };
 
   return (
     <Styled.Container
       {...restProps}
-      className={clsx("hamburger-menu", className)}
+      className={clsx(
+        "hamburger-menu",
+        `hamburger-menu--gap-${gap}`,
+        `hamburger-menu--width-${width}`,
+        `hamburger-menu--height-${height}`,
+        `hamburger-menu--border-radius-${borderRadius}`,
+        `hamburger-menu--color-${color}`,
+        isActivated && "hamburger-menu--active",
+        className,
+      )}
       data-testid="hamburger-menu"
       onClick={handleToggle}
     >

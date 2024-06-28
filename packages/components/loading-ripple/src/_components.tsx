@@ -13,22 +13,18 @@ export const LoadingRipple = ({
   <Styled.Container
     {...restProps}
     $fullScreen={fullScreen}
-    className={className}
+    className={clsx(
+      "loading-ripple",
+      `loading-ripple--size-${size}`,
+      `loading-ripple--color-${color}`,
+      fullScreen && "loading-ripple--fullScreen",
+      className,
+    )}
+    data-testid="loading-ripple"
   >
-    <Styled.Ripple
-      $size={size}
-      $color={color}
-      className={clsx(
-        "loading-ripple",
-        `loading-ripple--size-${size}`,
-        `loading-ripple--color-${color}`,
-        fullScreen && "loading-ripple--fullScreen",
-        className,
-      )}
-      data-testid="loading-ripple"
-    >
-      <div />
-      <div />
+    <Styled.Ripple $size={size} $color={color} className="loading-ripple-inner">
+      <span />
+      <span />
     </Styled.Ripple>
   </Styled.Container>
 );

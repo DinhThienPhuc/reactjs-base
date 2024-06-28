@@ -1,18 +1,13 @@
-import {
-  ChangeEvent,
-  HTMLAttributes,
-  InputHTMLAttributes,
-  ReactNode,
-} from "react";
 import { IExtendable, IFormFieldProps } from "@phantomthief-react/utils";
+import { ChangeEvent, HTMLAttributes, InputHTMLAttributes } from "react";
 
 export interface ISwitchProps
   extends Omit<HTMLAttributes<HTMLDivElement>, "onChange">,
     IFormFieldProps,
     IExtendable {
   value?: boolean;
-  leftLabel?: ReactNode;
-  rightLabel?: ReactNode;
+  leftLabel?: string;
+  rightLabel?: string;
   inputProps?: InputHTMLAttributes<HTMLInputElement> & IExtendable;
   onChange?: (value: boolean, e: ChangeEvent<HTMLInputElement>) => void;
 }

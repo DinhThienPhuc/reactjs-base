@@ -1,7 +1,4 @@
-import { Typography } from "@phantomthief-react/components.typography";
-import { useBlock } from "@phantomthief-react/hooks";
 import { HELPER_TEXT_VARIANT } from "./_constants";
-import { FONT } from "@phantomthief-react/utils";
 import { IHelperTextProps } from "./_types";
 import React, { memo } from "react";
 import { Styled } from "./_style";
@@ -16,13 +13,6 @@ export const HelperText = memo(
     hasLabel = false,
     ...restProps
   }: IHelperTextProps) => {
-    const textColor = useBlock(() => {
-      if (isError) {
-        return "#f44336";
-      }
-      return "#ffffffb3";
-    });
-
     if (!children) {
       return null;
     }
@@ -32,6 +22,7 @@ export const HelperText = memo(
         {...restProps}
         $variant={variant}
         $hasLabel={hasLabel}
+        $isError={isError}
         className={clsx(
           "helper-text",
           `helper-text--variant-${variant}`,
@@ -41,9 +32,7 @@ export const HelperText = memo(
         )}
         data-testid="helper-text"
       >
-        <Typography color={textColor} size={12} font={FONT.VERNADA}>
-          {children}
-        </Typography>
+        {children}
       </Styled.Container>
     );
   },
