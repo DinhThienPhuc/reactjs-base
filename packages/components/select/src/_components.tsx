@@ -22,8 +22,8 @@ import { INodePosition, getPositionOfNode } from "@phantomthief-react/utils";
 import { PostAdorment } from "@phantomthief-react/components.post-adorment";
 import { HelperText } from "@phantomthief-react/components.helper-text";
 import { Portal } from "@phantomthief-react/components.portal";
-import { ChevronDown as IconChevronLeft } from "react-feather";
 import { Label } from "@phantomthief-react/components.label";
+import { Icon } from "@phantomthief-react/components.icon";
 import { SELECT_VARIANT } from "./_constants";
 import { Styled } from "./_style";
 import clsx from "clsx";
@@ -225,7 +225,7 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
                 disabled && "select-post-adorment-content--disabled",
               )}
             >
-              {postAdormentProps?.children ?? <IconChevronLeft />}
+              {postAdormentProps?.children ?? <Icon name="chevron-down" />}
             </Styled.PostAdormentContentWrapper>
           </PostAdorment>
           <HelperText {...helperTextProps} isError={!!error} variant={variant}>

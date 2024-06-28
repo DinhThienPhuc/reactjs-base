@@ -1,12 +1,11 @@
 import { LoadingEllipsis } from "@phantomthief-react/components.loading-ellipsis";
 import React, { useState, useEffect, ComponentType } from "react";
 import { toCamelCase } from "@phantomthief-react/utils";
-import { IIconProps } from "./_types";
+import { IIconProps, ISingleIconProps } from "./_types";
 
 export const Icon = ({ name, loadingProps, ...restProps }: IIconProps) => {
-  const [IconComponent, setIconComponent] = useState<ComponentType | null>(
-    null,
-  );
+  const [IconComponent, setIconComponent] =
+    useState<ComponentType<ISingleIconProps> | null>(null);
 
   useEffect(() => {
     // Reset IconComponent when name changes
@@ -23,7 +22,7 @@ export const Icon = ({ name, loadingProps, ...restProps }: IIconProps) => {
 
   // Render the imported icon or a placeholder
   return IconComponent ? (
-    <IconComponent {...restProps} />
+    <IconComponent {...restProps} name={name} />
   ) : (
     <LoadingEllipsis size={4} color="#ffffff" {...loadingProps} />
   );

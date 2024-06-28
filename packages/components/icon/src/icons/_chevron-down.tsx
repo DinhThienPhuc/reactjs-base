@@ -1,7 +1,9 @@
 import { ISingleIconProps } from "../_types";
 import React from "react";
+import clsx from "clsx";
 
 export const IconChevronDown = ({
+  name,
   className,
   ...restProps
 }: ISingleIconProps) => {
@@ -17,7 +19,7 @@ export const IconChevronDown = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       {...restProps}
-      className={className}
+      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
     >
       <path d="m6 9 6 6 6-6" />
     </svg>

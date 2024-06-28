@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
-import { Info as IconInfo, Anchor as IconAnchor } from "react-feather";
+import { Icon } from "@phantomthief-react/components.icon";
 import type { Meta, StoryObj } from "@storybook/react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
@@ -19,10 +19,10 @@ const meta = {
       children: "Username",
     },
     preAdormentProps: {
-      children: <IconAnchor color="#ffffff" width={16} height={16} />,
+      children: <Icon name="anchor" color="#ffffff" width={16} height={16} />,
     },
     postAdormentProps: {
-      children: <IconInfo color="#ffffff" width={16} height={16} />,
+      children: <Icon name="info" color="#ffffff" width={16} height={16} />,
     },
     helperTextProps: {
       children: "This is a text field",

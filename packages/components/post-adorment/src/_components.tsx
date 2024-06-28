@@ -30,7 +30,7 @@ export const PostAdorment = ({
   if (clear) {
     return (
       <Styled.ButtonContainer {...containerProps} onClick={clear}>
-        {clearIcon ?? <Icon name="X" />}
+        {clearIcon ?? <Icon name="x" />}
       </Styled.ButtonContainer>
     );
   }

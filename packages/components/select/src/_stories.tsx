@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
-import { ArrowDownCircle as IconArrowDownCircle } from "react-feather";
+import { Icon } from "@phantomthief-react/components.icon";
 import type { Meta, StoryObj } from "@storybook/react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
@@ -37,7 +37,7 @@ const meta = {
       children: "Label",
     },
     postAdormentProps: {
-      children: <IconArrowDownCircle />,
+      children: <Icon name="arrow-down" />,
     },
     helperTextProps: {
       children: "helper text",
@@ -52,6 +52,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     isStandalone: true,
+    postAdormentProps: null,
   },
 };
 
@@ -59,6 +60,7 @@ export const CustomDefaultValue: Story = {
   args: {
     isStandalone: true,
     value: "option-4",
+    postAdormentProps: null,
   },
 };
 

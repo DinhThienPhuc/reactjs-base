@@ -2,7 +2,11 @@ import { ISingleIconProps } from "../_types";
 import React from "react";
 import clsx from "clsx";
 
-export const IconX = ({ name, className, ...restProps }: ISingleIconProps) => {
+export const IconCopy = ({
+  name,
+  className,
+  ...restProps
+}: ISingleIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,8 +21,8 @@ export const IconX = ({ name, className, ...restProps }: ISingleIconProps) => {
       {...restProps}
       className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
     >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
+      <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
     </svg>
   );
 };
