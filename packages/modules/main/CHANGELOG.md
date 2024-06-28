@@ -1,5 +1,17 @@
 # @phantomthief-react/modules
 
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [57de399]
+- Updated dependencies [2c30a5d]
+- Updated dependencies [fac7aa1]
+- Updated dependencies [884e64f]
+  - @phantomthief-react/modules.responsive-topnav@0.0.6
+  - @phantomthief-react/modules.error-boundary@0.0.8
+  - @phantomthief-react/modules.authenticator@0.0.8
+
 ## 0.0.6
 
 ### Patch Changes

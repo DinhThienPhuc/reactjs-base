@@ -1,5 +1,11 @@
 # @phantomthief-react/hooks
 
+## 0.0.6
+
+### Patch Changes
+
+- @phantomthief-react/hooks.block@0.0.8
+
 ## 0.0.5
 
 ### Patch Changes

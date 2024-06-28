@@ -1,5 +1,34 @@
 # @phantomthief-react/components
 
+## 0.0.7
+
+### Patch Changes
+
+- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 2c30a5d: Update dependencies and add new constants for radio-group and label components
+- fac7aa1: U
+- 884e64f: Remove unused react-feather dependency from package.json files
+- Updated dependencies [57de399]
+- Updated dependencies [2c30a5d]
+- Updated dependencies [8a005f7]
+- Updated dependencies [d0823ae]
+- Updated dependencies [f1bd2bc]
+- Updated dependencies [fac7aa1]
+- Updated dependencies [884e64f]
+  - @phantomthief-react/components.loading-ellipsis@0.0.9
+  - @phantomthief-react/components.hamburger-menu@0.0.5
+  - @phantomthief-react/components.loading-ripple@0.0.9
+  - @phantomthief-react/components.radio-group@0.0.2
+  - @phantomthief-react/components.text-field@0.0.5
+  - @phantomthief-react/components.typography@0.0.11
+  - @phantomthief-react/components.navbar@0.0.5
+  - @phantomthief-react/components.portal@0.0.6
+  - @phantomthief-react/components.select@0.0.9
+  - @phantomthief-react/components.switch@0.0.9
+  - @phantomthief-react/components.icon@0.0.2
+  - @phantomthief-react/components.button@0.0.9
+  - @phantomthief-react/components.flex-box@0.0.12
+
 ## 0.0.6
 
 ### Patch Changes

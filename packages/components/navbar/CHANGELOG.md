@@ -1,5 +1,14 @@
 # @phantomthief-react/components.navbar
 
+## 0.0.5
+
+### Patch Changes
+
+- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 2c30a5d: Update dependencies and add new constants for radio-group and label components
+- fac7aa1: U
+- 884e64f: Remove unused react-feather dependency from package.json files
+
 ## 0.0.4
 
 ### Patch Changes

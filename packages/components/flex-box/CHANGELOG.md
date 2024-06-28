@@ -1,5 +1,11 @@
 # @phantomthief-react/components.flex-box
 
+## 0.0.12
+
+### Patch Changes
+
+- @phantomthief-react/utils@0.0.6
+
 ## 0.0.11
 
 ### Patch Changes
