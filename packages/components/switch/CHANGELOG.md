@@ -1,5 +1,16 @@
 # @phantomthief-react/components.switch
 
+## 0.0.9
+
+### Patch Changes
+
+- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 2c30a5d: Update dependencies and add new constants for radio-group and label components
+- fac7aa1: U
+- 884e64f: Remove unused react-feather dependency from package.json files
+  - @phantomthief-react/utils@0.0.6
+  - @phantomthief-react/hooks@0.0.6
+
 ## 0.0.8
 
 ### Patch Changes

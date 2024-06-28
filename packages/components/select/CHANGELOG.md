@@ -1,5 +1,26 @@
 # @phantomthief-react/components.select
 
+## 0.0.9
+
+### Patch Changes
+
+- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 2c30a5d: Update dependencies and add new constants for radio-group and label components
+- 8a005f7: Add radio-group component and update Accordion module, add base props compare helper
+- fac7aa1: U
+- 884e64f: Remove unused react-feather dependency from package.json files
+- Updated dependencies [57de399]
+- Updated dependencies [2c30a5d]
+- Updated dependencies [fac7aa1]
+- Updated dependencies [884e64f]
+  - @phantomthief-react/components.post-adorment@0.0.9
+  - @phantomthief-react/components.helper-text@0.0.10
+  - @phantomthief-react/components.portal@0.0.6
+  - @phantomthief-react/components.label@0.0.10
+  - @phantomthief-react/components.icon@0.0.2
+  - @phantomthief-react/utils@0.0.6
+  - @phantomthief-react/hooks@0.0.6
+
 ## 0.0.8
 
 ### Patch Changes

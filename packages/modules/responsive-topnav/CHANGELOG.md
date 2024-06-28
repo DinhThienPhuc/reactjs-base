@@ -1,5 +1,21 @@
 # @phantomthief-react/modules.responsive-topnav
 
+## 0.0.6
+
+### Patch Changes
+
+- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 2c30a5d: Update dependencies and add new constants for radio-group and label components
+- fac7aa1: U
+- 884e64f: Remove unused react-feather dependency from package.json files
+- Updated dependencies [57de399]
+- Updated dependencies [2c30a5d]
+- Updated dependencies [fac7aa1]
+- Updated dependencies [884e64f]
+  - @phantomthief-react/components@0.0.7
+  - @phantomthief-react/utils@0.0.6
+  - @phantomthief-react/hooks@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

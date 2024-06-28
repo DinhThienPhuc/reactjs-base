@@ -1,5 +1,11 @@
 # @phantomthief-react/services.firebase
 
+## 0.0.9
+
+### Patch Changes
+
+- @phantomthief-react/utils@0.0.6
+
 ## 0.0.8
 
 ### Patch Changes
