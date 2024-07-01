@@ -1,5 +1,12 @@
 # @phantomthief-react/components.post-adorment
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [4a063fd]
+  - @phantomthief-react/components.icon@0.0.3
+
 ## 0.0.9
 
 ### Patch Changes

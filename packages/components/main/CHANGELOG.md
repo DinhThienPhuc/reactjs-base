@@ -1,5 +1,16 @@
 # @phantomthief-react/components
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [4a063fd]
+  - @phantomthief-react/components.flex-box@0.0.13
+  - @phantomthief-react/components.icon@0.0.3
+  - @phantomthief-react/components.radio-group@0.0.3
+  - @phantomthief-react/components.select@0.0.10
+  - @phantomthief-react/components.text-field@0.0.6
+
 ## 0.0.7
 
 ### Patch Changes

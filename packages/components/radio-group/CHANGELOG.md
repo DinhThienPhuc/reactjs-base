@@ -1,5 +1,12 @@
 # @phantomthief-react/components.radio-group
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [4a063fd]
+  - @phantomthief-react/components.flex-box@0.0.13
+
 ## 0.0.2
 
 ### Patch Changes

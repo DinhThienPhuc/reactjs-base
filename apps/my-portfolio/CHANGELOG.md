@@ -1,5 +1,13 @@
 # my-portfolio
 
+## 0.0.6
+
+### Patch Changes
+
+- 4a063fd: Update home page layout and add new components
+  - @phantomthief-react/components@0.0.8
+  - @phantomthief-react/modules@0.0.8
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @phantomthief-react/modules.accordion
 
+## 0.0.5
+
+### Patch Changes
+
+- @phantomthief-react/components@0.0.8
+
 ## 0.0.4
 
 ### Patch Changes

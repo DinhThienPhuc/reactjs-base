@@ -1,5 +1,11 @@
 # @phantomthief-react/components.text-field
 
+## 0.0.6
+
+### Patch Changes
+
+- @phantomthief-react/components.post-adorment@0.0.10
+
 ## 0.0.5
 
 ### Patch Changes

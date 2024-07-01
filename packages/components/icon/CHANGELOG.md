@@ -1,5 +1,11 @@
 # @phantomthief-react/components.icon
 
+## 0.0.3
+
+### Patch Changes
+
+- 4a063fd: Update home page layout and add new components
+
 ## 0.0.2
 
 ### Patch Changes
