@@ -13,7 +13,7 @@
     "start": "ts-node ./scripts/run-pnpm-command.ts --stream --parallel start",
     "start:all": "pnpm --filter \"./apps/**\" --stream --parallel start",
     "build": "ts-node ./scripts/run-pnpm-command.ts -r build",
-    "build:all": "pnpm --filter \"./packages/**/**\" -r build",
+    "build:all": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r build",
     "publish": "ts-node ./scripts/run-pnpm-command.ts -r publish --access public --no-git-checks",
     "publish:all": "pnpm --filter \"./packages/**/**\" -r publish --access public --no-git-checks",
     "rm:packages": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rimraf ./node_modules && rimraf ./pnpm-lock.yaml",
