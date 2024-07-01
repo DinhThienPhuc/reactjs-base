@@ -24,8 +24,13 @@ const Styled = {
       height: 3px;
     }
 
+    & .responsive-topnav-item:first-of-type {
+      border-bottom: 1px solid #1e2d3d;
+    }
+
     &.responsive-topnav--mobile-expanded .responsive-topnav-item {
       border-top-color: #1e2d3d;
+      border-bottom: none;
     }
   `,
 };
