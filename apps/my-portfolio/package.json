@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@phantomthief-react/components": "workspace:*",
-    "@phantomthief-react/hooks": "workspace:*",
-    "@phantomthief-react/modules": "workspace:*",
-    "@phantomthief-react/services": "workspace:*",
-    "@phantomthief-react/utils": "workspace:*",
+    "@phantomthief-react/components": "0.0.8",
+    "@phantomthief-react/hooks": "0.0.6",
+    "@phantomthief-react/modules": "0.0.8",
+    "@phantomthief-react/services": "0.0.6",
+    "@phantomthief-react/utils": "0.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
