@@ -23,10 +23,14 @@ jobs:
           npm i
           npm run build
 
+      - name: Bypass jekyll
+        run: touch "apps/my-portfolio/dist/.nojekyll"
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: apps/my-portfolio/dist # The folder the action should deploy.
           repository-name: DinhThienPhuc/dinhthienphuc.github.io # The repository the action should deploy to.
+          clean: true # Automatically remove old files from the deployment branch
           token: ${{ secrets.PORTFOLIO_GITHUB_TOKEN }} # The GITHUB_TOKEN secret
