@@ -10,6 +10,7 @@ export interface IFlexBoxProps
   flexDirection?: Property.FlexDirection;
   variant?: keyof JSX.IntrinsicElements;
   gap?: Property.Gap;
+  wrap?: Property.FlexWrap;
 }
 
 export interface IStyledFlexBoxProps {
@@ -17,4 +18,5 @@ export interface IStyledFlexBoxProps {
   $justifyContent?: Property.JustifyContent;
   $flexDirection?: Property.FlexDirection;
   $gap?: Property.Gap;
+  $wrap?: Property.FlexWrap;
 }
