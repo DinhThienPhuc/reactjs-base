@@ -12,6 +12,7 @@ const Styled = {
     border: solid 1px #1e2d3d;
     background-color: #011627;
     height: calc(100vh - 30px);
+    overflow: hidden;
   `,
   Content: styled.div`
     display: flex;

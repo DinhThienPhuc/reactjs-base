@@ -1,8 +1,13 @@
+import { Typography } from "@phantomthief-react/components";
 import styled from "styled-components";
 
 const Styled = {
   Container: styled.div`
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     &::before {
       content: "";
@@ -33,6 +38,20 @@ const Styled = {
       filter: blur(174px);
       background-color: #4d5bce;
     }
+  `,
+  Name: styled(Typography)`
+    margin: 10px 0px 5px;
+  `,
+  Role: styled(Typography)`
+    display: inline-flex;
+    align-items: center;
+  `,
+  RoleText: styled.span`
+    margin-left: 16px;
+  `,
+  FindMe: styled(Typography)`
+    display: inline-block;
+    margin-bottom: 16px;
   `,
 };
 
