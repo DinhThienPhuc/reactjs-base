@@ -26,6 +26,7 @@
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
   "dependencies": {
+    "@phantomthief-react/modules.accordion": "workspace:*",
     "@phantomthief-react/modules.authenticator": "workspace:*",
     "@phantomthief-react/modules.error-boundary": "workspace:*",
     "@phantomthief-react/modules.responsive-topnav": "workspace:*"

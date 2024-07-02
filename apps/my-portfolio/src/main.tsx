@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
+import "../public/styles/_reset.css";
 import "../public/styles/global.css";
-import "../public/styles/reset.css";
 import App from "./index.tsx";
 import React from "react";
 

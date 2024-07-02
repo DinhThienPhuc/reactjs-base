@@ -18,7 +18,7 @@ const Styled = {
       top: 69px;
       padding: 12px 41px 81px 42px;
       transform: rotate(-94deg);
-      opacity: 0.4;
+      opacity: 0.3;
       -webkit-filter: blur(174px);
       filter: blur(174px);
       background-color: #43d9ad;
