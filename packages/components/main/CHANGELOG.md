@@ -1,5 +1,14 @@
 # @phantomthief-react/components
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [5f53adb]
+  - @phantomthief-react/components.icon@0.0.4
+  - @phantomthief-react/components.select@0.0.11
+  - @phantomthief-react/components.text-field@0.0.7
+
 ## 0.0.8
 
 ### Patch Changes
