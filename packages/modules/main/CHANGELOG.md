@@ -1,5 +1,14 @@
 # @phantomthief-react/modules
 
+## 0.0.9
+
+### Patch Changes
+
+- 5f53adb: Add react-hook-form dependency and update styles
+- Updated dependencies [5f53adb]
+  - @phantomthief-react/modules.accordion@0.0.6
+  - @phantomthief-react/modules.responsive-topnav@0.0.8
+
 ## 0.0.8
 
 ### Patch Changes

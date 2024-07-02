@@ -1,5 +1,14 @@
 # my-portfolio
 
+## 0.0.7
+
+### Patch Changes
+
+- 5f53adb: Add react-hook-form dependency and update styles
+- Updated dependencies [5f53adb]
+  - @phantomthief-react/modules@0.0.9
+  - @phantomthief-react/components@0.0.9
+
 ## 0.0.6
 
 ### Patch Changes
