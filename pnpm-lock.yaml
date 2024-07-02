@@ -188,20 +188,20 @@ importers:
   apps/my-portfolio:
     dependencies:
       "@phantomthief-react/components":
-        specifier: workspace:*
-        version: link:../../packages/components/main
+        specifier: 0.0.9
+        version: 0.0.9(j7i2vpgsficbujvkphcr7idlwq)
       "@phantomthief-react/hooks":
-        specifier: workspace:*
-        version: link:../../packages/hooks/main
+        specifier: 0.0.6
+        version: 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
       "@phantomthief-react/modules":
-        specifier: workspace:*
-        version: link:../../packages/modules/main
+        specifier: 0.0.9
+        version: 0.0.9(@phantomthief-react/components@0.0.9(j7i2vpgsficbujvkphcr7idlwq))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react-router-dom@6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)(zustand@4.5.4(@types/react@18.3.3)(react@18.3.1))
       "@phantomthief-react/services":
-        specifier: workspace:*
-        version: link:../../packages/services/main
+        specifier: 0.0.6
+        version: 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(firebase@10.12.2)(i18next@23.11.5)(react-i18next@14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
       "@phantomthief-react/utils":
-        specifier: workspace:*
-        version: link:../../packages/utils/main
+        specifier: 0.0.6
+        version: 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -3529,6 +3529,498 @@ packages:
         tarball: https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz,
       }
     engines: { node: ">= 8" }
+
+  "@phantomthief-react/components.button@0.0.9":
+    resolution:
+      {
+        integrity: sha512-sQpzrCeBCeL7ceN5z/pCcOW5JDcXe8U2JUJ5oEn9HBaiaUMMfH9pCsBHVDk6NKnZeGA0JPqc75qS4aJzrJD2iw==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.button/-/components.button-0.0.9.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components.loading-ripple": 0.0.9
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.flex-box@0.0.13":
+    resolution:
+      {
+        integrity: sha512-0Tx6QnBVbA5IG3DZCTzgVlbbz0XSUQ87/yhZRqPJ5t0h6qsglLM1681iV5wFvFTI7GD0IVxzynexRkmmRZYFRg==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.flex-box/-/components.flex-box-0.0.13.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      csstype: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.hamburger-menu@0.0.5":
+    resolution:
+      {
+        integrity: sha512-UDoFmXRnG2S3Vf8Fg2SCL0IJRncfb4u4w/JaXWUSh2Hb8+SYWTzSBLebdRQh7Ju4a75tI1DZiJgQD1HxuHgN3g==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.hamburger-menu/-/components.hamburger-menu-0.0.5.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/hooks": 0.0.6
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.helper-text@0.0.10":
+    resolution:
+      {
+        integrity: sha512-Xet8hBPWlV5qJYNXDd6CcH43l8XwpkO4YNw8XMd0poxqnG70ZerLXdwc80JYfLVbJWQg28u/ky0lppFdqIl5fQ==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.helper-text/-/components.helper-text-0.0.10.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.icon@0.0.4":
+    resolution:
+      {
+        integrity: sha512-O/INczuc3YNJLpitQfTm0CtYhPwrVWiOPOo8S8K1m3fHpk4NrmYPmaQ7bpXoyn2OnGxNAVGflajALHQblM7j2A==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.icon/-/components.icon-0.0.4.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components.loading-ellipsis": 0.0.9
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.label@0.0.10":
+    resolution:
+      {
+        integrity: sha512-jHsY4gZvRzppGy7hwk/L2PYSIVSP2VSW40LblfVoVmkVONHFQQVQpweYpZCTCOj7EArddG872hFPoZ2UoaOo8w==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.label/-/components.label-0.0.10.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.loading-ellipsis@0.0.9":
+    resolution:
+      {
+        integrity: sha512-n4pKU3BAHdQP8bkWyAkXciJlMhKU9/cTndWKL2rnOf/Pq1pBujBr3uXuga8vP+Fjg62ZToMCjPG4NGbx4ABK0A==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.loading-ellipsis/-/components.loading-ellipsis-0.0.9.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.loading-ripple@0.0.9":
+    resolution:
+      {
+        integrity: sha512-NDiFcEMT7UmQKGACJ6FOBVeMEMQb34a5Diw+2h1kxlfuTfgiNtCCmFKVZs2isrXxihrHlHhIxR/Y4yzYqqj7aQ==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.loading-ripple/-/components.loading-ripple-0.0.9.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.navbar@0.0.5":
+    resolution:
+      {
+        integrity: sha512-HCgwYxPrh7IKvP7xPp688k1ygXIrhrSxzuN5MZXYEHBTdQMLfGL1hYcsgw9QNNN6IiNDBDe/Kr10WcNG/YYggQ==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.navbar/-/components.navbar-0.0.5.tgz,
+      }
+    peerDependencies:
+      clsx: "*"
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.portal@0.0.6":
+    resolution:
+      {
+        integrity: sha512-k3oJMd2UM/uzAUg8ha1F1IHmCSPK7SyG587O1y8dQtCH/RPmTdGNb86rsMc4j+ZJM0eN4ei8snSV4tX5pWQbOA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.portal/-/components.portal-0.0.6.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      react: "*"
+      react-dom: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.post-adorment@0.0.11":
+    resolution:
+      {
+        integrity: sha512-H3UmzZJ4FXzkVhPacTs9fTqiRe8Vwgb62wJPayM3AJZA99mo4T3HFZpuaxyosw53BQvpTLU6S2kn2zlKY66KUQ==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.post-adorment/-/components.post-adorment-0.0.11.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components.icon": 0.0.4
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.pre-adorment@0.0.9":
+    resolution:
+      {
+        integrity: sha512-RgwX4XJKBKhtuxLl2ZYPF7/IYUB4xSP9DyFsEFkkbM3iyxucINp8u2h8fnLpAA+2IIGz78uE4i/zfD/UpX3IwA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.pre-adorment/-/components.pre-adorment-0.0.9.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.radio-group@0.0.3":
+    resolution:
+      {
+        integrity: sha512-WL3U9r4RNtljEtA6MytRj6Qb3RQTkheb3Lu+bo8QTAfR/RHOhxMARNpxCIcsSZwd++dirppxMf/RmUyHuRr6ww==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.radio-group/-/components.radio-group-0.0.3.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components.flex-box": 0.0.13
+      "@phantomthief-react/hooks": 0.0.6
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.select@0.0.11":
+    resolution:
+      {
+        integrity: sha512-jv7SynnCQw3lj2XFo8wOMXiAJud+/wOFJe4BEYylqraQrlmH3S6SlKFvkhKYqvIAIDVwWFfH/nxyDgALMn86Cw==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.select/-/components.select-0.0.11.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components.helper-text": 0.0.10
+      "@phantomthief-react/components.icon": 0.0.4
+      "@phantomthief-react/components.label": 0.0.10
+      "@phantomthief-react/components.portal": 0.0.6
+      "@phantomthief-react/components.post-adorment": 0.0.11
+      "@phantomthief-react/hooks": 0.0.6
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.switch@0.0.9":
+    resolution:
+      {
+        integrity: sha512-M4kw4BEAw7vOu5lU4JmlmYLPyghXFLKp6fpUdEbCIMKopSfBXTwwblAzsLQKbAowXLwscijxxnEtcOPpbr6ufw==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.switch/-/components.switch-0.0.9.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/hooks": 0.0.6
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.text-field@0.0.7":
+    resolution:
+      {
+        integrity: sha512-H4lYj0FlKYbacrFz4h0c0rHeLRkmFyR+bfRaxfaeUNIVpV/Tqyw50iwW/Bhscsk7PhqIaf3as7+M5UOOA36kbQ==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.text-field/-/components.text-field-0.0.7.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components.helper-text": 0.0.10
+      "@phantomthief-react/components.label": 0.0.10
+      "@phantomthief-react/components.post-adorment": 0.0.11
+      "@phantomthief-react/components.pre-adorment": 0.0.9
+      "@phantomthief-react/hooks": 0.0.6
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components.typography@0.0.11":
+    resolution:
+      {
+        integrity: sha512-a760Iphbgyj7802VKBrVNIJ1+UiIFhGaxOpgfS2wZ0/PC/qkhyxCl+ke9ROAKEJLCLe8qEbzBeYIrBV4xYQTjA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components.typography/-/components.typography-0.0.11.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/components@0.0.9":
+    resolution:
+      {
+        integrity: sha512-lPql6FQabam/6dAo04ylMX433I+2fCa0zdDYHmWLGAdRq3uSYVc9Otzqfpn9Iq/zylWsF6WibsBBHCkBtQDFOQ==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/components/-/components-0.0.9.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.block@0.0.8":
+    resolution:
+      {
+        integrity: sha512-HS52aJHK/xYWItIeJFJRAI/6s7nfqALGjrmiU+EeiytLwBlRI3v8FvYdTjExbxYHi+gKOgkyBW/hBY1asdAInw==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.block/-/hooks.block-0.0.8.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.event-listener@0.0.3":
+    resolution:
+      {
+        integrity: sha512-fiY+jBuUCVC+YQDRsZjiiO1Prsfg7RiLyjqYHtF6RFPoIbAo3Fp0bVgguf3OVE+AilnrUUr4U/VHLI/5ryXwnw==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.event-listener/-/hooks.event-listener-0.0.3.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/hooks.isomorphic-layout-effect": 0.0.3
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.focus-with-callback@0.0.3":
+    resolution:
+      {
+        integrity: sha512-2RVUOQuyyB9UjXsy7tYca6EjHuV2U2vIK1UMp4aJXy4hPvuR/L/kCpdaeo4jXnEWOYz7WLZrKAYk0oFY3AXkvA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.focus-with-callback/-/hooks.focus-with-callback-0.0.3.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.isomorphic-layout-effect@0.0.3":
+    resolution:
+      {
+        integrity: sha512-qgsqD4nrbuX4clXS8+t/P9nOnMjyDNn7e457FaMP1Va6dY9BEtIkGJ5VHzx+BpcoHlxIO8GzZ/n+J6o7dI6P6w==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.isomorphic-layout-effect/-/hooks.isomorphic-layout-effect-0.0.3.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.media-query@0.0.3":
+    resolution:
+      {
+        integrity: sha512-9aqit2pc/MDnv1cZFV+9RrdnPcmYxM6njZAX+c6fMudQGVrSFvciJLKe1XpSsYdRLGpwMj1y8SXqlbR/KjLIbA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.media-query/-/hooks.media-query-0.0.3.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.not-click-on-elements@0.0.3":
+    resolution:
+      {
+        integrity: sha512-zGnTr98mjdLe9dO0bxIQSASchdzXb7woj9iBGA6ioHJHQA/4RfjcabLDDbfNzvCKNVCaM5LpXLFK0I5/27KnlA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.not-click-on-elements/-/hooks.not-click-on-elements-0.0.3.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/hooks.event-listener": 0.0.3
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.on-mounted@0.0.3":
+    resolution:
+      {
+        integrity: sha512-R5jnTgAPQncCONIIlmdmepKKUqPESfzXMC3YkHx2rqZ8ICOrULmeh+R/VqJZXHHN/P4qQHrboABs3H384Z/bng==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.on-mounted/-/hooks.on-mounted-0.0.3.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks.sync-state-with-props@0.0.2":
+    resolution:
+      {
+        integrity: sha512-D0rk5BVaRchgt67eOIu+RYXjVGnpJ2Rys5YBCbjeq3jZq8Hb8ckElbjlgnT3J5wD9jHumUeJo96qyAHYggpPFg==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks.sync-state-with-props/-/hooks.sync-state-with-props-0.0.2.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/hooks@0.0.6":
+    resolution:
+      {
+        integrity: sha512-Kogfts5kINLUBscD+qJkBPGAcfV7zv10ic5L/xHz/cUZ2e4XJsdzQRmmmxBH/yenLSShRghGPqUC3wdAI+FCmA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/hooks/-/hooks-0.0.6.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/modules.accordion@0.0.6":
+    resolution:
+      {
+        integrity: sha512-rDFtlXTswDlRQNCV2Au69Q/3zgr8Sr/gt/3EQTX9S81/Bff572PLzCl8SEk4EXLBpWeSn9J9uAcW+SbrXS9P9A==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/modules.accordion/-/modules.accordion-0.0.6.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components": 0.0.9
+      "@phantomthief-react/hooks": 0.0.6
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+      zustand: "*"
+
+  "@phantomthief-react/modules.authenticator@0.0.8":
+    resolution:
+      {
+        integrity: sha512-d3lB+3/Cq2RomDETpG3JmyiH7FVtb168qxf3NH9DMqC/JyOQmQlKRC3MoISAlDBzNVENxbBQcMUyk6POUUAs1Q==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/modules.authenticator/-/modules.authenticator-0.0.8.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/hooks": 0.0.6
+      react: "*"
+      react-router-dom: "*"
+      typescript: "*"
+
+  "@phantomthief-react/modules.error-boundary@0.0.8":
+    resolution:
+      {
+        integrity: sha512-ZFchtxZDVCpxMREYtLsbUM2Aniqn+OX/1qZuonwwttR+00vtykic4hphFUxM1BAMAzJUoJcx5dM/e/kPwJJ3Ig==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/modules.error-boundary/-/modules.error-boundary-0.0.8.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/modules.responsive-topnav@0.0.8":
+    resolution:
+      {
+        integrity: sha512-7aZa1v5oXVVF8sDproHVefQmB9vwZIQsjIzYYKov1Iv+TmuXIhh3T6LAa5LwjeY0fiQLJgSjcof4T67nz8fYfA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/modules.responsive-topnav/-/modules.responsive-topnav-0.0.8.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/components": 0.0.9
+      "@phantomthief-react/hooks": 0.0.6
+      "@phantomthief-react/utils": 0.0.6
+      clsx: "*"
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/modules@0.0.9":
+    resolution:
+      {
+        integrity: sha512-p4dcbAgcZlfFyePbiVT23FJdgcuaXPkVTEeEr0chavhdjwzDdwpQNOWNKsEw5q/BcN8ajByvDAJy83koRaTmaA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/modules/-/modules-0.0.9.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/services.firebase@0.0.9":
+    resolution:
+      {
+        integrity: sha512-9lt5vD6f2Lr9sZoJN07XQkFnl4HsClBAmmHQ37z0i3J+XaMqv51U3JsX0CilTDs6indjNEv3YbE4Vmk9AJ55eg==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/services.firebase/-/services.firebase-0.0.9.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      firebase: "*"
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/services.i18n@0.0.8":
+    resolution:
+      {
+        integrity: sha512-Tl2Of/lvxPJynFLZJV+Dbht7QgbToMQukeIrjNFIRVk1aVtP8dbCF1i8401lR8JWU4+gMKjBu7A/ar04aP6WgA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/services.i18n/-/services.i18n-0.0.8.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      i18next: "*"
+      react: "*"
+      react-i18next: "*"
+      typescript: "*"
+
+  "@phantomthief-react/services.styled-theme@0.0.8":
+    resolution:
+      {
+        integrity: sha512-+A8ZcVGK+GMvMwlCo72uJzsegUR95DkohhFLidHV12+T4w8HhdpYhn16DJS2swKPWTCDt3+HcGd/Vv3Kctj1MA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/services.styled-theme/-/services.styled-theme-0.0.8.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils": 0.0.6
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/services@0.0.6":
+    resolution:
+      {
+        integrity: sha512-jT4goL7VlJij9p1w0fE1xAQHeVt1Y5PEWB8FZXbgzrB4ADDMbd8jxKWTLb3TJwapZy8p99d+cV3g2fMfhusPMg==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/services/-/services-0.0.6.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
+
+  "@phantomthief-react/utils.constants@0.0.4":
+    resolution:
+      {
+        integrity: sha512-2SdRH+peSxuEXUeLvHos6IVeK0A+7ZaUfZ6xATecI+BQUIg+k2VljJ1jT6JfgoxIOtDQJP1BpacPHk4jpKf4ZA==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/utils.constants/-/utils.constants-0.0.4.tgz,
+      }
+
+  "@phantomthief-react/utils.definations@0.0.5":
+    resolution:
+      {
+        integrity: sha512-pEAyDEEmSj3ifE3rMx5OcUAsgIRPvthKx2qjdb8PPvX7h5rer1rYEf3FH6Ptail15lAlSq5PWUuybDm1vOGYEg==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/utils.definations/-/utils.definations-0.0.5.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils.constants": 0.0.4
+      react: "*"
+      react-hook-form: "*"
+      typescript: "*"
+
+  "@phantomthief-react/utils.helpers@0.0.8":
+    resolution:
+      {
+        integrity: sha512-vUacJS2CEk8vF7wqK9yu0RWno7mFzbwwp5DoUKW+nDFOd7i6TWuWLilOFRp//ZA49k2hcMu5k9hMOPHED0EmQQ==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/utils.helpers/-/utils.helpers-0.0.8.tgz,
+      }
+    peerDependencies:
+      "@phantomthief-react/utils.constants": 0.0.4
+      "@phantomthief-react/utils.definations": 0.0.5
+      react: "*"
+      styled-components: "*"
+      typescript: "*"
+
+  "@phantomthief-react/utils@0.0.6":
+    resolution:
+      {
+        integrity: sha512-w+GdhEeNy4lCuBxTA53bTaedkB3zpf5vVhg46RfrMmmBu5ZhvdVSCNu0rdy63zwnU/4MbS5wPv06mkQ8Hmsbrw==,
+        tarball: https://registry.npmjs.org/@phantomthief-react/utils/-/utils-0.0.6.tgz,
+      }
+    peerDependencies:
+      react: "*"
+      typescript: "*"
 
   "@pkgjs/parseargs@0.11.0":
     resolution:
@@ -13772,6 +14264,359 @@ snapshots:
     dependencies:
       "@nodelib/fs.scandir": 2.1.5
       fastq: 1.17.1
+
+  "@phantomthief-react/components.button@0.0.9(@phantomthief-react/components.loading-ripple@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/components.loading-ripple": 0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.flex-box@0.0.13(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(csstype@3.1.3)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      csstype: 3.1.3
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.hamburger-menu@0.0.5(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.helper-text@0.0.10(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.icon@0.0.4(@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/components.loading-ellipsis": 0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.label@0.0.10(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.loading-ripple@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.navbar@0.0.5(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      clsx: 2.1.1
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.portal@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.post-adorment@0.0.11(@phantomthief-react/components.icon@0.0.4(@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/components.icon": 0.0.4(@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.pre-adorment@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.radio-group@0.0.3(@phantomthief-react/components.flex-box@0.0.13(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(csstype@3.1.3)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/components.flex-box": 0.0.13(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(csstype@3.1.3)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.select@0.0.11(pcuj6jkbwmikgxlcbkbyf5fxr4)":
+    dependencies:
+      "@phantomthief-react/components.helper-text": 0.0.10(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.icon": 0.0.4(@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/components.label": 0.0.10(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.portal": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/components.post-adorment": 0.0.11(@phantomthief-react/components.icon@0.0.4(@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.switch@0.0.9(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.text-field@0.0.7(qcdea2p2x6cf7zeptxn4lqfsge)":
+    dependencies:
+      "@phantomthief-react/components.helper-text": 0.0.10(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.label": 0.0.10(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.post-adorment": 0.0.11(@phantomthief-react/components.icon@0.0.4(@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.pre-adorment": 0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components.typography@0.0.11(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/components@0.0.9(j7i2vpgsficbujvkphcr7idlwq)":
+    dependencies:
+      "@phantomthief-react/components.button": 0.0.9(@phantomthief-react/components.loading-ripple@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.flex-box": 0.0.13(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(csstype@3.1.3)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.hamburger-menu": 0.0.5(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.icon": 0.0.4(@phantomthief-react/components.loading-ellipsis@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/components.loading-ellipsis": 0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.loading-ripple": 0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.navbar": 0.0.5(clsx@2.1.1)(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/components.portal": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/components.radio-group": 0.0.3(@phantomthief-react/components.flex-box@0.0.13(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(csstype@3.1.3)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.select": 0.0.11(pcuj6jkbwmikgxlcbkbyf5fxr4)
+      "@phantomthief-react/components.switch": 0.0.9(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/components.text-field": 0.0.7(qcdea2p2x6cf7zeptxn4lqfsge)
+      "@phantomthief-react/components.typography": 0.0.11(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+    transitivePeerDependencies:
+      - "@phantomthief-react/components.helper-text"
+      - "@phantomthief-react/components.label"
+      - "@phantomthief-react/components.post-adorment"
+      - "@phantomthief-react/components.pre-adorment"
+      - "@phantomthief-react/hooks"
+      - "@phantomthief-react/utils"
+      - clsx
+      - csstype
+      - react-dom
+      - styled-components
+
+  "@phantomthief-react/hooks.block@0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks.event-listener@0.0.3(@phantomthief-react/hooks.isomorphic-layout-effect@0.0.3(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/hooks.isomorphic-layout-effect": 0.0.3(react@18.3.1)(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks.focus-with-callback@0.0.3(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks.isomorphic-layout-effect@0.0.3(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks.media-query@0.0.3(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks.not-click-on-elements@0.0.3(@phantomthief-react/hooks.event-listener@0.0.3(@phantomthief-react/hooks.isomorphic-layout-effect@0.0.3(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/hooks.event-listener": 0.0.3(@phantomthief-react/hooks.isomorphic-layout-effect@0.0.3(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks.on-mounted@0.0.3(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks.sync-state-with-props@0.0.2(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/hooks.block": 0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/hooks.event-listener": 0.0.3(@phantomthief-react/hooks.isomorphic-layout-effect@0.0.3(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/hooks.focus-with-callback": 0.0.3(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/hooks.isomorphic-layout-effect": 0.0.3(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/hooks.media-query": 0.0.3(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/hooks.not-click-on-elements": 0.0.3(@phantomthief-react/hooks.event-listener@0.0.3(@phantomthief-react/hooks.isomorphic-layout-effect@0.0.3(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/hooks.on-mounted": 0.0.3(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/hooks.sync-state-with-props": 0.0.2(react@18.3.1)(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+    transitivePeerDependencies:
+      - "@phantomthief-react/utils"
+
+  "@phantomthief-react/modules.accordion@0.0.6(@phantomthief-react/components@0.0.9(j7i2vpgsficbujvkphcr7idlwq))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)(zustand@4.5.4(@types/react@18.3.3)(react@18.3.1))":
+    dependencies:
+      "@phantomthief-react/components": 0.0.9(j7i2vpgsficbujvkphcr7idlwq)
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+      zustand: 4.5.4(@types/react@18.3.3)(react@18.3.1)
+
+  "@phantomthief-react/modules.authenticator@0.0.8(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(react-router-dom@6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      react: 18.3.1
+      react-router-dom: 6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/modules.error-boundary@0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/modules.responsive-topnav@0.0.8(@phantomthief-react/components@0.0.9(j7i2vpgsficbujvkphcr7idlwq))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/components": 0.0.9(j7i2vpgsficbujvkphcr7idlwq)
+      "@phantomthief-react/hooks": 0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      clsx: 2.1.1
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/modules@0.0.9(@phantomthief-react/components@0.0.9(j7i2vpgsficbujvkphcr7idlwq))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react-router-dom@6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)(zustand@4.5.4(@types/react@18.3.3)(react@18.3.1))":
+    dependencies:
+      "@phantomthief-react/modules.accordion": 0.0.6(@phantomthief-react/components@0.0.9(j7i2vpgsficbujvkphcr7idlwq))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)(zustand@4.5.4(@types/react@18.3.3)(react@18.3.1))
+      "@phantomthief-react/modules.authenticator": 0.0.8(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(react-router-dom@6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/modules.error-boundary": 0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      "@phantomthief-react/modules.responsive-topnav": 0.0.8(@phantomthief-react/components@0.0.9(j7i2vpgsficbujvkphcr7idlwq))(@phantomthief-react/hooks@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(typescript@5.5.2))(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(clsx@2.1.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+    transitivePeerDependencies:
+      - "@phantomthief-react/components"
+      - "@phantomthief-react/hooks"
+      - "@phantomthief-react/utils"
+      - clsx
+      - react-router-dom
+      - styled-components
+      - zustand
+
+  "@phantomthief-react/services.firebase@0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(firebase@10.12.2)(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      firebase: 10.12.2
+      react: 18.3.1
+      typescript: 5.5.2
+
+  "@phantomthief-react/services.i18n@0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(i18next@23.11.5)(react-i18next@14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      i18next: 23.11.5
+      react: 18.3.1
+      react-i18next: 14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/services.styled-theme@0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils": 0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/services@0.0.6(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(firebase@10.12.2)(i18next@23.11.5)(react-i18next@14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/services.firebase": 0.0.9(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(firebase@10.12.2)(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/services.i18n": 0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(i18next@23.11.5)(react-i18next@14.1.2(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/services.styled-theme": 0.0.8(@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+    transitivePeerDependencies:
+      - "@phantomthief-react/utils"
+      - firebase
+      - i18next
+      - react-i18next
+      - styled-components
+
+  "@phantomthief-react/utils.constants@0.0.4": {}
+
+  "@phantomthief-react/utils.definations@0.0.5(@phantomthief-react/utils.constants@0.0.4)(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils.constants": 0.0.4
+      react: 18.3.1
+      react-hook-form: 7.52.0(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/utils.helpers@0.0.8(@phantomthief-react/utils.constants@0.0.4)(@phantomthief-react/utils.definations@0.0.5(@phantomthief-react/utils.constants@0.0.4)(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils.constants": 0.0.4
+      "@phantomthief-react/utils.definations": 0.0.5(@phantomthief-react/utils.constants@0.0.4)(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
+      react: 18.3.1
+      styled-components: 6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript: 5.5.2
+
+  "@phantomthief-react/utils@0.0.6(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)":
+    dependencies:
+      "@phantomthief-react/utils.constants": 0.0.4
+      "@phantomthief-react/utils.definations": 0.0.5(@phantomthief-react/utils.constants@0.0.4)(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
+      "@phantomthief-react/utils.helpers": 0.0.8(@phantomthief-react/utils.constants@0.0.4)(@phantomthief-react/utils.definations@0.0.5(@phantomthief-react/utils.constants@0.0.4)(react-hook-form@7.52.0(react@18.3.1))(react@18.3.1)(typescript@5.5.2))(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)
+      react: 18.3.1
+      typescript: 5.5.2
+    transitivePeerDependencies:
+      - react-hook-form
+      - styled-components
 
   "@pkgjs/parseargs@0.11.0":
     optional: true
