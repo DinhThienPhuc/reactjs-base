@@ -26,7 +26,12 @@ const LayoutDefault = () => {
             </Link>
             <Link to="/" target="_blank">
               <Styled.BottomLink variant="span">
-                <Icon name="facebook" />
+                <Icon name="upwork" />
+              </Styled.BottomLink>
+            </Link>
+            <Link to="/" target="_blank">
+              <Styled.BottomLink variant="span">
+                <Icon name="rss" />
               </Styled.BottomLink>
             </Link>
           </FlexBox>

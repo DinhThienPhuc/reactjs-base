@@ -14,13 +14,18 @@ const listIconNames = [
   "chevron-left",
   "chevron-right",
   "chevron-up",
+  "contact",
   "copy",
+  "external-link",
   "facebook",
   "git-hub",
   "info",
   "linked-in",
+  "rss",
   "save",
   "settings",
+  "upwork",
+  "user-search",
   "x",
 ];
 

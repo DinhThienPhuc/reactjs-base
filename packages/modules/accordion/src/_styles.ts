@@ -56,6 +56,7 @@ export const Styled = {
     opacity: ${({ $disabled }) => ($disabled ? 0.38 : 1)};
   `,
   ItemHeaderPreIcon: styled.span`
+    display: flex;
     margin-right: 16px;
   `,
   ItemHeaderExpandIcon: styled.span<{
