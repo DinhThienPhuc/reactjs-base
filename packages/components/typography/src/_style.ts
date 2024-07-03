@@ -8,6 +8,7 @@ const typographyModify = ({
   $color,
   $bold,
   $font,
+  $align,
 }: IStyledTypographyProps) => {
   return css`
     transition: inherit;
@@ -15,6 +16,7 @@ const typographyModify = ({
     font-weight: ${$bold};
     color: ${$color};
     font-family: ${$font};
+    text-align: ${$align};
   `;
 };
 

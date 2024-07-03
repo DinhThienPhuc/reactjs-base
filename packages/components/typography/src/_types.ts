@@ -1,5 +1,6 @@
 import { IExtendable } from "@phantomthief-react/utils";
 import { HTMLAttributes, ReactNode } from "react";
+import { Property } from "csstype";
 
 export interface ITypographyProps
   extends HTMLAttributes<HTMLElement>,
@@ -11,6 +12,7 @@ export interface ITypographyProps
   color?: string;
   font?: string;
   className?: string;
+  align?: Property.TextAlign;
 }
 
 export interface IStyledTypographyProps extends IExtendable {
