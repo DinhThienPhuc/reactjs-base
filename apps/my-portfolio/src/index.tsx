@@ -3,9 +3,10 @@ import {
   createHashRouter,
   RouterProvider,
 } from "react-router-dom";
-import { LoadingEllipsis } from "@phantomthief-react/components";
+import { LoadingEllipsis, LoadingRipple } from "@phantomthief-react/components";
 import PageContacMe from "./pages/contact-me";
 import PageProjects from "./pages/projects";
+import { useEffect, useState } from "react";
 import PageAboutMe from "./pages/about-me";
 import { LayoutDefault } from "./layouts";
 import PageHome from "./pages/home";
@@ -40,11 +41,25 @@ const router =
     ? createHashRouter(routes)
     : createBrowserRouter(routes);
 
-const App = () => (
-  <RouterProvider
-    router={router}
-    fallbackElement={<LoadingEllipsis fullScreen />}
-  />
-);
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingRipple fullScreen />;
+  }
+
+  return (
+    <RouterProvider
+      router={router}
+      fallbackElement={<LoadingEllipsis fullScreen />}
+    />
+  );
+};
 
 export default App;

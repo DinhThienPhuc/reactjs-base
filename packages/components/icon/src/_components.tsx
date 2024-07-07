@@ -1,5 +1,5 @@
 import { LoadingEllipsis } from "@phantomthief-react/components.loading-ellipsis";
-import React, { useState, useEffect, ComponentType } from "react";
+import React, { useState, useEffect, ComponentType, Suspense } from "react";
 import { toCamelCase } from "@phantomthief-react/utils";
 import { IIconProps, ISingleIconProps } from "./_types";
 
@@ -20,10 +20,15 @@ export const Icon = ({ name, loadingProps, ...restProps }: IIconProps) => {
       .catch((error) => console.error(`Icon not found: ${name}`, error));
   }, [name]);
 
-  // Render the imported icon or a placeholder
-  return IconComponent ? (
-    <IconComponent {...restProps} name={name} />
-  ) : (
-    <LoadingEllipsis size={4} color="#ffffff" {...loadingProps} />
+  if (!IconComponent) {
+    return null;
+  }
+
+  return (
+    <Suspense
+      fallback={<LoadingEllipsis size={4} color="#ffffff" {...loadingProps} />}
+    >
+      <IconComponent {...restProps} name={name} />
+    </Suspense>
   );
 };

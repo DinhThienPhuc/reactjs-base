@@ -1,36 +1,6 @@
-import { IAccordionItemProps } from "@phantomthief-react/modules";
-import { Icon } from "@phantomthief-react/components";
-import { ContactForm } from "./contact-form";
+import { ProjectCard } from "../../components/project-card";
+import { FlexBox } from "@phantomthief-react/components";
 import { CommonStyled } from "../../styles";
-import { FindMeAt } from "./find-me-at";
-import Styled from "./style";
-
-const items: IAccordionItemProps[] = [
-  {
-    key: "react-base",
-    preIcon: <Icon name="react-js" width={16} height={16} />,
-    label: "React Base",
-    body: <ContactForm />,
-  },
-  {
-    key: "mine-sweeper-web-game",
-    preIcon: <Icon name="bomb" width={16} height={16} />,
-    label: "Mine Sweeper web game",
-    body: <FindMeAt />,
-  },
-  {
-    key: "pwa-splash-generator",
-    preIcon: <Icon name="script" width={16} height={16} />,
-    label: "PWA Splash generator",
-    body: <FindMeAt />,
-  },
-  {
-    key: "sudoku-solver",
-    preIcon: <Icon name="script" width={16} height={16} />,
-    label: "Sudoku Solver",
-    body: <FindMeAt />,
-  },
-];
 
 const PageContacMe = () => {
   return (
@@ -38,7 +8,32 @@ const PageContacMe = () => {
       <CommonStyled.PageName variant="h1" size={14} bold={400}>
         _projects
       </CommonStyled.PageName>
-      <Styled.Sections items={items} />
+      <FlexBox flexDirection="column" gap="32px">
+        <ProjectCard
+          label="Project 1"
+          name="React.js Base Template"
+          description="Lorem impluse dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris."
+          previewImage="https://dinhthienphuc.github.io/assets/images/reactjs-base.jpg"
+        />
+        <ProjectCard
+          label="Project 2"
+          name="Mine Sweeper"
+          description="Lorem impluse dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris."
+          previewImage="https://dinhthienphuc.github.io/assets/images/reactjs-base.jpg"
+        />
+        <ProjectCard
+          label="Project 3"
+          name="Sudoku Solver"
+          description="Lorem impluse dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris."
+          previewImage="https://dinhthienphuc.github.io/assets/images/reactjs-base.jpg"
+        />
+        <ProjectCard
+          label="Project 4"
+          name="PWA Splash Generator"
+          description="Lorem impluse dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris."
+          previewImage="https://dinhthienphuc.github.io/assets/images/reactjs-base.jpg"
+        />
+      </FlexBox>
     </>
   );
 };
