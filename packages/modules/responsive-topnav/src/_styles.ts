@@ -1,5 +1,6 @@
-import { getInvisibleButton, VIEWPORT } from "@phantomthief-react/utils";
 import styled from "styled-components";
+
+import { VIEWPORT, getInvisibleButton } from "@phantomthief-react/utils";
 
 export const Styled = {
   Container: styled.div<{ $isMobileMenuExpanded: boolean }>`

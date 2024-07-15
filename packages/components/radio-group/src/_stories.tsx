@@ -1,9 +1,11 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
-import type { Meta, StoryObj } from "@storybook/react";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
-import { RadioGroup } from "./_components";
 import * as yup from "yup";
+
+import { yupResolver } from "@hookform/resolvers/yup";
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { RadioGroup } from "./_components";
 
 const meta = {
   title: "Components/Radio Group",

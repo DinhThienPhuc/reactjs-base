@@ -1,5 +1,6 @@
-import { ProjectCard } from "../../components/project-card";
 import { FlexBox } from "@phantomthief-react/components";
+
+import { ProjectCard } from "../../components/project-card";
 import { CommonStyled } from "../../styles";
 
 const PageContacMe = () => {

@@ -1,5 +1,6 @@
-import useIsomorphicLayoutEffect from "@phantomthief-react/hooks.isomorphic-layout-effect";
 import { useState } from "react";
+
+import useIsomorphicLayoutEffect from "@phantomthief-react/hooks.isomorphic-layout-effect";
 
 export interface IMediaQuery {
   defaultValue?: boolean;

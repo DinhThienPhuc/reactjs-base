@@ -1,9 +1,11 @@
-import { Typography } from "@phantomthief-react/components.typography";
-import { Button } from "@phantomthief-react/components.button";
-import type { Meta, StoryObj } from "@storybook/react";
-import { FONT } from "@phantomthief-react/utils";
-import { Navbar } from "./_components";
 import React from "react";
+
+import { Button } from "@phantomthief-react/components.button";
+import { Typography } from "@phantomthief-react/components.typography";
+import { FONT } from "@phantomthief-react/utils";
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { Navbar } from "./_components";
 
 const meta = {
   title: "Components/Navbar",

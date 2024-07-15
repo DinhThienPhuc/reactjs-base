@@ -1,9 +1,9 @@
+import clsx from "clsx";
 import React, { memo } from "react";
 
 import { LABEL_VARIANT } from "./_constants";
-import { ILabelProps } from "./_types";
 import { Styled } from "./_style";
-import clsx from "clsx";
+import { ILabelProps } from "./_types";
 
 export const Label = memo(
   ({

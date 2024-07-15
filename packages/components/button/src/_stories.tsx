@@ -1,7 +1,9 @@
+import React from "react";
+
 import { LoadingRipple } from "@phantomthief-react/components.loading-ripple";
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { Button } from "./_components";
-import React from "react";
 
 const meta = {
   title: "Components/Button",

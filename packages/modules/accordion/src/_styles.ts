@@ -1,7 +1,9 @@
-import { getInvisibleButton } from "@phantomthief-react/utils";
-import { IStyledAccordionItemContainerProps } from "./_types";
-import { FlexBox } from "@phantomthief-react/components";
 import styled, { css } from "styled-components";
+
+import { FlexBox } from "@phantomthief-react/components";
+import { getInvisibleButton } from "@phantomthief-react/utils";
+
+import { IStyledAccordionItemContainerProps } from "./_types";
 
 export const Styled = {
   Container: styled.div`

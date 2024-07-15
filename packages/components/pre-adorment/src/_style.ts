@@ -1,6 +1,7 @@
+import styled from "styled-components";
+
 import { PRE_ADORMENT_VARIANT } from "./_constants";
 import { TPreAdormentVariant } from "./_types";
-import styled from "styled-components";
 
 export const Styled = {
   Container: styled.span<{

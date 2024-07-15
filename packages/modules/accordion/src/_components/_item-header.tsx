@@ -1,8 +1,9 @@
-import { AccordionItemExpandIcon } from "./_expand-icon";
-import { IAccordionItemProps } from "../_types";
+import React, { memo } from "react";
+
 import { useAccordionState } from "../_states";
 import { Styled } from "../_styles";
-import React, { memo } from "react";
+import { IAccordionItemProps } from "../_types";
+import { AccordionItemExpandIcon } from "./_expand-icon";
 
 export const AccordionItemHeader = memo(
   ({

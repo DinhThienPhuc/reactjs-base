@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { FONT } from "@phantomthief-react/utils";
-import { Icon } from "./_components";
 import React from "react";
+
+import { FONT } from "@phantomthief-react/utils";
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { Icon } from "./_components";
 
 const listIconNames = [
   "anchor",

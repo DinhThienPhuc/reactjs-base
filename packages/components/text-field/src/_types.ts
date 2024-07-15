@@ -1,13 +1,15 @@
+import { HTMLAttributes, InputHTMLAttributes } from "react";
+
+import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
+import { ILabelProps } from "@phantomthief-react/components.label";
+import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
+import { IPreAdormentProps } from "@phantomthief-react/components.pre-adorment";
 import {
   IExtendable,
   IFormFieldProps,
   TFunction,
 } from "@phantomthief-react/utils";
-import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
-import { IPreAdormentProps } from "@phantomthief-react/components.pre-adorment";
-import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
-import { ILabelProps } from "@phantomthief-react/components.label";
-import { HTMLAttributes, InputHTMLAttributes } from "react";
+
 import { TEXT_FIELD_VARIANT } from "./_constants";
 
 export type TTextFieldVariant =

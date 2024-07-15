@@ -1,9 +1,10 @@
-import { AccordionItemHeader } from "./_item-header";
-import { IAccordionItemProps } from "../_types";
+import clsx from "clsx";
+import React from "react";
+
 import { useAccordionState } from "../_states";
 import { Styled } from "../_styles";
-import React from "react";
-import clsx from "clsx";
+import { IAccordionItemProps } from "../_types";
+import { AccordionItemHeader } from "./_item-header";
 
 export const AccordionItem = ({
   label,

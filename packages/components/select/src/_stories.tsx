@@ -1,10 +1,12 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import * as yup from "yup";
+
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Icon } from "@phantomthief-react/components.icon";
 import type { Meta, StoryObj } from "@storybook/react";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm, Controller } from "react-hook-form";
+
 import { Select } from "./_components";
-import * as yup from "yup";
 
 const meta = {
   title: "Components/Select",

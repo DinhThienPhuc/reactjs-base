@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { getInvisibleButton } from "@phantomthief-react/utils";
+
 import { IStyledTypographyProps } from "./_types";
 
 const typographyModify = ({

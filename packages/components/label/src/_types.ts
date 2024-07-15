@@ -1,6 +1,8 @@
-import { IExtendable } from "@phantomthief-react/utils";
-import { LABEL_VARIANT } from "./_constants";
 import { ReactNode } from "react";
+
+import { IExtendable } from "@phantomthief-react/utils";
+
+import { LABEL_VARIANT } from "./_constants";
 
 export type TLabelVariant = (typeof LABEL_VARIANT)[keyof typeof LABEL_VARIANT];
 

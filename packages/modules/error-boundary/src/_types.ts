@@ -1,5 +1,6 @@
-import { TAny, TFunction } from "@phantomthief-react/utils";
 import { ComponentType, ReactNode } from "react";
+
+import { TAny, TFunction } from "@phantomthief-react/utils";
 
 export interface IErrorBoundaryProps {
   onReset: TFunction<void>;

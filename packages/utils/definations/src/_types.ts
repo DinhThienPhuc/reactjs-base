@@ -1,10 +1,11 @@
+import type { ReactElement, ReactNode } from "react";
+
 import {
   BROWSER_STORAGE,
   SIZE,
   SIZE_UNIT,
   VARIANT,
 } from "@phantomthief-react/utils.constants";
-import type { ReactElement, ReactNode } from "react";
 
 /**
  * Override any type for bypass linter

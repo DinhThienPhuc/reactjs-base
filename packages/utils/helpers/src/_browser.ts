@@ -1,10 +1,11 @@
+import { MutableRefObject } from "react";
+
 import {
   INodePosition,
   TBrowserStorage,
   TFunction,
 } from "@phantomthief-react/utils.definations";
 
-import { MutableRefObject } from "react";
 import { parseJSON } from "./_base";
 
 /**

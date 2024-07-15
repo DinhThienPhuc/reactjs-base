@@ -1,6 +1,7 @@
-import { TVariant } from "@phantomthief-react/utils.definations";
-import { VARIANT } from "@phantomthief-react/utils.constants";
 import { css } from "styled-components";
+
+import { VARIANT } from "@phantomthief-react/utils.constants";
+import { TVariant } from "@phantomthief-react/utils.definations";
 
 /**
  * Style for each variant of input/textare/element of form

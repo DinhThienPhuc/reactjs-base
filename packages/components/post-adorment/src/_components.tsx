@@ -1,9 +1,11 @@
-import { Icon } from "@phantomthief-react/components.icon";
-import { POST_ADORMENT_VARIANT } from "./_constants";
-import { IPostAdormentProps } from "./_types";
-import React, { memo } from "react";
-import { Styled } from "./_style";
 import clsx from "clsx";
+import React, { memo } from "react";
+
+import { Icon } from "@phantomthief-react/components.icon";
+
+import { POST_ADORMENT_VARIANT } from "./_constants";
+import { Styled } from "./_style";
+import { IPostAdormentProps } from "./_types";
 
 export const PostAdorment = memo(
   ({

@@ -1,7 +1,9 @@
+import React, { MouseEvent, useState } from "react";
+
 import { Typography } from "@phantomthief-react/components";
-import type { Meta, StoryObj } from "@storybook/react";
-import React, { useState, MouseEvent } from "react";
 import { FONT } from "@phantomthief-react/utils";
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { ResponsiveTopnav } from "./_components";
 
 const meta = {

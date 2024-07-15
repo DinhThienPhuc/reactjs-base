@@ -1,6 +1,7 @@
+import styled, { css } from "styled-components";
+
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { TButtonSize, TButtonVariant } from "./_types";
-import styled, { css } from "styled-components";
 
 const modifySize = (props: { $size: TButtonSize }) => {
   if (props?.$size === BUTTON_SIZE.SMALL) {

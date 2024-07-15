@@ -1,8 +1,9 @@
-import { PRE_ADORMENT_VARIANT } from "./_constants";
-import { IPreAdormentProps } from "./_types";
-import { Styled } from "./_style";
-import React from "react";
 import clsx from "clsx";
+import React from "react";
+
+import { PRE_ADORMENT_VARIANT } from "./_constants";
+import { Styled } from "./_style";
+import { IPreAdormentProps } from "./_types";
 
 export const PreAdorment = ({
   className,

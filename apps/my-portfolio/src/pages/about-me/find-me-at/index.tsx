@@ -1,5 +1,7 @@
-import { FlexBox, Icon } from "@phantomthief-react/components";
 import { Link } from "react-router-dom";
+
+import { FlexBox, Icon } from "@phantomthief-react/components";
+
 import { Styled } from "./style";
 
 export const FindMeAt = () => {

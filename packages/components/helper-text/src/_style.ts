@@ -1,7 +1,9 @@
-import { HELPER_TEXT_VARIANT } from "./_constants";
-import { FONT } from "@phantomthief-react/utils";
-import { THelperTextVariant } from "./_types";
 import styled from "styled-components";
+
+import { FONT } from "@phantomthief-react/utils";
+
+import { HELPER_TEXT_VARIANT } from "./_constants";
+import { THelperTextVariant } from "./_types";
 
 export const Styled = {
   Container: styled.span<{

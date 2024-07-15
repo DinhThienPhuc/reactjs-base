@@ -1,5 +1,7 @@
-import { FONT, getVariantStyle } from "@phantomthief-react/utils";
 import styled, { css } from "styled-components";
+
+import { FONT, getVariantStyle } from "@phantomthief-react/utils";
+
 import { SELECT_VARIANT } from "./_constants";
 import { TSelectVariant } from "./_types";
 

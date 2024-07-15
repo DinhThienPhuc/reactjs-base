@@ -1,8 +1,8 @@
-import { Typography } from "@phantomthief-react/components.typography";
-import type { Meta, StoryObj } from "@storybook/react";
-import { useForm, Controller } from "react-hook-form";
 import React, { useCallback, useState } from "react";
-import { FONT } from "@phantomthief-react/utils";
+import { Controller, useForm } from "react-hook-form";
+
+import type { Meta, StoryObj } from "@storybook/react";
+
 import { Switch } from "./_components";
 
 const meta = {
@@ -43,11 +43,13 @@ export const Disabled: Story = {
 
 export const ParentController: Story = {
   args: {
-    leftLabel: <Typography font={FONT.VERNADA}>Left</Typography>,
-    rightLabel: <Typography font={FONT.VERNADA}>Right</Typography>,
+    leftLabel: "",
+    rightLabel: "",
   },
   render: function Render(args) {
     const [value, setValue] = useState(true);
+    const [leftLabel, setLeftLabel] = useState("");
+    const [rightLabel, setRightLabel] = useState("");
 
     const handleChange = useCallback((value: boolean) => {
       setValue(value);
@@ -61,9 +63,27 @@ export const ParentController: Story = {
 
     return (
       <div style={{ display: "inline-flex", flexDirection: "column" }}>
-        <Switch {...args} value={value} onChange={handleChange} />
+        <Switch
+          {...args}
+          leftLabel={leftLabel}
+          rightLabel={rightLabel}
+          value={value}
+          onChange={handleChange}
+        />
         <button style={{ marginTop: 48 }} onClick={handleParentChange}>
           Toggle switch
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() => setLeftLabel((prev) => (prev ? "" : "Off"))}
+        >
+          Toggle left label
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() => setRightLabel((prev) => (prev ? "" : "On"))}
+        >
+          Toggle right label
         </button>
       </div>
     );
@@ -72,8 +92,8 @@ export const ParentController: Story = {
 
 export const PropsControllerSelect: Story = {
   args: {
-    leftLabel: <Typography font={FONT.VERNADA}>Left</Typography>,
-    rightLabel: <Typography font={FONT.VERNADA}>Right</Typography>,
+    leftLabel: "Off",
+    rightLabel: "On",
   },
   render: function Render(args) {
     const [isSwitchOn, setSwitchOn] = useState(false);
@@ -90,8 +110,8 @@ export const PropsControllerSelect: Story = {
 
 export const RHFController: Story = {
   args: {
-    leftLabel: <Typography font={FONT.VERNADA}>Left</Typography>,
-    rightLabel: <Typography font={FONT.VERNADA}>Right</Typography>,
+    leftLabel: "Off",
+    rightLabel: "On",
   },
   render: function Render(args) {
     const { handleSubmit, control } = useForm<Record<string, boolean>>({

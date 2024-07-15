@@ -1,5 +1,6 @@
-import { Typography } from "@phantomthief-react/components";
 import styled from "styled-components";
+
+import { Typography } from "@phantomthief-react/components";
 
 const Styled = {
   Container: styled.div`

@@ -1,5 +1,6 @@
-import { Button } from "@phantomthief-react/components";
 import styled from "styled-components";
+
+import { Button } from "@phantomthief-react/components";
 
 export const Styled = {
   CustomButton: styled(Button)`

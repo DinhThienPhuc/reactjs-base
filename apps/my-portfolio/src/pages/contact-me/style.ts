@@ -1,5 +1,6 @@
-import { Accordion } from "@phantomthief-react/modules";
 import styled from "styled-components";
+
+import { Accordion } from "@phantomthief-react/modules";
 
 const Styled = {
   Sections: styled(Accordion)`

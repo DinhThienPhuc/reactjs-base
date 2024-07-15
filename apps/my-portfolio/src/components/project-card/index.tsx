@@ -1,7 +1,8 @@
 import { Typography } from "@phantomthief-react/components";
+
 import { CustomButton } from "../custom-button";
-import { IProjectCardProps } from "./types";
 import { Styled } from "./style";
+import { IProjectCardProps } from "./types";
 
 export const ProjectCard = ({
   name,

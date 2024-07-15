@@ -1,9 +1,11 @@
-import { FlexBox, Typography } from "@phantomthief-react/components";
-import { CustomButton } from "../../../components/custom-button";
-import { Controller, useForm } from "react-hook-form";
-import { IContactFormData } from "./types";
-import { Styled } from "./style";
 import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+
+import { FlexBox, Typography } from "@phantomthief-react/components";
+
+import { CustomButton } from "../../../components/custom-button";
+import { Styled } from "./style";
+import { IContactFormData } from "./types";
 
 export const ContactForm = () => {
   const [showAlert, setShowAlert] = useState(false);

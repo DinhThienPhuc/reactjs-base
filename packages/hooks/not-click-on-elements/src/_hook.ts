@@ -1,5 +1,6 @@
-import useEventListener from "@phantomthief-react/hooks.event-listener";
 import { MutableRefObject } from "react";
+
+import useEventListener from "@phantomthief-react/hooks.event-listener";
 
 const useNotClickOnElements = (
   refs: MutableRefObject<HTMLDivElement | null>[],

@@ -1,6 +1,7 @@
-import { IExtendable } from "@phantomthief-react/utils";
-import { HTMLAttributes } from "react";
 import { Property } from "csstype";
+import { HTMLAttributes } from "react";
+
+import { IExtendable } from "@phantomthief-react/utils";
 
 export interface IFlexBoxProps
   extends HTMLAttributes<HTMLElement>,

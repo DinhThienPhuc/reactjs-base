@@ -1,7 +1,8 @@
-import { ISelectOptionProps } from "../_types";
-import { Styled } from "../_style";
-import React from "react";
 import clsx from "clsx";
+import React from "react";
+
+import { Styled } from "../_style";
+import { ISelectOptionProps } from "../_types";
 
 export const SelectOption = ({
   value,

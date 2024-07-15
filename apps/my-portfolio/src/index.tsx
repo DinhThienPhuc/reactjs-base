@@ -1,16 +1,18 @@
+import { useEffect, useState } from "react";
 import {
+  RouterProvider,
   createBrowserRouter,
   createHashRouter,
-  RouterProvider,
 } from "react-router-dom";
+
 import { LoadingEllipsis, LoadingRipple } from "@phantomthief-react/components";
 import { useMediaQuery } from "@phantomthief-react/hooks";
-import PageContacMe from "./pages/contact-me";
-import PageProjects from "./pages/projects";
-import { useEffect, useState } from "react";
-import PageAboutMe from "./pages/about-me";
+
 import { LayoutDefault } from "./layouts";
+import PageAboutMe from "./pages/about-me";
+import PageContacMe from "./pages/contact-me";
 import PageHome from "./pages/home";
+import PageProjects from "./pages/projects";
 
 const routes = [
   {

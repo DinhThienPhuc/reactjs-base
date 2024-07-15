@@ -1,6 +1,8 @@
-import { IExtendable } from "@phantomthief-react/utils";
-import { HELPER_TEXT_VARIANT } from "./_constants";
 import { HTMLAttributes, ReactNode } from "react";
+
+import { IExtendable } from "@phantomthief-react/utils";
+
+import { HELPER_TEXT_VARIANT } from "./_constants";
 
 export type THelperTextVariant =
   (typeof HELPER_TEXT_VARIANT)[keyof typeof HELPER_TEXT_VARIANT];

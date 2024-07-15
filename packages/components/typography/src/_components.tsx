@@ -1,9 +1,10 @@
-import { IStyledTypographyProps, ITypographyProps } from "./_types";
+import clsx from "clsx";
 import React, { FC, useMemo } from "react";
 
 import { capitalize } from "@phantomthief-react/utils";
+
 import { Styled } from "./_style";
-import clsx from "clsx";
+import { IStyledTypographyProps, ITypographyProps } from "./_types";
 
 export const Typography = ({
   variant = "span",

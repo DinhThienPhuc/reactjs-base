@@ -1,8 +1,10 @@
-import { arePropsShallowEqual } from "@phantomthief-react/utils";
-import React, { ChangeEvent, memo, useCallback } from "react";
-import { IRadioGroupOptionProps } from "../_types";
-import { Styled } from "../_style";
 import clsx from "clsx";
+import React, { ChangeEvent, memo, useCallback } from "react";
+
+import { arePropsShallowEqual } from "@phantomthief-react/utils";
+
+import { Styled } from "../_style";
+import { IRadioGroupOptionProps } from "../_types";
 
 export const RadioGroupOption = memo(
   ({

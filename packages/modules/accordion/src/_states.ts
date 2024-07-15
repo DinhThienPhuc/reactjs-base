@@ -1,5 +1,6 @@
-import { isNil } from "@phantomthief-react/utils";
 import { create } from "zustand";
+
+import { isNil } from "@phantomthief-react/utils";
 
 export interface IAccordionState {
   itemKeys: Record<string, boolean>;

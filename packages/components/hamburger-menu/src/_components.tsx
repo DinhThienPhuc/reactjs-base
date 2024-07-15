@@ -1,9 +1,11 @@
+import clsx from "clsx";
+import React from "react";
+
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
-import { IHamburgerMenuProps } from "./_types";
+
 import { DEFAULT_VALUE } from "./_constants";
 import { Styled } from "./_style";
-import React from "react";
-import clsx from "clsx";
+import { IHamburgerMenuProps } from "./_types";
 
 export const HamburgerMenu = ({
   gap = DEFAULT_VALUE.GAP,

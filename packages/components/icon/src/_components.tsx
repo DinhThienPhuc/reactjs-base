@@ -1,6 +1,8 @@
+import React, { ComponentType, Suspense, useEffect, useState } from "react";
+
 import { LoadingEllipsis } from "@phantomthief-react/components.loading-ellipsis";
-import React, { useState, useEffect, ComponentType, Suspense } from "react";
 import { toCamelCase } from "@phantomthief-react/utils";
+
 import { IIconProps, ISingleIconProps } from "./_types";
 
 export const Icon = ({ name, loadingProps, ...restProps }: IIconProps) => {

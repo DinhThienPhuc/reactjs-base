@@ -1,8 +1,10 @@
+import React from "react";
+
 import { Icon } from "@phantomthief-react/components";
-import { IAccordionItemProps } from "../_types";
+
 import { useAccordionState } from "../_states";
 import { Styled } from "../_styles";
-import React from "react";
+import { IAccordionItemProps } from "../_types";
 
 export const AccordionItemExpandIcon = ({
   itemKey = "",

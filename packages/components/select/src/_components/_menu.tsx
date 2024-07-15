@@ -1,8 +1,9 @@
-import { ISelectMenuProps, ISelectOption } from "../_types";
-import React, { forwardRef, useMemo } from "react";
-import { SelectOption } from "./_option";
-import { Styled } from "../_style";
 import clsx from "clsx";
+import React, { forwardRef, useMemo } from "react";
+
+import { Styled } from "../_style";
+import { ISelectMenuProps, ISelectOption } from "../_types";
+import { SelectOption } from "./_option";
 
 export const SelectMenu = forwardRef<HTMLDivElement, ISelectMenuProps>(
   ({ options, position, isShowed, currentValue, selectOption }, ref) => {

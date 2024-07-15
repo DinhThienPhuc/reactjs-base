@@ -3,7 +3,9 @@ import {
   InputHTMLAttributes,
   LabelHTMLAttributes,
 } from "react";
+
 import { IExtendable, ISyncStateWithProps } from "@phantomthief-react/utils";
+
 import { RADIO_GROUP_DIRECTION } from "./_constants";
 
 export type TRadioGroupDirection =

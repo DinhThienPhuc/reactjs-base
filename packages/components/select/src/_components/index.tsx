@@ -1,4 +1,6 @@
+import clsx from "clsx";
 import React, {
+  MouseEvent,
   MouseEventHandler,
   Suspense,
   forwardRef,
@@ -7,23 +9,23 @@ import React, {
   useMemo,
   useRef,
   useState,
-  MouseEvent,
 } from "react";
+
+import { HelperText } from "@phantomthief-react/components.helper-text";
+import { Icon } from "@phantomthief-react/components.icon";
+import { Label } from "@phantomthief-react/components.label";
+import { Portal } from "@phantomthief-react/components.portal";
+import { PostAdorment } from "@phantomthief-react/components.post-adorment";
 import {
   useBlock,
   useNotClickOnElements,
   useSyncStateWithProps,
 } from "@phantomthief-react/hooks";
 import { INodePosition, getPositionOfNode } from "@phantomthief-react/utils";
-import { PostAdorment } from "@phantomthief-react/components.post-adorment";
-import { HelperText } from "@phantomthief-react/components.helper-text";
-import { Portal } from "@phantomthief-react/components.portal";
-import { Label } from "@phantomthief-react/components.label";
-import { ISelectEventTarget, ISelectProps } from "../_types";
-import { Icon } from "@phantomthief-react/components.icon";
+
 import { SELECT_VARIANT } from "../_constants";
 import { Styled } from "../_style";
-import clsx from "clsx";
+import { ISelectEventTarget, ISelectProps } from "../_types";
 
 const SelectMenu = lazy(() =>
   import("./_menu").then((module) => ({ default: module.SelectMenu })),
