@@ -69,7 +69,7 @@ export const toCamelCase = (str: string, divider: RegExp = /-/): string => {
 export const isNil = (value: unknown) => value == null;
 
 /**
- * Shallow compare a field in objects, used in React.memo
+ * Shallow compare a field in objects, used in React.memo. Return false to re-render and true to skip re-render.
  * @param keys fields to be deep compare
  * @param callback callback to compare the fields
  * @returns boolean
@@ -79,13 +79,13 @@ export const arePropsShallowEqual =
     keys: string[],
     callback: (
       key: string,
-      prevFieldValue: unknown,
-      nextFieldValue: unknown,
+      prevProps: Record<string, unknown>,
+      nextProps: Record<string, unknown>,
     ) => boolean | undefined,
   ) =>
   (prevProps: Record<string, unknown>, nextProps: Record<string, unknown>) => {
     const areSpecificPropsEqual = keys.every(
-      (k: string) => callback(k, prevProps[k], nextProps[k]) ?? true,
+      (k: string) => callback(k, prevProps, nextProps) ?? true,
     );
 
     const areOtherPropsEqual = Object.keys(prevProps).every((k: string) => {

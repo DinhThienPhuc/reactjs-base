@@ -4,6 +4,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { LoadingEllipsis, LoadingRipple } from "@phantomthief-react/components";
+import { useMediaQuery } from "@phantomthief-react/hooks";
 import PageContacMe from "./pages/contact-me";
 import PageProjects from "./pages/projects";
 import { useEffect, useState } from "react";
@@ -43,6 +44,8 @@ const router =
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const matches = useMediaQuery("(min-width: 768px)");
+  console.log("matches", matches);
 
   useEffect(() => {
     setTimeout(() => {

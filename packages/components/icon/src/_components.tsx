@@ -14,7 +14,6 @@ export const Icon = ({ name, loadingProps, ...restProps }: IIconProps) => {
     // Dynamically import the SVG icon based on its name
     import(`./icons/_${name}.tsx`)
       .then((module) => {
-        console.log("ahihi: ", toCamelCase(name), module);
         setIconComponent(() => module[`Icon${toCamelCase(name)}`]);
       })
       .catch((error) => console.error(`Icon not found: ${name}`, error));

@@ -1,10 +1,10 @@
-import React, { ChangeEvent, forwardRef, useCallback } from "react";
 import { FlexBox } from "@phantomthief-react/components.flex-box";
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
 import { RADIO_GROUP_DIRECTION } from "../_constants";
 import { IRadioGroupProps } from "../_types";
 import { RadioGroupOption } from "./_option";
 import { RadioGroupLabel } from "./_label";
+import React, { forwardRef } from "react";
 import { Styled } from "../_style";
 import clsx from "clsx";
 
@@ -26,14 +26,6 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
     const { currentValue, setCurrentValue } = useSyncStateWithProps<
       string | undefined
     >(value, isStandalone);
-
-    const handleChange = useCallback(
-      (e: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e);
-        setCurrentValue(value);
-      },
-      [onChange, setCurrentValue, value],
-    );
 
     return (
       <Styled.Container
@@ -58,7 +50,8 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
               key={option.key}
               isStandalone={isStandalone}
               currentValue={currentValue}
-              onChange={handleChange}
+              onChange={onChange}
+              setCurrentValue={setCurrentValue}
             />
           ))}
         </FlexBox>

@@ -27,7 +27,8 @@
   },
   "peerDependencies": {
     "typescript": "*",
-    "react": "*"
+    "react": "*",
+    "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

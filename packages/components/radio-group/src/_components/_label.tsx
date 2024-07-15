@@ -1,4 +1,3 @@
-import { arePropsShallowEqual } from "@phantomthief-react/utils";
 import { IRadioGroupLabelProps } from "../_types";
 import React, { memo } from "react";
 import { Styled } from "../_style";
@@ -18,14 +17,6 @@ export const RadioGroupLabel = memo(
       </Styled.Label>
     );
   },
-  arePropsShallowEqual(["hasValue"], (key, prevValue, nextValue) => {
-    switch (key) {
-      case "hasValue":
-        return !!nextValue && !!prevValue;
-      default:
-        return;
-    }
-  }),
 );
 
 RadioGroupLabel.displayName = "RadioGroupLabel";

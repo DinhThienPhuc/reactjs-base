@@ -1,4 +1,4 @@
-import { FONT, FONT_SIZE, getVariantStyle } from "@phantomthief-react/utils";
+import { FONT, getVariantStyle } from "@phantomthief-react/utils";
 import styled, { css } from "styled-components";
 import { SELECT_VARIANT } from "./_constants";
 import { TSelectVariant } from "./_types";
@@ -39,7 +39,7 @@ export const Styled = {
     white-space: nowrap;
     text-overflow: ellipsis;
     font-family: ${FONT.VERNADA};
-    font-size: ${FONT_SIZE.MEDIUM};
+    font-size: 16px;
 
     &:hover {
       background-color: #ffffff14;
@@ -99,7 +99,7 @@ export const Styled = {
     text-overflow: ellipsis;
     color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
     font-family: ${FONT.VERNADA};
-    font-size: ${FONT_SIZE.MEDIUM};
+    font-size: 16px;
     ${modifyInnerBoxPadding};
 
     &:focus-visible {

@@ -1,5 +1,4 @@
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
-import { COLOR } from "@phantomthief-react/utils";
 import { IHamburgerMenuProps } from "./_types";
 import { DEFAULT_VALUE } from "./_constants";
 import { Styled } from "./_style";
@@ -11,7 +10,7 @@ export const HamburgerMenu = ({
   width = DEFAULT_VALUE.WIDTH,
   height = DEFAULT_VALUE.HEIGHT,
   borderRadius = DEFAULT_VALUE.BORDER_RADIUS,
-  color = COLOR.WHITE,
+  color = "#ffffff",
   isStandalone = true,
   active = false,
   className,

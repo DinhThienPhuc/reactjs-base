@@ -158,7 +158,7 @@ We should follow these rules:
 
 ### Media queries
 
-We should follow these media queries for consistency
+We should follow these media queries refered in `VIEWPORT` for consistency
 
 ```css
 /* Mobile (Smartphones, Portrait) */
@@ -172,17 +172,17 @@ We should follow these media queries for consistency
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 991px) {
   /* styles */
 }
 
 /* Desktop */
-@media (min-width: 1024px) and (max-width: 1215px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   /* styles */
 }
 
 /* Wide Screen */
-@media (min-width: 1216px) {
+@media (min-width: 1200px) {
   /* styles */
 }
 ```
@@ -296,7 +296,10 @@ pnpm bump
 - Push `release/packages/*` branch to the remote git.
 - Let the github actions does the job :D
 
-<!-- TODO: Implement theme feature for each component -->
 <!-- TODO: Remove zustand and use memo with compare callback to prevent re-render -->
 <!-- TODO: Improve to load component on demand -->
 <!-- TODO: Implement a list of svg icon in React component -->
+<!-- TODO: Allow restProp to override the current prop of element -->
+<!-- TODO: Remove restProps and specific a prop for the custom prop: attributes -->
+<!-- TODO: Update accessibility checking with eslint-plugin -->
+<!-- TODO: Use taiwind-css to reduce bundle size -->
