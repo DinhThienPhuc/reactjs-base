@@ -597,10 +597,6 @@ importers:
       typescript:
         specifier: "*"
         version: 5.5.3
-    devDependencies:
-      "@phantomthief-react/components.typography":
-        specifier: workspace:*
-        version: link:../typography
 
   packages/components/text-field:
     dependencies:
