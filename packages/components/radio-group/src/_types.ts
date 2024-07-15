@@ -18,6 +18,7 @@ export interface IRadioGroupOptionProps
   label?: string;
   labelProps?: LabelHTMLAttributes<HTMLLabelElement>;
   currentValue?: string;
+  setCurrentValue?: (value: string) => void;
 }
 
 export interface IRadioGroupLabelProps extends IExtendable {

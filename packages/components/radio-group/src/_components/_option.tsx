@@ -21,7 +21,7 @@ export const RadioGroupOption = memo(
     const handleChange = useCallback(
       (e: ChangeEvent<HTMLInputElement>) => {
         onChange?.(e);
-        setCurrentValue(value);
+        setCurrentValue?.(value);
       },
       [onChange, setCurrentValue, value],
     );
