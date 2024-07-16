@@ -1,5 +1,22 @@
 # @phantomthief-react/modules
 
+## 0.0.10
+
+### Patch Changes
+
+- d4e97f2: Memoize PreAdorment and remove unnecessary useMemo
+- 9b062fa: Update dependencies, fix import order, and update radio-group and select components
+- 0c123ca: Update dependencies and fix import order
+- Updated dependencies [e25db53]
+- Updated dependencies [376ed0b]
+- Updated dependencies [d4e97f2]
+- Updated dependencies [9b062fa]
+- Updated dependencies [0c123ca]
+  - @phantomthief-react/modules.responsive-topnav@0.0.9
+  - @phantomthief-react/modules.error-boundary@0.0.9
+  - @phantomthief-react/modules.authenticator@0.0.9
+  - @phantomthief-react/modules.accordion@0.0.7
+
 ## 0.0.9
 
 ### Patch Changes
