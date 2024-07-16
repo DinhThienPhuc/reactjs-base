@@ -297,6 +297,7 @@ pnpm bump
 <!-- TODO: Improve to load component on demand -->
 <!-- TODO: Remove restProps and specific a prop for the custom prop: attributes -->
 <!-- TODO: Use taiwind-css to reduce bundle size -->
+<!-- TODO: Consider to use svg as image instead of component to have better performance -->
 
 ## Component checklist
 
