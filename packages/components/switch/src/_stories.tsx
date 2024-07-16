@@ -90,7 +90,7 @@ export const ParentController: Story = {
   },
 };
 
-export const PropsControllerSelect: Story = {
+export const PropsController: Story = {
   args: {
     leftLabel: "Off",
     rightLabel: "On",
@@ -102,7 +102,7 @@ export const PropsControllerSelect: Story = {
       setSwitchOn(value);
     }, []);
 
-    console.log("PropsControllerSelect", isSwitchOn);
+    console.log("PropsController", isSwitchOn);
 
     return <Switch {...args} value={isSwitchOn} onChange={handleChange} />;
   },
@@ -137,6 +137,42 @@ export const RHFController: Story = {
 
         <input type="submit" style={{ marginTop: 24 }} />
       </form>
+    );
+  },
+};
+
+export const LazyLoad: Story = {
+  render: function Render(args) {
+    const [leftLabel, setLeftLabel] = useState("");
+    const [rightLabel, setRightLabel] = useState("");
+    const [isSwitchOn, setSwitchOn] = useState(false);
+
+    const handleChange = useCallback((value: boolean) => {
+      setSwitchOn(value);
+    }, []);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <Switch
+          {...args}
+          value={isSwitchOn}
+          onChange={handleChange}
+          rightLabel={rightLabel}
+          leftLabel={leftLabel}
+        />
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() => setLeftLabel((prev) => (prev ? "" : "Left label"))}
+        >
+          Toggle show left label
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() => setRightLabel((prev) => (prev ? "" : "Right label"))}
+        >
+          Toggle show right label
+        </button>
+      </div>
     );
   },
 };

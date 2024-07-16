@@ -1,10 +1,6 @@
 import clsx from "clsx";
-import React, { ChangeEvent, forwardRef } from "react";
+import React, { ChangeEvent, Suspense, forwardRef, lazy } from "react";
 
-import { HelperText } from "@phantomthief-react/components.helper-text";
-import { Label } from "@phantomthief-react/components.label";
-import { PostAdorment } from "@phantomthief-react/components.post-adorment";
-import { PreAdorment } from "@phantomthief-react/components.pre-adorment";
 import {
   useFocusWithCallback,
   useSyncStateWithProps,
@@ -13,6 +9,30 @@ import {
 import { TEXT_FIELD_VARIANT } from "./_constants";
 import { Styled } from "./_style";
 import { ITextFieldProps } from "./_types";
+
+const HelperText = lazy(() =>
+  import("@phantomthief-react/components.helper-text").then((module) => ({
+    default: module.HelperText,
+  })),
+);
+
+const Label = lazy(() =>
+  import("@phantomthief-react/components.label").then((module) => ({
+    default: module.Label,
+  })),
+);
+
+const PostAdorment = lazy(() =>
+  import("@phantomthief-react/components.post-adorment").then((module) => ({
+    default: module.PostAdorment,
+  })),
+);
+
+const PreAdorment = lazy(() =>
+  import("@phantomthief-react/components.pre-adorment").then((module) => ({
+    default: module.PreAdorment,
+  })),
+);
 
 export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
   (
@@ -74,20 +94,28 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
         )}
         data-testid="text-field"
       >
-        <Label
-          {...labelProps}
-          variant={variant}
-          disabled={disabled}
-          required={required}
-          isLabelCollapsed={isLabelCollapsed}
-          isFocused={isFocused}
-          isError={!!error}
-        />
-        <PreAdorment
-          {...preAdormentProps}
-          hasLabel={!!labelProps?.children}
-          variant={variant}
-        />
+        <Suspense>
+          {!!labelProps?.children && (
+            <Label
+              {...labelProps}
+              variant={variant}
+              disabled={disabled}
+              required={required}
+              isLabelCollapsed={isLabelCollapsed}
+              isFocused={isFocused}
+              isError={!!error}
+            />
+          )}
+        </Suspense>
+        <Suspense>
+          {!!preAdormentProps?.children && (
+            <PreAdorment
+              {...preAdormentProps}
+              hasLabel={!!labelProps?.children}
+              variant={variant}
+            />
+          )}
+        </Suspense>
         <Styled.Input
           {...inputProps}
           $variant={variant}
@@ -108,10 +136,26 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
             required && "text-field-input--required",
           )}
         />
-        <PostAdorment {...postAdormentProps} clear={clear} variant={variant} />
-        <HelperText {...helperTextProps} isError={!!error} variant={variant}>
-          {error?.message ?? helperTextProps?.children ?? ""}
-        </HelperText>
+        <Suspense>
+          {!!postAdormentProps?.children && (
+            <PostAdorment
+              {...postAdormentProps}
+              clear={clear}
+              variant={variant}
+            />
+          )}
+        </Suspense>
+        <Suspense>
+          {helperTextProps?.children && (
+            <HelperText
+              {...helperTextProps}
+              isError={!!error}
+              variant={variant}
+            >
+              {error?.message ?? helperTextProps?.children ?? ""}
+            </HelperText>
+          )}
+        </Suspense>
       </Styled.Container>
     );
   },

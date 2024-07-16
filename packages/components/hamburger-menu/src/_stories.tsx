@@ -56,7 +56,7 @@ export const ParentController: Story = {
   },
 };
 
-export const PropsControllerSelect: Story = {
+export const PropsController: Story = {
   render: function Render() {
     const [value, setValue] = useState(false);
 
@@ -64,7 +64,7 @@ export const PropsControllerSelect: Story = {
       setValue(isActivated);
     }, []);
 
-    console.log("PropsControllerSelect: ", value);
+    console.log("PropsController: ", value);
 
     return (
       <div style={{ display: "inline-flex", flexDirection: "column" }}>

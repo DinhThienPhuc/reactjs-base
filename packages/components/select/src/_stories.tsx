@@ -212,7 +212,7 @@ export const ParentController: Story = {
   },
 };
 
-export const PropsControllerSelect: Story = {
+export const PropsController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[2].value);
 
@@ -220,7 +220,7 @@ export const PropsControllerSelect: Story = {
       setValue(e.target.value);
     }, []);
 
-    console.log("PropsControllerSelect: ", value);
+    console.log("PropsController: ", value);
 
     return (
       <div style={{ display: "inline-flex", flexDirection: "column" }}>
@@ -283,6 +283,59 @@ export const RHFController: Story = {
 
         <input type="submit" style={{ marginTop: 48 }} />
       </form>
+    );
+  },
+};
+
+export const LazyLoad: Story = {
+  render: function Render(args) {
+    const [value, setValue] = useState(args.options[2].value);
+    const [helperTextProps, setHelperTextProps] = useState(null);
+    const [labelProps, setLabelProps] = useState(null);
+    const [postAdormentProps, setPostAdormentProps] = useState(null);
+
+    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    }, []);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <Select
+          {...args}
+          helperTextProps={helperTextProps}
+          labelProps={labelProps}
+          postAdormentProps={postAdormentProps}
+          variant="outlined"
+          value={value}
+          onChange={handleChange}
+        />
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setHelperTextProps((prev) => (prev ? null : args.helperTextProps))
+          }
+        >
+          Toggle show helper text
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setLabelProps((prev) => (prev ? null : args.labelProps))
+          }
+        >
+          Toggle show label
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setPostAdormentProps((prev) =>
+              prev ? null : args.postAdormentProps,
+            )
+          }
+        >
+          Toggle show postAdorment
+        </button>
+      </div>
     );
   },
 };

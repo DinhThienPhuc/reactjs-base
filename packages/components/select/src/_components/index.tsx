@@ -11,11 +11,7 @@ import React, {
   useState,
 } from "react";
 
-import { HelperText } from "@phantomthief-react/components.helper-text";
-import { Icon } from "@phantomthief-react/components.icon";
-import { Label } from "@phantomthief-react/components.label";
 import { Portal } from "@phantomthief-react/components.portal";
-import { PostAdorment } from "@phantomthief-react/components.post-adorment";
 import {
   useBlock,
   useNotClickOnElements,
@@ -26,6 +22,30 @@ import { INodePosition, getPositionOfNode } from "@phantomthief-react/utils";
 import { SELECT_VARIANT } from "../_constants";
 import { Styled } from "../_style";
 import { ISelectEventTarget, ISelectProps } from "../_types";
+
+const HelperText = lazy(() =>
+  import("@phantomthief-react/components.helper-text").then((module) => ({
+    default: module.HelperText,
+  })),
+);
+
+const Icon = lazy(() =>
+  import("@phantomthief-react/components.icon").then((module) => ({
+    default: module.Icon,
+  })),
+);
+
+const Label = lazy(() =>
+  import("@phantomthief-react/components.label").then((module) => ({
+    default: module.Label,
+  })),
+);
+
+const PostAdorment = lazy(() =>
+  import("@phantomthief-react/components.post-adorment").then((module) => ({
+    default: module.PostAdorment,
+  })),
+);
 
 const SelectMenu = lazy(() =>
   import("./_menu").then((module) => ({ default: module.SelectMenu })),
@@ -106,7 +126,11 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
             disabled && "select-post-adorment-content--disabled",
           )}
         >
-          {postAdormentProps?.children ?? <Icon name="chevron-down" />}
+          {postAdormentProps?.children ?? (
+            <Suspense>
+              <Icon name="chevron-down" />
+            </Suspense>
+          )}
         </Styled.PostAdormentContentWrapper>
       ),
       [disabled, isShowed, postAdormentProps?.children],
@@ -150,15 +174,19 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
           )}
           data-testid="select-box"
         >
-          <Label
-            {...labelProps}
-            required={required}
-            disabled={disabled}
-            variant={variant}
-            isLabelCollapsed={isLabelCollapsed}
-            isFocused={isShowed}
-            isError={!!error}
-          />
+          <Suspense>
+            {!!labelProps?.children && (
+              <Label
+                {...labelProps}
+                required={required}
+                disabled={disabled}
+                variant={variant}
+                isLabelCollapsed={isLabelCollapsed}
+                isFocused={isShowed}
+                isError={!!error}
+              />
+            )}
+          </Suspense>
           <Styled.FakeSelect required={required} disabled={disabled} />
           <Styled.InnerBox
             $hasLabel={!!labelProps?.children}
@@ -174,12 +202,24 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
           >
             {displayedOption?.label}
           </Styled.InnerBox>
-          <PostAdorment {...postAdormentProps} variant={variant}>
-            {postAdormentContent}
-          </PostAdorment>
-          <HelperText {...helperTextProps} isError={!!error} variant={variant}>
-            {error?.message ?? helperTextProps?.children ?? ""}
-          </HelperText>
+          <Suspense>
+            {!!postAdormentProps?.children && (
+              <PostAdorment {...postAdormentProps} variant={variant}>
+                {postAdormentContent}
+              </PostAdorment>
+            )}
+          </Suspense>
+          <Suspense>
+            {!!helperTextProps?.children && (
+              <HelperText
+                {...helperTextProps}
+                isError={!!error}
+                variant={variant}
+              >
+                {error?.message ?? helperTextProps?.children ?? ""}
+              </HelperText>
+            )}
+          </Suspense>
         </Styled.Box>
         <Portal className={clsx("portal-select", optionGroupClassName)}>
           <Suspense>
