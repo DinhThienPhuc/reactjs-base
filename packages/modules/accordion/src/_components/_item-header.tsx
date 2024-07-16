@@ -1,33 +1,45 @@
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
 
-import { useAccordionState } from "../_states";
-import { Styled } from "../_styles";
-import { IAccordionItemProps } from "../_types";
+import { IAccordionItemHeaderProps, TItemDictionary } from "../_types";
+import { AccordionItemHeaderRight } from "./_item-header-right";
 import { AccordionItemExpandIcon } from "./_expand-icon";
+import { useWhyDidYouUpdate } from "ahooks";
+import { Styled } from "../_styles";
 
 export const AccordionItemHeader = memo(
   ({
     label,
-    itemKey = "",
-    isOnlyOneExpand,
     preIcon,
     postIcon,
     expandIcon,
     disabled,
-  }: IAccordionItemProps) => {
-    const toggleKey = useAccordionState((state) => state.toggleKey);
-    const toggleOnlyKey = useAccordionState((state) => state.toggleOnlyKey);
+    isExpanded,
+    isOnlyOneExpand,
+    id,
+    setItemDictionary,
+  }: IAccordionItemHeaderProps) => {
+    const onClickItemHeader = (key: string) => () => {
+      if (isOnlyOneExpand) {
+        setItemDictionary((prev) => ({
+          ...Object.keys(prev).reduce(
+            (acc: TItemDictionary, currentKey: string) => {
+              acc[currentKey] = false;
+              return acc;
+            },
+            {},
+          ),
+          [key]: true,
+        }));
+      } else {
+        setItemDictionary((prev) => ({ ...prev, [key]: !prev[key] }));
+      }
+    };
 
-    return (
-      <Styled.ItemHeader
-        $disabled={disabled}
-        className="accordion-item__header"
-        onClick={() =>
-          isOnlyOneExpand ? toggleOnlyKey(itemKey) : toggleKey(itemKey)
-        }
-      >
+    const leftPanel = useMemo(() => {
+      return (
         <Styled.ItemHeaderSection
           $disabled={disabled}
+          variant="span"
           className="accordion-item__header__left"
         >
           {!!preIcon && (
@@ -35,15 +47,38 @@ export const AccordionItemHeader = memo(
               {preIcon}
             </Styled.ItemHeaderPreIcon>
           )}
-          {label}
+          <Styled.ItemHeaderLabel $disabled={disabled}>
+            {label}
+          </Styled.ItemHeaderLabel>
         </Styled.ItemHeaderSection>
-        <Styled.ItemHeaderSection
-          $disabled={disabled}
-          className="accordion-item__header__right"
-        >
-          {postIcon}
-          <AccordionItemExpandIcon expandIcon={expandIcon} itemKey={itemKey} />
-        </Styled.ItemHeaderSection>
+      );
+    }, [disabled, label, preIcon]);
+
+    useWhyDidYouUpdate(`AccordionItemHeader ${id}`, {
+      label,
+      preIcon,
+      postIcon,
+      expandIcon,
+      disabled,
+      isExpanded,
+      isOnlyOneExpand,
+      id,
+      setItemDictionary,
+    });
+
+    return (
+      <Styled.ItemHeader
+        $disabled={disabled}
+        className="accordion-item__header"
+        onClick={onClickItemHeader(id)}
+      >
+        {leftPanel}
+        <AccordionItemHeaderRight postIcon={postIcon} disabled={disabled}>
+          <AccordionItemExpandIcon
+            expandIcon={expandIcon}
+            isExpanded={isExpanded}
+          />
+        </AccordionItemHeaderRight>
       </Styled.ItemHeader>
     );
   },

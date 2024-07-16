@@ -1,8 +1,8 @@
 import React from "react";
 
 import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
-import { FONT } from "@phantomthief-react/utils";
 import type { Meta, StoryObj } from "@storybook/react";
+import { FONT } from "@phantomthief-react/utils";
 
 import { Accordion } from "./_components";
 
@@ -40,7 +40,7 @@ const meta = {
     items: [
       {
         key: "accordion-item-1",
-        label: <Typography font={FONT.VERNADA}>Accordion 1</Typography>,
+        label: "Accordion 1",
         body: (
           <Typography font={FONT.VERNADA}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -50,7 +50,7 @@ const meta = {
       },
       {
         key: "accordion-item-2",
-        label: <Typography font={FONT.VERNADA}>Accordion 2</Typography>,
+        label: "Accordion 2",
         preIcon: <Icon name="settings" width={16} height={16} />,
         body: (
           <Typography font={FONT.VERNADA}>
@@ -61,7 +61,7 @@ const meta = {
       },
       {
         key: "accordion-item-3",
-        label: <Typography font={FONT.VERNADA}>Accordion disabled</Typography>,
+        label: "Accordion disabled",
         disabled: true,
         body: (
           <Typography font={FONT.VERNADA}>
@@ -72,7 +72,7 @@ const meta = {
       },
       {
         key: "accordion-item-4",
-        label: <Typography font={FONT.VERNADA}>Accordion 4</Typography>,
+        label: "Accordion 4",
         body: (
           <Typography font={FONT.VERNADA}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse

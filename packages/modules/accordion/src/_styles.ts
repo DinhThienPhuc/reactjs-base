@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { FONT, getInvisibleButton } from "@phantomthief-react/utils";
 import { FlexBox } from "@phantomthief-react/components";
-import { getInvisibleButton } from "@phantomthief-react/utils";
 
 import { IStyledAccordionItemContainerProps } from "./_types";
 
@@ -60,6 +60,12 @@ export const Styled = {
   ItemHeaderPreIcon: styled.span`
     display: flex;
     margin-right: 16px;
+  `,
+  ItemHeaderLabel: styled.span<{
+    $disabled?: boolean;
+  }>`
+    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
+    font-family: ${FONT.VERNADA};
   `,
   ItemHeaderExpandIcon: styled.span<{
     $isExpanded: boolean;

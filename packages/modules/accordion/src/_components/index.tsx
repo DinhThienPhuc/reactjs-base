@@ -1,68 +1,29 @@
+import React, { useState } from "react";
 import clsx from "clsx";
-import React, { ReactNode, useMemo } from "react";
 
-import { useOnMounted } from "@phantomthief-react/hooks";
-
-import { useAccordionState } from "../_states";
-import { Styled } from "../_styles";
-import { IAccordionItemProps, IAccordionProps } from "../_types";
+import { IAccordionItem, IAccordionProps, TItemDictionary } from "../_types";
 import { AccordionItem } from "./_item";
+import { Styled } from "../_styles";
 
 export const Accordion = ({
   items,
   className,
   isOnlyOneExpand = false,
-  expandKeys = [],
+  expandKeys,
   preIcon = null,
   postIcon = null,
   expandIcon = null,
   disabled = false,
   ...restProps
 }: IAccordionProps) => {
-  const initKeys = useAccordionState((state) => state.initKeys);
-
-  const { listItems, listExpandkeys } = useMemo(() => {
-    const listItems: ReactNode[] = [];
-    let listExpandkeys = expandKeys;
-    items?.forEach((item: IAccordionItemProps) => {
-      listItems.push(
-        <AccordionItem
-          {...item}
-          key={item.key}
-          itemKey={item.key}
-          isOnlyOneExpand={isOnlyOneExpand}
-          preIcon={item.preIcon ?? preIcon}
-          postIcon={item.postIcon ?? postIcon}
-          expandIcon={item.expandIcon ?? expandIcon}
-          disabled={item.disabled ?? disabled}
-        />,
-      );
-      listExpandkeys = listExpandkeys.filter((expandKey: string) => {
-        if ((item.disabled || disabled) && expandKey === item.key) {
-          return false;
-        }
-        return true;
-      });
-    });
-    return {
-      listItems,
-      listExpandkeys,
-    };
-  }, [
-    disabled,
-    expandIcon,
-    expandKeys,
-    isOnlyOneExpand,
-    items,
-    postIcon,
-    preIcon,
-  ]);
-
-  useOnMounted(() => {
-    if (listExpandkeys.length) {
-      initKeys(listExpandkeys, isOnlyOneExpand);
-    }
-  });
+  const [itemDictionary, setItemDictionary] = useState<TItemDictionary>(() =>
+    expandKeys
+      ? expandKeys.reduce((acc: TItemDictionary, key: string) => {
+          acc[key] = true;
+          return acc;
+        }, {})
+      : {},
+  );
 
   return (
     <Styled.Container
@@ -70,7 +31,22 @@ export const Accordion = ({
       className={clsx("accordion", className)}
       data-testid="accordion"
     >
-      {listItems}
+      {items?.map((item: IAccordionItem) => {
+        return (
+          <AccordionItem
+            {...item}
+            key={item.key}
+            id={item.key}
+            isOnlyOneExpand={isOnlyOneExpand}
+            preIcon={item.preIcon ?? preIcon}
+            postIcon={item.postIcon ?? postIcon}
+            expandIcon={item.expandIcon ?? expandIcon}
+            disabled={item.disabled ?? disabled}
+            isExpanded={item.key ? !!itemDictionary[item.key] : false}
+            setItemDictionary={setItemDictionary}
+          />
+        );
+      })}
     </Styled.Container>
   );
 };

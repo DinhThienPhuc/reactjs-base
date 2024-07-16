@@ -1,24 +1,36 @@
-import { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
+import {
+  ButtonHTMLAttributes,
+  Dispatch,
+  HTMLAttributes,
+  ReactNode,
+  SetStateAction,
+} from "react";
 
 import { IExtendable } from "@phantomthief-react/utils";
 
-export interface IAccordionItemProps
+export type TItemDictionary = Record<string, boolean>;
+
+export interface IAccordionItem
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     IExtendable {
-  key?: string;
-  itemKey?: string;
+  label: string;
+  body: ReactNode;
   preIcon?: ReactNode;
   postIcon?: ReactNode;
   expandIcon?: ReactNode;
-  label?: ReactNode;
-  body?: ReactNode;
-  isOnlyOneExpand?: boolean;
+}
+
+export interface IAccordionItemProps extends IAccordionItem {
+  id: string;
+  isExpanded: boolean;
+  isOnlyOneExpand: boolean;
+  setItemDictionary: Dispatch<SetStateAction<TItemDictionary>>;
 }
 
 export interface IAccordionProps
   extends HTMLAttributes<HTMLDivElement>,
     IExtendable {
-  items?: IAccordionItemProps[];
+  items?: IAccordionItem[];
   disabled?: boolean;
   preIcon?: ReactNode;
   postIcon?: ReactNode;
@@ -33,4 +45,27 @@ export interface IStyledAccordionItemContainerProps
   $preIcon?: ReactNode;
   $postIcon?: ReactNode;
   $expandIcon?: ReactNode;
+}
+
+export interface IAccordionItemExpandIconProps {
+  expandIcon?: ReactNode;
+  isExpanded: boolean;
+}
+
+export interface IAccordionItemHeaderProps {
+  label: string;
+  preIcon?: ReactNode;
+  postIcon?: ReactNode;
+  expandIcon?: ReactNode;
+  disabled?: boolean;
+  isExpanded: boolean;
+  isOnlyOneExpand: boolean;
+  id: string;
+  setItemDictionary: Dispatch<SetStateAction<TItemDictionary>>;
+}
+
+export interface IAccordionItemHeaderRightProps {
+  postIcon?: ReactNode;
+  disabled?: boolean;
+  children?: ReactNode;
 }
