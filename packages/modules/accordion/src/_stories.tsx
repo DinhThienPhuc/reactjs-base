@@ -1,8 +1,10 @@
-import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
-import type { Meta, StoryObj } from "@storybook/react";
-import { FONT } from "@phantomthief-react/utils";
-import { Accordion } from "./_components";
 import React from "react";
+
+import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
+import { FONT } from "@phantomthief-react/utils";
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { Accordion } from "./_components";
 
 const postIcon = (
   <FlexBox variant="span" gap="16px">

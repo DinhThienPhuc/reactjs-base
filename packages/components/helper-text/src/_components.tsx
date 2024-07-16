@@ -1,8 +1,9 @@
-import { HELPER_TEXT_VARIANT } from "./_constants";
-import { IHelperTextProps } from "./_types";
-import React, { memo } from "react";
-import { Styled } from "./_style";
 import clsx from "clsx";
+import React, { memo } from "react";
+
+import { HELPER_TEXT_VARIANT } from "./_constants";
+import { Styled } from "./_style";
+import { IHelperTextProps } from "./_types";
 
 export const HelperText = memo(
   ({

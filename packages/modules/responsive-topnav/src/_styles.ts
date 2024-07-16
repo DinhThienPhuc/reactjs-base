@@ -1,5 +1,6 @@
-import { getInvisibleButton } from "@phantomthief-react/utils";
 import styled from "styled-components";
+
+import { VIEWPORT, getInvisibleButton } from "@phantomthief-react/utils";
 
 export const Styled = {
   Container: styled.div<{ $isMobileMenuExpanded: boolean }>`
@@ -18,7 +19,7 @@ export const Styled = {
     height: ${({ $isMobileMenuExpanded }) =>
       $isMobileMenuExpanded ? "100vh" : "auto"};
 
-    @media (min-width: 768px) {
+    @media (min-width: ${VIEWPORT.SEVEN}px) {
       flex-direction: row;
     }
   `,
@@ -64,7 +65,7 @@ export const Styled = {
       width: ${({ $isActivated }) => ($isActivated ? "100%" : 0)};
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: ${VIEWPORT.SEVEN}px) {
       height: 64px;
       padding-left: 24px;
       padding-right: 24px;
@@ -86,7 +87,7 @@ export const Styled = {
     right: 28px;
     transform: translate(50%, -50%);
 
-    @media (min-width: 768px) {
+    @media (min-width: ${VIEWPORT.SEVEN}px) {
       display: none;
     }
   `,

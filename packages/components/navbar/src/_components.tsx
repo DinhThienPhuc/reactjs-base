@@ -1,7 +1,8 @@
-import { INavbarProps } from "./_types";
-import { Styled } from "./_style";
-import React from "react";
 import clsx from "clsx";
+import React from "react";
+
+import { Styled } from "./_style";
+import { INavbarProps } from "./_types";
 
 export const Navbar = ({
   title,

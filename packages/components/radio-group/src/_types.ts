@@ -3,7 +3,9 @@ import {
   InputHTMLAttributes,
   LabelHTMLAttributes,
 } from "react";
+
 import { IExtendable, ISyncStateWithProps } from "@phantomthief-react/utils";
+
 import { RADIO_GROUP_DIRECTION } from "./_constants";
 
 export type TRadioGroupDirection =
@@ -18,6 +20,7 @@ export interface IRadioGroupOptionProps
   label?: string;
   labelProps?: LabelHTMLAttributes<HTMLLabelElement>;
   currentValue?: string;
+  setCurrentValue?: (value: string) => void;
 }
 
 export interface IRadioGroupLabelProps extends IExtendable {

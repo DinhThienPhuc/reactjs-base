@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { getInvisibleButton } from "@phantomthief-react/utils";
+
 import { IStyledTypographyProps } from "./_types";
 
 const typographyModify = ({
@@ -8,6 +9,7 @@ const typographyModify = ({
   $color,
   $bold,
   $font,
+  $align,
 }: IStyledTypographyProps) => {
   return css`
     transition: inherit;
@@ -15,6 +17,7 @@ const typographyModify = ({
     font-weight: ${$bold};
     color: ${$color};
     font-family: ${$font};
+    text-align: ${$align};
   `;
 };
 

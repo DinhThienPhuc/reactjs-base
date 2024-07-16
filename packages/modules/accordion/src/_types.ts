@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
+
 import { IExtendable } from "@phantomthief-react/utils";
 
 export interface IAccordionItemProps

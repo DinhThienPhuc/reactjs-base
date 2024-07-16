@@ -1,9 +1,11 @@
+import clsx from "clsx";
+import React, { useState } from "react";
+
 import { HamburgerMenu } from "@phantomthief-react/components";
 import { useBlock } from "@phantomthief-react/hooks";
-import { IResponsiveTopnavProps } from "./_types";
-import React, { useState } from "react";
+
 import { Styled } from "./_styles";
-import clsx from "clsx";
+import { IResponsiveTopnavProps } from "./_types";
 
 export const ResponsiveTopnav = ({
   items,

@@ -1,10 +1,12 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import * as yup from "yup";
+
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Icon } from "@phantomthief-react/components.icon";
 import type { Meta, StoryObj } from "@storybook/react";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm, Controller } from "react-hook-form";
+
 import { TextField } from "./_components";
-import * as yup from "yup";
 
 const meta = {
   title: "Components/Text Field",
@@ -191,7 +193,7 @@ export const ParentController: Story = {
   },
 };
 
-export const PropsControllerSelect: Story = {
+export const PropsController: Story = {
   args: {},
   render: function Render(args) {
     const [value, setValue] = useState("");
@@ -246,6 +248,68 @@ export const RHFController: Story = {
 
         <input type="submit" style={{ marginTop: 48 }} />
       </form>
+    );
+  },
+};
+
+export const LazyLoad: Story = {
+  render: function Render(args) {
+    const [labelProps, setLabelProps] = useState(null);
+    const [preAdormentProps, setPreAdormentProps] = useState(null);
+    const [postAdormentProps, setPostAdormentProps] = useState(null);
+    const [helperTextProps, setHelperTextProps] = useState(null);
+    const [value, setValue] = useState("");
+
+    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    }, []);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <TextField
+          {...args}
+          labelProps={labelProps}
+          preAdormentProps={preAdormentProps}
+          postAdormentProps={postAdormentProps}
+          helperTextProps={helperTextProps}
+          value={value}
+          onChange={handleChange}
+        />
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setLabelProps((prev) => (prev ? null : args.labelProps))
+          }
+        >
+          Toggle show label
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setPreAdormentProps((prev) => (prev ? null : args.preAdormentProps))
+          }
+        >
+          Toggle show pre adorment
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setPostAdormentProps((prev) =>
+              prev ? null : args.postAdormentProps,
+            )
+          }
+        >
+          Toggle show post adorment
+        </button>
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setHelperTextProps((prev) => (prev ? null : args.helperTextProps))
+          }
+        >
+          Toggle show helper text
+        </button>
+      </div>
     );
   },
 };

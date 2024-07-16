@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
+
 import { IExtendable, TFunction } from "@phantomthief-react/utils";
 
 import { POST_ADORMENT_VARIANT } from "./_constants";
-import { ReactNode } from "react";
 
 export type TPostAdormentVariant =
   (typeof POST_ADORMENT_VARIANT)[keyof typeof POST_ADORMENT_VARIANT];

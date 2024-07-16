@@ -1,21 +1,20 @@
 # React.JS Base
 
-This is the React.JS Base project. It is a monorepo that contains smaller packages. Each package can contain one or multiple base UI components or module or services that are used to build up applications.
+This is the React.JS Base project, organized as a monorepo containing smaller packages. Each package may include one or more base UI components, modules, or services used to build applications.
 
 ## Getting Started
 
-We use `pnpm` to manage workspace. Feel free to take a look at [pnpm workspace](https://pnpm.io/workspaces) and [pnpm CLI](https://pnpm.io/cli/add) to understand the basic of `pnpm`.
+We use `pnpm` to manage our workspace. You can explore [pnpm workspace](https://pnpm.io/workspaces) and [pnpm CLI](https://pnpm.io/cli/add) to learn the basics of `pnpm`.
 
-<https://pnpm.io/installation>
+For installation instructions, visit <https://pnpm.io/installation>.
 
-We use `monorepo` structure and `pnpm` as the package manager because `pnpm` has built-in support for `monorepo`, followed by these advantages:
+Our project follows a `monorepo` structure and utilizes `pnpm` as the package manager due to its built-in support for `monorepo`, offering several advantages:
 
-- Easy to split components/modules/services/etc into separate packages.
-- Easy to develop, build and deploy packages since `pnpm` provide built-in config and CLI: `pnpm workspace`, `pnpm CLI`
+- Simplifies splitting components/modules/services/etc. into separate packages.
+- Facilitates development, building, and deployment of packages with built-in configuration and CLI tools: pnpm workspace, pnpm CLI.
+- Many popular libraries, such as `Next.js`, `Vue.js`, and `SvelteKit`, adopt the `monorepo` and `pnpm` approach.
 
-`monorepo` and `pnpm` is the approach of lots of popular libraries: Nextjs, Vuejs, SvelteKit, etc.
-
-`vite` is used as build tool for development and production environments.
+We use `vite` as our build tool for both development and production environments.
 
 The packages will look like that:
 
@@ -25,9 +24,9 @@ The packages will look like that:
 ...
 ```
 
-Each package will have its own version.
+Each package will maintain its own version.
 
-## Install packages for the entire workspaces
+## Install packages across the entire workspace
 
 ```bash
 pnpm i
@@ -35,7 +34,7 @@ pnpm i
 
 ## Naming packages
 
-Noted that packages are named:
+Please note that packages are named:
 
 ```bash
 <package-scope>.<package-name>
@@ -44,7 +43,7 @@ Noted that packages are named:
 utils.constants
 ```
 
-This is required when you run some pnpm command like below
+This is necessary when executing certain pnpm commands like the ones below
 
 ## Commands execution
 
@@ -63,7 +62,7 @@ pnpm dev:all
 
 ### Generate package
 
-This command will create a new package with basic template.
+This command will generate a new package using a basic template.
 
 ```bash
 // Create a new component
@@ -81,15 +80,13 @@ pnpm dev:storybook
 
 ### Build applications or packages
 
-You can build multi apps or packages at once
-
-Note that packages always have scope prefix
+You can build multiple apps or packages simultaneously. Keep in mind that packages always have a scope prefix.
 
 ```bash
 pnpm build --apps=demo --packages=components.flex,utils.constants
 ```
 
-You can build all packages at once
+All packages can be built together at once
 
 ```bash
 pnpm build:all
@@ -97,7 +94,7 @@ pnpm build:all
 
 ### Start applications
 
-After building, you can start single or multi apps at once
+Once the build is complete, you can launch one or multiple apps simultaneously
 
 ```bash
 pnpm start --apps=demo,demo2
@@ -111,13 +108,15 @@ pnpm start:all
 
 ### Publish packages
 
-Before you publish packages, please ensure to update the CHANGELOG file by running [`pnpm bump`](#bump-the-version-of-packages)
+Ensure that you update the CHANGELOG file by running the following command before publishing packages:
 
 ```bash
+pnpm bump
+
 pnpm publish --packages=demo,demo2
 ```
 
-You can publish all bumped packages at once
+All packages can be published together at once
 
 ```bash
 pnpm publish:all
@@ -125,7 +124,7 @@ pnpm publish:all
 
 ### Analyze built package
 
-To have the look at how package contains, please run the command below to enable the analyze bundle folder:
+Use the following command to enable the analyze bundle folder and see what’s inside the package:
 
 ```bash
 // window
@@ -136,13 +135,11 @@ ENABLE_ANALYZE=true pnpm build:all
 
 ```
 
-This will generate a `statistics.html` file to explore the structure and the size of the package
+This process will produce a `statistics.html` file for exploring the structure and size of the package.
 
 ## Style Guide
 
-We use tools: ESLint, Prettier, TypeScript to automatically enforce parts of our style guide.
-
-It is recommended to use Visual Studio Code with the following extensions to ensure fully linting support during local development.
+`ESLint`, `Prettier`, and `TypeScript` are used to automatically apply parts of our style guide. To ensure complete linting support during local development, it is recommended to use Visual Studio Code with these extensions.
 
 - [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -150,15 +147,15 @@ It is recommended to use Visual Studio Code with the following extensions to ens
 
 ### Transient props and classNames
 
-We should follow these rules:
+Follow these guidelines:
 
-- Add all classNames to the container of the component, relative with the component's props.
-- No need to add classNames for the atom components unless a limited cases.
-- Add classNames to styled section of component, relative with the transient props.
+- Place all classNames on the component’s container according to its props.
+- ClassNames for atom components are only needed in specific cases.
+- Use classNames in the styled section of the component as dictated by transient props.
 
 ### Media queries
 
-We should follow these media queries for consistency
+We should follow these media queries refered in `VIEWPORT` for consistency
 
 ```css
 /* Mobile (Smartphones, Portrait) */
@@ -172,17 +169,17 @@ We should follow these media queries for consistency
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 991px) {
   /* styles */
 }
 
 /* Desktop */
-@media (min-width: 1024px) and (max-width: 1215px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   /* styles */
 }
 
 /* Wide Screen */
-@media (min-width: 1216px) {
+@media (min-width: 1200px) {
   /* styles */
 }
 ```
@@ -191,7 +188,7 @@ We should follow these media queries for consistency
 
 ### Fix eslint error
 
-It is recommend to enable auto fix all lint error on saving. Example for vscode:
+Enabling auto-fix for lint errors on save is recommended. Here’s an example configuration for VSCode:
 
 ```JSON
   "editor.codeActionsOnSave": {
@@ -201,23 +198,23 @@ It is recommend to enable auto fix all lint error on saving. Example for vscode:
 
 ### Add changeset
 
-Whenever a modification is made to a package, a changeset should be provided. A changeset is a file contains information about changes made in a branch or commit. A changeset is only generated when we commit with an action is `fix`, `feat`, `revert`, `refactor`. It contains three kind of information:
+A changeset must be provided whenever a package is modified. This file includes information about changes made in a branch or commit and is only created for commits with `fix`, `feat`, `revert`, or `refactor` actions. It provides:
 
-- WHAT we need to release
-- WHAT VERSION we are releasing packages at (using a semver bump type)
-- A CHANGELOG ENTRY for the released packages
+- Details on what changes are being released
+- The version number for the release (with a semver bump type)
+- A changelog entry for the released packages
 
-Run the following command to add a changeset:
+To add a changeset, run the following command:
 
 ```bash
 pnpm changeset
 ```
 
-You will be prompted with a set of options to choose from when you execute the command. These options include:
+Executing the command will prompt you with options such as:
 
-- Selecting the package you would like update.
-- Choosing the type of version you want to bump for the package (major, minor, or patch).
-- Adding a summary for the change. You can submit an empty line to open an external editor.
+- Picking the package you wish to update.
+- Choosing the version bump type for the package (`major`, `minor`, or `patch`).
+- Providing a summary of the change. If you leave it blank, an external editor will open.
 
 [Read more about changeset](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md)
 
@@ -225,11 +222,11 @@ You will be prompted with a set of options to choose from when you execute the c
 
 We will follow the [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)
 
-Your commit will fail if it did not sastify these conditions:
+Your commit will fail if it doesn’t meet these conditions:
 
-- Fix all linting error
-- Include atleast one changeset
-- Commit message follows the commit convention
+- All linting errors must be fixed
+- You must include at least one changeset
+- The commit message must follow the commit convention
 
 The standard commitlint terms:
 
@@ -257,7 +254,7 @@ The standard commitlint terms:
 
 ## Versioning
 
-Versioning of packages are coupled to changesets. The changesets added above determine which package is bumped and which version is used.
+Changesets control the versioning of packages. They specify which package gets updated and the version number for the update.
 
 ### Bump the version of packages
 
@@ -267,36 +264,113 @@ Run the following command to bump the version of packages:
 pnpm bump
 ```
 
-These actions will be performed by the command:
+The command will perform the following actions:
 
-- It will consume all the changesets.
-- Based on the consumed changesets, it will automatically increase the version of the appropriate packages and generate the changelogs.
+- It will process all the changesets.
+- It will automatically update the version of the relevant packages and generate changelogs based on the changesets.
 
-Once this action is done, you can commit the version change and push it to the remote.
+After this process, you can commit the version changes and push them to the remote repository."
 
 ### Tips & Tricks
 
-- A version change can contains multiple changesets.
-- The changesets will be converted to the changelogs.
-- The highest version of the changesets will be chosen to bump the version of the packages.
+- A version update can include multiple changesets.
+- The changesets are converted into changelog entries.
+- The highest version from the changesets will be used to update the package versions.
 
 ## Release to npm registry
 
-The steps to perform an releasing:
+The steps to perform a release:
 
-- Pull the latest develop source code.
-- Checkout to new branch with formated name as `release/packages/*`.
-- Run the command to create Changelog for each publish components
+- Pull the latest code from the develop branch.
+- Check out a new branch named `release/packages/*`.
+- Run the command to generate a changelog for each component to be published
 
 ```bash
 pnpm bump
 ```
 
-- Review the version of package and the ChangeLogs.
-- Push `release/packages/*` branch to the remote git.
-- Let the github actions does the job :D
+- Verify the package version and review the changelogs.
+- Push the release/packages/\* branch to the remote repository.
+- Let GitHub Actions take care of the rest!
 
-<!-- TODO: Implement theme feature for each component -->
 <!-- TODO: Remove zustand and use memo with compare callback to prevent re-render -->
 <!-- TODO: Improve to load component on demand -->
-<!-- TODO: Implement a list of svg icon in React component -->
+<!-- TODO: Remove restProps and specific a prop for the custom prop: attributes -->
+<!-- TODO: Use taiwind-css to reduce bundle size -->
+
+## Component checklist
+
+- Regularly verify component re-renders.
+- Utilize named exports for components.
+
+```typescript
+export const TextField = () => <></>
+```
+
+- Isolate conditionally displayed elements into separate files and dynamically import them as needed using lazy loading.
+
+```typescript
+const HelperText = lazy(() =>
+  import("@phantomthief-react/components.helper-text").then((module) => ({
+    default: module.HelperText,
+  })),
+);
+
+<Suspense>
+  {helperTextProps?.children && (
+    <HelperText
+      {...helperTextProps}
+      isError={!!error}
+      variant={variant}
+    >
+      {error?.message ?? helperTextProps?.children ?? ""}
+    </HelperText>
+  )}
+</Suspense>
+```
+
+- Specify the full name of components/modules within the same scope in the package.json.
+
+```typescript
+// Inside components.text-field
+import { HelperText } from "@phantomthief-react/components.helper-text";
+```
+
+- For components/modules outside the current scope, reference the parent package.
+
+```typescript
+// Inside components.text-field
+import { useSyncStateWithProps } from "@phantomthief-react/hooks";
+```
+
+- Prop ordering in components should adhere to the following guidelines:
+
+```typescript
+<Component
+  {...restProps}            // Deprecated soon
+  $fullWidth={fullWidth}    // Transient props, might deprecated too when use TaiwindCSS
+  inputProps={{}}           // Override element props
+  className="test-clsx"     // HTML native attributes
+```
+
+- Prefix interfaces with I and types with T.
+
+```typescript
+export interface ITextFieldProps
+  extends HTMLAttributes<HTMLElement>,
+    IFormFieldProps,
+    IExtendable {
+  variant?: TTextFieldVariant;
+  clear?: TFunction<void>;
+  captureOnFocus?: (e: React.FocusEvent<HTMLElement, Element>) => void;
+  captureOnBlur?: (e: React.FocusEvent<HTMLElement, Element>) => void;
+  inputProps?: InputHTMLAttributes<HTMLInputElement>;
+  labelProps?: ILabelProps;
+  preAdormentProps?: IPreAdormentProps;
+  postAdormentProps?: IPostAdormentProps;
+  helperTextProps?: IHelperTextProps;
+}
+
+export type TTextFieldVariant =
+  (typeof TEXT_FIELD_VARIANT)[keyof typeof TEXT_FIELD_VARIANT];
+```

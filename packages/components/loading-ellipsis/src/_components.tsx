@@ -1,7 +1,8 @@
-import { ILoadingEllipsisProps } from "./_types";
-import { Styled } from "./_style";
-import React from "react";
 import clsx from "clsx";
+import React from "react";
+
+import { Styled } from "./_style";
+import { ILoadingEllipsisProps } from "./_types";
 
 export const LoadingEllipsis = ({
   size = 12,

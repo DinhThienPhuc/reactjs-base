@@ -1,5 +1,6 @@
-import { FONT, FONT_SIZE } from "@phantomthief-react/utils";
 import styled, { css } from "styled-components";
+
+import { FONT } from "@phantomthief-react/utils";
 
 const disabledLabelModify = ({ $disabled }: { $disabled: boolean }) => {
   if ($disabled) {
@@ -17,7 +18,7 @@ const disabledLabelModify = ({ $disabled }: { $disabled: boolean }) => {
 const modifyLabelFontStyle = ({ $disabled }: { $disabled: boolean }) => {
   return css`
     color: ${$disabled ? "#ffffff80" : "#ffffff"};
-    font-size: ${FONT_SIZE.MEDIUM};
+    font-size: 16px;
     font-family: ${FONT.VERNADA};
   `;
 };
@@ -84,12 +85,12 @@ export const Styled = {
       }};
     }
   `,
-  LeftLabel: styled.div<{ $disabled: boolean }>`
+  LeftLabel: styled.span<{ $disabled: boolean }>`
     margin-right: 8px;
     ${modifyLabelFontStyle};
     ${disabledLabelModify};
   `,
-  RightLabel: styled.div<{ $disabled: boolean }>`
+  RightLabel: styled.span<{ $disabled: boolean }>`
     margin-left: 8px;
     ${modifyLabelFontStyle};
     ${disabledLabelModify};

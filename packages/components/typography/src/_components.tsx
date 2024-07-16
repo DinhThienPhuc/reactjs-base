@@ -1,9 +1,10 @@
-import { IStyledTypographyProps, ITypographyProps } from "./_types";
+import clsx from "clsx";
 import React, { FC, useMemo } from "react";
 
 import { capitalize } from "@phantomthief-react/utils";
+
 import { Styled } from "./_style";
-import clsx from "clsx";
+import { IStyledTypographyProps, ITypographyProps } from "./_types";
 
 export const Typography = ({
   variant = "span",
@@ -11,6 +12,7 @@ export const Typography = ({
   bold = 400,
   color = "inherit",
   font = "inherit",
+  align = "inherit",
   className,
   children,
   ...restProps
@@ -27,6 +29,7 @@ export const Typography = ({
       $color={color}
       $bold={bold}
       $font={font}
+      $align={align}
       className={clsx(
         "typography",
         `typography__variant--${variant}`,
@@ -34,6 +37,7 @@ export const Typography = ({
         `typography__bold--${bold}`,
         `typography__color--${color}`,
         `typography__font--${font}`,
+        `typography__align--${align}`,
         className,
       )}
       data-testid="typography"

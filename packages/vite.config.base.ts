@@ -1,9 +1,11 @@
-import dynamicImportVars from "@rollup/plugin-dynamic-import-vars";
-import { visualizer } from "rollup-plugin-visualizer"; // Uncomment this line to generate statistics.html
-import { PluginOptions } from "vite-plugin-dts";
-import viteReact from "@vitejs/plugin-react";
-import { Plugin, UserConfig } from "vite";
 import { resolve } from "path";
+import { visualizer } from "rollup-plugin-visualizer";
+import { Plugin, UserConfig } from "vite";
+// Uncomment this line to generate statistics.html
+import { PluginOptions } from "vite-plugin-dts";
+
+import dynamicImportVars from "@rollup/plugin-dynamic-import-vars";
+import viteReact from "@vitejs/plugin-react";
 
 const resolveExternal = (pkg: Record<string, unknown>) => {
   const defaultExternal = [

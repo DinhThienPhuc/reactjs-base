@@ -1,17 +1,18 @@
+import clsx from "clsx";
+import React from "react";
+
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
-import { COLOR } from "@phantomthief-react/utils";
-import { IHamburgerMenuProps } from "./_types";
+
 import { DEFAULT_VALUE } from "./_constants";
 import { Styled } from "./_style";
-import React from "react";
-import clsx from "clsx";
+import { IHamburgerMenuProps } from "./_types";
 
 export const HamburgerMenu = ({
   gap = DEFAULT_VALUE.GAP,
   width = DEFAULT_VALUE.WIDTH,
   height = DEFAULT_VALUE.HEIGHT,
   borderRadius = DEFAULT_VALUE.BORDER_RADIUS,
-  color = COLOR.WHITE,
+  color = "#ffffff",
   isStandalone = true,
   active = false,
   className,

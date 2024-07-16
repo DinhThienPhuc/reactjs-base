@@ -9,6 +9,7 @@ import {
   getDocs,
   setDoc,
 } from "firebase/firestore";
+
 import { TAsyncBoundary, tryDo } from "@phantomthief-react/utils";
 
 export const getAllDocuments = async <T>(

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from "react";
-
 import { createPortal } from "react-dom";
+
 import { IPortalProps } from "./_types";
 
 export const Portal = ({

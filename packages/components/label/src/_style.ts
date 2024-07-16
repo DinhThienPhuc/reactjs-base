@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
-import { IStyledLabelProps } from "./_types";
 
 import { FONT } from "@phantomthief-react/utils";
+
 import { LABEL_VARIANT } from "./_constants";
+import { IStyledLabelProps } from "./_types";
 
 const modifyLabelPosition = (props: IStyledLabelProps) => {
   if (props?.$variant === LABEL_VARIANT.STANDARD) {

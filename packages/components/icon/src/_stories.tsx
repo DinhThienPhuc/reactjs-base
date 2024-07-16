@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { FONT } from "@phantomthief-react/utils";
-import { Icon } from "./_components";
 import React from "react";
+
+import { FONT } from "@phantomthief-react/utils";
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { Icon } from "./_components";
 
 const listIconNames = [
   "anchor",
@@ -9,6 +11,7 @@ const listIconNames = [
   "arrow-left",
   "arrow-right",
   "arrow-up",
+  "bomb",
   "bookmark",
   "chevron-down",
   "chevron-left",
@@ -21,6 +24,7 @@ const listIconNames = [
   "git-hub",
   "info",
   "linked-in",
+  "react-js",
   "rss",
   "save",
   "settings",

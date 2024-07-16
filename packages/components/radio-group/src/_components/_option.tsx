@@ -1,38 +1,68 @@
-import { IRadioGroupOptionProps } from "../_types";
-import { Styled } from "../_style";
-import React from "react";
 import clsx from "clsx";
+import React, { ChangeEvent, memo, useCallback } from "react";
 
-export const RadioGroupOption = ({
-  className,
-  label,
-  value,
-  labelProps,
-  isStandalone,
-  currentValue,
-  ...restProps
-}: IRadioGroupOptionProps) => {
-  const val = isStandalone ? undefined : currentValue === value;
+import { arePropsShallowEqual } from "@phantomthief-react/utils";
 
-  return (
-    <Styled.OptionLabel
-      {...labelProps}
-      className={clsx("radio-group-option", className)}
-      data-testid="radio-group-option"
-    >
-      <Styled.OptionInput
-        {...restProps}
-        className={clsx(
-          "radio-group-option-input",
-          val ? "radio-group-option-input--checked" : "",
-        )}
-        type="radio"
-        value={value}
-        checked={val}
-      />
-      <Styled.OptionLabelText className="radio-group-option-label">
-        {label}
-      </Styled.OptionLabelText>
-    </Styled.OptionLabel>
-  );
-};
+import { Styled } from "../_style";
+import { IRadioGroupOptionProps } from "../_types";
+
+export const RadioGroupOption = memo(
+  ({
+    className,
+    label,
+    value,
+    labelProps,
+    isStandalone,
+    currentValue,
+    setCurrentValue,
+    onChange,
+    ...restProps
+  }: IRadioGroupOptionProps) => {
+    const val = isStandalone ? undefined : currentValue === value;
+
+    const handleChange = useCallback(
+      (e: ChangeEvent<HTMLInputElement>) => {
+        onChange?.(e);
+        setCurrentValue?.(value);
+      },
+      [onChange, setCurrentValue, value],
+    );
+
+    return (
+      <Styled.OptionLabel
+        {...labelProps}
+        className={clsx("radio-group-option", className)}
+        data-testid="radio-group-option"
+      >
+        <Styled.OptionInput
+          {...restProps}
+          className={clsx(
+            "radio-group-option-input",
+            val ? "radio-group-option-input--checked" : "",
+          )}
+          type="radio"
+          value={value}
+          checked={val}
+          onChange={handleChange}
+        />
+        <Styled.OptionLabelText className="radio-group-option-label">
+          {label}
+        </Styled.OptionLabelText>
+      </Styled.OptionLabel>
+    );
+  },
+  arePropsShallowEqual(["currentValue"], (key, prevProps, nextProps) => {
+    switch (key) {
+      case "currentValue":
+        const willNotRender =
+          (nextProps["currentValue"] === nextProps["value"]) ===
+          (prevProps["currentValue"] === prevProps["value"]);
+
+        return willNotRender;
+      default:
+        return;
+    }
+  }),
+);
+
+RadioGroupOption.displayName = "RadioGroupOption";

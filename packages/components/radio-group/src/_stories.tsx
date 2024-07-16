@@ -1,9 +1,11 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
-import type { Meta, StoryObj } from "@storybook/react";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
-import { RadioGroup } from "./_components";
 import * as yup from "yup";
+
+import { yupResolver } from "@hookform/resolvers/yup";
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { RadioGroup } from "./_components";
 
 const meta = {
   title: "Components/Radio Group",
@@ -98,7 +100,7 @@ export const ParentController: Story = {
   },
 };
 
-export const PropsControllerSelect: Story = {
+export const PropsController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[2].value);
 
@@ -106,7 +108,7 @@ export const PropsControllerSelect: Story = {
       setValue(e.target.value);
     }, []);
 
-    console.log("PropsControllerSelect: ", value);
+    console.log("PropsController: ", value);
 
     return (
       <div style={{ display: "inline-flex", flexDirection: "column" }}>
@@ -157,6 +159,34 @@ export const RHFController: Story = {
 
         <input type="submit" style={{ marginTop: 48 }} />
       </form>
+    );
+  },
+};
+
+export const LazyLoad: Story = {
+  render: function Render(args) {
+    const [value, setValue] = useState(args.options[2].value);
+    const [label, setLabel] = useState("");
+
+    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    }, []);
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <RadioGroup
+          {...args}
+          label={label}
+          value={value}
+          onChange={handleChange}
+        />
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() => setLabel((prev) => (prev ? "" : "Label lazy load"))}
+        >
+          Toggle show label
+        </button>
+      </div>
     );
   },
 };

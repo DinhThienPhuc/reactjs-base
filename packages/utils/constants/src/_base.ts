@@ -31,17 +31,9 @@ export const FONT = {
   FIRA_CODE: "FiraCode, monospace",
 };
 
-export const COLOR = {
-  WHITE: "#ffffff",
-};
-
-export const FONT_SIZE = {
-  XXSMALL: "8px",
-  XSMALL: "10px",
-  SMALL: "12px",
-  REGULAR: "14px",
-  MEDIUM: "16px",
-  LARGE: "20px",
-  XLARGE: "24px",
-  XXLARGE: "28px",
+export const VIEWPORT = {
+  FOUR: 480,
+  SEVEN: 768,
+  NINE: 992,
+  TWELVE: 1200,
 };

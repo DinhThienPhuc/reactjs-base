@@ -1,8 +1,8 @@
 module.exports = {
-  // For prettier 3
-  sortingMethod: "lineLength",
-  plugins: ["./node_modules/prettier-plugin-sort-imports/dist/index.js"],
-  // Common settings
+  plugins: ["@trivago/prettier-plugin-sort-imports"],
+  importOrder: ["^[a-z]", "^@(.*)$", "^[./]"],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
   tabWidth: 2,
   singleQuote: false,
   semi: true,

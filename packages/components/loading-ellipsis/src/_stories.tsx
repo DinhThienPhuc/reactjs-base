@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { LoadingEllipsis } from "./_components";
 
 const meta = {

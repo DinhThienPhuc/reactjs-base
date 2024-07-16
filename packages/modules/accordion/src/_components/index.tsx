@@ -1,10 +1,12 @@
-import { IAccordionItemProps, IAccordionProps } from "../_types";
-import { useOnMounted } from "@phantomthief-react/hooks";
-import React, { ReactNode, useMemo } from "react";
-import { useAccordionState } from "../_states";
-import { AccordionItem } from "./_item";
-import { Styled } from "../_styles";
 import clsx from "clsx";
+import React, { ReactNode, useMemo } from "react";
+
+import { useOnMounted } from "@phantomthief-react/hooks";
+
+import { useAccordionState } from "../_states";
+import { Styled } from "../_styles";
+import { IAccordionItemProps, IAccordionProps } from "../_types";
+import { AccordionItem } from "./_item";
 
 export const Accordion = ({
   items,

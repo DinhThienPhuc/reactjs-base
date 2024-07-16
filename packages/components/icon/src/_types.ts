@@ -1,6 +1,7 @@
+import { SVGProps } from "react";
+
 import { ILoadingEllipsisProps } from "@phantomthief-react/components.loading-ellipsis";
 import { IExtendable } from "@phantomthief-react/utils";
-import { SVGProps } from "react";
 
 export interface ISingleIconProps extends SVGProps<SVGSVGElement>, IExtendable {
   name: string;

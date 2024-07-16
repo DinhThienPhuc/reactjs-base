@@ -1,10 +1,11 @@
-import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
+import clsx from "clsx";
 import React, { useMemo } from "react";
 
 import { LoadingRipple } from "@phantomthief-react/components.loading-ripple";
-import { IButtonProps } from "./_types";
+
+import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { Styled } from "./_style";
-import clsx from "clsx";
+import { IButtonProps } from "./_types";
 
 export const Button = ({
   variant = BUTTON_VARIANT.TEXT,

@@ -1,12 +1,19 @@
-import React, { ChangeEvent, forwardRef, useCallback } from "react";
+import clsx from "clsx";
+import React, { Suspense, forwardRef, lazy } from "react";
+
 import { FlexBox } from "@phantomthief-react/components.flex-box";
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
+
 import { RADIO_GROUP_DIRECTION } from "../_constants";
+import { Styled } from "../_style";
 import { IRadioGroupProps } from "../_types";
 import { RadioGroupOption } from "./_option";
-import { RadioGroupLabel } from "./_label";
-import { Styled } from "../_style";
-import clsx from "clsx";
+
+const RadioGroupLabel = lazy(() =>
+  import("./_label").then((module) => ({
+    default: module.RadioGroupLabel,
+  })),
+);
 
 export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
   (
@@ -27,21 +34,17 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
       string | undefined
     >(value, isStandalone);
 
-    const handleChange = useCallback(
-      (e: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e);
-        setCurrentValue(value);
-      },
-      [onChange, setCurrentValue, value],
-    );
-
     return (
       <Styled.Container
         {...restProps}
         className={clsx("radio-group", className)}
         data-testid="radio-group"
       >
-        <RadioGroupLabel hasValue={!!currentValue} label={label} />
+        <Suspense>
+          {!!label && (
+            <RadioGroupLabel hasValue={!!currentValue} label={label} />
+          )}
+        </Suspense>
         <FlexBox
           gap="16px"
           flexDirection={direction}
@@ -58,7 +61,8 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
               key={option.key}
               isStandalone={isStandalone}
               currentValue={currentValue}
-              onChange={handleChange}
+              onChange={onChange}
+              setCurrentValue={setCurrentValue}
             />
           ))}
         </FlexBox>

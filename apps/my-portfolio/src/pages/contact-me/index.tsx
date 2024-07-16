@@ -1,7 +1,8 @@
-import { IAccordionItemProps } from "@phantomthief-react/modules";
 import { Icon } from "@phantomthief-react/components";
-import { ContactForm } from "./contact-form";
+import { IAccordionItemProps } from "@phantomthief-react/modules";
+
 import { CommonStyled } from "../../styles";
+import { ContactForm } from "./contact-form";
 import { FindMeAt } from "./find-me-at";
 import Styled from "./style";
 

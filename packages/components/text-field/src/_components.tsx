@@ -1,17 +1,38 @@
-import React, { ChangeEvent, forwardRef, useMemo } from "react";
+import clsx from "clsx";
+import React, { ChangeEvent, Suspense, forwardRef, lazy } from "react";
 
 import {
   useFocusWithCallback,
   useSyncStateWithProps,
 } from "@phantomthief-react/hooks";
-import { PostAdorment } from "@phantomthief-react/components.post-adorment";
-import { PreAdorment } from "@phantomthief-react/components.pre-adorment";
-import { HelperText } from "@phantomthief-react/components.helper-text";
-import { Label } from "@phantomthief-react/components.label";
+
 import { TEXT_FIELD_VARIANT } from "./_constants";
-import { ITextFieldProps } from "./_types";
 import { Styled } from "./_style";
-import clsx from "clsx";
+import { ITextFieldProps } from "./_types";
+
+const HelperText = lazy(() =>
+  import("@phantomthief-react/components.helper-text").then((module) => ({
+    default: module.HelperText,
+  })),
+);
+
+const Label = lazy(() =>
+  import("@phantomthief-react/components.label").then((module) => ({
+    default: module.Label,
+  })),
+);
+
+const PostAdorment = lazy(() =>
+  import("@phantomthief-react/components.post-adorment").then((module) => ({
+    default: module.PostAdorment,
+  })),
+);
+
+const PreAdorment = lazy(() =>
+  import("@phantomthief-react/components.pre-adorment").then((module) => ({
+    default: module.PreAdorment,
+  })),
+);
 
 export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
   (
@@ -56,56 +77,6 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
       setCurrentValue(e.target.value);
     };
 
-    const customPreAdorment = useMemo(
-      () => (
-        <PreAdorment
-          {...preAdormentProps}
-          hasLabel={!!labelProps?.children}
-          variant={variant}
-        />
-      ),
-      [labelProps?.children, preAdormentProps, variant],
-    );
-
-    const customPostAdorment = useMemo(
-      () => (
-        <PostAdorment {...postAdormentProps} clear={clear} variant={variant} />
-      ),
-      [clear, postAdormentProps, variant],
-    );
-
-    const customHelperText = useMemo(
-      () => (
-        <HelperText {...helperTextProps} isError={!!error} variant={variant}>
-          {error?.message ?? helperTextProps?.children ?? ""}
-        </HelperText>
-      ),
-      [error, helperTextProps, variant],
-    );
-
-    const customLabel = useMemo(
-      () => (
-        <Label
-          {...labelProps}
-          variant={variant}
-          disabled={disabled}
-          required={required}
-          isLabelCollapsed={isLabelCollapsed}
-          isFocused={isFocused}
-          isError={!!error}
-        />
-      ),
-      [
-        disabled,
-        error,
-        isFocused,
-        isLabelCollapsed,
-        labelProps,
-        required,
-        variant,
-      ],
-    );
-
     return (
       <Styled.Container
         {...restProps}
@@ -123,8 +94,28 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
         )}
         data-testid="text-field"
       >
-        {customLabel}
-        {customPreAdorment}
+        <Suspense>
+          {!!labelProps?.children && (
+            <Label
+              {...labelProps}
+              variant={variant}
+              disabled={disabled}
+              required={required}
+              isLabelCollapsed={isLabelCollapsed}
+              isFocused={isFocused}
+              isError={!!error}
+            />
+          )}
+        </Suspense>
+        <Suspense>
+          {!!preAdormentProps?.children && (
+            <PreAdorment
+              {...preAdormentProps}
+              hasLabel={!!labelProps?.children}
+              variant={variant}
+            />
+          )}
+        </Suspense>
         <Styled.Input
           {...inputProps}
           $variant={variant}
@@ -145,8 +136,26 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
             required && "text-field-input--required",
           )}
         />
-        {customPostAdorment}
-        {customHelperText}
+        <Suspense>
+          {!!postAdormentProps?.children && (
+            <PostAdorment
+              {...postAdormentProps}
+              clear={clear}
+              variant={variant}
+            />
+          )}
+        </Suspense>
+        <Suspense>
+          {helperTextProps?.children && (
+            <HelperText
+              {...helperTextProps}
+              isError={!!error}
+              variant={variant}
+            >
+              {error?.message ?? helperTextProps?.children ?? ""}
+            </HelperText>
+          )}
+        </Suspense>
       </Styled.Container>
     );
   },

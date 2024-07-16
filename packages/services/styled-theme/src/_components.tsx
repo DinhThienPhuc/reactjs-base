@@ -1,9 +1,9 @@
-import { IStyledThemeProps, TStyledTheme, TStyledThemeContext } from "./_types";
 import React, { createContext, useContext, useMemo, useState } from "react";
-
 import { ThemeProvider } from "styled-components";
+
 import { STYLED_THEMES } from "./_constants";
 import defaultSchema from "./_schema.json";
+import { IStyledThemeProps, TStyledTheme, TStyledThemeContext } from "./_types";
 
 const ThemeContext = createContext<TStyledThemeContext>({
   theme: STYLED_THEMES.DARK,
