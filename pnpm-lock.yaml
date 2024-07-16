@@ -665,15 +665,6 @@ importers:
         specifier: "*"
         version: 5.5.3
 
-  packages/hooks/create-context:
-    dependencies:
-      react:
-        specifier: "*"
-        version: 18.3.1
-      typescript:
-        specifier: "*"
-        version: 5.5.3
-
   packages/hooks/event-listener:
     dependencies:
       "@phantomthief-react/hooks.isomorphic-layout-effect":

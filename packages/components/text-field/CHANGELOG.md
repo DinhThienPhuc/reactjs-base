@@ -1,5 +1,23 @@
 # @phantomthief-react/components.text-field
 
+## 0.0.8
+
+### Patch Changes
+
+- d4e97f2: Memoize PreAdorment and remove unnecessary useMemo
+- 9b062fa: Update dependencies, fix import order, and update radio-group and select components
+- 0c123ca: Update dependencies and fix import order
+- Updated dependencies [e25db53]
+- Updated dependencies [d4e97f2]
+- Updated dependencies [9b062fa]
+- Updated dependencies [0c123ca]
+  - @phantomthief-react/components.post-adorment@0.0.12
+  - @phantomthief-react/components.pre-adorment@0.0.10
+  - @phantomthief-react/components.helper-text@0.0.11
+  - @phantomthief-react/components.label@0.0.11
+  - @phantomthief-react/hooks@0.0.7
+  - @phantomthief-react/utils@0.0.7
+
 ## 0.0.7
 
 ### Patch Changes

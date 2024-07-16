@@ -1,5 +1,17 @@
 # @phantomthief-react/services.i18n
 
+## 0.0.9
+
+### Patch Changes
+
+- d4e97f2: Memoize PreAdorment and remove unnecessary useMemo
+- 9b062fa: Update dependencies, fix import order, and update radio-group and select components
+- 0c123ca: Update dependencies and fix import order
+- Updated dependencies [d4e97f2]
+- Updated dependencies [9b062fa]
+- Updated dependencies [0c123ca]
+  - @phantomthief-react/utils@0.0.7
+
 ## 0.0.8
 
 ### Patch Changes

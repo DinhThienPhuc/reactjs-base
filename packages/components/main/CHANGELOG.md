@@ -1,5 +1,33 @@
 # @phantomthief-react/components
 
+## 0.0.10
+
+### Patch Changes
+
+- d4e97f2: Memoize PreAdorment and remove unnecessary useMemo
+- 9b062fa: Update dependencies, fix import order, and update radio-group and select components
+- 0c123ca: Update dependencies and fix import order
+- Updated dependencies [e25db53]
+- Updated dependencies [376ed0b]
+- Updated dependencies [d4e97f2]
+- Updated dependencies [9b062fa]
+- Updated dependencies [0c123ca]
+- Updated dependencies [4696248]
+- Updated dependencies [10ae366]
+  - @phantomthief-react/components.hamburger-menu@0.0.6
+  - @phantomthief-react/components.radio-group@0.0.4
+  - @phantomthief-react/components.typography@0.0.12
+  - @phantomthief-react/components.select@0.0.12
+  - @phantomthief-react/components.switch@0.0.10
+  - @phantomthief-react/components.icon@0.0.5
+  - @phantomthief-react/components.loading-ellipsis@0.0.10
+  - @phantomthief-react/components.loading-ripple@0.0.10
+  - @phantomthief-react/components.text-field@0.0.8
+  - @phantomthief-react/components.flex-box@0.0.14
+  - @phantomthief-react/components.button@0.0.10
+  - @phantomthief-react/components.navbar@0.0.6
+  - @phantomthief-react/components.portal@0.0.7
+
 ## 0.0.9
 
 ### Patch Changes

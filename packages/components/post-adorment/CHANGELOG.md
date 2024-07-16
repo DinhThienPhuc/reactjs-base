@@ -1,5 +1,23 @@
 # @phantomthief-react/components.post-adorment
 
+## 0.0.12
+
+### Patch Changes
+
+- e25db53: Update radio-group and select components
+- d4e97f2: Memoize PreAdorment and remove unnecessary useMemo
+- 9b062fa: Update dependencies, fix import order, and update radio-group and select components
+- 0c123ca: Update dependencies and fix import order
+- Updated dependencies [e25db53]
+- Updated dependencies [376ed0b]
+- Updated dependencies [d4e97f2]
+- Updated dependencies [9b062fa]
+- Updated dependencies [0c123ca]
+- Updated dependencies [4696248]
+- Updated dependencies [10ae366]
+  - @phantomthief-react/components.icon@0.0.5
+  - @phantomthief-react/utils@0.0.7
+
 ## 0.0.11
 
 ### Patch Changes
