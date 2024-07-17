@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
 import { FONT, getInvisibleButton } from "@phantomthief-react/utils";
-import { FlexBox } from "@phantomthief-react/components";
 
 import { IStyledAccordionItemContainerProps } from "./_types";
 
@@ -37,7 +36,8 @@ export const Styled = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: inherit;
+    gap: 16px;
+    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
     padding: 0px 16px;
     width: 100%;
     height: 48px;
@@ -54,29 +54,25 @@ export const Styled = {
             cursor: pointer;
           `};
   `,
-  ItemHeaderSection: styled(FlexBox)<{ $disabled?: boolean }>`
-    opacity: ${({ $disabled }) => ($disabled ? 0.38 : 1)};
-  `,
-  ItemHeaderPreIcon: styled.span`
+  ItemHeaderSection: styled.span`
     display: flex;
-    margin-right: 16px;
+    gap: 16px;
   `,
-  ItemHeaderLabel: styled.span<{
-    $disabled?: boolean;
-  }>`
-    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
+  ItemHeaderSectionGroup: styled.span`
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  `,
+  ItemHeaderLabel: styled.span`
     font-family: ${FONT.VERNADA};
   `,
   ItemHeaderExpandIcon: styled.span<{
     $isExpanded: boolean;
-    $disabled?: boolean;
   }>`
     display: flex;
     transition: all 250ms ease-in-out;
     width: 20px;
     height: 20px;
-    margin-left: 16px;
-    color: ${({ $disabled }) => ($disabled ? "#ffffff80" : "#ffffff")};
     transform: ${({ $isExpanded }) =>
       $isExpanded ? "rotate(180deg)" : "none"};
   `,

@@ -1,10 +1,11 @@
 import React, { memo, useMemo } from "react";
 
-import { IAccordionItemHeaderProps, TItemDictionary } from "../_types";
-import { AccordionItemHeaderRight } from "./_item-header-right";
-import { AccordionItemExpandIcon } from "./_expand-icon";
-import { useWhyDidYouUpdate } from "ahooks";
+import { Typography } from "@phantomthief-react/components";
+import { FONT } from "@phantomthief-react/utils";
+
 import { Styled } from "../_styles";
+import { IAccordionItemHeaderProps, TItemDictionary } from "../_types";
+import { AccordionItemExpandIcon } from "./_expand-icon";
 
 export const AccordionItemHeader = memo(
   ({
@@ -28,43 +29,32 @@ export const AccordionItemHeader = memo(
             },
             {},
           ),
-          [key]: true,
+          [key]: prev[key] ? false : true,
         }));
       } else {
         setItemDictionary((prev) => ({ ...prev, [key]: !prev[key] }));
       }
     };
 
-    const leftPanel = useMemo(() => {
-      return (
-        <Styled.ItemHeaderSection
-          $disabled={disabled}
-          variant="span"
-          className="accordion-item__header__left"
-        >
-          {!!preIcon && (
-            <Styled.ItemHeaderPreIcon className="accordion-item__header__left__pre-icon">
-              {preIcon}
-            </Styled.ItemHeaderPreIcon>
-          )}
-          <Styled.ItemHeaderLabel $disabled={disabled}>
-            {label}
-          </Styled.ItemHeaderLabel>
-        </Styled.ItemHeaderSection>
-      );
-    }, [disabled, label, preIcon]);
-
-    useWhyDidYouUpdate(`AccordionItemHeader ${id}`, {
-      label,
-      preIcon,
-      postIcon,
-      expandIcon,
-      disabled,
-      isExpanded,
-      isOnlyOneExpand,
-      id,
-      setItemDictionary,
-    });
+    const firstSection = useMemo(
+      () => (
+        <Styled.ItemHeaderSectionGroup>
+          <Styled.ItemHeaderSection className="accordion-item__header__left">
+            {preIcon}
+            <Typography
+              font={FONT.VERNADA}
+              className="accordion-item__header-label"
+            >
+              {label}
+            </Typography>
+          </Styled.ItemHeaderSection>
+          <Styled.ItemHeaderSection className="accordion-item__header__right">
+            {postIcon}
+          </Styled.ItemHeaderSection>
+        </Styled.ItemHeaderSectionGroup>
+      ),
+      [label, postIcon, preIcon],
+    );
 
     return (
       <Styled.ItemHeader
@@ -72,13 +62,11 @@ export const AccordionItemHeader = memo(
         className="accordion-item__header"
         onClick={onClickItemHeader(id)}
       >
-        {leftPanel}
-        <AccordionItemHeaderRight postIcon={postIcon} disabled={disabled}>
-          <AccordionItemExpandIcon
-            expandIcon={expandIcon}
-            isExpanded={isExpanded}
-          />
-        </AccordionItemHeaderRight>
+        {firstSection}
+        <AccordionItemExpandIcon
+          expandIcon={expandIcon}
+          isExpanded={isExpanded}
+        />
       </Styled.ItemHeader>
     );
   },

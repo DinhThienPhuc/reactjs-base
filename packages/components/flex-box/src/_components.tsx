@@ -15,6 +15,7 @@ export const FlexBox = ({
   variant = "div",
   gap = "0px",
   wrap = "nowrap",
+  fullWidth = false,
   ...restProps
 }: IFlexBoxProps) => {
   const StyledTag = useMemo(() => {
@@ -30,6 +31,7 @@ export const FlexBox = ({
       $justifyContent={justifyContent}
       $gap={gap}
       $wrap={wrap}
+      $fullWidth={fullWidth}
       className={clsx(
         "flex-box",
         `flex-box--direction-${flexDirection}`,
