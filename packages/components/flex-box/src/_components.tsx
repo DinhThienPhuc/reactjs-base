@@ -16,7 +16,7 @@ export const FlexBox = ({
   gap = "0px",
   wrap = "nowrap",
   fullWidth = false,
-  ...restProps
+  htmlAttributes,
 }: IFlexBoxProps) => {
   const StyledTag = useMemo(() => {
     const styledTagProperty = capitalize(variant) as keyof typeof Styled;
@@ -25,7 +25,7 @@ export const FlexBox = ({
 
   return (
     <StyledTag
-      {...restProps}
+      {...htmlAttributes}
       $flexDirection={flexDirection}
       $alignItems={alignItems}
       $justifyContent={justifyContent}
@@ -42,7 +42,6 @@ export const FlexBox = ({
         `flex-box--variant-${variant}`,
         className,
       )}
-      data-testid="flex-box"
     >
       {children}
     </StyledTag>

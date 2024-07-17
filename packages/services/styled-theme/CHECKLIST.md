@@ -47,7 +47,7 @@ import { useSyncStateWithProps } from "@phantomthief-react/hooks";
 
 ```typescript
 <Component
-  {...restProps}            // Deprecated soon
+  {...htmlAttributes}       // Place carefully
   $fullWidth={fullWidth}    // Transient props, might deprecated too when use TaiwindCSS
   inputProps={{}}           // Override element props
   className="test-clsx"     // HTML native attributes

@@ -1,11 +1,7 @@
 import { Property } from "csstype";
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils";
-
-export interface IFlexBoxProps
-  extends HTMLAttributes<HTMLElement>,
-    IExtendable {
+export interface IFlexBoxProps {
   alignItems?: Property.AlignItems;
   justifyContent?: Property.JustifyContent;
   flexDirection?: Property.FlexDirection;
@@ -13,6 +9,9 @@ export interface IFlexBoxProps
   gap?: Property.Gap;
   wrap?: Property.FlexWrap;
   fullWidth?: boolean;
+  htmlAttributes?: HTMLAttributes<HTMLElement>;
+  children?: ReactNode;
+  className?: string;
 }
 
 export interface IStyledFlexBoxProps {
