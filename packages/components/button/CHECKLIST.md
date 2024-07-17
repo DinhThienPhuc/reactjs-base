@@ -1,13 +1,13 @@
 # Component checklist
 
-- ✅ Regularly verify component re-renders.
-- ✅ Utilize named exports for components.
+- 💯 Regularly verify component re-renders.
+- 💯 Utilize named exports for components.
 
 ```typescript
 export const TextField = () => <></>
 ```
 
-- ✅ Isolate conditionally displayed elements into separate files and dynamically import them as needed using lazy loading.
+- 💯 Isolate conditionally displayed elements into separate files and dynamically import them as needed using lazy loading.
 
 ```typescript
 const HelperText = lazy(() =>
@@ -29,21 +29,21 @@ const HelperText = lazy(() =>
 </Suspense>
 ```
 
-- ✅ Specify the full name of components/modules within the same scope in the package.json.
+- 💯 Specify the full name of components/modules within the same scope in the package.json.
 
 ```typescript
 // Inside components.text-field
 import { HelperText } from "@phantomthief-react/components.helper-text";
 ```
 
-- ✅ For components/modules outside the current scope, reference the parent package.
+- 💯 For components/modules outside the current scope, reference the parent package.
 
 ```typescript
 // Inside components.text-field
 import { useSyncStateWithProps } from "@phantomthief-react/hooks";
 ```
 
-- ✅ Prop ordering in components should adhere to the following guidelines:
+- 💯 Prop ordering in components should adhere to the following guidelines:
 
 ```typescript
 <Component
@@ -53,7 +53,7 @@ import { useSyncStateWithProps } from "@phantomthief-react/hooks";
   className="test-clsx"     // HTML native attributes
 ```
 
-- ✅ Prefix interfaces with I and types with T.
+- 💯 Prefix interfaces with I and types with T.
 
 ```typescript
 export interface ITextFieldProps
@@ -75,7 +75,7 @@ export type TTextFieldVariant =
   (typeof TEXT_FIELD_VARIANT)[keyof typeof TEXT_FIELD_VARIANT];
 ```
 
-- ✅ Refrain from using styled-components to wrap and customize other components. Reserve this approach for use within the applications only.
+- 💯 Refrain from using styled-components to wrap and customize other components. Reserve this approach for use within the applications only.
 
 ```typescript
 // DON'T
@@ -98,9 +98,9 @@ Details: styled(FlexBox)`
 `,
 ```
 
-- ✅ Minimize the use of HTML tags to reduce the complexity of the HTML DOM.
+- 💯 Minimize the use of HTML tags to reduce the complexity of the HTML DOM.
 
-- ✅ Create a story for the component with split load chunks.
+- 💯 Create a story for the component with split load chunks.
 
 ```typescript
 export const LazyLoad: Story = {
@@ -136,8 +136,8 @@ export const LazyLoad: Story = {
 };
 ```
 
-- ✅ Utilize the htmlAttributes prop to add standard HTML attributes. Apply this to each element within the component as well.
+- 💯 Utilize the htmlAttributes prop to add standard HTML attributes. Apply this to each element within the component as well.
 
-- 🔄 Utilize Tailwind CSS to decrease the bundle size of package.
+- 🚀 Utilize Tailwind CSS to decrease the bundle size of package.
 
-- 📝 Consider using SVG images instead of components for better performance
+- 🧩 Consider using SVG images instead of components for better performance
