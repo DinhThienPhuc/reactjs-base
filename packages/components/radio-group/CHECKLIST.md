@@ -141,3 +141,5 @@ export const LazyLoad: Story = {
 - 🧩 Utilize Tailwind CSS to decrease the bundle size of package.
 
 - 🧩 Consider using SVG images instead of components for better performance
+
+- 🧩 Include a story that demonstrates how the HTML attributes function

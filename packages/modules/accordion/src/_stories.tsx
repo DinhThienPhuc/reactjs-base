@@ -1,7 +1,8 @@
+import type { Meta, StoryObj } from "@storybook/react";
+
 import React from "react";
 
 import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
-import type { Meta, StoryObj } from "@storybook/react";
 import { FONT } from "@phantomthief-react/utils";
 
 import { Accordion } from "./_components";
@@ -39,7 +40,7 @@ const meta = {
   args: {
     items: [
       {
-        key: "accordion-item-1",
+        id: "accordion-item-1",
         label: "Accordion 1",
         body: (
           <Typography font={FONT.VERNADA}>
@@ -49,7 +50,7 @@ const meta = {
         ),
       },
       {
-        key: "accordion-item-2",
+        id: "accordion-item-2",
         label: "Accordion 2",
         preIcon: <Icon name="settings" width={16} height={16} />,
         body: (
@@ -60,7 +61,7 @@ const meta = {
         ),
       },
       {
-        key: "accordion-item-3",
+        id: "accordion-item-3",
         label: "Accordion disabled",
         disabled: true,
         body: (
@@ -71,7 +72,7 @@ const meta = {
         ),
       },
       {
-        key: "accordion-item-4",
+        id: "accordion-item-4",
         label: "Accordion 4",
         body: (
           <Typography font={FONT.VERNADA}>
@@ -79,7 +80,6 @@ const meta = {
             malesuada lacus ex, sit amet blandit leo lobortis eget.
           </Typography>
         ),
-        "data-web-test": "web-test-accordion-item-4",
       },
     ],
   },
@@ -94,7 +94,7 @@ export const Default: Story = {};
 export const DisableAll: Story = {
   args: {
     disabled: true,
-    expandKeys: ["accordion-item-1", "accordion-item-3", "accordion-item-4"],
+    expandIds: ["accordion-item-1", "accordion-item-3", "accordion-item-4"],
   },
 };
 
@@ -106,14 +106,14 @@ export const ExpandOne: Story = {
 
 export const ExpandDefaultKeys: Story = {
   args: {
-    expandKeys: ["accordion-item-1", "accordion-item-3", "accordion-item-4"],
+    expandIds: ["accordion-item-1", "accordion-item-3", "accordion-item-4"],
   },
 };
 
 export const ExpandDefaultKeysInOnlyOneMode: Story = {
   args: {
     isOnlyOneExpand: true,
-    expandKeys: ["accordion-item-1", "accordion-item-2"],
+    expandIds: ["accordion-item-1", "accordion-item-2"],
   },
 };
 
@@ -125,7 +125,7 @@ export const CustomExpandIcon: Story = {
 
 export const CustomPreIcon: Story = {
   args: {
-    expandKeys: ["accordion-item-2"],
+    expandIds: ["accordion-item-2"],
     preIcon: <Icon name="bookmark" width={16} height={16} />,
   },
 };
@@ -134,5 +134,47 @@ export const CustomPostIcon: Story = {
   args: {
     preIcon: <Icon name="bookmark" width={16} height={16} />,
     postIcon,
+  },
+};
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    preIcon: <Icon name="bookmark" width={16} height={16} />,
+    postIcon,
+    items: [
+      {
+        id: "accordion-item-1",
+        label: "Accordion 1",
+        body: (
+          <Typography font={FONT.VERNADA}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        ),
+        htmlAttributes: {
+          "aria-expanded": "true",
+        },
+        bodyHtmlAttributes: {
+          "data-webid": "accordion-item-1-body",
+        },
+        expandIconHtmlAttributes: {
+          "aria-controls": "accordion-item-1-controls-expand-icon",
+        },
+        itemHeaderHtmlAttributes: {
+          "data-testid": "test-accordion-item-1",
+        },
+      },
+      {
+        id: "accordion-item-2",
+        label: "Accordion 2",
+        preIcon: <Icon name="settings" width={16} height={16} />,
+        body: (
+          <Typography font={FONT.VERNADA}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        ),
+      },
+    ],
   },
 };

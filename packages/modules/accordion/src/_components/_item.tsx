@@ -1,15 +1,14 @@
-import React, { memo } from "react";
 import clsx from "clsx";
+import React, { memo } from "react";
 
-import { AccordionItemHeader } from "./_item-header";
-import { IAccordionItemProps } from "../_types";
 import { Styled } from "../_styles";
+import { IAccordionItemProps } from "../_types";
+import { AccordionItemHeader } from "./_item-header";
 
 export const AccordionItem = memo(
   ({
     label,
     body,
-    className,
     preIcon,
     postIcon,
     expandIcon,
@@ -17,17 +16,20 @@ export const AccordionItem = memo(
     isExpanded,
     isOnlyOneExpand,
     id,
+    bodyHtmlAttributes,
+    expandIconHtmlAttributes,
+    itemHeaderHtmlAttributes,
+    itemHeaderLabelHtmlAttributes,
+    htmlAttributes,
     setItemDictionary,
-    ...restProps
   }: IAccordionItemProps) => {
     return (
       <Styled.ItemContainer
-        {...restProps}
+        {...htmlAttributes}
         $isExpanded={isExpanded}
         className={clsx(
           "accordion-item",
           isExpanded && "accordion-item--isExpanded",
-          className,
         )}
       >
         <AccordionItemHeader
@@ -39,9 +41,13 @@ export const AccordionItem = memo(
           isExpanded={isExpanded}
           id={id}
           isOnlyOneExpand={isOnlyOneExpand}
+          itemHeaderHtmlAttributes={itemHeaderHtmlAttributes}
+          expandIconHtmlAttributes={expandIconHtmlAttributes}
+          itemHeaderLabelHtmlAttributes={itemHeaderLabelHtmlAttributes}
           setItemDictionary={setItemDictionary}
         />
         <Styled.ItemContent
+          {...bodyHtmlAttributes}
           $isExpanded={isExpanded}
           className={clsx(
             "accordion-item__content",

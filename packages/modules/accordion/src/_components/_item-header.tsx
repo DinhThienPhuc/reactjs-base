@@ -17,22 +17,25 @@ export const AccordionItemHeader = memo(
     isExpanded,
     isOnlyOneExpand,
     id,
+    expandIconHtmlAttributes,
+    itemHeaderHtmlAttributes,
+    itemHeaderLabelHtmlAttributes,
     setItemDictionary,
   }: IAccordionItemHeaderProps) => {
-    const onClickItemHeader = (key: string) => () => {
+    const onClickItemHeader = (id: string) => () => {
       if (isOnlyOneExpand) {
         setItemDictionary((prev) => ({
           ...Object.keys(prev).reduce(
-            (acc: TItemDictionary, currentKey: string) => {
-              acc[currentKey] = false;
+            (acc: TItemDictionary, currentId: string) => {
+              acc[currentId] = false;
               return acc;
             },
             {},
           ),
-          [key]: prev[key] ? false : true,
+          [id]: prev[id] ? false : true,
         }));
       } else {
-        setItemDictionary((prev) => ({ ...prev, [key]: !prev[key] }));
+        setItemDictionary((prev) => ({ ...prev, [id]: !prev[id] }));
       }
     };
 
@@ -42,6 +45,7 @@ export const AccordionItemHeader = memo(
           <Styled.ItemHeaderSection className="accordion-item__header__left">
             {preIcon}
             <Typography
+              {...itemHeaderLabelHtmlAttributes}
               font={FONT.VERNADA}
               className="accordion-item__header-label"
             >
@@ -53,17 +57,19 @@ export const AccordionItemHeader = memo(
           </Styled.ItemHeaderSection>
         </Styled.ItemHeaderSectionGroup>
       ),
-      [label, postIcon, preIcon],
+      [itemHeaderLabelHtmlAttributes, label, postIcon, preIcon],
     );
 
     return (
       <Styled.ItemHeader
+        {...itemHeaderHtmlAttributes}
         $disabled={disabled}
         className="accordion-item__header"
         onClick={onClickItemHeader(id)}
       >
         {firstSection}
         <AccordionItemExpandIcon
+          htmlAttributes={expandIconHtmlAttributes}
           expandIcon={expandIcon}
           isExpanded={isExpanded}
         />

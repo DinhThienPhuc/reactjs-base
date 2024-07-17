@@ -2,13 +2,11 @@ import styled, { css } from "styled-components";
 
 import { FONT, getInvisibleButton } from "@phantomthief-react/utils";
 
-import { IStyledAccordionItemContainerProps } from "./_types";
-
 export const Styled = {
   Container: styled.div`
     color: #ffffff;
   `,
-  ItemContainer: styled.div<IStyledAccordionItemContainerProps>`
+  ItemContainer: styled.div<{ $isExpanded: boolean }>`
     transition: margin 150ms ease-in-out;
     background-color: #121212;
     width: 100%;
