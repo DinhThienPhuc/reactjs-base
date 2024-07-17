@@ -101,3 +101,43 @@ Details: styled(FlexBox)`
 - [ ] Minimize the use of HTML tags to reduce the complexity of the HTML DOM.
 
 - [ ] Create a story for the component with split load chunks.
+
+```typescript
+export const LazyLoad: Story = {
+  args: {
+    variant: "outlined",
+    loading: true,
+    loadingComponent: <>...</>,
+  },
+  render: function Render(args) {
+    const [loadingComponent, setLoadingComponent] = useState(
+      args.loadingComponent,
+    );
+
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column" }}>
+        <Button {...args} loadingComponent={loadingComponent} />
+        <button
+          style={{ marginTop: 48 }}
+          onClick={() =>
+            setLoadingComponent((prev) => (prev ? null : args.loadingComponent))
+          }
+        >
+          Toggle show custom loading component
+        </button>
+        <p style={{ color: "#ffffff" }}>
+          Please note: To replicate this lazy behavior, comment out the
+          CustomLoading story. Otherwise, the LoadingRipple will still load due
+          to the definition of the CustomLoading story.
+        </p>
+      </div>
+    );
+  },
+};
+```
+
+- [ ] Utilize the htmlAttributes prop to add standard HTML attributes. Apply this to each element within the component as well.
+
+- [ ] Utilize Tailwind CSS to decrease the bundle size of package.
+
+- [ ] Consider using SVG images instead of components for better performance

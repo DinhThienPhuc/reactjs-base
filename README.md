@@ -292,9 +292,3 @@ pnpm bump
 - Verify the package version and review the changelogs.
 - Push the release/packages/\* branch to the remote repository.
 - Let GitHub Actions take care of the rest!
-
-<!-- TODO: Remove zustand and use memo with compare callback to prevent re-render -->
-<!-- TODO: Improve to load component on demand -->
-<!-- TODO: Remove restProps and specific a prop for the custom prop: attributes -->
-<!-- TODO: Use taiwind-css to reduce bundle size -->
-<!-- TODO: Consider to use svg as image instead of component to have better performance -->

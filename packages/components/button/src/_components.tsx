@@ -1,11 +1,15 @@
 import clsx from "clsx";
-import React, { useMemo } from "react";
-
-import { LoadingRipple } from "@phantomthief-react/components.loading-ripple";
+import React, { Suspense, lazy, useMemo } from "react";
 
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { Styled } from "./_style";
 import { IButtonProps } from "./_types";
+
+const LoadingRipple = lazy(() =>
+  import("@phantomthief-react/components.loading-ripple").then((module) => ({
+    default: module.LoadingRipple,
+  })),
+);
 
 export const Button = ({
   variant = BUTTON_VARIANT.TEXT,
@@ -13,20 +17,24 @@ export const Button = ({
   loading = false,
   loadingComponent,
   className,
+  htmlAttributes,
   children,
   onClick,
-  ...restProps
 }: IButtonProps) => {
   const buttonContent = useMemo(() => {
     if (!loading) {
       return children;
     }
-    return loadingComponent ?? <LoadingRipple size={16} fullScreen={false} />;
+    return (
+      <Suspense>
+        {loadingComponent ?? <LoadingRipple size={16} fullScreen={false} />}
+      </Suspense>
+    );
   }, [children, loading, loadingComponent]);
 
   return (
     <Styled.Container
-      {...restProps}
+      {...htmlAttributes}
       $variant={variant}
       $size={size}
       onClick={onClick}
@@ -37,7 +45,6 @@ export const Button = ({
         loading && "button--loading",
         className,
       )}
-      data-testid="button"
     >
       {buttonContent}
     </Styled.Container>
