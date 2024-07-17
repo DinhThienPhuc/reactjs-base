@@ -1,15 +1,11 @@
 import clsx from "clsx";
-import React, { Suspense, lazy, useMemo } from "react";
+import React, { useMemo } from "react";
+
+import { LoadingRipple } from "@phantomthief-react/components.loading-ripple";
 
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { Styled } from "./_style";
 import { IButtonProps } from "./_types";
-
-const LoadingRipple = lazy(() =>
-  import("@phantomthief-react/components.loading-ripple").then((module) => ({
-    default: module.LoadingRipple,
-  })),
-);
 
 export const Button = ({
   variant = BUTTON_VARIANT.TEXT,
@@ -25,11 +21,7 @@ export const Button = ({
     if (!loading) {
       return children;
     }
-    return (
-      <Suspense>
-        {loadingComponent ?? <LoadingRipple size={16} fullScreen={false} />}
-      </Suspense>
-    );
+    return loadingComponent ?? <LoadingRipple size={16} fullScreen={false} />;
   }, [children, loading, loadingComponent]);
 
   return (

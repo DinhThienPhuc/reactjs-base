@@ -7,7 +7,7 @@
 export const TextField = () => <></>
 ```
 
-- 💯 Isolate conditionally displayed elements into separate files and dynamically import them as needed using lazy loading.
+- 🏳️ Isolate conditionally displayed elements into separate files and dynamically import them as needed using lazy loading. This might result in a larger bundle size, so please choose whether to focus on the split strategy or the bundle size
 
 ```typescript
 const HelperText = lazy(() =>
