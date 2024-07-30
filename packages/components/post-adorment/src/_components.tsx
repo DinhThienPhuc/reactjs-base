@@ -14,11 +14,11 @@ export const PostAdorment = memo(
     variant = POST_ADORMENT_VARIANT.STANDARD,
     clearIcon = null,
     hasLabel = false,
+    htmlAttributes,
     clear,
-    ...restProps
   }: IPostAdormentProps) => {
     const containerProps = {
-      ...restProps,
+      ...htmlAttributes,
       $adormentVariant: variant,
       $hasLabel: hasLabel,
       className: clsx(
@@ -27,7 +27,6 @@ export const PostAdorment = memo(
         hasLabel && "post-adorment--hasLabel",
         className,
       ),
-      "data-testid": "post-adorment",
     };
 
     if (clear) {

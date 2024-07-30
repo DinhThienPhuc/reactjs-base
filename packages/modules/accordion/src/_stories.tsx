@@ -1,9 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
-
 import React from "react";
 
 import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
 import { FONT } from "@phantomthief-react/utils";
+import type { Meta, StoryObj } from "@storybook/react";
 
 import { Accordion } from "./_components";
 
@@ -119,7 +118,7 @@ export const ExpandDefaultKeysInOnlyOneMode: Story = {
 
 export const CustomExpandIcon: Story = {
   args: {
-    expandIcon: <Icon name="arrow-down-wad" width={16} height={16} />,
+    expandIcon: <Icon name="arrow-down" width={16} height={16} />,
   },
 };
 

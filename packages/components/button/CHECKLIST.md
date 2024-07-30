@@ -142,4 +142,14 @@ export const LazyLoad: Story = {
 
 - 🧩 Consider using SVG images instead of components for better performance
 
-- 🧩 Include a story that demonstrates how the HTML attributes function
+- 💯 Include a story that demonstrates how the HTML attributes function
+
+```typescript
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "button-gtm-id",
+    },
+  },
+};
+```

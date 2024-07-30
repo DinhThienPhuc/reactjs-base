@@ -104,3 +104,11 @@ export const LazyLoad: Story = {
     );
   },
 };
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "button-gtm-id",
+    },
+  },
+};

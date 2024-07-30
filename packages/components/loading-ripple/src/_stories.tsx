@@ -36,3 +36,11 @@ export const CustomColor: Story = {
     color: "#c5cbce",
   },
 };
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "loading-ripple-gtm-id",
+    },
+  },
+};

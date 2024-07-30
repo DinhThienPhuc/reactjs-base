@@ -9,14 +9,10 @@ export const Navbar = ({
   leftButton,
   rightButton,
   className,
-  ...restProps
+  htmlAttributes,
 }: INavbarProps) => {
   return (
-    <Styled.Container
-      {...restProps}
-      className={clsx("navbar", className)}
-      data-testid="navbar"
-    >
+    <Styled.Container {...htmlAttributes} className={clsx("navbar", className)}>
       <Styled.LeftButton className="navbar__button navbar__button--left">
         {leftButton}
       </Styled.LeftButton>

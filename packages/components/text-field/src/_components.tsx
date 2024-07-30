@@ -37,24 +37,24 @@ const PreAdorment = lazy(() =>
 export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
   (
     {
-      className,
       value = "",
-      required = false,
-      disabled = false,
-      fullWidth = false,
-      isStandalone = false,
-      error = null,
       variant = TEXT_FIELD_VARIANT.STANDARD,
       onChange,
       onFocus,
       onBlur,
       clear,
-      inputProps,
+      htmlAttributes,
+      inputHtmlAttributes,
       labelProps,
       preAdormentProps,
       postAdormentProps,
       helperTextProps,
-      ...restProps
+      className = "",
+      fullWidth = false,
+      disabled = false,
+      required = false,
+      error = null,
+      isStandalone = false,
     },
     ref,
   ) => {
@@ -79,7 +79,7 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
 
     return (
       <Styled.Container
-        {...restProps}
+        {...htmlAttributes}
         $fullWidth={fullWidth}
         $variant={variant}
         $disabled={disabled}
@@ -92,7 +92,6 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
           `text-field--variant-${variant}`,
           className,
         )}
-        data-testid="text-field"
       >
         <Suspense>
           {!!labelProps?.children && (
@@ -117,7 +116,7 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
           )}
         </Suspense>
         <Styled.Input
-          {...inputProps}
+          {...inputHtmlAttributes}
           $variant={variant}
           $hasPreAdorment={!!preAdormentProps?.children}
           $hasPostAdorment={!!clear || !!postAdormentProps?.children}

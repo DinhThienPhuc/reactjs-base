@@ -2,25 +2,25 @@ import { ChangeEvent, HTMLAttributes, InputHTMLAttributes } from "react";
 
 import { IExtendable, IFormFieldProps } from "@phantomthief-react/utils";
 
-export interface ISwitchProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, "onChange">,
-    IFormFieldProps,
-    IExtendable {
+export interface ISwitchProps extends IFormFieldProps {
   value?: boolean;
   leftLabel?: string;
   rightLabel?: string;
-  inputProps?: InputHTMLAttributes<HTMLInputElement> & IExtendable;
+  htmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
+  inputHtmlAttributes?: InputHTMLAttributes<HTMLInputElement> & IExtendable;
+  leftHtmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
+  rightHtmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
   onChange?: (value: boolean, e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export interface ISwitchLeftLabelProps
-  extends HTMLAttributes<HTMLDivElement>,
-    IExtendable {
+export interface ISwitchLeftLabelProps {
   leftLabel?: string;
+  disabled?: boolean;
+  htmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
 }
 
-export interface ISwitchRightLabelProps
-  extends HTMLAttributes<HTMLDivElement>,
-    IExtendable {
+export interface ISwitchRightLabelProps {
   rightLabel?: string;
+  disabled?: boolean;
+  htmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
 }

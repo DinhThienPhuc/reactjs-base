@@ -1,4 +1,9 @@
-import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
+import {
+  HTMLAttributes,
+  MouseEvent,
+  MouseEventHandler,
+  ReactNode,
+} from "react";
 
 import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
 import { ILabelProps } from "@phantomthief-react/components.label";
@@ -11,12 +16,11 @@ import {
 
 import { SELECT_VARIANT } from "./_constants";
 
-export interface ISelectOption
-  extends HTMLAttributes<HTMLSpanElement>,
-    IExtendable {
+export interface ISelectOption {
   value: string;
   label: ReactNode;
   disabled?: boolean;
+  htmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
 }
 
 export interface ISelectOptionProps extends ISelectOption {
@@ -27,21 +31,17 @@ export interface ISelectOptionProps extends ISelectOption {
 export type TSelectVariant =
   (typeof SELECT_VARIANT)[keyof typeof SELECT_VARIANT];
 
-export interface ISelectMenuProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, "onChange">,
-    IExtendable {
+export interface ISelectMenuProps {
   options: ISelectOption[];
   position: INodePosition | null;
   isShowed: boolean;
-  optionGroupClassName?: string;
   currentValue?: string;
+  optionGroupClassName?: string;
+  htmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
   selectOption: (value: string) => MouseEventHandler<HTMLSpanElement>;
 }
 
-export interface ISelectProps
-  extends HTMLAttributes<HTMLElement>,
-    IFormFieldProps,
-    IExtendable {
+export interface ISelectProps extends IFormFieldProps {
   optionGroupClassName?: string;
   options: ISelectOption[];
   value?: string;
@@ -49,8 +49,8 @@ export interface ISelectProps
   labelProps?: ILabelProps;
   postAdormentProps?: IPostAdormentProps;
   helperTextProps?: IHelperTextProps;
-}
-
-export interface ISelectEventTarget extends EventTarget {
-  value: string;
+  htmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
+  menuHtmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
+  tabIndex?: number;
+  onChange?: (value: string, e: MouseEvent<HTMLSpanElement>) => void;
 }

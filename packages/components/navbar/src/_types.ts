@@ -1,9 +1,11 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-export interface INavbarProps
-  extends Omit<HTMLAttributes<HTMLElement>, "title"> {
+import { IExtendable } from "@phantomthief-react/utils";
+
+export interface INavbarProps {
   className?: string;
   leftButton?: ReactNode;
   rightButton?: ReactNode;
   title?: ReactNode;
+  htmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
 }

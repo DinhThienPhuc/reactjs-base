@@ -1,8 +1,4 @@
-import {
-  HTMLAttributes,
-  InputHTMLAttributes,
-  LabelHTMLAttributes,
-} from "react";
+import { ChangeEvent, HTMLAttributes, LabelHTMLAttributes } from "react";
 
 import { IExtendable, ISyncStateWithProps } from "@phantomthief-react/utils";
 
@@ -11,30 +7,37 @@ import { RADIO_GROUP_DIRECTION } from "./_constants";
 export type TRadioGroupDirection =
   (typeof RADIO_GROUP_DIRECTION)[keyof typeof RADIO_GROUP_DIRECTION];
 
-export interface IRadioGroupOptionProps
-  extends InputHTMLAttributes<HTMLInputElement>,
-    ISyncStateWithProps,
-    IExtendable {
+export interface IRadioGroupOption {
   key: string;
   value: string;
   label?: string;
-  labelProps?: LabelHTMLAttributes<HTMLLabelElement>;
+  htmlAttributes?: LabelHTMLAttributes<HTMLLabelElement> & IExtendable;
+}
+
+export interface IRadioGroupOptionProps
+  extends IRadioGroupOption,
+    ISyncStateWithProps {
+  name: string;
   currentValue?: string;
   setCurrentValue?: (value: string) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export interface IRadioGroupLabelProps extends IExtendable {
+export interface IRadioGroupLabelProps {
   label?: string;
   hasValue?: boolean;
+  htmlAttributes?: LabelHTMLAttributes<HTMLLabelElement> & IExtendable;
 }
 
-export interface IRadioGroupProps
-  extends HTMLAttributes<HTMLDivElement>,
-    ISyncStateWithProps,
-    IExtendable {
-  options: IRadioGroupOptionProps[];
+export interface IRadioGroupProps extends ISyncStateWithProps {
+  className?: string;
+  options: IRadioGroupOption[];
+  name: string;
   value?: string;
   label?: string;
-  name: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   direction?: TRadioGroupDirection;
+  htmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
+  labelHtmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
+  optionHtmlAttributes?: LabelHTMLAttributes<HTMLLabelElement> & IExtendable;
 }

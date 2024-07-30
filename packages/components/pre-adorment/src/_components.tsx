@@ -11,7 +11,7 @@ export const PreAdorment = memo(
     children = null,
     variant = PRE_ADORMENT_VARIANT.STANDARD,
     hasLabel = false,
-    ...restProps
+    htmlAttributes,
   }: IPreAdormentProps) => {
     if (!children) {
       return null;
@@ -19,7 +19,7 @@ export const PreAdorment = memo(
 
     return (
       <Styled.Container
-        {...restProps}
+        {...htmlAttributes}
         $adormentVariant={variant}
         $hasLabel={hasLabel}
         className={clsx(
@@ -28,7 +28,6 @@ export const PreAdorment = memo(
           hasLabel && "pre-adorment--hasLabel",
           className,
         )}
-        data-testid="pre-adorment"
       >
         {children}
       </Styled.Container>

@@ -292,3 +292,7 @@ pnpm bump
 - Verify the package version and review the changelogs.
 - Push the release/packages/\* branch to the remote repository.
 - Let GitHub Actions take care of the rest!
+
+## Resources
+
+- Storybook homepage: <https://66a914a9cceb7306305566cf-vvenwervir.chromatic.com/>

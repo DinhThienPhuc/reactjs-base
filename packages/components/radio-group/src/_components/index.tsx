@@ -26,7 +26,9 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
       onChange,
       isStandalone = false,
       direction = RADIO_GROUP_DIRECTION.COLUMN,
-      ...restProps
+      htmlAttributes,
+      labelHtmlAttributes,
+      optionHtmlAttributes,
     },
     _ref,
   ) => {
@@ -36,13 +38,17 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
 
     return (
       <Styled.Container
-        {...restProps}
+        {...htmlAttributes}
         className={clsx("radio-group", className)}
         data-testid="radio-group"
       >
         <Suspense>
           {!!label && (
-            <RadioGroupLabel hasValue={!!currentValue} label={label} />
+            <RadioGroupLabel
+              hasValue={!!currentValue}
+              label={label}
+              htmlAttributes={labelHtmlAttributes}
+            />
           )}
         </Suspense>
         <FlexBox
@@ -56,13 +62,15 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
         >
           {options?.map((option) => (
             <RadioGroupOption
-              {...option}
-              name={name}
               key={option.key}
+              label={option.label}
+              value={option.value}
+              name={name}
+              htmlAttributes={optionHtmlAttributes ?? option.htmlAttributes}
               isStandalone={isStandalone}
               currentValue={currentValue}
-              onChange={onChange}
               setCurrentValue={setCurrentValue}
+              onChange={onChange}
             />
           ))}
         </FlexBox>
@@ -72,3 +80,5 @@ export const RadioGroup = forwardRef<HTMLElement, IRadioGroupProps>(
 );
 
 RadioGroup.displayName = "RadioGroup";
+
+// TODO: Implement error state, use IFormFieldProps

@@ -1,9 +1,12 @@
-import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import { yupResolver } from "@hookform/resolvers/yup";
+import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
 import { Icon } from "@phantomthief-react/components.icon";
+import { ILabelProps } from "@phantomthief-react/components.label";
+import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Select } from "./_components";
@@ -21,6 +24,9 @@ const meta = {
       {
         label: "Option 1 1 opiep oasi poeop aspoi posi",
         value: "option-1-1-2-3-4--5--6-67",
+        htmlAttributes: {
+          "data-gtm": "option-1-1-2-3-4--5--6-67",
+        },
       },
       {
         label: "Option 2",
@@ -54,7 +60,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     isStandalone: true,
-    postAdormentProps: null,
+    postAdormentProps: undefined,
   },
 };
 
@@ -62,16 +68,16 @@ export const CustomDefaultValue: Story = {
   args: {
     isStandalone: true,
     value: "option-4",
-    postAdormentProps: null,
+    postAdormentProps: undefined,
   },
 };
 
 export const Outlined: Story = {
   args: {
     variant: "outlined",
-    labelProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -79,9 +85,9 @@ export const Outlined: Story = {
 export const Filled: Story = {
   args: {
     variant: "filled",
-    labelProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -89,9 +95,9 @@ export const Filled: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
-    labelProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -100,9 +106,9 @@ export const FullWidth: Story = {
   args: {
     variant: "outlined",
     fullWidth: true,
-    labelProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -111,17 +117,17 @@ export const Required: Story = {
   args: {
     variant: "filled",
     required: true,
-    labelProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
 
 export const LabeledDefault: Story = {
   args: {
-    postAdormentProps: null,
-    helperTextProps: null,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -129,8 +135,8 @@ export const LabeledDefault: Story = {
 export const LabeledOutlined: Story = {
   args: {
     variant: "outlined",
-    postAdormentProps: null,
-    helperTextProps: null,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -138,8 +144,8 @@ export const LabeledOutlined: Story = {
 export const LabeledFilled: Story = {
   args: {
     variant: "filled",
-    postAdormentProps: null,
-    helperTextProps: null,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -147,7 +153,7 @@ export const LabeledFilled: Story = {
 export const CustomPostAdorment: Story = {
   args: {
     variant: "outlined",
-    helperTextProps: null,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -174,8 +180,8 @@ export const ParentController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[1].value);
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     const handleParentChange = useCallback(
@@ -216,8 +222,8 @@ export const PropsController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[2].value);
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     console.log("PropsController: ", value);
@@ -290,12 +296,18 @@ export const RHFController: Story = {
 export const LazyLoad: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[2].value);
-    const [helperTextProps, setHelperTextProps] = useState(null);
-    const [labelProps, setLabelProps] = useState(null);
-    const [postAdormentProps, setPostAdormentProps] = useState(null);
+    const [helperTextProps, setHelperTextProps] = useState<
+      IHelperTextProps | undefined
+    >(undefined);
+    const [labelProps, setLabelProps] = useState<ILabelProps | undefined>(
+      undefined,
+    );
+    const [postAdormentProps, setPostAdormentProps] = useState<
+      IPostAdormentProps | undefined
+    >(undefined);
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     return (
@@ -312,7 +324,9 @@ export const LazyLoad: Story = {
         <button
           style={{ marginTop: 48 }}
           onClick={() =>
-            setHelperTextProps((prev) => (prev ? null : args.helperTextProps))
+            setHelperTextProps((prev) =>
+              prev ? undefined : args.helperTextProps,
+            )
           }
         >
           Toggle show helper text
@@ -320,7 +334,7 @@ export const LazyLoad: Story = {
         <button
           style={{ marginTop: 48 }}
           onClick={() =>
-            setLabelProps((prev) => (prev ? null : args.labelProps))
+            setLabelProps((prev) => (prev ? undefined : args.labelProps))
           }
         >
           Toggle show label
@@ -329,7 +343,7 @@ export const LazyLoad: Story = {
           style={{ marginTop: 48 }}
           onClick={() =>
             setPostAdormentProps((prev) =>
-              prev ? null : args.postAdormentProps,
+              prev ? undefined : args.postAdormentProps,
             )
           }
         >
@@ -337,5 +351,16 @@ export const LazyLoad: Story = {
         </button>
       </div>
     );
+  },
+};
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "select-gtm-id",
+    },
+    menuHtmlAttributes: {
+      "data-gtm": "menu-gtm-id",
+    },
   },
 };

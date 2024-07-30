@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ["@trivago/prettier-plugin-sort-imports"],
-  importOrder: ["^[a-z]", "^@phantomthief-react(.*)$", "^[./]"],
+  importOrder: ["^[a-z]", "^@(.*)$", "^@phantomthief-react(.*)$", "^[./]"],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   tabWidth: 2,

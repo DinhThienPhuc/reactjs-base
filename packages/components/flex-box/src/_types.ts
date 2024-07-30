@@ -1,6 +1,8 @@
 import { Property } from "csstype";
 import { HTMLAttributes, ReactNode } from "react";
 
+import { IExtendable } from "@phantomthief-react/utils";
+
 export interface IFlexBoxProps {
   alignItems?: Property.AlignItems;
   justifyContent?: Property.JustifyContent;
@@ -9,7 +11,7 @@ export interface IFlexBoxProps {
   gap?: Property.Gap;
   wrap?: Property.FlexWrap;
   fullWidth?: boolean;
-  htmlAttributes?: HTMLAttributes<HTMLElement>;
+  htmlAttributes?: HTMLAttributes<HTMLElement> & IExtendable;
   children?: ReactNode;
   className?: string;
 }

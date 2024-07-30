@@ -12,7 +12,7 @@ export const HelperText = memo(
     variant = HELPER_TEXT_VARIANT.STANDARD,
     isError = false,
     hasLabel = false,
-    ...restProps
+    htmlAttributes,
   }: IHelperTextProps) => {
     if (!children) {
       return null;
@@ -20,7 +20,7 @@ export const HelperText = memo(
 
     return (
       <Styled.Container
-        {...restProps}
+        {...htmlAttributes}
         $variant={variant}
         $hasLabel={hasLabel}
         $isError={isError}
@@ -31,7 +31,6 @@ export const HelperText = memo(
           isError && "helper-text--error",
           className,
         )}
-        data-testid="helper-text"
       >
         {children}
       </Styled.Container>

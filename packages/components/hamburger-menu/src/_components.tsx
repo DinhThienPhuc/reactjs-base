@@ -17,7 +17,7 @@ export const HamburgerMenu = ({
   active = false,
   className,
   onClick,
-  ...restProps
+  htmlAttributes,
 }: IHamburgerMenuProps) => {
   const { currentValue: isActivated, setCurrentValue: setActive } =
     useSyncStateWithProps<boolean>(active, isStandalone);
@@ -42,7 +42,7 @@ export const HamburgerMenu = ({
 
   return (
     <Styled.Container
-      {...restProps}
+      {...htmlAttributes}
       className={clsx(
         "hamburger-menu",
         `hamburger-menu--gap-${gap}`,
@@ -53,7 +53,6 @@ export const HamburgerMenu = ({
         isActivated && "hamburger-menu--active",
         className,
       )}
-      data-testid="hamburger-menu"
       onClick={handleToggle}
     >
       <Styled.Bar {...barProps} />

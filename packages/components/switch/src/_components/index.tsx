@@ -21,15 +21,18 @@ const SwitchLabelRight = lazy(() =>
 export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
   (
     {
-      className,
-      leftLabel,
-      rightLabel = null,
-      disabled = false,
       value = false,
-      isStandalone = false,
-      inputProps,
+      leftLabel = "",
+      rightLabel = "",
+      htmlAttributes,
+      inputHtmlAttributes,
+      leftHtmlAttributes,
+      rightHtmlAttributes,
       onChange,
-      ...restProps
+      className = "",
+      disabled = false,
+      required = false,
+      isStandalone = false,
     },
     ref,
   ) => {
@@ -44,10 +47,17 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
     };
 
     return (
-      <Styled.Container {...restProps} className={clsx("switch", className)}>
+      <Styled.Container
+        {...htmlAttributes}
+        className={clsx("switch", className)}
+      >
         <Suspense>
           {!!leftLabel && (
-            <SwitchLabelLeft leftLabel={leftLabel} disabled={disabled} />
+            <SwitchLabelLeft
+              htmlAttributes={leftHtmlAttributes}
+              leftLabel={leftLabel}
+              disabled={disabled}
+            />
           )}
         </Suspense>
         <Styled.Pad
@@ -60,17 +70,22 @@ export const Switch = forwardRef<HTMLInputElement, ISwitchProps>(
           )}
         >
           <input
-            {...inputProps}
+            {...inputHtmlAttributes}
             ref={ref}
             checked={currentValue}
             onChange={handleChange}
             disabled={disabled}
             type="checkbox"
+            required={required}
           />
         </Styled.Pad>
         <Suspense>
           {!!rightLabel && (
-            <SwitchLabelRight rightLabel={rightLabel} disabled={disabled} />
+            <SwitchLabelRight
+              htmlAttributes={rightHtmlAttributes}
+              rightLabel={rightLabel}
+              disabled={disabled}
+            />
           )}
         </Suspense>
       </Styled.Container>

@@ -15,8 +15,8 @@ export const Label = memo(
     isFocused = false,
     isError = false,
     variant = LABEL_VARIANT.STANDARD,
-    isLabelCollapsed,
-    ...restProps
+    isLabelCollapsed = false,
+    htmlAttributes,
   }: ILabelProps) => {
     if (hiddenLabel || !children) {
       return null;
@@ -24,7 +24,7 @@ export const Label = memo(
 
     return (
       <Styled.Container
-        {...restProps}
+        {...htmlAttributes}
         $variant={variant}
         $isLabelCollapsed={isLabelCollapsed}
         $disabled={disabled}
@@ -41,7 +41,6 @@ export const Label = memo(
           hiddenLabel && "label--hidden",
           className,
         )}
-        data-testid="label"
       >
         {children} {required ? "*" : ""}
       </Styled.Container>

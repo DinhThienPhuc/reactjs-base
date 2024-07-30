@@ -85,3 +85,11 @@ export const BottomAlign: Story = {
     alignItems: "flex-end",
   },
 };
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "flex-box-id-gtm",
+    },
+  },
+};

@@ -176,3 +176,23 @@ export const LazyLoad: Story = {
     );
   },
 };
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "switch-container-gtm",
+    },
+    inputHtmlAttributes: {
+      "data-gtm": "switch-input-gtm",
+    },
+    leftHtmlAttributes: {
+      "data-gtm": "switch-left-gtm",
+    },
+    rightHtmlAttributes: {
+      "data-gtm": "switch-right-gtm",
+    },
+    leftLabel: "Off",
+    rightLabel: "On",
+    isStandalone: true,
+  },
+};

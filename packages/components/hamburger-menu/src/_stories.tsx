@@ -77,3 +77,11 @@ export const PropsController: Story = {
     );
   },
 };
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "hamburger-gtm-id",
+    },
+  },
+};

@@ -8,14 +8,14 @@ import { IStyledTypographyProps, ITypographyProps } from "./_types";
 
 export const Typography = ({
   variant = "span",
+  children,
   size = "inherit",
   bold = 400,
   color = "inherit",
   font = "inherit",
+  className = "",
   align = "inherit",
-  className,
-  children,
-  ...restProps
+  htmlAttributes,
 }: ITypographyProps) => {
   const StyledTag = useMemo<FC<IStyledTypographyProps>>(() => {
     const styledTagProperty = capitalize(variant) as keyof typeof Styled;
@@ -24,7 +24,7 @@ export const Typography = ({
 
   return (
     <StyledTag
-      {...restProps}
+      {...htmlAttributes}
       $size={size}
       $color={color}
       $bold={bold}
@@ -40,7 +40,6 @@ export const Typography = ({
         `typography__align--${align}`,
         className,
       )}
-      data-testid="typography"
     >
       {children}
     </StyledTag>
