@@ -18,8 +18,8 @@ export const AccordionItemHeader = memo(
     isOnlyOneExpand,
     id,
     expandIconHtmlAttributes,
-    itemHeaderHtmlAttributes,
-    itemHeaderLabelHtmlAttributes,
+    htmlAttributes,
+    labelHtmlAttributes,
     setItemDictionary,
   }: IAccordionItemHeaderProps) => {
     const onClickItemHeader = (id: string) => () => {
@@ -45,9 +45,9 @@ export const AccordionItemHeader = memo(
           <Styled.ItemHeaderSection className="accordion-item__header__left">
             {preIcon}
             <Typography
-              {...itemHeaderLabelHtmlAttributes}
               font={FONT.VERNADA}
               className="accordion-item__header-label"
+              htmlAttributes={labelHtmlAttributes}
             >
               {label}
             </Typography>
@@ -57,12 +57,12 @@ export const AccordionItemHeader = memo(
           </Styled.ItemHeaderSection>
         </Styled.ItemHeaderSectionGroup>
       ),
-      [itemHeaderLabelHtmlAttributes, label, postIcon, preIcon],
+      [label, labelHtmlAttributes, postIcon, preIcon],
     );
 
     return (
       <Styled.ItemHeader
-        {...itemHeaderHtmlAttributes}
+        {...htmlAttributes}
         $disabled={disabled}
         className="accordion-item__header"
         onClick={onClickItemHeader(id)}

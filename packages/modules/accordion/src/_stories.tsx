@@ -140,6 +140,9 @@ export const WithHTMLAttributes: Story = {
   args: {
     preIcon: <Icon name="bookmark" width={16} height={16} />,
     postIcon,
+    htmlAttributes: {
+      "data-testid": "test-accordion",
+    },
     items: [
       {
         id: "accordion-item-1",
@@ -161,6 +164,9 @@ export const WithHTMLAttributes: Story = {
         },
         itemHeaderHtmlAttributes: {
           "data-testid": "test-accordion-item-1",
+        },
+        itemHeaderLabelHtmlAttributes: {
+          "data-testid": "test-accordion-item-1-label",
         },
       },
       {

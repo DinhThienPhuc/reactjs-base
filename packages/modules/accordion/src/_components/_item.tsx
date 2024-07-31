@@ -7,20 +7,20 @@ import { AccordionItemHeader } from "./_item-header";
 
 export const AccordionItem = memo(
   ({
+    id,
     label,
     body,
     preIcon,
     postIcon,
     expandIcon,
     disabled,
-    isExpanded,
-    isOnlyOneExpand,
-    id,
     bodyHtmlAttributes,
+    htmlAttributes,
     expandIconHtmlAttributes,
     itemHeaderHtmlAttributes,
     itemHeaderLabelHtmlAttributes,
-    htmlAttributes,
+    isExpanded,
+    isOnlyOneExpand,
     setItemDictionary,
   }: IAccordionItemProps) => {
     return (
@@ -39,11 +39,11 @@ export const AccordionItem = memo(
           expandIcon={expandIcon}
           disabled={disabled}
           isExpanded={isExpanded}
-          id={id}
           isOnlyOneExpand={isOnlyOneExpand}
-          itemHeaderHtmlAttributes={itemHeaderHtmlAttributes}
+          id={id}
           expandIconHtmlAttributes={expandIconHtmlAttributes}
-          itemHeaderLabelHtmlAttributes={itemHeaderLabelHtmlAttributes}
+          htmlAttributes={itemHeaderHtmlAttributes}
+          labelHtmlAttributes={itemHeaderLabelHtmlAttributes}
           setItemDictionary={setItemDictionary}
         />
         <Styled.ItemContent

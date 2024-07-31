@@ -8,10 +8,8 @@ import {
 
 import { IExtendable } from "@phantomthief-react/utils";
 
-// GOOD
 export type TItemDictionary = Record<string, boolean>;
 
-// GOOD
 export interface IAccordionItem {
   id: string;
   label: string;
@@ -28,7 +26,6 @@ export interface IAccordionItem {
   itemHeaderLabelHtmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
 }
 
-// GOOD
 export interface IAccordionItemProps extends IAccordionItem {
   isExpanded: boolean;
   isOnlyOneExpand: boolean;
@@ -47,14 +44,12 @@ export interface IAccordionProps {
   htmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
 }
 
-// GOOD
 export interface IAccordionItemExpandIconProps {
   expandIcon?: ReactNode;
   isExpanded: boolean;
   htmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
 }
 
-// GOOD
 export interface IAccordionItemHeaderProps {
   label: string;
   preIcon?: ReactNode;
@@ -65,7 +60,7 @@ export interface IAccordionItemHeaderProps {
   isOnlyOneExpand: boolean;
   id: string;
   expandIconHtmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
-  itemHeaderHtmlAttributes?: HTMLAttributes<HTMLButtonElement> & IExtendable;
-  itemHeaderLabelHtmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
+  htmlAttributes?: HTMLAttributes<HTMLButtonElement> & IExtendable;
+  labelHtmlAttributes?: HTMLAttributes<HTMLElement> & IExtendable;
   setItemDictionary: Dispatch<SetStateAction<TItemDictionary>>;
 }

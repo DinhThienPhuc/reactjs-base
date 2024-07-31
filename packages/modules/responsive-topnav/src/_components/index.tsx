@@ -1,0 +1,82 @@
+import clsx from "clsx";
+import React, { useCallback, useMemo, useState } from "react";
+
+import { HamburgerMenu } from "@phantomthief-react/components";
+import { useBlock } from "@phantomthief-react/hooks";
+
+import { Styled } from "../_styles";
+import { IResponsiveTopnavProps } from "../_types";
+import { ResponsiveTopnavItem } from "./_item";
+
+export const ResponsiveTopnav = ({
+  className = "",
+  items,
+  activeKey = items[0].key,
+  firstItemSelectable = false,
+  collapseAfterSelectItem = true,
+  mobileMenuExpanded = false,
+  hamburgerProps,
+  htmlAttributes,
+  onClick,
+}: IResponsiveTopnavProps) => {
+  const [isMobileMenuExpanded, setMobileMenuExpand] =
+    useState<boolean>(mobileMenuExpanded);
+
+  const customItems = useBlock(() => {
+    return items.map((item, index) => (
+      <ResponsiveTopnavItem
+        key={item.key}
+        isMobileMenuExpanded={isMobileMenuExpanded}
+        content={item.content}
+        index={index}
+        activeKey={activeKey}
+        itemKey={item.key}
+        firstItemSelectable={firstItemSelectable}
+        collapseAfterSelectItem={collapseAfterSelectItem}
+        htmlAttributes={item.htmlAttributes}
+        setMobileMenuExpand={setMobileMenuExpand}
+        onClick={onClick}
+      />
+    ));
+  });
+
+  const handleClickMobileMenu = useCallback(
+    (expanded: boolean) => {
+      setMobileMenuExpand(expanded);
+      hamburgerProps?.onClick?.(expanded);
+    },
+    [hamburgerProps],
+  );
+
+  const mobileMenu = useMemo(
+    () => (
+      <Styled.MenuIconWrapper>
+        <HamburgerMenu
+          {...hamburgerProps}
+          isStandalone={false}
+          width={hamburgerProps?.width ?? 24}
+          height={hamburgerProps?.height ?? 24}
+          gap={hamburgerProps?.gap ?? 4}
+          active={isMobileMenuExpanded}
+          onClick={handleClickMobileMenu}
+        />
+      </Styled.MenuIconWrapper>
+    ),
+    [hamburgerProps, handleClickMobileMenu, isMobileMenuExpanded],
+  );
+
+  return (
+    <Styled.Container
+      {...htmlAttributes}
+      $isMobileMenuExpanded={isMobileMenuExpanded}
+      className={clsx(
+        "responsive-topnav",
+        isMobileMenuExpanded && "responsive-topnav--mobile-expanded",
+        className,
+      )}
+    >
+      {customItems}
+      {mobileMenu}
+    </Styled.Container>
+  );
+};

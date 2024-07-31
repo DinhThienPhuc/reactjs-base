@@ -34,20 +34,20 @@ export const Accordion = ({
         return (
           <AccordionItem
             key={item.id}
+            id={item.id}
             label={item.label}
             body={item.body}
             preIcon={preIcon ?? item.preIcon}
             postIcon={postIcon ?? item.postIcon}
             expandIcon={expandIcon ?? item.expandIcon}
             disabled={disabled || item.disabled}
-            isExpanded={item.id ? !!itemDictionary[item.id] : false}
-            isOnlyOneExpand={isOnlyOneExpand}
-            id={item.id}
             bodyHtmlAttributes={item.bodyHtmlAttributes}
+            htmlAttributes={item.htmlAttributes}
             expandIconHtmlAttributes={item.expandIconHtmlAttributes}
             itemHeaderHtmlAttributes={item.itemHeaderHtmlAttributes}
             itemHeaderLabelHtmlAttributes={item.itemHeaderLabelHtmlAttributes}
-            htmlAttributes={item.htmlAttributes}
+            isExpanded={item.id ? !!itemDictionary[item.id] : false}
+            isOnlyOneExpand={isOnlyOneExpand}
             setItemDictionary={setItemDictionary}
           />
         );
