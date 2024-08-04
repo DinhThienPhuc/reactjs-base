@@ -31,8 +31,12 @@
     "styled-components": "*",
     "clsx": "*",
     "@phantomthief-react/utils": "workspace:*",
-    "@phantomthief-react/hooks": "workspace:*",
-    "@phantomthief-react/components": "workspace:*"
+    "@phantomthief-react/hooks.block": "workspace:*",
+    "@phantomthief-react/hooks.media-query": "workspace:*",
+    "@phantomthief-react/components.hamburger-menu": "workspace:*"
+  },
+  "devDependencies": {
+    "@phantomthief-react/components.typography": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

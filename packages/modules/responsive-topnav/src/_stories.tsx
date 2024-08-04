@@ -1,6 +1,6 @@
 import React, { MouseEvent, useCallback, useState } from "react";
 
-import { Typography } from "@phantomthief-react/components";
+import { Typography } from "@phantomthief-react/components.typography";
 import { FONT } from "@phantomthief-react/utils";
 import type { Meta, StoryObj } from "@storybook/react";
 

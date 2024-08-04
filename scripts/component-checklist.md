@@ -142,6 +142,12 @@ export const LazyLoad: Story = {
 
 - 🧩 Consider using SVG images instead of components for better performance
 
+- 🧩 The onChange function for a form element must accept its value as the first parameter and the event as the second parameter.
+
+```typescript
+onChange?: (value: string, e: ChangeEvent<HTMLElement>) => void;
+```
+
 - 🧩 Include a story that demonstrates how the HTML attributes function
 
 ```typescript

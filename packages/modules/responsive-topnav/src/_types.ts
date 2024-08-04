@@ -7,7 +7,7 @@ import {
   SetStateAction,
 } from "react";
 
-import { IHamburgerMenuProps } from "@phantomthief-react/components";
+import { IHamburgerMenuProps } from "@phantomthief-react/components.hamburger-menu";
 import { IExtendable } from "@phantomthief-react/utils";
 
 export interface IResponsiveTopnavItem {

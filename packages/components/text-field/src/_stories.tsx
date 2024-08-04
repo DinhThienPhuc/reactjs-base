@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 
@@ -166,8 +166,8 @@ export const ParentController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState("");
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     const handleParentChange = useCallback(
@@ -202,8 +202,8 @@ export const PropsController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState("");
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     return <TextField {...args} value={value} onChange={handleChange} />;
@@ -272,8 +272,8 @@ export const LazyLoad: Story = {
     >(undefined);
     const [value, setValue] = useState("");
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     return (

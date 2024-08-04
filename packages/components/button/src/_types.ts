@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable } from "@phantomthief-react/utils.definations";
 
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 

@@ -12,11 +12,9 @@ import React, {
 } from "react";
 
 import { Portal } from "@phantomthief-react/components.portal";
-import {
-  useBlock,
-  useNotClickOnElements,
-  useSyncStateWithProps,
-} from "@phantomthief-react/hooks";
+import useBlock from "@phantomthief-react/hooks.block";
+import useNotClickOnElements from "@phantomthief-react/hooks.not-click-on-elements";
+import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
 import { INodePosition, getPositionOfNode } from "@phantomthief-react/utils";
 
 import { SELECT_VARIANT } from "../_constants";

@@ -106,13 +106,16 @@ export default defineConfig(config);
   fs.writeFileSync(packageFilePath, packageContent);
 
   /**
-   * Generate CHECKLIST.md file for package
+   * Generate CHECKLIST.md file for component packages
    */
-  const checklistContent = fs.readFileSync(
-    path.join(__dirname, "CHECKLIST.md"),
+  const componentChecklistContent = fs.readFileSync(
+    path.join(__dirname, "component-checklist.md"),
     "utf8",
   );
-  fs.writeFileSync(path.join(dirPath, "CHECKLIST.md"), checklistContent);
+  fs.writeFileSync(
+    path.join(dirPath, "CHECKLIST.md"),
+    componentChecklistContent,
+  );
 
   /**
    * Generate `src` directory for package

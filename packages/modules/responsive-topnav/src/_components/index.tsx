@@ -1,12 +1,19 @@
 import clsx from "clsx";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { Suspense, lazy, useCallback, useMemo, useState } from "react";
 
-import { HamburgerMenu } from "@phantomthief-react/components";
-import { useBlock } from "@phantomthief-react/hooks";
+import useBlock from "@phantomthief-react/hooks.block";
+import useMediaQuery from "@phantomthief-react/hooks.media-query";
+import { VIEWPORT } from "@phantomthief-react/utils";
 
 import { Styled } from "../_styles";
 import { IResponsiveTopnavProps } from "../_types";
 import { ResponsiveTopnavItem } from "./_item";
+
+const HamburgerMenu = lazy(() =>
+  import("@phantomthief-react/components.hamburger-menu").then((module) => ({
+    default: module.HamburgerMenu,
+  })),
+);
 
 export const ResponsiveTopnav = ({
   className = "",
@@ -21,6 +28,8 @@ export const ResponsiveTopnav = ({
 }: IResponsiveTopnavProps) => {
   const [isMobileMenuExpanded, setMobileMenuExpand] =
     useState<boolean>(mobileMenuExpanded);
+
+  const isNotMobileDevice = useMediaQuery(`(min-width: ${VIEWPORT.SEVEN}px)`);
 
   const customItems = useBlock(() => {
     return items.map((item, index) => (
@@ -48,22 +57,31 @@ export const ResponsiveTopnav = ({
     [hamburgerProps],
   );
 
-  const mobileMenu = useMemo(
-    () => (
+  const mobileMenu = useMemo(() => {
+    if (isNotMobileDevice) {
+      return null;
+    }
+    return (
       <Styled.MenuIconWrapper>
-        <HamburgerMenu
-          {...hamburgerProps}
-          isStandalone={false}
-          width={hamburgerProps?.width ?? 24}
-          height={hamburgerProps?.height ?? 24}
-          gap={hamburgerProps?.gap ?? 4}
-          active={isMobileMenuExpanded}
-          onClick={handleClickMobileMenu}
-        />
+        <Suspense>
+          <HamburgerMenu
+            {...hamburgerProps}
+            isStandalone={false}
+            width={hamburgerProps?.width ?? 24}
+            height={hamburgerProps?.height ?? 24}
+            gap={hamburgerProps?.gap ?? 4}
+            active={isMobileMenuExpanded}
+            onClick={handleClickMobileMenu}
+          />
+        </Suspense>
       </Styled.MenuIconWrapper>
-    ),
-    [hamburgerProps, handleClickMobileMenu, isMobileMenuExpanded],
-  );
+    );
+  }, [
+    hamburgerProps,
+    handleClickMobileMenu,
+    isMobileMenuExpanded,
+    isNotMobileDevice,
+  ]);
 
   return (
     <Styled.Container

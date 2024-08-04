@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable } from "@phantomthief-react/utils.definations";
 
 import { HELPER_TEXT_VARIANT } from "./_constants";
 

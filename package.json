@@ -1,7 +1,7 @@
 {
   "name": "reactjs-base",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "changeset": "changeset",
     "bump": "changeset version",
     "do": "ts-node ./scripts/run-pnpm-command.ts",
@@ -92,7 +92,6 @@
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.9.1",
     "yargs": "^17.7.2",
-    "yup": "^1.4.0",
-    "zustand": "^4.5.2"
+    "yup": "^1.4.0"
   }
 }

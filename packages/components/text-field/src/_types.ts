@@ -1,5 +1,5 @@
 import {
-  ChangeEventHandler,
+  ChangeEvent,
   FocusEventHandler,
   HTMLAttributes,
   InputHTMLAttributes,
@@ -13,7 +13,7 @@ import {
   IExtendable,
   IFormFieldProps,
   TFunction,
-} from "@phantomthief-react/utils";
+} from "@phantomthief-react/utils.definations";
 
 import { TEXT_FIELD_VARIANT } from "./_constants";
 
@@ -23,7 +23,7 @@ export type TTextFieldVariant =
 export interface ITextFieldProps extends IFormFieldProps {
   value?: string;
   variant?: TTextFieldVariant;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onChange?: (value: string, e: ChangeEvent<HTMLInputElement>) => void;
   onFocus?: FocusEventHandler<HTMLInputElement>;
   onBlur?: FocusEventHandler<HTMLInputElement>;
   clear?: TFunction<void>;

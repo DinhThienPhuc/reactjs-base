@@ -20,7 +20,7 @@ export interface IRadioGroupOptionProps
   name: string;
   currentValue?: string;
   setCurrentValue?: (value: string) => void;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (value: string, e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface IRadioGroupLabelProps {
@@ -35,9 +35,9 @@ export interface IRadioGroupProps extends ISyncStateWithProps {
   name: string;
   value?: string;
   label?: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   direction?: TRadioGroupDirection;
   htmlAttributes?: HTMLAttributes<HTMLDivElement> & IExtendable;
   labelHtmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
   optionHtmlAttributes?: LabelHTMLAttributes<HTMLLabelElement> & IExtendable;
+  onChange?: (value: string, e: ChangeEvent<HTMLInputElement>) => void;
 }

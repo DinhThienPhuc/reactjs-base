@@ -7,7 +7,7 @@
 export const TextField = () => <></>
 ```
 
-- 🧩 Isolate conditionally displayed elements into separate files and dynamically import them as needed using lazy loading. This might result in a larger bundle size, so please choose whether to focus on the split strategy or the bundle size
+- 💯 Isolate conditionally displayed elements into separate files and dynamically import them as needed using lazy loading. This might result in a larger bundle size, so please choose whether to focus on the split strategy or the bundle size
 
 ```typescript
 const HelperText = lazy(() =>
@@ -29,18 +29,11 @@ const HelperText = lazy(() =>
 </Suspense>
 ```
 
-- 💯 Specify the full name of components/modules within the same scope in the package.json.
+- 💯 Specify the full name of components/modules in the package.json.
 
 ```typescript
 // Inside components.text-field
 import { HelperText } from "@phantomthief-react/components.helper-text";
-```
-
-- 💯 For components/modules outside the current scope, reference the parent package.
-
-```typescript
-// Inside components.text-field
-import { useSyncStateWithProps } from "@phantomthief-react/hooks";
 ```
 
 - 💯 Prop ordering in components should adhere to the following guidelines:
@@ -141,6 +134,12 @@ export const LazyLoad: Story = {
 - 🧩 Utilize Tailwind CSS to decrease the bundle size of package.
 
 - 🧩 Consider using SVG images instead of components for better performance
+
+- 💯 The onChange function for a form element must accept its value as the first parameter and the event as the second parameter.
+
+```typescript
+onChange?: (value: string, e: ChangeEvent<HTMLElement>) => void;
+```
 
 - 💯 Include a story that demonstrates how the HTML attributes function
 

@@ -30,7 +30,11 @@
     "react": "*",
     "clsx": "*",
     "@phantomthief-react/components.loading-ellipsis": "workspace:*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantomthief-react/utils.helpers": "workspace:*",
+    "@phantomthief-react/utils.definations": "workspace:*"
+  },
+  "devDependencies": {
+    "@phantomthief-react/utils.constants": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

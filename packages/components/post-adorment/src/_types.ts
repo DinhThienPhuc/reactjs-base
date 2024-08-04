@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import { IExtendable, TFunction } from "@phantomthief-react/utils";
+import { IExtendable, TFunction } from "@phantomthief-react/utils.definations";
 
 import { POST_ADORMENT_VARIANT } from "./_constants";
 

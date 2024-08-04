@@ -1,7 +1,7 @@
 import { Property } from "csstype";
 import { HTMLAttributes, ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable } from "@phantomthief-react/utils.definations";
 
 export interface IFlexBoxProps {
   alignItems?: Property.AlignItems;

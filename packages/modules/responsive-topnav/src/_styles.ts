@@ -87,8 +87,8 @@ export const Styled = {
     right: 28px;
     transform: translate(50%, -50%);
 
-    @media (min-width: ${VIEWPORT.SEVEN}px) {
+    /* @media (min-width: ${VIEWPORT.SEVEN}px) {
       display: none;
-    }
+    } */
   `,
 };

@@ -1,6 +1,8 @@
 import React from "react";
 
-import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
+import { FlexBox } from "@phantomthief-react/components.flex-box";
+import { Icon } from "@phantomthief-react/components.icon";
+import { Typography } from "@phantomthief-react/components.typography";
 import { FONT } from "@phantomthief-react/utils";
 import type { Meta, StoryObj } from "@storybook/react";
 

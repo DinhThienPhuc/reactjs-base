@@ -1,6 +1,9 @@
 import { ChangeEvent, HTMLAttributes, InputHTMLAttributes } from "react";
 
-import { IExtendable, IFormFieldProps } from "@phantomthief-react/utils";
+import {
+  IExtendable,
+  IFormFieldProps,
+} from "@phantomthief-react/utils.definations";
 
 export interface ISwitchProps extends IFormFieldProps {
   value?: boolean;

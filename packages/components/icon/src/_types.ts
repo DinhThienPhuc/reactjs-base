@@ -1,7 +1,7 @@
 import { SVGProps } from "react";
 
 import { ILoadingEllipsisProps } from "@phantomthief-react/components.loading-ellipsis";
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable } from "@phantomthief-react/utils.definations";
 
 export interface ISingleIconProps {
   className?: string;

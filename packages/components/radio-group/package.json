@@ -31,7 +31,7 @@
     "styled-components": "*",
     "clsx": "*",
     "@phantomthief-react/components.flex-box": "workspace:*",
-    "@phantomthief-react/hooks": "workspace:*",
+    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*",
     "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",

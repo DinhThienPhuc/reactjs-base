@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 
@@ -35,8 +35,8 @@ const meta = {
       { key: "option-4", value: "option-4", label: "Option 4" },
     ],
     label: "Label of radio group",
-    onChange: (e: ChangeEvent<HTMLInputElement>) => {
-      console.log("e", e.target.value);
+    onChange: (value: string) => {
+      console.log("value", value);
     },
   },
 } satisfies Meta<typeof RadioGroup>;
@@ -67,8 +67,8 @@ export const ParentController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[1].value);
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     const handleParentChange = useCallback(
@@ -104,8 +104,8 @@ export const PropsController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState(args.options[2].value);
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     console.log("PropsController: ", value);
@@ -170,8 +170,8 @@ export const LazyLoad: Story = {
     const [value, setValue] = useState(args.options[2].value);
     const [label, setLabel] = useState("");
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     return (

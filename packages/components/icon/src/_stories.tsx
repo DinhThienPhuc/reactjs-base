@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { FONT } from "@phantomthief-react/utils";
+import { FONT } from "@phantomthief-react/utils.constants";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Icon } from "./_components";

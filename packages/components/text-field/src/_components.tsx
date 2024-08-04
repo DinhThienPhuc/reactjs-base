@@ -1,10 +1,8 @@
 import clsx from "clsx";
 import React, { ChangeEvent, Suspense, forwardRef, lazy } from "react";
 
-import {
-  useFocusWithCallback,
-  useSyncStateWithProps,
-} from "@phantomthief-react/hooks";
+import useFocusWithCallback from "@phantomthief-react/hooks.focus-with-callback";
+import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
 
 import { TEXT_FIELD_VARIANT } from "./_constants";
 import { Styled } from "./_style";
@@ -73,7 +71,7 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
         : false;
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-      onChange?.(e);
+      onChange?.(e.target.value, e);
       setCurrentValue(e.target.value);
     };
 
