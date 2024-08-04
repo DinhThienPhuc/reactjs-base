@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { FONT } from "@phantomthief-react/utils";
+import { FONT } from "@phantomthief-react/utils.constants";
 
 import { LABEL_VARIANT } from "./_constants";
 import { IStyledLabelProps } from "./_types";

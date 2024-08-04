@@ -20,7 +20,7 @@ dist/
 /.firebase
 
 # env
-# .env.local
+.env.local
 # .env.development.local
 # .env.staging
 # .env.development

@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 
 import { FlexBox } from "./_components";
 
@@ -39,27 +38,20 @@ const meta = {
       },
       description: "HTML tag to render",
     },
-    onClick: {
-      table: {
-        disable: true,
-      },
-    },
-    style: {
-      description: "CSS style object",
-    },
     children: {
       description: "Content to render",
     },
   },
   args: {
-    onClick: fn(),
     children: "Content",
-    style: {
-      width: 600,
-      height: 360,
-      border: "1px solid green",
-      color: "#ffffff",
-      padding: 24,
+    htmlAttributes: {
+      style: {
+        width: 600,
+        height: 360,
+        border: "1px solid green",
+        color: "#ffffff",
+        padding: 24,
+      },
     },
   },
 } satisfies Meta<typeof FlexBox>;
@@ -91,5 +83,13 @@ export const TopAlign: Story = {
 export const BottomAlign: Story = {
   args: {
     alignItems: "flex-end",
+  },
+};
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "flex-box-id-gtm",
+    },
   },
 };

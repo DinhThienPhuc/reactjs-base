@@ -1,3 +1,4 @@
+import { HTMLAttributes } from "react";
 import { FieldError } from "react-hook-form";
 
 import { TAny } from "./_types";
@@ -27,6 +28,7 @@ export interface ILoadingProps {
   color?: string;
   className?: string;
   fullScreen?: boolean;
+  htmlAttributes?: HTMLAttributes<HTMLSpanElement> & IExtendable;
 }
 
 /**

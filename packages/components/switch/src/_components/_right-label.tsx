@@ -5,13 +5,18 @@ import { Styled } from "../_style";
 import { ISwitchRightLabelProps } from "../_types";
 
 export const SwitchLabelRight = memo(
-  ({ rightLabel = "", disabled = false }: ISwitchRightLabelProps) => {
+  ({
+    rightLabel = "",
+    disabled = false,
+    htmlAttributes,
+  }: ISwitchRightLabelProps) => {
     if (!rightLabel) {
       return null;
     }
 
     return (
       <Styled.RightLabel
+        {...htmlAttributes}
         $disabled={disabled}
         className={clsx(
           "switch-label",

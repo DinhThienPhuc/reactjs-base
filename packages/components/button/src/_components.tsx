@@ -13,9 +13,9 @@ export const Button = ({
   loading = false,
   loadingComponent,
   className,
+  htmlAttributes,
   children,
   onClick,
-  ...restProps
 }: IButtonProps) => {
   const buttonContent = useMemo(() => {
     if (!loading) {
@@ -26,7 +26,7 @@ export const Button = ({
 
   return (
     <Styled.Container
-      {...restProps}
+      {...htmlAttributes}
       $variant={variant}
       $size={size}
       onClick={onClick}
@@ -37,7 +37,6 @@ export const Button = ({
         loading && "button--loading",
         className,
       )}
-      data-testid="button"
     >
       {buttonContent}
     </Styled.Container>

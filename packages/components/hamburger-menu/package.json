@@ -30,8 +30,9 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils": "workspace:*",
-    "@phantomthief-react/hooks": "workspace:*"
+    "@phantomthief-react/utils.helpers": "workspace:*",
+    "@phantomthief-react/utils.definations": "workspace:*",
+    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

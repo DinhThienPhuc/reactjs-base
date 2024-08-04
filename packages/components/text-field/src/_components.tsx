@@ -1,10 +1,8 @@
 import clsx from "clsx";
 import React, { ChangeEvent, Suspense, forwardRef, lazy } from "react";
 
-import {
-  useFocusWithCallback,
-  useSyncStateWithProps,
-} from "@phantomthief-react/hooks";
+import useFocusWithCallback from "@phantomthief-react/hooks.focus-with-callback";
+import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
 
 import { TEXT_FIELD_VARIANT } from "./_constants";
 import { Styled } from "./_style";
@@ -37,24 +35,24 @@ const PreAdorment = lazy(() =>
 export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
   (
     {
-      className,
       value = "",
-      required = false,
-      disabled = false,
-      fullWidth = false,
-      isStandalone = false,
-      error = null,
       variant = TEXT_FIELD_VARIANT.STANDARD,
       onChange,
       onFocus,
       onBlur,
       clear,
-      inputProps,
+      htmlAttributes,
+      inputHtmlAttributes,
       labelProps,
       preAdormentProps,
       postAdormentProps,
       helperTextProps,
-      ...restProps
+      className = "",
+      fullWidth = false,
+      disabled = false,
+      required = false,
+      error = null,
+      isStandalone = false,
     },
     ref,
   ) => {
@@ -73,13 +71,13 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
         : false;
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-      onChange?.(e);
+      onChange?.(e.target.value, e);
       setCurrentValue(e.target.value);
     };
 
     return (
       <Styled.Container
-        {...restProps}
+        {...htmlAttributes}
         $fullWidth={fullWidth}
         $variant={variant}
         $disabled={disabled}
@@ -92,7 +90,6 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
           `text-field--variant-${variant}`,
           className,
         )}
-        data-testid="text-field"
       >
         <Suspense>
           {!!labelProps?.children && (
@@ -117,7 +114,7 @@ export const TextField = forwardRef<HTMLInputElement, ITextFieldProps>(
           )}
         </Suspense>
         <Styled.Input
-          {...inputProps}
+          {...inputHtmlAttributes}
           $variant={variant}
           $hasPreAdorment={!!preAdormentProps?.children}
           $hasPostAdorment={!!clear || !!postAdormentProps?.children}

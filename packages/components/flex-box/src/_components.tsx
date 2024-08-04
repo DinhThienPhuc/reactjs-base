@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { useMemo } from "react";
 
-import { capitalize } from "@phantomthief-react/utils";
+import { capitalize } from "@phantomthief-react/utils.helpers";
 
 import { Styled } from "./_style";
 import { IFlexBoxProps } from "./_types";
@@ -15,7 +15,8 @@ export const FlexBox = ({
   variant = "div",
   gap = "0px",
   wrap = "nowrap",
-  ...restProps
+  fullWidth = false,
+  htmlAttributes,
 }: IFlexBoxProps) => {
   const StyledTag = useMemo(() => {
     const styledTagProperty = capitalize(variant) as keyof typeof Styled;
@@ -24,12 +25,13 @@ export const FlexBox = ({
 
   return (
     <StyledTag
-      {...restProps}
+      {...htmlAttributes}
       $flexDirection={flexDirection}
       $alignItems={alignItems}
       $justifyContent={justifyContent}
       $gap={gap}
       $wrap={wrap}
+      $fullWidth={fullWidth}
       className={clsx(
         "flex-box",
         `flex-box--direction-${flexDirection}`,
@@ -40,7 +42,6 @@ export const FlexBox = ({
         `flex-box--variant-${variant}`,
         className,
       )}
-      data-testid="flex-box"
     >
       {children}
     </StyledTag>

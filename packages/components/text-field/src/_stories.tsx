@@ -1,9 +1,13 @@
-import React, { ChangeEvent, useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import { yupResolver } from "@hookform/resolvers/yup";
+import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
 import { Icon } from "@phantomthief-react/components.icon";
+import { ILabelProps } from "@phantomthief-react/components.label";
+import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
+import { IPreAdormentProps } from "@phantomthief-react/components.pre-adorment";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { TextField } from "./_components";
@@ -21,10 +25,10 @@ const meta = {
       children: "Username",
     },
     preAdormentProps: {
-      children: <Icon name="anchor" color="#ffffff" width={16} height={16} />,
+      children: <Icon name="anchor" color="#ffffff" />,
     },
     postAdormentProps: {
-      children: <Icon name="info" color="#ffffff" width={16} height={16} />,
+      children: <Icon name="info" color="#ffffff" />,
     },
     helperTextProps: {
       children: "This is a text field",
@@ -39,10 +43,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     isStandalone: true,
-    labelProps: null,
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
   },
 };
 
@@ -50,10 +54,10 @@ export const Outlined: Story = {
   args: {
     isStandalone: true,
     variant: "outlined",
-    labelProps: null,
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
   },
 };
 
@@ -61,10 +65,10 @@ export const Filled: Story = {
   args: {
     isStandalone: true,
     variant: "filled",
-    labelProps: null,
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
   },
 };
 
@@ -72,10 +76,10 @@ export const FullWidth: Story = {
   args: {
     variant: "outlined",
     fullWidth: true,
-    labelProps: null,
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -84,19 +88,19 @@ export const Required: Story = {
   args: {
     variant: "filled",
     required: true,
-    labelProps: null,
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    labelProps: undefined,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
 
 export const LabeledDefault: Story = {
   args: {
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -104,9 +108,9 @@ export const LabeledDefault: Story = {
 export const LabeledOutlined: Story = {
   args: {
     variant: "outlined",
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -114,9 +118,9 @@ export const LabeledOutlined: Story = {
 export const LabeledFilled: Story = {
   args: {
     variant: "filled",
-    preAdormentProps: null,
-    postAdormentProps: null,
-    helperTextProps: null,
+    preAdormentProps: undefined,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -124,8 +128,8 @@ export const LabeledFilled: Story = {
 export const CustomPreAdorment: Story = {
   args: {
     variant: "outlined",
-    postAdormentProps: null,
-    helperTextProps: null,
+    postAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -133,8 +137,8 @@ export const CustomPreAdorment: Story = {
 export const CustomPostAdorment: Story = {
   args: {
     variant: "outlined",
-    preAdormentProps: null,
-    helperTextProps: null,
+    preAdormentProps: undefined,
+    helperTextProps: undefined,
     isStandalone: true,
   },
 };
@@ -162,8 +166,8 @@ export const ParentController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState("");
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     const handleParentChange = useCallback(
@@ -198,8 +202,8 @@ export const PropsController: Story = {
   render: function Render(args) {
     const [value, setValue] = useState("");
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     return <TextField {...args} value={value} onChange={handleChange} />;
@@ -254,14 +258,22 @@ export const RHFController: Story = {
 
 export const LazyLoad: Story = {
   render: function Render(args) {
-    const [labelProps, setLabelProps] = useState(null);
-    const [preAdormentProps, setPreAdormentProps] = useState(null);
-    const [postAdormentProps, setPostAdormentProps] = useState(null);
-    const [helperTextProps, setHelperTextProps] = useState(null);
+    const [labelProps, setLabelProps] = useState<ILabelProps | undefined>(
+      undefined,
+    );
+    const [preAdormentProps, setPreAdormentProps] = useState<
+      IPreAdormentProps | undefined
+    >(undefined);
+    const [postAdormentProps, setPostAdormentProps] = useState<
+      IPostAdormentProps | undefined
+    >(undefined);
+    const [helperTextProps, setHelperTextProps] = useState<
+      IHelperTextProps | undefined
+    >(undefined);
     const [value, setValue] = useState("");
 
-    const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-      setValue(e.target.value);
+    const handleChange = useCallback((value: string) => {
+      setValue(value);
     }, []);
 
     return (
@@ -278,7 +290,7 @@ export const LazyLoad: Story = {
         <button
           style={{ marginTop: 48 }}
           onClick={() =>
-            setLabelProps((prev) => (prev ? null : args.labelProps))
+            setLabelProps((prev) => (prev ? undefined : args.labelProps))
           }
         >
           Toggle show label
@@ -286,7 +298,9 @@ export const LazyLoad: Story = {
         <button
           style={{ marginTop: 48 }}
           onClick={() =>
-            setPreAdormentProps((prev) => (prev ? null : args.preAdormentProps))
+            setPreAdormentProps((prev) =>
+              prev ? undefined : args.preAdormentProps,
+            )
           }
         >
           Toggle show pre adorment
@@ -295,7 +309,7 @@ export const LazyLoad: Story = {
           style={{ marginTop: 48 }}
           onClick={() =>
             setPostAdormentProps((prev) =>
-              prev ? null : args.postAdormentProps,
+              prev ? undefined : args.postAdormentProps,
             )
           }
         >
@@ -304,12 +318,25 @@ export const LazyLoad: Story = {
         <button
           style={{ marginTop: 48 }}
           onClick={() =>
-            setHelperTextProps((prev) => (prev ? null : args.helperTextProps))
+            setHelperTextProps((prev) =>
+              prev ? undefined : args.helperTextProps,
+            )
           }
         >
           Toggle show helper text
         </button>
       </div>
     );
+  },
+};
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "text-field-gtm-id",
+    },
+    inputHtmlAttributes: {
+      "data-gtm": "text-field-input-gtm-id",
+    },
   },
 };

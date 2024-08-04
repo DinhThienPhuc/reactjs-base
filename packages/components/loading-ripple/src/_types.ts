@@ -1,3 +1,3 @@
-import { IExtendable, ILoadingProps } from "@phantomthief-react/utils";
+import { ILoadingProps } from "@phantomthief-react/utils.definations";
 
-export interface ILoadingRippleProps extends ILoadingProps, IExtendable {}
+export interface ILoadingRippleProps extends ILoadingProps {}

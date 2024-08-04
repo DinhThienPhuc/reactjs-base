@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
-import { useBlock } from "@phantomthief-react/hooks";
+import useBlock from "@phantomthief-react/hooks.block";
 
 import { BASE_ROUTES } from "./_base-routes";
 import { IAuthenticatorProps } from "./_types";

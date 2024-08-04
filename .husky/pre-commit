@@ -1,5 +1,2 @@
-#!/bin/bash
-. "$(dirname "$0")/_/husky.sh"
-
 # Format lint + prettier
 pnpm run format

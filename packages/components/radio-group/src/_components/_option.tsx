@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { ChangeEvent, memo, useCallback } from "react";
+import React, { ChangeEvent, memo, useCallback, useMemo } from "react";
 
 import { arePropsShallowEqual } from "@phantomthief-react/utils";
 
@@ -8,46 +8,48 @@ import { IRadioGroupOptionProps } from "../_types";
 
 export const RadioGroupOption = memo(
   ({
-    className,
     label,
     value,
-    labelProps,
+    name,
+    htmlAttributes,
     isStandalone,
     currentValue,
     setCurrentValue,
     onChange,
-    ...restProps
   }: IRadioGroupOptionProps) => {
     const val = isStandalone ? undefined : currentValue === value;
 
     const handleChange = useCallback(
       (e: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e);
+        onChange?.(value, e);
         setCurrentValue?.(value);
       },
       [onChange, setCurrentValue, value],
     );
 
+    const customLabelOption = useMemo(
+      () => (
+        <Styled.OptionLabelText className="radio-group-option-label">
+          {label}
+        </Styled.OptionLabelText>
+      ),
+      [label],
+    );
+
     return (
-      <Styled.OptionLabel
-        {...labelProps}
-        className={clsx("radio-group-option", className)}
-        data-testid="radio-group-option"
-      >
+      <Styled.OptionLabel {...htmlAttributes} className="radio-group-option">
         <Styled.OptionInput
-          {...restProps}
           className={clsx(
             "radio-group-option-input",
             val ? "radio-group-option-input--checked" : "",
           )}
+          name={name}
           type="radio"
           value={value}
           checked={val}
           onChange={handleChange}
         />
-        <Styled.OptionLabelText className="radio-group-option-label">
-          {label}
-        </Styled.OptionLabelText>
+        {customLabelOption}
       </Styled.OptionLabel>
     );
   },

@@ -1,6 +1,6 @@
-import React, { MouseEvent, useState } from "react";
+import React, { MouseEvent, useCallback, useState } from "react";
 
-import { Typography } from "@phantomthief-react/components";
+import { Typography } from "@phantomthief-react/components.typography";
 import { FONT } from "@phantomthief-react/utils";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -26,6 +26,9 @@ const meta = {
       {
         key: "home",
         content: <Typography font={FONT.VERNADA}>Home</Typography>,
+        htmlAttributes: {
+          "data-gtm": "home",
+        },
       },
       {
         key: "about-us",
@@ -47,15 +50,21 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const DefaultWithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "responsive-topnav",
+    },
+  },
   render: function Render(args) {
     const [activeKey, setActiveKey] = useState("");
-    const handleSelectMenuItem = (
-      _: MouseEvent<HTMLButtonElement>,
-      key?: string,
-    ) => {
-      key && setActiveKey(key);
-    };
+    const handleSelectMenuItem = useCallback(
+      (_: MouseEvent<HTMLButtonElement>, key?: string) => {
+        key && setActiveKey(key);
+      },
+      [],
+    );
+
     return (
       <ResponsiveTopnav
         {...args}

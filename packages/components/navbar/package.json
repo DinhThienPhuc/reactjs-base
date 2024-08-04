@@ -28,12 +28,13 @@
   "peerDependencies": {
     "typescript": "*",
     "react": "*",
-    "clsx": "*"
+    "clsx": "*",
+    "@phantomthief-react/utils.definations": "workspace:*"
   },
   "devDependencies": {
     "@phantomthief-react/components.typography": "workspace:*",
     "@phantomthief-react/components.button": "workspace:*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantomthief-react/utils.constants": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

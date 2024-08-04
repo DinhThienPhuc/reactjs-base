@@ -1,11 +1,19 @@
 import React, { ComponentType, Suspense, useEffect, useState } from "react";
 
 import { LoadingEllipsis } from "@phantomthief-react/components.loading-ellipsis";
-import { toCamelCase } from "@phantomthief-react/utils";
+import { toCamelCase } from "@phantomthief-react/utils.helpers";
 
 import { IIconProps, ISingleIconProps } from "./_types";
 
-export const Icon = ({ name, loadingProps, ...restProps }: IIconProps) => {
+export const Icon = ({
+  name,
+  loadingProps,
+  htmlAttributes,
+  color = "#ffffff",
+  width = 24,
+  height = 24,
+  className = "",
+}: IIconProps) => {
   const [IconComponent, setIconComponent] =
     useState<ComponentType<ISingleIconProps> | null>(null);
 
@@ -22,14 +30,19 @@ export const Icon = ({ name, loadingProps, ...restProps }: IIconProps) => {
   }, [name]);
 
   if (!IconComponent) {
-    return null;
+    return <LoadingEllipsis size={4} color="#ffffff" {...loadingProps} />;
   }
 
   return (
-    <Suspense
-      fallback={<LoadingEllipsis size={4} color="#ffffff" {...loadingProps} />}
-    >
-      <IconComponent {...restProps} name={name} />
+    <Suspense>
+      <IconComponent
+        className={className}
+        color={color}
+        name={name}
+        width={width}
+        height={height}
+        htmlAttributes={htmlAttributes}
+      />
     </Suspense>
   );
 };

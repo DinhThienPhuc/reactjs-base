@@ -1,11 +1,9 @@
 import { Property } from "csstype";
 import { HTMLAttributes, ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable } from "@phantomthief-react/utils.definations";
 
-export interface ITypographyProps
-  extends HTMLAttributes<HTMLElement>,
-    IExtendable {
+export interface ITypographyProps {
   variant?: keyof JSX.IntrinsicElements;
   children?: ReactNode;
   size?: number | string;
@@ -14,11 +12,15 @@ export interface ITypographyProps
   font?: string;
   className?: string;
   align?: Property.TextAlign;
+  htmlAttributes?: HTMLAttributes<HTMLElement> & IExtendable;
 }
 
-export interface IStyledTypographyProps extends IExtendable {
+export interface IStyledTypographyProps
+  extends HTMLAttributes<HTMLElement>,
+    IExtendable {
   $size?: number | string;
   $color?: string;
   $bold?: number;
   $font?: string;
+  $align?: Property.TextAlign;
 }

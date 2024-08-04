@@ -12,16 +12,14 @@ import React, {
 } from "react";
 
 import { Portal } from "@phantomthief-react/components.portal";
-import {
-  useBlock,
-  useNotClickOnElements,
-  useSyncStateWithProps,
-} from "@phantomthief-react/hooks";
+import useBlock from "@phantomthief-react/hooks.block";
+import useNotClickOnElements from "@phantomthief-react/hooks.not-click-on-elements";
+import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
 import { INodePosition, getPositionOfNode } from "@phantomthief-react/utils";
 
 import { SELECT_VARIANT } from "../_constants";
 import { Styled } from "../_style";
-import { ISelectEventTarget, ISelectProps } from "../_types";
+import { ISelectProps } from "../_types";
 
 const HelperText = lazy(() =>
   import("@phantomthief-react/components.helper-text").then((module) => ({
@@ -54,22 +52,23 @@ const SelectMenu = lazy(() =>
 export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
   (
     {
-      className,
+      optionGroupClassName,
       options,
       value,
       variant = SELECT_VARIANT.STANDARD,
-      disabled = false,
-      fullWidth = false,
-      required = false,
-      tabIndex = -1,
-      error = null,
-      isStandalone = false,
-      optionGroupClassName,
       labelProps,
       postAdormentProps,
       helperTextProps,
+      className,
+      fullWidth = false,
+      disabled = false,
+      required = false,
+      error = null,
+      isStandalone = false,
+      tabIndex = -1,
+      menuHtmlAttributes,
+      htmlAttributes,
       onChange,
-      ...restProps
     },
     _ref,
   ) => {
@@ -138,12 +137,7 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
 
     const handleSelectOption = useCallback(
       (value: string) => (e: MouseEvent<HTMLSpanElement>) => {
-        const target: ISelectEventTarget = {
-          ...e.target,
-          value,
-        };
-        e.target = target;
-        onChange?.(e);
+        onChange?.(value, e);
         setShow(false);
         setCurrentValue(value);
       },
@@ -152,10 +146,9 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
 
     return (
       <Styled.Container
-        {...restProps}
+        {...htmlAttributes}
         $fullWidth={fullWidth}
         className={clsx("select", fullWidth && "select--fullWidth", className)}
-        data-testid="select"
       >
         <Styled.Box
           $variant={variant}
@@ -172,7 +165,6 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
             !!error && "select-box--error",
             `select-box--variant-${variant}`,
           )}
-          data-testid="select-box"
         >
           <Suspense>
             {!!labelProps?.children && (
@@ -198,7 +190,6 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
               !!labelProps?.children && "select-inner-box--hasLabel",
               disabled && "select-inner-box--disabled",
             )}
-            data-testid="select-displayed-option"
           >
             {displayedOption?.label}
           </Styled.InnerBox>
@@ -231,6 +222,7 @@ export const Select = forwardRef<HTMLSelectElement, ISelectProps>(
                 isShowed={isShowed}
                 optionGroupClassName={optionGroupClassName}
                 currentValue={currentValue}
+                htmlAttributes={menuHtmlAttributes}
                 selectOption={handleSelectOption}
               />
             )}

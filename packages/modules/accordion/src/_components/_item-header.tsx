@@ -1,49 +1,78 @@
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
 
-import { useAccordionState } from "../_states";
+import { Typography } from "@phantomthief-react/components.typography";
+import { FONT } from "@phantomthief-react/utils";
+
 import { Styled } from "../_styles";
-import { IAccordionItemProps } from "../_types";
+import { IAccordionItemHeaderProps, TItemDictionary } from "../_types";
 import { AccordionItemExpandIcon } from "./_expand-icon";
 
 export const AccordionItemHeader = memo(
   ({
     label,
-    itemKey = "",
-    isOnlyOneExpand,
     preIcon,
     postIcon,
     expandIcon,
     disabled,
-  }: IAccordionItemProps) => {
-    const toggleKey = useAccordionState((state) => state.toggleKey);
-    const toggleOnlyKey = useAccordionState((state) => state.toggleOnlyKey);
+    isExpanded,
+    isOnlyOneExpand,
+    id,
+    expandIconHtmlAttributes,
+    htmlAttributes,
+    labelHtmlAttributes,
+    setItemDictionary,
+  }: IAccordionItemHeaderProps) => {
+    const onClickItemHeader = (id: string) => () => {
+      if (isOnlyOneExpand) {
+        setItemDictionary((prev) => ({
+          ...Object.keys(prev).reduce(
+            (acc: TItemDictionary, currentId: string) => {
+              acc[currentId] = false;
+              return acc;
+            },
+            {},
+          ),
+          [id]: prev[id] ? false : true,
+        }));
+      } else {
+        setItemDictionary((prev) => ({ ...prev, [id]: !prev[id] }));
+      }
+    };
+
+    const firstSection = useMemo(
+      () => (
+        <Styled.ItemHeaderSectionGroup>
+          <Styled.ItemHeaderSection className="accordion-item__header__left">
+            {preIcon}
+            <Typography
+              font={FONT.VERNADA}
+              className="accordion-item__header-label"
+              htmlAttributes={labelHtmlAttributes}
+            >
+              {label}
+            </Typography>
+          </Styled.ItemHeaderSection>
+          <Styled.ItemHeaderSection className="accordion-item__header__right">
+            {postIcon}
+          </Styled.ItemHeaderSection>
+        </Styled.ItemHeaderSectionGroup>
+      ),
+      [label, labelHtmlAttributes, postIcon, preIcon],
+    );
 
     return (
       <Styled.ItemHeader
+        {...htmlAttributes}
         $disabled={disabled}
         className="accordion-item__header"
-        onClick={() =>
-          isOnlyOneExpand ? toggleOnlyKey(itemKey) : toggleKey(itemKey)
-        }
+        onClick={onClickItemHeader(id)}
       >
-        <Styled.ItemHeaderSection
-          $disabled={disabled}
-          className="accordion-item__header__left"
-        >
-          {!!preIcon && (
-            <Styled.ItemHeaderPreIcon className="accordion-item__header__left__pre-icon">
-              {preIcon}
-            </Styled.ItemHeaderPreIcon>
-          )}
-          {label}
-        </Styled.ItemHeaderSection>
-        <Styled.ItemHeaderSection
-          $disabled={disabled}
-          className="accordion-item__header__right"
-        >
-          {postIcon}
-          <AccordionItemExpandIcon expandIcon={expandIcon} itemKey={itemKey} />
-        </Styled.ItemHeaderSection>
+        {firstSection}
+        <AccordionItemExpandIcon
+          htmlAttributes={expandIconHtmlAttributes}
+          expandIcon={expandIcon}
+          isExpanded={isExpanded}
+        />
       </Styled.ItemHeader>
     );
   },

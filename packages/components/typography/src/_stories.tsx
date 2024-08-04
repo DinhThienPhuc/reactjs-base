@@ -56,3 +56,11 @@ export const CustomFontText: Story = {
     font: "Arial, Helvetica, sans-serif",
   },
 };
+
+export const WithHTMLAttributes: Story = {
+  args: {
+    htmlAttributes: {
+      "data-gtm": "test",
+    },
+  },
+};

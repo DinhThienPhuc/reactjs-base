@@ -9,10 +9,10 @@ export const LoadingRipple = ({
   color = "#00bfff",
   fullScreen = false,
   className,
-  ...restProps
+  htmlAttributes,
 }: ILoadingRippleProps) => (
   <Styled.Container
-    {...restProps}
+    {...htmlAttributes}
     $fullScreen={fullScreen}
     className={clsx(
       "loading-ripple",
@@ -21,7 +21,6 @@ export const LoadingRipple = ({
       fullScreen && "loading-ripple--fullScreen",
       className,
     )}
-    data-testid="loading-ripple"
   >
     <Styled.Ripple $size={size} $color={color} className="loading-ripple-inner">
       <span />

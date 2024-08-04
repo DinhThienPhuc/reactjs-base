@@ -3,19 +3,27 @@ import React from "react";
 
 import { ISingleIconProps } from "../_types";
 
-export const IconX = ({ name, className, ...restProps }: ISingleIconProps) => {
+export const IconX = ({
+  className = "",
+  name,
+  color,
+  width,
+  height,
+  htmlAttributes,
+}: ISingleIconProps) => {
   return (
     <svg
+      {...htmlAttributes}
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={width || "24"}
+      height={height || "24"}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...restProps}
+      color={color}
       className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
     >
       <path d="M18 6 6 18" />

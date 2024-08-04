@@ -4,22 +4,26 @@ import React from "react";
 import { ISingleIconProps } from "../_types";
 
 export const IconCopy = ({
+  className = "",
   name,
-  className,
-  ...restProps
+  color,
+  width,
+  height,
+  htmlAttributes,
 }: ISingleIconProps) => {
   return (
     <svg
+      {...htmlAttributes}
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={width || "24"}
+      height={height || "24"}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...restProps}
+      color={color}
       className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
     >
       <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />

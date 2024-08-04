@@ -30,10 +30,12 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "zustand": "*",
-    "@phantomthief-react/hooks": "workspace:*",
     "@phantomthief-react/utils": "workspace:*",
-    "@phantomthief-react/components": "workspace:*"
+    "@phantomthief-react/components.icon": "workspace:*",
+    "@phantomthief-react/components.typography": "workspace:*"
+  },
+  "devDependencies": {
+    "@phantomthief-react/components.flex-box": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

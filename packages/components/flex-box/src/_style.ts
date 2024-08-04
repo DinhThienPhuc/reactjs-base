@@ -8,6 +8,7 @@ const modifyFlexBox = ({
   $flexDirection,
   $gap,
   $wrap,
+  $fullWidth,
 }: IStyledFlexBoxProps) => {
   return css`
     display: flex;
@@ -16,6 +17,7 @@ const modifyFlexBox = ({
     flex-direction: ${$flexDirection};
     gap: ${$gap};
     flex-wrap: ${$wrap};
+    width: ${$fullWidth ? "100%" : "auto"};
   `;
 };
 

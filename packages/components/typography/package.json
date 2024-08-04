@@ -30,7 +30,8 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantomthief-react/utils.definations": "workspace:*",
+    "@phantomthief-react/utils.helpers": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

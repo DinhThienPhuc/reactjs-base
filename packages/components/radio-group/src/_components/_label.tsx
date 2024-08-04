@@ -5,9 +5,10 @@ import { Styled } from "../_style";
 import { IRadioGroupLabelProps } from "../_types";
 
 export const RadioGroupLabel = memo(
-  ({ label = "", hasValue }: IRadioGroupLabelProps) => {
+  ({ label = "", hasValue, htmlAttributes }: IRadioGroupLabelProps) => {
     return (
       <Styled.Label
+        {...htmlAttributes}
         $hasValue={hasValue}
         className={clsx(
           "radio-group-label",

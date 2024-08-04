@@ -6,16 +6,28 @@ import { ISelectMenuProps, ISelectOption } from "../_types";
 import { SelectOption } from "./_option";
 
 export const SelectMenu = forwardRef<HTMLDivElement, ISelectMenuProps>(
-  ({ options, position, isShowed, currentValue, selectOption }, ref) => {
+  (
+    {
+      options,
+      position,
+      isShowed,
+      currentValue,
+      optionGroupClassName,
+      htmlAttributes,
+      selectOption,
+    },
+    ref,
+  ) => {
     const selectOptions = useMemo(() => {
       return options.map((option: ISelectOption) => {
         return (
           <SelectOption
-            {...option}
             key={option.value}
             value={option.value}
-            label={option.label}
             displayedValue={currentValue}
+            label={option.label}
+            disabled={!!option.disabled}
+            htmlAttributes={option.htmlAttributes}
             handleSelectOption={selectOption}
           />
         );
@@ -24,6 +36,7 @@ export const SelectMenu = forwardRef<HTMLDivElement, ISelectMenuProps>(
 
     return (
       <Styled.OptionGroup
+        {...htmlAttributes}
         $position={position}
         $isShowed={isShowed}
         ref={ref}
@@ -36,6 +49,7 @@ export const SelectMenu = forwardRef<HTMLDivElement, ISelectMenuProps>(
           !!position?.width &&
             `select-options--position-width-${position.width}`,
           isShowed && "select-options--showed",
+          optionGroupClassName,
         )}
       >
         {selectOptions}

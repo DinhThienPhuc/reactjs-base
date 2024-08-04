@@ -1,53 +1,64 @@
 import clsx from "clsx";
-import React from "react";
+import React, { memo } from "react";
 
-import { useAccordionState } from "../_states";
 import { Styled } from "../_styles";
 import { IAccordionItemProps } from "../_types";
 import { AccordionItemHeader } from "./_item-header";
 
-export const AccordionItem = ({
-  label,
-  body,
-  className,
-  itemKey = "",
-  isOnlyOneExpand,
-  preIcon,
-  postIcon,
-  expandIcon,
-  disabled,
-  ...restProps
-}: IAccordionItemProps) => {
-  const isExpanded = useAccordionState((state) => !!state.itemKeys[itemKey]);
-
-  return (
-    <Styled.ItemContainer
-      {...restProps}
-      $isExpanded={isExpanded}
-      className={clsx(
-        "accordion-item",
-        isExpanded && "accordion-item--isExpanded",
-        className,
-      )}
-    >
-      <AccordionItemHeader
-        label={label}
-        itemKey={itemKey}
-        isOnlyOneExpand={isOnlyOneExpand}
-        preIcon={preIcon}
-        postIcon={postIcon}
-        expandIcon={expandIcon}
-        disabled={disabled}
-      />
-      <Styled.ItemContent
+export const AccordionItem = memo(
+  ({
+    id,
+    label,
+    body,
+    preIcon,
+    postIcon,
+    expandIcon,
+    disabled,
+    bodyHtmlAttributes,
+    htmlAttributes,
+    expandIconHtmlAttributes,
+    itemHeaderHtmlAttributes,
+    itemHeaderLabelHtmlAttributes,
+    isExpanded,
+    isOnlyOneExpand,
+    setItemDictionary,
+  }: IAccordionItemProps) => {
+    return (
+      <Styled.ItemContainer
+        {...htmlAttributes}
         $isExpanded={isExpanded}
         className={clsx(
-          "accordion-item__content",
-          isExpanded && "accordion-item__content--isExpanded",
+          "accordion-item",
+          isExpanded && "accordion-item--isExpanded",
         )}
       >
-        {body}
-      </Styled.ItemContent>
-    </Styled.ItemContainer>
-  );
-};
+        <AccordionItemHeader
+          label={label}
+          preIcon={preIcon}
+          postIcon={postIcon}
+          expandIcon={expandIcon}
+          disabled={disabled}
+          isExpanded={isExpanded}
+          isOnlyOneExpand={isOnlyOneExpand}
+          id={id}
+          expandIconHtmlAttributes={expandIconHtmlAttributes}
+          htmlAttributes={itemHeaderHtmlAttributes}
+          labelHtmlAttributes={itemHeaderLabelHtmlAttributes}
+          setItemDictionary={setItemDictionary}
+        />
+        <Styled.ItemContent
+          {...bodyHtmlAttributes}
+          $isExpanded={isExpanded}
+          className={clsx(
+            "accordion-item__content",
+            isExpanded && "accordion-item__content--isExpanded",
+          )}
+        >
+          {body}
+        </Styled.ItemContent>
+      </Styled.ItemContainer>
+    );
+  },
+);
+
+AccordionItem.displayName = "AccordionItem";

@@ -9,10 +9,10 @@ export const LoadingEllipsis = ({
   color = "#00bfff",
   fullScreen = false,
   className,
-  ...restProps
+  htmlAttributes,
 }: ILoadingEllipsisProps) => (
   <Styled.Container
-    {...restProps}
+    {...htmlAttributes}
     $fullScreen={fullScreen}
     className={clsx(
       "loading-ellipsis",
@@ -21,7 +21,6 @@ export const LoadingEllipsis = ({
       fullScreen && "loading-ellipsis--fullScreen",
       className,
     )}
-    data-testid="loading-ellipsis"
   >
     <Styled.Spinner
       $size={size}

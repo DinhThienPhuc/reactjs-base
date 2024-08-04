@@ -35,7 +35,9 @@
     "@phantomthief-react/components.label": "workspace:*",
     "@phantomthief-react/components.portal": "workspace:*",
     "@phantomthief-react/components.icon": "workspace:*",
-    "@phantomthief-react/hooks": "workspace:*",
+    "@phantomthief-react/hooks.block": "workspace:*",
+    "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
+    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*",
     "@phantomthief-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",

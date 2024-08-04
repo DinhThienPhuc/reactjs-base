@@ -29,7 +29,8 @@
     "typescript": "*",
     "react": "*",
     "styled-components": "*",
-    "@phantomthief-react/utils": "workspace:*"
+    "clsx": "*",
+    "@phantomthief-react/utils.definations": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",
