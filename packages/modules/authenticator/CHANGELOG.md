@@ -1,5 +1,20 @@
 # @phantomthief-react/modules.authenticator
 
+## 0.0.10
+
+### Patch Changes
+
+- 7d3b774: Refactor components packages
+- 1320f53: Update CHECKLIST.md files to use htmlAttributes prop and support lazy loading in components
+- b6a46d1: Update component CHECKLIST.md files to use htmlAttributes prop instead of restProps
+- 31ac3a0: Update components according to the checklist
+- 6f4f459: Update checklist emoji, support lazy loading in Button component, and fix FlexBox fullwidth prop and accordion re-render
+- 930318b: Update component CHECKLIST.md files to use htmlAttributes prop and add story for HTML attributes function
+- Updated dependencies [7d3b774]
+- Updated dependencies [b6a46d1]
+- Updated dependencies [930318b]
+  - @phantomthief-react/hooks.block@0.0.10
+
 ## 0.0.9
 
 ### Patch Changes

@@ -1,5 +1,24 @@
 # @phantomthief-react/hooks
 
+## 0.0.8
+
+### Patch Changes
+
+- 7d3b774: Refactor components packages
+- b6a46d1: Update component CHECKLIST.md files to use htmlAttributes prop instead of restProps
+- 930318b: Update component CHECKLIST.md files to use htmlAttributes prop and add story for HTML attributes function
+- Updated dependencies [7d3b774]
+- Updated dependencies [b6a46d1]
+- Updated dependencies [930318b]
+  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.5
+  - @phantomthief-react/hooks.not-click-on-elements@0.0.5
+  - @phantomthief-react/hooks.sync-state-with-props@0.0.4
+  - @phantomthief-react/hooks.focus-with-callback@0.0.5
+  - @phantomthief-react/hooks.event-listener@0.0.5
+  - @phantomthief-react/hooks.media-query@0.0.5
+  - @phantomthief-react/hooks.on-mounted@0.0.5
+  - @phantomthief-react/hooks.block@0.0.10
+
 ## 0.0.7
 
 ### Patch Changes

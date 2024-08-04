@@ -1,5 +1,20 @@
 # @phantomthief-react/utils.helpers
 
+## 0.0.10
+
+### Patch Changes
+
+- 7d3b774: Refactor components packages
+- b6a46d1: Update component CHECKLIST.md files to use htmlAttributes prop instead of restProps
+- 930318b: Update component CHECKLIST.md files to use htmlAttributes prop and add story for HTML attributes function
+- Updated dependencies [7d3b774]
+- Updated dependencies [1320f53]
+- Updated dependencies [b6a46d1]
+- Updated dependencies [31ac3a0]
+- Updated dependencies [930318b]
+  - @phantomthief-react/utils.definations@0.0.7
+  - @phantomthief-react/utils.constants@0.0.6
+
 ## 0.0.9
 
 ### Patch Changes
