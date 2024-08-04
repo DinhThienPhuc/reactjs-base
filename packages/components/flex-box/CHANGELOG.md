@@ -1,5 +1,25 @@
 # @phantomthief-react/components.flex-box
 
+## 0.0.15
+
+### Patch Changes
+
+- 7d3b774: Refactor components packages
+- 1320f53: Update CHECKLIST.md files to use htmlAttributes prop and support lazy loading in components
+- b6a46d1: Update component CHECKLIST.md files to use htmlAttributes prop instead of restProps
+- 31ac3a0: Update components according to the checklist
+- 6f4f459: Update checklist emoji, support lazy loading in Button component, and fix FlexBox fullwidth prop and accordion re-render
+- c0bddf2: Update Button component to support lazy loading and add htmlAttributes prop
+- 930318b: Update component CHECKLIST.md files to use htmlAttributes prop and add story for HTML attributes function
+- 00109cd: Update FlexBox to have fullwidth prop and fix re-render of modules.accordion
+- Updated dependencies [7d3b774]
+- Updated dependencies [1320f53]
+- Updated dependencies [b6a46d1]
+- Updated dependencies [31ac3a0]
+- Updated dependencies [930318b]
+  - @phantomthief-react/utils.definations@0.0.7
+  - @phantomthief-react/utils.helpers@0.0.10
+
 ## 0.0.14
 
 ### Patch Changes

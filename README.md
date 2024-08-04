@@ -1,4 +1,12 @@
-# React.JS Base
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://dinhthienphuc.github.io/assets/images/logos/phantom-purr.png">
+    <img src="https://dinhthienphuc.github.io/assets/images/logos/phantom-purr.png" height="128">
+  </picture>
+  <h1 align="center">React.JS Base</h1>
+</p>
+
+---
 
 This is the React.JS Base project, organized as a monorepo containing smaller packages. Each package may include one or more base UI components, modules, or services used to build applications.
 

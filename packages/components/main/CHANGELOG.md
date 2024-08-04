@@ -1,5 +1,35 @@
 # @phantomthief-react/components
 
+## 0.0.11
+
+### Patch Changes
+
+- 7d3b774: Refactor components packages
+- b6a46d1: Update component CHECKLIST.md files to use htmlAttributes prop instead of restProps
+- 6f4f459: Update checklist emoji, support lazy loading in Button component, and fix FlexBox fullwidth prop and accordion re-render
+- 930318b: Update component CHECKLIST.md files to use htmlAttributes prop and add story for HTML attributes function
+- Updated dependencies [7d3b774]
+- Updated dependencies [1320f53]
+- Updated dependencies [b6a46d1]
+- Updated dependencies [31ac3a0]
+- Updated dependencies [6f4f459]
+- Updated dependencies [c0bddf2]
+- Updated dependencies [930318b]
+- Updated dependencies [00109cd]
+  - @phantomthief-react/components.loading-ellipsis@0.0.11
+  - @phantomthief-react/components.hamburger-menu@0.0.7
+  - @phantomthief-react/components.loading-ripple@0.0.11
+  - @phantomthief-react/components.radio-group@0.0.5
+  - @phantomthief-react/components.text-field@0.0.9
+  - @phantomthief-react/components.typography@0.0.13
+  - @phantomthief-react/components.flex-box@0.0.15
+  - @phantomthief-react/components.button@0.0.11
+  - @phantomthief-react/components.navbar@0.0.7
+  - @phantomthief-react/components.portal@0.0.8
+  - @phantomthief-react/components.select@0.0.13
+  - @phantomthief-react/components.switch@0.0.11
+  - @phantomthief-react/components.icon@0.0.6
+
 ## 0.0.10
 
 ### Patch Changes
