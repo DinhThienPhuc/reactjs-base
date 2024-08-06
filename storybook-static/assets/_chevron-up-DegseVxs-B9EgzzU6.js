@@ -26,7 +26,7 @@ const l = ({
     strokeLinecap: "round",
     strokeLinejoin: "round",
     color: i,
-    className: c("phantomthief-icon", "icon", `icon--${r}`, t),
+    className: c("phantompurr-icon", "icon", `icon--${r}`, t),
     children: o.jsx("path", { d: "m18 15-6-6-6 6" }),
   });
 export { l as IconChevronUp };

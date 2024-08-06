@@ -1,8 +1,8 @@
 import "./_commonjsHelpers-BosuxZz1.js";
+import "./_commonjsHelpers-BosuxZz1.js";
 import { c as o } from "./clsx-B-dksMZM.js";
 import { R as e } from "./index-Cs7sjTYM.js";
 
-import "./_commonjsHelpers-BosuxZz1.js";
 const c = ({
   className: t = "",
   name: r,
@@ -25,7 +25,7 @@ const c = ({
       strokeLinecap: "round",
       strokeLinejoin: "round",
       color: n,
-      className: o("phantomthief-icon", "icon", `icon--${r}`, t),
+      className: o("phantompurr-icon", "icon", `icon--${r}`, t),
     },
     e.createElement("path", { d: "M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2" }),
     e.createElement("rect", {
