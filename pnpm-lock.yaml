@@ -249,7 +249,7 @@ importers:
         specifier: ^5.2.0
         version: 5.3.5(@types/node@20.14.14)
 
-  main:
+  core:
     dependencies:
       "@phantompurr-react/components":
         specifier: workspace:*
