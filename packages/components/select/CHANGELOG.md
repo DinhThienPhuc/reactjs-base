@@ -1,5 +1,24 @@
 # @phantompurr-react/components.select
 
+## 1.0.0
+
+### Major Changes
+
+- 4e6f42d: Change the organization name and release a core package
+
+### Patch Changes
+
+- Updated dependencies [4e6f42d]
+  - @phantompurr-react/hooks.not-click-on-elements@1.0.0
+  - @phantompurr-react/hooks.sync-state-with-props@1.0.0
+  - @phantompurr-react/components.post-adorment@1.0.0
+  - @phantompurr-react/components.helper-text@1.0.0
+  - @phantompurr-react/components.portal@1.0.0
+  - @phantompurr-react/components.label@1.0.0
+  - @phantompurr-react/components.icon@1.0.0
+  - @phantompurr-react/hooks.block@1.0.0
+  - @phantompurr-react/utils@1.0.0
+
 ## 0.0.13
 
 ### Patch Changes

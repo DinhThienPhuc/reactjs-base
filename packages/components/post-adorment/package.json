@@ -1,6 +1,6 @@
 {
   "name": "@phantompurr-react/components.post-adorment",
-  "version": "0.0.13",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",

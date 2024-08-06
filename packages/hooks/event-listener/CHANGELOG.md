@@ -1,5 +1,16 @@
 # @phantompurr-react/hooks.event-listener
 
+## 1.0.0
+
+### Major Changes
+
+- 4e6f42d: Change the organization name and release a core package
+
+### Patch Changes
+
+- Updated dependencies [4e6f42d]
+  - @phantompurr-react/hooks.isomorphic-layout-effect@1.0.0
+
 ## 0.0.5
 
 ### Patch Changes
