@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/modules.responsive-topnav",
+  "name": "@phantompurr-react/modules.responsive-topnav",
   "version": "0.0.10",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,13 +30,13 @@
     "typescript": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils": "workspace:*",
-    "@phantomthief-react/hooks.block": "workspace:*",
-    "@phantomthief-react/hooks.media-query": "workspace:*",
-    "@phantomthief-react/components.hamburger-menu": "workspace:*"
+    "@phantompurr-react/utils": "workspace:*",
+    "@phantompurr-react/hooks.block": "workspace:*",
+    "@phantompurr-react/hooks.media-query": "workspace:*",
+    "@phantompurr-react/components.hamburger-menu": "workspace:*"
   },
   "devDependencies": {
-    "@phantomthief-react/components.typography": "workspace:*"
+    "@phantompurr-react/components.typography": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

@@ -1,4 +1,4 @@
-# @phantomthief-react/components.text-field
+# @phantompurr-react/components.text-field
 
 ## 0.0.9
 
@@ -16,14 +16,14 @@
 - Updated dependencies [31ac3a0]
 - Updated dependencies [6f4f459]
 - Updated dependencies [930318b]
-  - @phantomthief-react/hooks.sync-state-with-props@0.0.4
-  - @phantomthief-react/hooks.focus-with-callback@0.0.5
-  - @phantomthief-react/components.post-adorment@0.0.13
-  - @phantomthief-react/components.pre-adorment@0.0.11
-  - @phantomthief-react/components.helper-text@0.0.12
-  - @phantomthief-react/utils.definations@0.0.7
-  - @phantomthief-react/components.label@0.0.12
-  - @phantomthief-react/utils.helpers@0.0.10
+  - @phantompurr-react/hooks.sync-state-with-props@0.0.4
+  - @phantompurr-react/hooks.focus-with-callback@0.0.5
+  - @phantompurr-react/components.post-adorment@0.0.13
+  - @phantompurr-react/components.pre-adorment@0.0.11
+  - @phantompurr-react/components.helper-text@0.0.12
+  - @phantompurr-react/utils.definations@0.0.7
+  - @phantompurr-react/components.label@0.0.12
+  - @phantompurr-react/utils.helpers@0.0.10
 
 ## 0.0.8
 
@@ -36,30 +36,30 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/components.post-adorment@0.0.12
-  - @phantomthief-react/components.pre-adorment@0.0.10
-  - @phantomthief-react/components.helper-text@0.0.11
-  - @phantomthief-react/components.label@0.0.11
-  - @phantomthief-react/hooks@0.0.7
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/components.post-adorment@0.0.12
+  - @phantompurr-react/components.pre-adorment@0.0.10
+  - @phantompurr-react/components.helper-text@0.0.11
+  - @phantompurr-react/components.label@0.0.11
+  - @phantompurr-react/hooks@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.7
 
 ### Patch Changes
 
-- @phantomthief-react/components.post-adorment@0.0.11
+- @phantompurr-react/components.post-adorment@0.0.11
 
 ## 0.0.6
 
 ### Patch Changes
 
-- @phantomthief-react/components.post-adorment@0.0.10
+- @phantompurr-react/components.post-adorment@0.0.10
 
 ## 0.0.5
 
 ### Patch Changes
 
-- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 57de399: Add @phantompurr-react/components.icon to devDependencies and update package.json files
 - 2c30a5d: Update dependencies and add new constants for radio-group and label components
 - fac7aa1: U
 - 884e64f: Remove unused react-feather dependency from package.json files
@@ -67,12 +67,12 @@
 - Updated dependencies [2c30a5d]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/components.post-adorment@0.0.9
-  - @phantomthief-react/components.pre-adorment@0.0.9
-  - @phantomthief-react/components.helper-text@0.0.10
-  - @phantomthief-react/components.label@0.0.10
-  - @phantomthief-react/utils@0.0.6
-  - @phantomthief-react/hooks@0.0.6
+  - @phantompurr-react/components.post-adorment@0.0.9
+  - @phantompurr-react/components.pre-adorment@0.0.9
+  - @phantompurr-react/components.helper-text@0.0.10
+  - @phantompurr-react/components.label@0.0.10
+  - @phantompurr-react/utils@0.0.6
+  - @phantompurr-react/hooks@0.0.6
 
 ## 0.0.4
 
@@ -82,12 +82,12 @@
 - c2a2304: Add accordion module with components and types
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/hooks@0.0.5
-  - @phantomthief-react/components.helper-text@0.0.9
-  - @phantomthief-react/components.label@0.0.9
-  - @phantomthief-react/utils@0.0.5
-  - @phantomthief-react/components.post-adorment@0.0.8
-  - @phantomthief-react/components.pre-adorment@0.0.8
+  - @phantompurr-react/hooks@0.0.5
+  - @phantompurr-react/components.helper-text@0.0.9
+  - @phantompurr-react/components.label@0.0.9
+  - @phantompurr-react/utils@0.0.5
+  - @phantompurr-react/components.post-adorment@0.0.8
+  - @phantompurr-react/components.pre-adorment@0.0.8
 
 ## 0.0.3
 
@@ -99,12 +99,12 @@
 - Updated dependencies [ff15021]
 - Updated dependencies [49b765c]
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/hooks@0.0.4
-  - @phantomthief-react/components.post-adorment@0.0.7
-  - @phantomthief-react/components.pre-adorment@0.0.7
-  - @phantomthief-react/components.helper-text@0.0.8
-  - @phantomthief-react/components.label@0.0.8
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/hooks@0.0.4
+  - @phantompurr-react/components.post-adorment@0.0.7
+  - @phantompurr-react/components.pre-adorment@0.0.7
+  - @phantompurr-react/components.helper-text@0.0.8
+  - @phantompurr-react/components.label@0.0.8
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.2
 
@@ -113,9 +113,9 @@
 - Updated dependencies [4c216ed]
 - Updated dependencies [c95f6e6]
 - Updated dependencies [fc1a4bb]
-  - @phantomthief-react/hooks@0.0.3
-  - @phantomthief-react/utils@0.0.3
-  - @phantomthief-react/components.post-adorment@0.0.6
-  - @phantomthief-react/components.pre-adorment@0.0.6
-  - @phantomthief-react/components.helper-text@0.0.7
-  - @phantomthief-react/components.label@0.0.7
+  - @phantompurr-react/hooks@0.0.3
+  - @phantompurr-react/utils@0.0.3
+  - @phantompurr-react/components.post-adorment@0.0.6
+  - @phantompurr-react/components.pre-adorment@0.0.6
+  - @phantompurr-react/components.helper-text@0.0.7
+  - @phantompurr-react/components.label@0.0.7

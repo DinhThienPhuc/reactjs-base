@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/hooks.on-mounted",
+  "name": "@phantompurr-react/hooks.on-mounted",
   "version": "0.0.5",
   "type": "module",
   "main": "dist/index.cjs",

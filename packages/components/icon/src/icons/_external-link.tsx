@@ -24,7 +24,7 @@ export const IconExternalLink = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       color={color}
-      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
+      className={clsx("phantompurr-icon", "icon", `icon--${name}`, className)}
     >
       <path d="M15 3h6v6" />
       <path d="M10 14 21 3" />

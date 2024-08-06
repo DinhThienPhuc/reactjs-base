@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/utils.definations",
+  "name": "@phantompurr-react/utils.definations",
   "version": "0.0.7",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,7 +29,7 @@
     "typescript": "*",
     "react": "*",
     "react-hook-form": "*",
-    "@phantomthief-react/utils.constants": "workspace:*"
+    "@phantompurr-react/utils.constants": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

@@ -1,4 +1,4 @@
-# @phantomthief-react/components.flex-box
+# @phantompurr-react/components.flex-box
 
 ## 0.0.15
 
@@ -17,8 +17,8 @@
 - Updated dependencies [b6a46d1]
 - Updated dependencies [31ac3a0]
 - Updated dependencies [930318b]
-  - @phantomthief-react/utils.definations@0.0.7
-  - @phantomthief-react/utils.helpers@0.0.10
+  - @phantompurr-react/utils.definations@0.0.7
+  - @phantompurr-react/utils.helpers@0.0.10
 
 ## 0.0.14
 
@@ -30,7 +30,7 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.13
 
@@ -42,7 +42,7 @@
 
 ### Patch Changes
 
-- @phantomthief-react/utils@0.0.6
+- @phantompurr-react/utils@0.0.6
 
 ## 0.0.11
 
@@ -56,7 +56,7 @@
 
 - 6f55d43: Remove form-element package and its dependencies
 - c2a2304: Add accordion module with components and types
-  - @phantomthief-react/utils@0.0.5
+  - @phantompurr-react/utils@0.0.5
 
 ## 0.0.9
 
@@ -64,14 +64,14 @@
 
 - d4002f6: Do not know why
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.8
 
 ### Patch Changes
 
 - Updated dependencies [c95f6e6]
-  - @phantomthief-react/utils@0.0.3
+  - @phantompurr-react/utils@0.0.3
 
 ## 0.0.7
 
@@ -80,7 +80,7 @@
 - 528ff47: Update load stradge
 - Updated dependencies [528ff47]
 - Updated dependencies [afaa6eb]
-  - @phantomthief-react/utils@0.0.2
+  - @phantompurr-react/utils@0.0.2
 
 ## 0.0.6
 
@@ -88,8 +88,8 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/utils.definations@0.0.3
-  - @phantomthief-react/utils.helpers@0.0.4
+  - @phantompurr-react/utils.definations@0.0.3
+  - @phantompurr-react/utils.helpers@0.0.4
 
 ## 0.0.5
 
@@ -97,7 +97,7 @@
 
 - Updated dependencies [73ccde8]
 - Updated dependencies [78157dd]
-  - @phantomthief-react/utils.helpers@0.0.3
+  - @phantompurr-react/utils.helpers@0.0.3
 
 ## 0.0.4
 
@@ -117,5 +117,5 @@
 
 - dbff3af: Release some first components and packages
 - Updated dependencies [dbff3af]
-  - @phantomthief-react/utils.definations@0.0.2
-  - @phantomthief-react/utils.helpers@0.0.2
+  - @phantompurr-react/utils.definations@0.0.2
+  - @phantompurr-react/utils.helpers@0.0.2

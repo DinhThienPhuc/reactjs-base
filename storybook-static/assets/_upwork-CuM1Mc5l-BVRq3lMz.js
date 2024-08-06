@@ -26,7 +26,7 @@ const p = ({
     strokeLinecap: "round",
     strokeLinejoin: "round",
     color: s,
-    className: c("phantomthief-icon", "icon", `icon--${r}`, t),
+    className: c("phantompurr-icon", "icon", `icon--${r}`, t),
     children: [
       o.jsx("path", { stroke: "none", d: "M0 0h24v24H0z" }),
       o.jsx("path", {

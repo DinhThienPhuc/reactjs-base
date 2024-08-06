@@ -24,7 +24,7 @@ export const IconUserSearch = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       color={color}
-      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
+      className={clsx("phantompurr-icon", "icon", `icon--${name}`, className)}
     >
       <circle cx="10" cy="7" r="4" />
       <path d="M10.3 15H7a4 4 0 0 0-4 4v2" />

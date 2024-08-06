@@ -1,4 +1,4 @@
-import { FlexBox } from "@phantomthief-react/components";
+import { FlexBox } from "@phantompurr-react/components";
 
 import { ProjectCard } from "../../components/project-card";
 import { CommonStyled } from "../../styles";

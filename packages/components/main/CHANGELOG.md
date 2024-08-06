@@ -1,4 +1,4 @@
-# @phantomthief-react/components
+# @phantompurr-react/components
 
 ## 0.0.11
 
@@ -16,19 +16,19 @@
 - Updated dependencies [c0bddf2]
 - Updated dependencies [930318b]
 - Updated dependencies [00109cd]
-  - @phantomthief-react/components.loading-ellipsis@0.0.11
-  - @phantomthief-react/components.hamburger-menu@0.0.7
-  - @phantomthief-react/components.loading-ripple@0.0.11
-  - @phantomthief-react/components.radio-group@0.0.5
-  - @phantomthief-react/components.text-field@0.0.9
-  - @phantomthief-react/components.typography@0.0.13
-  - @phantomthief-react/components.flex-box@0.0.15
-  - @phantomthief-react/components.button@0.0.11
-  - @phantomthief-react/components.navbar@0.0.7
-  - @phantomthief-react/components.portal@0.0.8
-  - @phantomthief-react/components.select@0.0.13
-  - @phantomthief-react/components.switch@0.0.11
-  - @phantomthief-react/components.icon@0.0.6
+  - @phantompurr-react/components.loading-ellipsis@0.0.11
+  - @phantompurr-react/components.hamburger-menu@0.0.7
+  - @phantompurr-react/components.loading-ripple@0.0.11
+  - @phantompurr-react/components.radio-group@0.0.5
+  - @phantompurr-react/components.text-field@0.0.9
+  - @phantompurr-react/components.typography@0.0.13
+  - @phantompurr-react/components.flex-box@0.0.15
+  - @phantompurr-react/components.button@0.0.11
+  - @phantompurr-react/components.navbar@0.0.7
+  - @phantompurr-react/components.portal@0.0.8
+  - @phantompurr-react/components.select@0.0.13
+  - @phantompurr-react/components.switch@0.0.11
+  - @phantompurr-react/components.icon@0.0.6
 
 ## 0.0.10
 
@@ -44,45 +44,45 @@
 - Updated dependencies [0c123ca]
 - Updated dependencies [4696248]
 - Updated dependencies [10ae366]
-  - @phantomthief-react/components.hamburger-menu@0.0.6
-  - @phantomthief-react/components.radio-group@0.0.4
-  - @phantomthief-react/components.typography@0.0.12
-  - @phantomthief-react/components.select@0.0.12
-  - @phantomthief-react/components.switch@0.0.10
-  - @phantomthief-react/components.icon@0.0.5
-  - @phantomthief-react/components.loading-ellipsis@0.0.10
-  - @phantomthief-react/components.loading-ripple@0.0.10
-  - @phantomthief-react/components.text-field@0.0.8
-  - @phantomthief-react/components.flex-box@0.0.14
-  - @phantomthief-react/components.button@0.0.10
-  - @phantomthief-react/components.navbar@0.0.6
-  - @phantomthief-react/components.portal@0.0.7
+  - @phantompurr-react/components.hamburger-menu@0.0.6
+  - @phantompurr-react/components.radio-group@0.0.4
+  - @phantompurr-react/components.typography@0.0.12
+  - @phantompurr-react/components.select@0.0.12
+  - @phantompurr-react/components.switch@0.0.10
+  - @phantompurr-react/components.icon@0.0.5
+  - @phantompurr-react/components.loading-ellipsis@0.0.10
+  - @phantompurr-react/components.loading-ripple@0.0.10
+  - @phantompurr-react/components.text-field@0.0.8
+  - @phantompurr-react/components.flex-box@0.0.14
+  - @phantompurr-react/components.button@0.0.10
+  - @phantompurr-react/components.navbar@0.0.6
+  - @phantompurr-react/components.portal@0.0.7
 
 ## 0.0.9
 
 ### Patch Changes
 
 - Updated dependencies [5f53adb]
-  - @phantomthief-react/components.icon@0.0.4
-  - @phantomthief-react/components.select@0.0.11
-  - @phantomthief-react/components.text-field@0.0.7
+  - @phantompurr-react/components.icon@0.0.4
+  - @phantompurr-react/components.select@0.0.11
+  - @phantompurr-react/components.text-field@0.0.7
 
 ## 0.0.8
 
 ### Patch Changes
 
 - Updated dependencies [4a063fd]
-  - @phantomthief-react/components.flex-box@0.0.13
-  - @phantomthief-react/components.icon@0.0.3
-  - @phantomthief-react/components.radio-group@0.0.3
-  - @phantomthief-react/components.select@0.0.10
-  - @phantomthief-react/components.text-field@0.0.6
+  - @phantompurr-react/components.flex-box@0.0.13
+  - @phantompurr-react/components.icon@0.0.3
+  - @phantompurr-react/components.radio-group@0.0.3
+  - @phantompurr-react/components.select@0.0.10
+  - @phantompurr-react/components.text-field@0.0.6
 
 ## 0.0.7
 
 ### Patch Changes
 
-- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 57de399: Add @phantompurr-react/components.icon to devDependencies and update package.json files
 - 2c30a5d: Update dependencies and add new constants for radio-group and label components
 - fac7aa1: U
 - 884e64f: Remove unused react-feather dependency from package.json files
@@ -93,26 +93,26 @@
 - Updated dependencies [f1bd2bc]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/components.loading-ellipsis@0.0.9
-  - @phantomthief-react/components.hamburger-menu@0.0.5
-  - @phantomthief-react/components.loading-ripple@0.0.9
-  - @phantomthief-react/components.radio-group@0.0.2
-  - @phantomthief-react/components.text-field@0.0.5
-  - @phantomthief-react/components.typography@0.0.11
-  - @phantomthief-react/components.navbar@0.0.5
-  - @phantomthief-react/components.portal@0.0.6
-  - @phantomthief-react/components.select@0.0.9
-  - @phantomthief-react/components.switch@0.0.9
-  - @phantomthief-react/components.icon@0.0.2
-  - @phantomthief-react/components.button@0.0.9
-  - @phantomthief-react/components.flex-box@0.0.12
+  - @phantompurr-react/components.loading-ellipsis@0.0.9
+  - @phantompurr-react/components.hamburger-menu@0.0.5
+  - @phantompurr-react/components.loading-ripple@0.0.9
+  - @phantompurr-react/components.radio-group@0.0.2
+  - @phantompurr-react/components.text-field@0.0.5
+  - @phantompurr-react/components.typography@0.0.11
+  - @phantompurr-react/components.navbar@0.0.5
+  - @phantompurr-react/components.portal@0.0.6
+  - @phantompurr-react/components.select@0.0.9
+  - @phantompurr-react/components.switch@0.0.9
+  - @phantompurr-react/components.icon@0.0.2
+  - @phantompurr-react/components.button@0.0.9
+  - @phantompurr-react/components.flex-box@0.0.12
 
 ## 0.0.6
 
 ### Patch Changes
 
 - Updated dependencies [d52a677]
-  - @phantomthief-react/components.flex-box@0.0.11
+  - @phantompurr-react/components.flex-box@0.0.11
 
 ## 0.0.5
 
@@ -120,15 +120,15 @@
 
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/components.loading-ellipsis@0.0.8
-  - @phantomthief-react/components.loading-ripple@0.0.8
-  - @phantomthief-react/components.flex-box@0.0.10
-  - @phantomthief-react/components.select@0.0.8
-  - @phantomthief-react/components.switch@0.0.8
-  - @phantomthief-react/components.button@0.0.8
-  - @phantomthief-react/components.hamburger-menu@0.0.4
-  - @phantomthief-react/components.navbar@0.0.4
-  - @phantomthief-react/components.typography@0.0.10
+  - @phantompurr-react/components.loading-ellipsis@0.0.8
+  - @phantompurr-react/components.loading-ripple@0.0.8
+  - @phantompurr-react/components.flex-box@0.0.10
+  - @phantompurr-react/components.select@0.0.8
+  - @phantompurr-react/components.switch@0.0.8
+  - @phantompurr-react/components.button@0.0.8
+  - @phantompurr-react/components.hamburger-menu@0.0.4
+  - @phantompurr-react/components.navbar@0.0.4
+  - @phantompurr-react/components.typography@0.0.10
 
 ## 0.0.4
 
@@ -141,16 +141,16 @@
 - Updated dependencies [57b304e]
 - Updated dependencies [d4002f6]
 - Updated dependencies [4c6865d]
-  - @phantomthief-react/components.hamburger-menu@0.0.3
-  - @phantomthief-react/components.typography@0.0.9
-  - @phantomthief-react/components.loading-ellipsis@0.0.7
-  - @phantomthief-react/components.loading-ripple@0.0.7
-  - @phantomthief-react/components.flex-box@0.0.9
-  - @phantomthief-react/components.button@0.0.7
-  - @phantomthief-react/components.select@0.0.7
-  - @phantomthief-react/components.switch@0.0.7
-  - @phantomthief-react/components.navbar@0.0.4
-  - @phantomthief-react/components.portal@0.0.5
+  - @phantompurr-react/components.hamburger-menu@0.0.3
+  - @phantompurr-react/components.typography@0.0.9
+  - @phantompurr-react/components.loading-ellipsis@0.0.7
+  - @phantompurr-react/components.loading-ripple@0.0.7
+  - @phantompurr-react/components.flex-box@0.0.9
+  - @phantompurr-react/components.button@0.0.7
+  - @phantompurr-react/components.select@0.0.7
+  - @phantompurr-react/components.switch@0.0.7
+  - @phantompurr-react/components.navbar@0.0.4
+  - @phantompurr-react/components.portal@0.0.5
 
 ## 0.0.3
 
@@ -161,15 +161,15 @@
 - Updated dependencies [b663914]
 - Updated dependencies [7ef54c9]
 - Updated dependencies [fc1a4bb]
-  - @phantomthief-react/components.hamburger-menu@0.0.2
-  - @phantomthief-react/components.typography@0.0.8
-  - @phantomthief-react/components.select@0.0.6
-  - @phantomthief-react/components.switch@0.0.6
-  - @phantomthief-react/components.button@0.0.6
-  - @phantomthief-react/components.flex-box@0.0.8
-  - @phantomthief-react/components.loading-ellipsis@0.0.6
-  - @phantomthief-react/components.loading-ripple@0.0.6
-  - @phantomthief-react/components.navbar@0.0.4
+  - @phantompurr-react/components.hamburger-menu@0.0.2
+  - @phantompurr-react/components.typography@0.0.8
+  - @phantompurr-react/components.select@0.0.6
+  - @phantompurr-react/components.switch@0.0.6
+  - @phantompurr-react/components.button@0.0.6
+  - @phantompurr-react/components.flex-box@0.0.8
+  - @phantompurr-react/components.loading-ellipsis@0.0.6
+  - @phantompurr-react/components.loading-ripple@0.0.6
+  - @phantompurr-react/components.navbar@0.0.4
 
 ## 0.0.2
 
@@ -182,12 +182,12 @@
 - Updated dependencies [578514e]
 - Updated dependencies [528ff47]
 - Updated dependencies [e513057]
-  - @phantomthief-react/components.select@0.0.5
-  - @phantomthief-react/components.loading-ellipsis@0.0.5
-  - @phantomthief-react/components.loading-ripple@0.0.5
-  - @phantomthief-react/components.typography@0.0.7
-  - @phantomthief-react/components.flex-box@0.0.7
-  - @phantomthief-react/components.button@0.0.5
-  - @phantomthief-react/components.navbar@0.0.4
-  - @phantomthief-react/components.switch@0.0.5
-  - @phantomthief-react/components.portal@0.0.4
+  - @phantompurr-react/components.select@0.0.5
+  - @phantompurr-react/components.loading-ellipsis@0.0.5
+  - @phantompurr-react/components.loading-ripple@0.0.5
+  - @phantompurr-react/components.typography@0.0.7
+  - @phantompurr-react/components.flex-box@0.0.7
+  - @phantompurr-react/components.button@0.0.5
+  - @phantompurr-react/components.navbar@0.0.4
+  - @phantompurr-react/components.switch@0.0.5
+  - @phantompurr-react/components.portal@0.0.4

@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.button",
+  "name": "@phantompurr-react/components.button",
   "version": "0.0.11",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,8 +30,8 @@
     "react": "*",
     "clsx": "*",
     "styled-components": "*",
-    "@phantomthief-react/components.loading-ripple": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantompurr-react/components.loading-ripple": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

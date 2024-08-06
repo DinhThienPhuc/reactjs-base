@@ -1,33 +1,33 @@
 import clsx from "clsx";
 import React, { ChangeEvent, Suspense, forwardRef, lazy } from "react";
 
-import useFocusWithCallback from "@phantomthief-react/hooks.focus-with-callback";
-import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
+import useFocusWithCallback from "@phantompurr-react/hooks.focus-with-callback";
+import useSyncStateWithProps from "@phantompurr-react/hooks.sync-state-with-props";
 
 import { TEXT_FIELD_VARIANT } from "./_constants";
 import { Styled } from "./_style";
 import { ITextFieldProps } from "./_types";
 
 const HelperText = lazy(() =>
-  import("@phantomthief-react/components.helper-text").then((module) => ({
+  import("@phantompurr-react/components.helper-text").then((module) => ({
     default: module.HelperText,
   })),
 );
 
 const Label = lazy(() =>
-  import("@phantomthief-react/components.label").then((module) => ({
+  import("@phantompurr-react/components.label").then((module) => ({
     default: module.Label,
   })),
 );
 
 const PostAdorment = lazy(() =>
-  import("@phantomthief-react/components.post-adorment").then((module) => ({
+  import("@phantompurr-react/components.post-adorment").then((module) => ({
     default: module.PostAdorment,
   })),
 );
 
 const PreAdorment = lazy(() =>
-  import("@phantomthief-react/components.pre-adorment").then((module) => ({
+  import("@phantompurr-react/components.pre-adorment").then((module) => ({
     default: module.PreAdorment,
   })),
 );

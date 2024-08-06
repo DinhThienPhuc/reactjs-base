@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
+import { FlexBox, Icon, Typography } from "@phantompurr-react/components";
 
 import Styled from "./style";
 

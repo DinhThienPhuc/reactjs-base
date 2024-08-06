@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { TextField } from "@phantomthief-react/components";
+import { TextField } from "@phantompurr-react/components";
 
 export const Styled = {
   Container: styled.div`

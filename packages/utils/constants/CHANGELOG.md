@@ -1,4 +1,4 @@
-# @phantomthief-react/utils.constants
+# @phantompurr-react/utils.constants
 
 ## 0.0.6
 

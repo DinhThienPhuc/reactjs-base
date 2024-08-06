@@ -1,7 +1,7 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import { TAny } from "@phantomthief-react/utils";
+import { TAny } from "@phantompurr-react/utils";
 
 export {
   Trans,

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { memo } from "react";
 
-import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
+import useSyncStateWithProps from "@phantompurr-react/hooks.sync-state-with-props";
 
 import { DEFAULT_VALUE } from "./_constants";
 import { Styled } from "./_style";

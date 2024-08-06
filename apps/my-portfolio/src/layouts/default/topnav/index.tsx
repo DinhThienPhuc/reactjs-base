@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
-import { Typography } from "@phantomthief-react/components";
-import { IResponsiveTopnavItem } from "@phantomthief-react/modules";
+import { Typography } from "@phantompurr-react/components";
+import { IResponsiveTopnavItem } from "@phantompurr-react/modules";
 
 import Styled from "./style";
 

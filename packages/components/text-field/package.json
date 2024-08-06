@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.text-field",
+  "name": "@phantompurr-react/components.text-field",
   "version": "0.0.9",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,17 +30,17 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.definations": "workspace:*",
-    "@phantomthief-react/utils.helpers": "workspace:*",
-    "@phantomthief-react/hooks.focus-with-callback": "workspace:*",
-    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*",
-    "@phantomthief-react/components.post-adorment": "workspace:*",
-    "@phantomthief-react/components.pre-adorment": "workspace:*",
-    "@phantomthief-react/components.helper-text": "workspace:*",
-    "@phantomthief-react/components.label": "workspace:*"
+    "@phantompurr-react/utils.definations": "workspace:*",
+    "@phantompurr-react/utils.helpers": "workspace:*",
+    "@phantompurr-react/hooks.focus-with-callback": "workspace:*",
+    "@phantompurr-react/hooks.sync-state-with-props": "workspace:*",
+    "@phantompurr-react/components.post-adorment": "workspace:*",
+    "@phantompurr-react/components.pre-adorment": "workspace:*",
+    "@phantompurr-react/components.helper-text": "workspace:*",
+    "@phantompurr-react/components.label": "workspace:*"
   },
   "devDependencies": {
-    "@phantomthief-react/components.icon": "workspace:*"
+    "@phantompurr-react/components.icon": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

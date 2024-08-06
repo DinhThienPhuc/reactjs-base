@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.label",
+  "name": "@phantompurr-react/components.label",
   "version": "0.0.12",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,8 +30,8 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.constants": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantompurr-react/utils.constants": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

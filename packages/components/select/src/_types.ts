@@ -5,14 +5,14 @@ import {
   ReactNode,
 } from "react";
 
-import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
-import { ILabelProps } from "@phantomthief-react/components.label";
-import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
+import { IHelperTextProps } from "@phantompurr-react/components.helper-text";
+import { ILabelProps } from "@phantompurr-react/components.label";
+import { IPostAdormentProps } from "@phantompurr-react/components.post-adorment";
 import {
   IExtendable,
   IFormFieldProps,
   INodePosition,
-} from "@phantomthief-react/utils";
+} from "@phantompurr-react/utils";
 
 import { SELECT_VARIANT } from "./_constants";
 

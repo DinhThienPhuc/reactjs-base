@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { useMemo } from "react";
 
-import { LoadingRipple } from "@phantomthief-react/components.loading-ripple";
+import { LoadingRipple } from "@phantompurr-react/components.loading-ripple";
 
 import { BUTTON_SIZE, BUTTON_VARIANT } from "./_constants";
 import { Styled } from "./_style";

@@ -1,4 +1,4 @@
-# @phantomthief-react/modules.error-boundary
+# @phantompurr-react/modules.error-boundary
 
 ## 0.0.10
 
@@ -15,7 +15,7 @@
 - Updated dependencies [b6a46d1]
 - Updated dependencies [31ac3a0]
 - Updated dependencies [930318b]
-  - @phantomthief-react/utils.definations@0.0.7
+  - @phantompurr-react/utils.definations@0.0.7
 
 ## 0.0.9
 
@@ -27,19 +27,19 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.8
 
 ### Patch Changes
 
-- @phantomthief-react/utils@0.0.6
+- @phantompurr-react/utils@0.0.6
 
 ## 0.0.7
 
 ### Patch Changes
 
-- @phantomthief-react/utils@0.0.5
+- @phantompurr-react/utils@0.0.5
 
 ## 0.0.6
 
@@ -47,14 +47,14 @@
 
 - d4002f6: Do not know why
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.5
 
 ### Patch Changes
 
 - Updated dependencies [c95f6e6]
-  - @phantomthief-react/utils@0.0.3
+  - @phantompurr-react/utils@0.0.3
 
 ## 0.0.4
 
@@ -63,7 +63,7 @@
 - 528ff47: Update load stradge
 - Updated dependencies [528ff47]
 - Updated dependencies [afaa6eb]
-  - @phantomthief-react/utils@0.0.2
+  - @phantompurr-react/utils@0.0.2
 
 ## 0.0.3
 
@@ -71,7 +71,7 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/utils.definations@0.0.3
+  - @phantompurr-react/utils.definations@0.0.3
 
 ## 0.0.2
 

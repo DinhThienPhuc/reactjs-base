@@ -1,7 +1,7 @@
 import { Property } from "csstype";
 import { HTMLAttributes, ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils.definations";
+import { IExtendable } from "@phantompurr-react/utils.definations";
 
 export interface ITypographyProps {
   variant?: keyof JSX.IntrinsicElements;

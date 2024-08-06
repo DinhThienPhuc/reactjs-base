@@ -1,4 +1,4 @@
-# @phantomthief-react/components.hamburger-menu
+# @phantompurr-react/components.hamburger-menu
 
 ## 0.0.7
 
@@ -15,9 +15,9 @@
 - Updated dependencies [b6a46d1]
 - Updated dependencies [31ac3a0]
 - Updated dependencies [930318b]
-  - @phantomthief-react/hooks.sync-state-with-props@0.0.4
-  - @phantomthief-react/utils.definations@0.0.7
-  - @phantomthief-react/utils.helpers@0.0.10
+  - @phantompurr-react/hooks.sync-state-with-props@0.0.4
+  - @phantompurr-react/utils.definations@0.0.7
+  - @phantompurr-react/utils.helpers@0.0.10
 
 ## 0.0.6
 
@@ -31,19 +31,19 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/hooks@0.0.7
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/hooks@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.5
 
 ### Patch Changes
 
-- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 57de399: Add @phantompurr-react/components.icon to devDependencies and update package.json files
 - 2c30a5d: Update dependencies and add new constants for radio-group and label components
 - fac7aa1: U
 - 884e64f: Remove unused react-feather dependency from package.json files
-  - @phantomthief-react/utils@0.0.6
-  - @phantomthief-react/hooks@0.0.6
+  - @phantompurr-react/utils@0.0.6
+  - @phantompurr-react/hooks@0.0.6
 
 ## 0.0.4
 
@@ -51,8 +51,8 @@
 
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/hooks@0.0.5
-  - @phantomthief-react/utils@0.0.5
+  - @phantompurr-react/hooks@0.0.5
+  - @phantompurr-react/utils@0.0.5
 
 ## 0.0.3
 
@@ -62,14 +62,14 @@
 - ff15021: Update responsive top navigation menu with collapsible functionality
 - 49b765c: Add new pages for About Me, Projects, and Contact Me
 - d4002f6: Do not know why
-- 4c6865d: Add @phantomthief-react/hooks dependency and useSyncStateWithProps hook
+- 4c6865d: Add @phantompurr-react/hooks dependency and useSyncStateWithProps hook
 - Updated dependencies [2ca9917]
 - Updated dependencies [538ad37]
 - Updated dependencies [ff15021]
 - Updated dependencies [49b765c]
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/hooks@0.0.4
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/hooks@0.0.4
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.2
 
@@ -78,4 +78,4 @@
 - b663914: Update components.hamburger-menu to fit with modules.responsive-topnav
 - 7ef54c9: Release first version of components.hamburger-menu
 - Updated dependencies [c95f6e6]
-  - @phantomthief-react/utils@0.0.3
+  - @phantompurr-react/utils@0.0.3

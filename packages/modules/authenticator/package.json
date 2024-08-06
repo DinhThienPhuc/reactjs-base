@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/modules.authenticator",
+  "name": "@phantompurr-react/modules.authenticator",
   "version": "0.0.10",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,7 +29,7 @@
     "typescript": "*",
     "react": "*",
     "react-router-dom": "*",
-    "@phantomthief-react/hooks.block": "workspace:*"
+    "@phantompurr-react/hooks.block": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { getInvisibleButton } from "@phantomthief-react/utils.helpers";
+import { getInvisibleButton } from "@phantompurr-react/utils.helpers";
 
 import { POST_ADORMENT_VARIANT } from "./_constants";
 import { IStyledContainerProps } from "./_types";

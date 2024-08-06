@@ -1,4 +1,4 @@
-import { TAsyncBoundary } from "@phantomthief-react/utils.definations";
+import { TAsyncBoundary } from "@phantompurr-react/utils.definations";
 
 /**
  * Beautiful version of try/catch block

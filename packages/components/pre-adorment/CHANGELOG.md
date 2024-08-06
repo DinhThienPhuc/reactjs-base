@@ -1,4 +1,4 @@
-# @phantomthief-react/components.pre-adorment
+# @phantompurr-react/components.pre-adorment
 
 ## 0.0.11
 
@@ -15,7 +15,7 @@
 - Updated dependencies [b6a46d1]
 - Updated dependencies [31ac3a0]
 - Updated dependencies [930318b]
-  - @phantomthief-react/utils.definations@0.0.7
+  - @phantompurr-react/utils.definations@0.0.7
 
 ## 0.0.10
 
@@ -27,23 +27,23 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.9
 
 ### Patch Changes
 
-- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 57de399: Add @phantompurr-react/components.icon to devDependencies and update package.json files
 - 2c30a5d: Update dependencies and add new constants for radio-group and label components
 - fac7aa1: U
 - 884e64f: Remove unused react-feather dependency from package.json files
-  - @phantomthief-react/utils@0.0.6
+  - @phantompurr-react/utils@0.0.6
 
 ## 0.0.8
 
 ### Patch Changes
 
-- @phantomthief-react/utils@0.0.5
+- @phantompurr-react/utils@0.0.5
 
 ## 0.0.7
 
@@ -51,7 +51,7 @@
 
 - d4002f6: Do not know why
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.6
 
@@ -59,7 +59,7 @@
 
 - fc1a4bb: Add hooks.form-element, components.text-field and update content for components.pre-adorment and components.post-adorment
 - Updated dependencies [c95f6e6]
-  - @phantomthief-react/utils@0.0.3
+  - @phantompurr-react/utils@0.0.3
 
 ## 0.0.5
 
@@ -68,8 +68,8 @@
 - 528ff47: Update load stradge
 - Updated dependencies [528ff47]
 - Updated dependencies [afaa6eb]
-  - @phantomthief-react/components.typography@0.0.7
-  - @phantomthief-react/utils@0.0.2
+  - @phantompurr-react/components.typography@0.0.7
+  - @phantompurr-react/utils@0.0.2
 
 ## 0.0.4
 
@@ -83,9 +83,9 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/components.typography@0.0.6
-  - @phantomthief-react/utils.constants@0.0.3
-  - @phantomthief-react/utils.definations@0.0.3
+  - @phantompurr-react/components.typography@0.0.6
+  - @phantompurr-react/utils.constants@0.0.3
+  - @phantompurr-react/utils.definations@0.0.3
 
 ## 0.0.2
 
@@ -94,4 +94,4 @@
 - 5c658e5: Release first version of components.pre-adorment
 - Updated dependencies [9ffa7d7]
 - Updated dependencies [e2ed92d]
-  - @phantomthief-react/components.typography@0.0.5
+  - @phantompurr-react/components.typography@0.0.5

@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/services.i18n",
+  "name": "@phantompurr-react/services.i18n",
   "version": "0.0.10",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,7 +30,7 @@
     "react": "*",
     "react-i18next": "*",
     "i18next": "*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantompurr-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

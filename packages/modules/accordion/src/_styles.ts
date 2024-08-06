@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { FONT, getInvisibleButton } from "@phantomthief-react/utils";
+import { FONT, getInvisibleButton } from "@phantompurr-react/utils";
 
 export const Styled = {
   Container: styled.div`

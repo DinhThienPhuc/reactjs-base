@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.post-adorment",
+  "name": "@phantompurr-react/components.post-adorment",
   "version": "0.0.13",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,9 +30,9 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.helpers": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*",
-    "@phantomthief-react/components.icon": "workspace:*"
+    "@phantompurr-react/utils.helpers": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*",
+    "@phantompurr-react/components.icon": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

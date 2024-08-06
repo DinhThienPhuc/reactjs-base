@@ -199,19 +199,19 @@ importers:
 
   apps/my-portfolio:
     dependencies:
-      "@phantomthief-react/components":
+      "@phantompurr-react/components":
         specifier: workspace:*
         version: link:../../packages/components/main
-      "@phantomthief-react/hooks":
+      "@phantompurr-react/hooks":
         specifier: workspace:*
         version: link:../../packages/hooks/main
-      "@phantomthief-react/modules":
+      "@phantompurr-react/modules":
         specifier: workspace:*
         version: link:../../packages/modules/main
-      "@phantomthief-react/services":
+      "@phantompurr-react/services":
         specifier: workspace:*
         version: link:../../packages/services/main
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../packages/utils/main
       react:
@@ -249,12 +249,30 @@ importers:
         specifier: ^5.2.0
         version: 5.3.5(@types/node@20.14.14)
 
+  main:
+    dependencies:
+      "@phantompurr-react/components":
+        specifier: workspace:*
+        version: link:../packages/components/main
+      "@phantompurr-react/hooks":
+        specifier: workspace:*
+        version: link:../packages/hooks/main
+      "@phantompurr-react/modules":
+        specifier: workspace:*
+        version: link:../packages/modules/main
+      "@phantompurr-react/services":
+        specifier: workspace:*
+        version: link:../packages/services/main
+      "@phantompurr-react/utils":
+        specifier: workspace:*
+        version: link:../packages/utils/main
+
   packages/components/button:
     dependencies:
-      "@phantomthief-react/components.loading-ripple":
+      "@phantompurr-react/components.loading-ripple":
         specifier: workspace:*
         version: link:../loading-ripple
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -272,10 +290,10 @@ importers:
 
   packages/components/flex-box:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
+      "@phantompurr-react/utils.helpers":
         specifier: workspace:*
         version: link:../../utils/helpers
       clsx:
@@ -296,13 +314,13 @@ importers:
 
   packages/components/hamburger-menu:
     dependencies:
-      "@phantomthief-react/hooks.sync-state-with-props":
+      "@phantompurr-react/hooks.sync-state-with-props":
         specifier: workspace:*
         version: link:../../hooks/sync-state-with-props
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
+      "@phantompurr-react/utils.helpers":
         specifier: workspace:*
         version: link:../../utils/helpers
       clsx:
@@ -320,10 +338,10 @@ importers:
 
   packages/components/helper-text:
     dependencies:
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -341,13 +359,13 @@ importers:
 
   packages/components/icon:
     dependencies:
-      "@phantomthief-react/components.loading-ellipsis":
+      "@phantompurr-react/components.loading-ellipsis":
         specifier: workspace:*
         version: link:../loading-ellipsis
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
+      "@phantompurr-react/utils.helpers":
         specifier: workspace:*
         version: link:../../utils/helpers
       clsx:
@@ -360,16 +378,16 @@ importers:
         specifier: "*"
         version: 5.5.4
     devDependencies:
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../../utils/constants
 
   packages/components/label:
     dependencies:
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -387,7 +405,7 @@ importers:
 
   packages/components/loading-ellipsis:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -405,7 +423,7 @@ importers:
 
   packages/components/loading-ripple:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -423,43 +441,43 @@ importers:
 
   packages/components/main:
     dependencies:
-      "@phantomthief-react/components.button":
+      "@phantompurr-react/components.button":
         specifier: workspace:*
         version: link:../button
-      "@phantomthief-react/components.flex-box":
+      "@phantompurr-react/components.flex-box":
         specifier: workspace:*
         version: link:../flex-box
-      "@phantomthief-react/components.hamburger-menu":
+      "@phantompurr-react/components.hamburger-menu":
         specifier: workspace:*
         version: link:../hamburger-menu
-      "@phantomthief-react/components.icon":
+      "@phantompurr-react/components.icon":
         specifier: workspace:*
         version: link:../icon
-      "@phantomthief-react/components.loading-ellipsis":
+      "@phantompurr-react/components.loading-ellipsis":
         specifier: workspace:*
         version: link:../loading-ellipsis
-      "@phantomthief-react/components.loading-ripple":
+      "@phantompurr-react/components.loading-ripple":
         specifier: workspace:*
         version: link:../loading-ripple
-      "@phantomthief-react/components.navbar":
+      "@phantompurr-react/components.navbar":
         specifier: workspace:*
         version: link:../navbar
-      "@phantomthief-react/components.portal":
+      "@phantompurr-react/components.portal":
         specifier: workspace:*
         version: link:../portal
-      "@phantomthief-react/components.radio-group":
+      "@phantompurr-react/components.radio-group":
         specifier: workspace:*
         version: link:../radio-group
-      "@phantomthief-react/components.select":
+      "@phantompurr-react/components.select":
         specifier: workspace:*
         version: link:../select
-      "@phantomthief-react/components.switch":
+      "@phantompurr-react/components.switch":
         specifier: workspace:*
         version: link:../switch
-      "@phantomthief-react/components.text-field":
+      "@phantompurr-react/components.text-field":
         specifier: workspace:*
         version: link:../text-field
-      "@phantomthief-react/components.typography":
+      "@phantompurr-react/components.typography":
         specifier: workspace:*
         version: link:../typography
       react:
@@ -471,7 +489,7 @@ importers:
 
   packages/components/navbar:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -484,19 +502,19 @@ importers:
         specifier: "*"
         version: 5.5.4
     devDependencies:
-      "@phantomthief-react/components.button":
+      "@phantompurr-react/components.button":
         specifier: workspace:*
         version: link:../button
-      "@phantomthief-react/components.typography":
+      "@phantompurr-react/components.typography":
         specifier: workspace:*
         version: link:../typography
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../../utils/constants
 
   packages/components/portal:
     dependencies:
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       react:
@@ -511,13 +529,13 @@ importers:
 
   packages/components/post-adorment:
     dependencies:
-      "@phantomthief-react/components.icon":
+      "@phantompurr-react/components.icon":
         specifier: workspace:*
         version: link:../icon
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
+      "@phantompurr-react/utils.helpers":
         specifier: workspace:*
         version: link:../../utils/helpers
       clsx:
@@ -535,7 +553,7 @@ importers:
 
   packages/components/pre-adorment:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -553,13 +571,13 @@ importers:
 
   packages/components/radio-group:
     dependencies:
-      "@phantomthief-react/components.flex-box":
+      "@phantompurr-react/components.flex-box":
         specifier: workspace:*
         version: link:../flex-box
-      "@phantomthief-react/hooks.sync-state-with-props":
+      "@phantompurr-react/hooks.sync-state-with-props":
         specifier: workspace:*
         version: link:../../hooks/sync-state-with-props
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       clsx:
@@ -577,31 +595,31 @@ importers:
 
   packages/components/select:
     dependencies:
-      "@phantomthief-react/components.helper-text":
+      "@phantompurr-react/components.helper-text":
         specifier: workspace:*
         version: link:../helper-text
-      "@phantomthief-react/components.icon":
+      "@phantompurr-react/components.icon":
         specifier: workspace:*
         version: link:../icon
-      "@phantomthief-react/components.label":
+      "@phantompurr-react/components.label":
         specifier: workspace:*
         version: link:../label
-      "@phantomthief-react/components.portal":
+      "@phantompurr-react/components.portal":
         specifier: workspace:*
         version: link:../portal
-      "@phantomthief-react/components.post-adorment":
+      "@phantompurr-react/components.post-adorment":
         specifier: workspace:*
         version: link:../post-adorment
-      "@phantomthief-react/hooks.block":
+      "@phantompurr-react/hooks.block":
         specifier: workspace:*
         version: link:../../hooks/block
-      "@phantomthief-react/hooks.not-click-on-elements":
+      "@phantompurr-react/hooks.not-click-on-elements":
         specifier: workspace:*
         version: link:../../hooks/not-click-on-elements
-      "@phantomthief-react/hooks.sync-state-with-props":
+      "@phantompurr-react/hooks.sync-state-with-props":
         specifier: workspace:*
         version: link:../../hooks/sync-state-with-props
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       clsx:
@@ -619,13 +637,13 @@ importers:
 
   packages/components/switch:
     dependencies:
-      "@phantomthief-react/hooks.sync-state-with-props":
+      "@phantompurr-react/hooks.sync-state-with-props":
         specifier: workspace:*
         version: link:../../hooks/sync-state-with-props
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../../utils/constants
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       clsx:
@@ -643,28 +661,28 @@ importers:
 
   packages/components/text-field:
     dependencies:
-      "@phantomthief-react/components.helper-text":
+      "@phantompurr-react/components.helper-text":
         specifier: workspace:*
         version: link:../helper-text
-      "@phantomthief-react/components.label":
+      "@phantompurr-react/components.label":
         specifier: workspace:*
         version: link:../label
-      "@phantomthief-react/components.post-adorment":
+      "@phantompurr-react/components.post-adorment":
         specifier: workspace:*
         version: link:../post-adorment
-      "@phantomthief-react/components.pre-adorment":
+      "@phantompurr-react/components.pre-adorment":
         specifier: workspace:*
         version: link:../pre-adorment
-      "@phantomthief-react/hooks.focus-with-callback":
+      "@phantompurr-react/hooks.focus-with-callback":
         specifier: workspace:*
         version: link:../../hooks/focus-with-callback
-      "@phantomthief-react/hooks.sync-state-with-props":
+      "@phantompurr-react/hooks.sync-state-with-props":
         specifier: workspace:*
         version: link:../../hooks/sync-state-with-props
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
+      "@phantompurr-react/utils.helpers":
         specifier: workspace:*
         version: link:../../utils/helpers
       clsx:
@@ -680,16 +698,16 @@ importers:
         specifier: "*"
         version: 5.5.4
     devDependencies:
-      "@phantomthief-react/components.icon":
+      "@phantompurr-react/components.icon":
         specifier: workspace:*
         version: link:../icon
 
   packages/components/typography:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
-      "@phantomthief-react/utils.helpers":
+      "@phantompurr-react/utils.helpers":
         specifier: workspace:*
         version: link:../../utils/helpers
       clsx:
@@ -707,7 +725,7 @@ importers:
 
   packages/hooks/block:
     dependencies:
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       react:
@@ -719,7 +737,7 @@ importers:
 
   packages/hooks/event-listener:
     dependencies:
-      "@phantomthief-react/hooks.isomorphic-layout-effect":
+      "@phantompurr-react/hooks.isomorphic-layout-effect":
         specifier: workspace:*
         version: link:../isomorphic-layout-effect
       react:
@@ -749,28 +767,28 @@ importers:
 
   packages/hooks/main:
     dependencies:
-      "@phantomthief-react/hooks.block":
+      "@phantompurr-react/hooks.block":
         specifier: workspace:*
         version: link:../block
-      "@phantomthief-react/hooks.event-listener":
+      "@phantompurr-react/hooks.event-listener":
         specifier: workspace:*
         version: link:../event-listener
-      "@phantomthief-react/hooks.focus-with-callback":
+      "@phantompurr-react/hooks.focus-with-callback":
         specifier: workspace:*
         version: link:../focus-with-callback
-      "@phantomthief-react/hooks.isomorphic-layout-effect":
+      "@phantompurr-react/hooks.isomorphic-layout-effect":
         specifier: workspace:*
         version: link:../isomorphic-layout-effect
-      "@phantomthief-react/hooks.media-query":
+      "@phantompurr-react/hooks.media-query":
         specifier: workspace:*
         version: link:../media-query
-      "@phantomthief-react/hooks.not-click-on-elements":
+      "@phantompurr-react/hooks.not-click-on-elements":
         specifier: workspace:*
         version: link:../not-click-on-elements
-      "@phantomthief-react/hooks.on-mounted":
+      "@phantompurr-react/hooks.on-mounted":
         specifier: workspace:*
         version: link:../on-mounted
-      "@phantomthief-react/hooks.sync-state-with-props":
+      "@phantompurr-react/hooks.sync-state-with-props":
         specifier: workspace:*
         version: link:../sync-state-with-props
       react:
@@ -782,7 +800,7 @@ importers:
 
   packages/hooks/media-query:
     dependencies:
-      "@phantomthief-react/hooks.isomorphic-layout-effect":
+      "@phantompurr-react/hooks.isomorphic-layout-effect":
         specifier: workspace:*
         version: link:../isomorphic-layout-effect
       react:
@@ -794,7 +812,7 @@ importers:
 
   packages/hooks/not-click-on-elements:
     dependencies:
-      "@phantomthief-react/hooks.event-listener":
+      "@phantompurr-react/hooks.event-listener":
         specifier: workspace:*
         version: link:../event-listener
       react:
@@ -824,13 +842,13 @@ importers:
 
   packages/modules/accordion:
     dependencies:
-      "@phantomthief-react/components.icon":
+      "@phantompurr-react/components.icon":
         specifier: workspace:*
         version: link:../../components/icon
-      "@phantomthief-react/components.typography":
+      "@phantompurr-react/components.typography":
         specifier: workspace:*
         version: link:../../components/typography
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       clsx:
@@ -846,13 +864,13 @@ importers:
         specifier: "*"
         version: 5.5.4
     devDependencies:
-      "@phantomthief-react/components.flex-box":
+      "@phantompurr-react/components.flex-box":
         specifier: workspace:*
         version: link:../../components/flex-box
 
   packages/modules/authenticator:
     dependencies:
-      "@phantomthief-react/hooks.block":
+      "@phantompurr-react/hooks.block":
         specifier: workspace:*
         version: link:../../hooks/block
       react:
@@ -867,7 +885,7 @@ importers:
 
   packages/modules/error-boundary:
     dependencies:
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../../utils/definations
       react:
@@ -882,16 +900,16 @@ importers:
 
   packages/modules/main:
     dependencies:
-      "@phantomthief-react/modules.accordion":
+      "@phantompurr-react/modules.accordion":
         specifier: workspace:*
         version: link:../accordion
-      "@phantomthief-react/modules.authenticator":
+      "@phantompurr-react/modules.authenticator":
         specifier: workspace:*
         version: link:../authenticator
-      "@phantomthief-react/modules.error-boundary":
+      "@phantompurr-react/modules.error-boundary":
         specifier: workspace:*
         version: link:../error-boundary
-      "@phantomthief-react/modules.responsive-topnav":
+      "@phantompurr-react/modules.responsive-topnav":
         specifier: workspace:*
         version: link:../responsive-topnav
       react:
@@ -903,16 +921,16 @@ importers:
 
   packages/modules/responsive-topnav:
     dependencies:
-      "@phantomthief-react/components.hamburger-menu":
+      "@phantompurr-react/components.hamburger-menu":
         specifier: workspace:*
         version: link:../../components/hamburger-menu
-      "@phantomthief-react/hooks.block":
+      "@phantompurr-react/hooks.block":
         specifier: workspace:*
         version: link:../../hooks/block
-      "@phantomthief-react/hooks.media-query":
+      "@phantompurr-react/hooks.media-query":
         specifier: workspace:*
         version: link:../../hooks/media-query
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       clsx:
@@ -928,13 +946,13 @@ importers:
         specifier: "*"
         version: 5.5.4
     devDependencies:
-      "@phantomthief-react/components.typography":
+      "@phantompurr-react/components.typography":
         specifier: workspace:*
         version: link:../../components/typography
 
   packages/services/firebase:
     dependencies:
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       firebase:
@@ -949,7 +967,7 @@ importers:
 
   packages/services/i18n:
     dependencies:
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       i18next:
@@ -967,13 +985,13 @@ importers:
 
   packages/services/main:
     dependencies:
-      "@phantomthief-react/services.firebase":
+      "@phantompurr-react/services.firebase":
         specifier: workspace:*
         version: link:../firebase
-      "@phantomthief-react/services.i18n":
+      "@phantompurr-react/services.i18n":
         specifier: workspace:*
         version: link:../i18n
-      "@phantomthief-react/services.styled-theme":
+      "@phantompurr-react/services.styled-theme":
         specifier: workspace:*
         version: link:../styled-theme
       react:
@@ -985,7 +1003,7 @@ importers:
 
   packages/services/styled-theme:
     dependencies:
-      "@phantomthief-react/utils":
+      "@phantompurr-react/utils":
         specifier: workspace:*
         version: link:../../utils/main
       react:
@@ -1002,7 +1020,7 @@ importers:
 
   packages/utils/definations:
     dependencies:
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../constants
       react:
@@ -1017,10 +1035,10 @@ importers:
 
   packages/utils/helpers:
     dependencies:
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../constants
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../definations
       react:
@@ -1035,13 +1053,13 @@ importers:
 
   packages/utils/main:
     dependencies:
-      "@phantomthief-react/utils.constants":
+      "@phantompurr-react/utils.constants":
         specifier: workspace:*
         version: link:../constants
-      "@phantomthief-react/utils.definations":
+      "@phantompurr-react/utils.definations":
         specifier: workspace:*
         version: link:../definations
-      "@phantomthief-react/utils.helpers":
+      "@phantompurr-react/utils.helpers":
         specifier: workspace:*
         version: link:../helpers
       react:
@@ -4596,18 +4614,18 @@ packages:
         tarball: https://registry.npmjs.org/@volar/typescript/-/typescript-1.11.1.tgz,
       }
 
-  "@vue/compiler-core@3.4.35":
+  "@vue/compiler-core@3.4.36":
     resolution:
       {
-        integrity: sha512-gKp0zGoLnMYtw4uS/SJRRO7rsVggLjvot3mcctlMXunYNsX+aRJDqqw/lV5/gHK91nvaAAlWFgdVl020AW1Prg==,
-        tarball: https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.4.35.tgz,
+        integrity: sha512-qBkndgpwFKdupmOPoiS10i7oFdN7a+4UNDlezD0GlQ1kuA1pNrscg9g12HnB5E8hrWSuEftRsbJhL1HI2zpJhg==,
+        tarball: https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.4.36.tgz,
       }
 
-  "@vue/compiler-dom@3.4.35":
+  "@vue/compiler-dom@3.4.36":
     resolution:
       {
-        integrity: sha512-pWIZRL76/oE/VMhdv/ovZfmuooEni6JPG1BFe7oLk5DZRo/ImydXijoZl/4kh2406boRQ7lxTYzbZEEXEhj9NQ==,
-        tarball: https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.4.35.tgz,
+        integrity: sha512-eEIjy4GwwZTFon/Y+WO8tRRNGqylaRlA79T1RLhUpkOzJ7EtZkkb8MurNfkqY6x6Qiu0R7ESspEF7GkPR/4yYg==,
+        tarball: https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.4.36.tgz,
       }
 
   "@vue/language-core@1.8.27":
@@ -4622,11 +4640,11 @@ packages:
       typescript:
         optional: true
 
-  "@vue/shared@3.4.35":
+  "@vue/shared@3.4.36":
     resolution:
       {
-        integrity: sha512-hvuhBYYDe+b1G8KHxsQ0diDqDMA8D9laxWZhNAjE83VZb5UDaXl9Xnz7cGdDSyiHM90qqI/CyGMcpBpiDy6VVQ==,
-        tarball: https://registry.npmjs.org/@vue/shared/-/shared-3.4.35.tgz,
+        integrity: sha512-fdPLStwl1sDfYuUftBaUVn2pIrVFDASYerZSrlBvVBfylObPA1gtcWJHy5Ox8jLEJ524zBibss488Q3SZtU1uA==,
+        tarball: https://registry.npmjs.org/@vue/shared/-/shared-3.4.36.tgz,
       }
 
   "@yarnpkg/fslib@2.10.3":
@@ -4992,11 +5010,11 @@ packages:
     peerDependencies:
       "@babel/core": ^7.4.0 || ^8.0.0-0 <8.0.0
 
-  babel-plugin-polyfill-corejs3@0.10.4:
+  babel-plugin-polyfill-corejs3@0.10.6:
     resolution:
       {
-        integrity: sha512-25J6I8NGfa5YkCDogHRID3fVCadIR8/pGl1/spvCkzb6lVn6SR3ojpx9nOn9iEBcUsjY24AmdKm5khcfKdylcg==,
-        tarball: https://registry.npmjs.org/babel-plugin-polyfill-corejs3/-/babel-plugin-polyfill-corejs3-0.10.4.tgz,
+        integrity: sha512-b37+KR2i/khY5sKmWNVQAnitvquQbNdWy6lJdsr0kmquCKEEUgMKK4SboVM3HtfnZilfjr4MMQ7vY58FVWDtIA==,
+        tarball: https://registry.npmjs.org/babel-plugin-polyfill-corejs3/-/babel-plugin-polyfill-corejs3-0.10.6.tgz,
       }
     peerDependencies:
       "@babel/core": ^7.4.0 || ^8.0.0-0 <8.0.0
@@ -5147,11 +5165,11 @@ packages:
         tarball: https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz,
       }
 
-  caniuse-lite@1.0.30001647:
+  caniuse-lite@1.0.30001649:
     resolution:
       {
-        integrity: sha512-n83xdNiyeNcHpzWY+1aFbqCK7LuLfBricc4+alSQL2Xb6OR3XpnQAmlDG+pQcdTfiHRuLcQ96VOfrPSGiNJYSg==,
-        tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001647.tgz,
+        integrity: sha512-fJegqZZ0ZX8HOWr6rcafGr72+xcgJKI9oWfDW5DrD7ExUtgZC7a7R7ZYmZqplh7XDocFdGeIFn7roAxhOeYrPQ==,
+        tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001649.tgz,
       }
 
   chai@4.5.0:
@@ -5485,11 +5503,11 @@ packages:
       }
     engines: { node: ">= 0.6" }
 
-  core-js-compat@3.37.1:
+  core-js-compat@3.38.0:
     resolution:
       {
-        integrity: sha512-9TNiImhKvQqSUkOvk/mMRZzOANTiEVC7WaBNhHcKM7x+/5E1l5NvsysR19zuDQScE8k+kfQXWRN3AtS/eOSHpg==,
-        tarball: https://registry.npmjs.org/core-js-compat/-/core-js-compat-3.37.1.tgz,
+        integrity: sha512-75LAicdLa4OJVwFxFbQR3NdnZjNgX6ILpVcVzcC4T2smerB5lELMrJQQQoWV6TiuC/vlaFqgU2tKQx9w5s0e0A==,
+        tarball: https://registry.npmjs.org/core-js-compat/-/core-js-compat-3.38.0.tgz,
       }
 
   cosmiconfig-typescript-loader@5.0.0:
@@ -5859,11 +5877,11 @@ packages:
         tarball: https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz,
       }
 
-  electron-to-chromium@1.5.4:
+  electron-to-chromium@1.5.5:
     resolution:
       {
-        integrity: sha512-orzA81VqLyIGUEA77YkVA1D+N+nNfl2isJVjjmOyrlxuooZ19ynb+dOlaDTqd/idKRS9lDCSBmtzM+kyCsMnkA==,
-        tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.4.tgz,
+        integrity: sha512-QR7/A7ZkMS8tZuoftC/jfqNkZLQO779SSW3YuZHP4eXpj3EffGLFcB/Xu9AAZQzLccTiCV+EmUo3ha4mQ9wnlA==,
+        tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.5.tgz,
       }
 
   emoji-regex@10.3.0:
@@ -5911,11 +5929,11 @@ packages:
       }
     engines: { node: ">=8.6" }
 
-  entities@4.5.0:
+  entities@5.0.0:
     resolution:
       {
-        integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==,
-        tarball: https://registry.npmjs.org/entities/-/entities-4.5.0.tgz,
+        integrity: sha512-BeJFvFRJddxobhvEdm5GqHzRV/X+ACeuw0/BuuxsCh1EUZcAIz8+kYmBp/LrQuloy6K1f3a0M7+IhmZ7QnkISA==,
+        tarball: https://registry.npmjs.org/entities/-/entities-5.0.0.tgz,
       }
     engines: { node: ">=0.12" }
 
@@ -8902,11 +8920,11 @@ packages:
       }
     engines: { node: ^10 || ^12 || >=14 }
 
-  postcss@8.4.40:
+  postcss@8.4.41:
     resolution:
       {
-        integrity: sha512-YF2kKIUzAofPMpfH6hOi2cGnv/HrUlfucspc7pDyvv7kGdqXrfj8SCl/t8owkEgKEuu8ZcRjSOxFxVLqwChZ2Q==,
-        tarball: https://registry.npmjs.org/postcss/-/postcss-8.4.40.tgz,
+        integrity: sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==,
+        tarball: https://registry.npmjs.org/postcss/-/postcss-8.4.41.tgz,
       }
     engines: { node: ^10 || ^12 || >=14 }
 
@@ -11692,9 +11710,9 @@ snapshots:
       "@babel/plugin-transform-unicode-sets-regex": 7.24.7(@babel/core@7.25.2)
       "@babel/preset-modules": 0.1.6-no-external-plugins(@babel/core@7.25.2)
       babel-plugin-polyfill-corejs2: 0.4.11(@babel/core@7.25.2)
-      babel-plugin-polyfill-corejs3: 0.10.4(@babel/core@7.25.2)
+      babel-plugin-polyfill-corejs3: 0.10.6(@babel/core@7.25.2)
       babel-plugin-polyfill-regenerator: 0.6.2(@babel/core@7.25.2)
-      core-js-compat: 3.37.1
+      core-js-compat: 3.38.0
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -13443,25 +13461,25 @@ snapshots:
       "@volar/language-core": 1.11.1
       path-browserify: 1.0.1
 
-  "@vue/compiler-core@3.4.35":
+  "@vue/compiler-core@3.4.36":
     dependencies:
       "@babel/parser": 7.25.3
-      "@vue/shared": 3.4.35
-      entities: 4.5.0
+      "@vue/shared": 3.4.36
+      entities: 5.0.0
       estree-walker: 2.0.2
       source-map-js: 1.2.0
 
-  "@vue/compiler-dom@3.4.35":
+  "@vue/compiler-dom@3.4.36":
     dependencies:
-      "@vue/compiler-core": 3.4.35
-      "@vue/shared": 3.4.35
+      "@vue/compiler-core": 3.4.36
+      "@vue/shared": 3.4.36
 
   "@vue/language-core@1.8.27(typescript@5.5.4)":
     dependencies:
       "@volar/language-core": 1.11.1
       "@volar/source-map": 1.11.1
-      "@vue/compiler-dom": 3.4.35
-      "@vue/shared": 3.4.35
+      "@vue/compiler-dom": 3.4.36
+      "@vue/shared": 3.4.36
       computeds: 0.0.1
       minimatch: 9.0.5
       muggle-string: 0.3.1
@@ -13470,7 +13488,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.5.4
 
-  "@vue/shared@3.4.35": {}
+  "@vue/shared@3.4.36": {}
 
   "@yarnpkg/fslib@2.10.3":
     dependencies:
@@ -13684,11 +13702,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  babel-plugin-polyfill-corejs3@0.10.4(@babel/core@7.25.2):
+  babel-plugin-polyfill-corejs3@0.10.6(@babel/core@7.25.2):
     dependencies:
       "@babel/core": 7.25.2
       "@babel/helper-define-polyfill-provider": 0.6.2(@babel/core@7.25.2)
-      core-js-compat: 3.37.1
+      core-js-compat: 3.38.0
     transitivePeerDependencies:
       - supports-color
 
@@ -13761,8 +13779,8 @@ snapshots:
 
   browserslist@4.23.3:
     dependencies:
-      caniuse-lite: 1.0.30001647
-      electron-to-chromium: 1.5.4
+      caniuse-lite: 1.0.30001649
+      electron-to-chromium: 1.5.5
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
@@ -13787,7 +13805,7 @@ snapshots:
 
   camelize@1.0.1: {}
 
-  caniuse-lite@1.0.30001647: {}
+  caniuse-lite@1.0.30001649: {}
 
   chai@4.5.0:
     dependencies:
@@ -13939,7 +13957,7 @@ snapshots:
 
   cookie@0.6.0: {}
 
-  core-js-compat@3.37.1:
+  core-js-compat@3.38.0:
     dependencies:
       browserslist: 4.23.3
 
@@ -14121,7 +14139,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.4: {}
+  electron-to-chromium@1.5.5: {}
 
   emoji-regex@10.3.0: {}
 
@@ -14141,7 +14159,7 @@ snapshots:
       ansi-colors: 4.1.3
       strip-ansi: 6.0.1
 
-  entities@4.5.0: {}
+  entities@5.0.0: {}
 
   env-paths@2.2.1: {}
 
@@ -15795,7 +15813,7 @@ snapshots:
       picocolors: 1.0.1
       source-map-js: 1.2.0
 
-  postcss@8.4.40:
+  postcss@8.4.41:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.1
@@ -16754,7 +16772,7 @@ snapshots:
   vite@5.3.5(@types/node@20.14.14):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.4.40
+      postcss: 8.4.41
       rollup: 4.20.0
     optionalDependencies:
       "@types/node": 20.14.14

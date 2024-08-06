@@ -1,4 +1,4 @@
-import { Typography } from "@phantomthief-react/components";
+import { Typography } from "@phantompurr-react/components";
 
 import { CustomButton } from "../custom-button";
 import { Styled } from "./style";

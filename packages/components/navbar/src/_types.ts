@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils.definations";
+import { IExtendable } from "@phantompurr-react/utils.definations";
 
 export interface INavbarProps {
   className?: string;

@@ -1,9 +1,9 @@
 import React from "react";
 
-import { FlexBox } from "@phantomthief-react/components.flex-box";
-import { Icon } from "@phantomthief-react/components.icon";
-import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils";
+import { FlexBox } from "@phantompurr-react/components.flex-box";
+import { Icon } from "@phantompurr-react/components.icon";
+import { Typography } from "@phantompurr-react/components.typography";
+import { FONT } from "@phantompurr-react/utils";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Accordion } from "./_components";

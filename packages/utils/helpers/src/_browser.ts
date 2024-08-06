@@ -4,7 +4,7 @@ import {
   INodePosition,
   TBrowserStorage,
   TFunction,
-} from "@phantomthief-react/utils.definations";
+} from "@phantompurr-react/utils.definations";
 
 import { parseJSON } from "./_base";
 

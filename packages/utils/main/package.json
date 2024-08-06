@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/utils",
+  "name": "@phantompurr-react/utils",
   "version": "0.0.8",
   "type": "module",
   "main": "dist/index.cjs",
@@ -26,9 +26,9 @@
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
   "dependencies": {
-    "@phantomthief-react/utils.constants": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*",
-    "@phantomthief-react/utils.helpers": "workspace:*"
+    "@phantompurr-react/utils.constants": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*",
+    "@phantompurr-react/utils.helpers": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "*",

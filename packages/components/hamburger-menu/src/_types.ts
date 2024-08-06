@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes } from "react";
 import {
   IExtendable,
   ISyncStateWithProps,
-} from "@phantomthief-react/utils.definations";
+} from "@phantompurr-react/utils.definations";
 
 export interface IHamburgerMenuProps extends ISyncStateWithProps {
   gap?: number;

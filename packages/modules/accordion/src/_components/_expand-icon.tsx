@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import { Icon } from "@phantomthief-react/components.icon";
+import { Icon } from "@phantompurr-react/components.icon";
 
 import { Styled } from "../_styles";
 import { IAccordionItemExpandIconProps } from "../_types";

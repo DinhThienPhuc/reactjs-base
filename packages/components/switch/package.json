@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.switch",
+  "name": "@phantompurr-react/components.switch",
   "version": "0.0.11",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,9 +30,9 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.constants": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*",
-    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*"
+    "@phantompurr-react/utils.constants": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*",
+    "@phantompurr-react/hooks.sync-state-with-props": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

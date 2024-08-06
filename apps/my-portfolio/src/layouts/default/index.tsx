@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-import { FlexBox, Icon, Typography } from "@phantomthief-react/components";
+import { FlexBox, Icon, Typography } from "@phantompurr-react/components";
 
 import Styled from "./style";
 import Topnav from "./topnav";

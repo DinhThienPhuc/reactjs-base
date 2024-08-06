@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.flex-box",
+  "name": "@phantompurr-react/components.flex-box",
   "version": "0.0.15",
   "type": "module",
   "main": "dist/index.cjs",
@@ -31,8 +31,8 @@
     "styled-components": "*",
     "csstype": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.helpers": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantompurr-react/utils.helpers": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

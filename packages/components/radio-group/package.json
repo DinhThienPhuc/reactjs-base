@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.radio-group",
+  "name": "@phantompurr-react/components.radio-group",
   "version": "0.0.5",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,9 +30,9 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/components.flex-box": "workspace:*",
-    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantompurr-react/components.flex-box": "workspace:*",
+    "@phantompurr-react/hooks.sync-state-with-props": "workspace:*",
+    "@phantompurr-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

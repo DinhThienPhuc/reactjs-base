@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/hooks.media-query",
+  "name": "@phantompurr-react/hooks.media-query",
   "version": "0.0.5",
   "type": "module",
   "main": "dist/index.cjs",
@@ -28,7 +28,7 @@
   "peerDependencies": {
     "typescript": "*",
     "react": "*",
-    "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*"
+    "@phantompurr-react/hooks.isomorphic-layout-effect": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

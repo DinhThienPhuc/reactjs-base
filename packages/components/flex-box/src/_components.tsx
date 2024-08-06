@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { useMemo } from "react";
 
-import { capitalize } from "@phantomthief-react/utils.helpers";
+import { capitalize } from "@phantompurr-react/utils.helpers";
 
 import { Styled } from "./_style";
 import { IFlexBoxProps } from "./_types";

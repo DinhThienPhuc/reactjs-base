@@ -1,4 +1,4 @@
-# @phantomthief-react/hooks.sync-state-with-props
+# @phantompurr-react/hooks.sync-state-with-props
 
 ## 0.0.4
 

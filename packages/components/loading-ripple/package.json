@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.loading-ripple",
+  "name": "@phantompurr-react/components.loading-ripple",
   "version": "0.0.11",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,7 +30,7 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantompurr-react/utils.definations": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

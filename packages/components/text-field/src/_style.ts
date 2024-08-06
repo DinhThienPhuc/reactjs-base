@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { getVariantStyle } from "@phantomthief-react/utils.helpers";
+import { getVariantStyle } from "@phantompurr-react/utils.helpers";
 
 import { TEXT_FIELD_VARIANT } from "./_constants";
 import { TTextFieldVariant } from "./_types";

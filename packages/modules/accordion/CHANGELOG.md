@@ -1,4 +1,4 @@
-# @phantomthief-react/modules.accordion
+# @phantompurr-react/modules.accordion
 
 ## 0.0.8
 
@@ -18,9 +18,9 @@
 - Updated dependencies [31ac3a0]
 - Updated dependencies [6f4f459]
 - Updated dependencies [930318b]
-  - @phantomthief-react/components.typography@0.0.13
-  - @phantomthief-react/components.icon@0.0.6
-  - @phantomthief-react/utils@0.0.8
+  - @phantompurr-react/components.typography@0.0.13
+  - @phantompurr-react/components.icon@0.0.6
+  - @phantompurr-react/utils@0.0.8
 
 ## 0.0.7
 
@@ -32,28 +32,28 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/components@0.0.10
-  - @phantomthief-react/hooks@0.0.7
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/components@0.0.10
+  - @phantompurr-react/hooks@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.6
 
 ### Patch Changes
 
 - 5f53adb: Add react-hook-form dependency and update styles
-  - @phantomthief-react/components@0.0.9
+  - @phantompurr-react/components@0.0.9
 
 ## 0.0.5
 
 ### Patch Changes
 
-- @phantomthief-react/components@0.0.8
+- @phantompurr-react/components@0.0.8
 
 ## 0.0.4
 
 ### Patch Changes
 
-- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 57de399: Add @phantompurr-react/components.icon to devDependencies and update package.json files
 - 2c30a5d: Update dependencies and add new constants for radio-group and label components
 - 8a005f7: Add radio-group component and update Accordion module, add base props compare helper
 - 82f8b75: Add styled-components plugin to Vite config and update Accordion module
@@ -65,16 +65,16 @@
 - Updated dependencies [2c30a5d]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/components@0.0.7
-  - @phantomthief-react/utils@0.0.6
-  - @phantomthief-react/hooks@0.0.6
+  - @phantompurr-react/components@0.0.7
+  - @phantompurr-react/utils@0.0.6
+  - @phantompurr-react/hooks@0.0.6
 
 ## 0.0.3
 
 ### Patch Changes
 
 - d52a677: Add gap property for FlexBox component and update Accodrdion module
-  - @phantomthief-react/components@0.0.6
+  - @phantompurr-react/components@0.0.6
 
 ## 0.0.2
 
@@ -82,5 +82,5 @@
 
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/hooks@0.0.5
-  - @phantomthief-react/utils@0.0.5
+  - @phantompurr-react/hooks@0.0.5
+  - @phantompurr-react/utils@0.0.5

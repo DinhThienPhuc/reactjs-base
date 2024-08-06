@@ -24,7 +24,7 @@ export const IconX = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       color={color}
-      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
+      className={clsx("phantompurr-icon", "icon", `icon--${name}`, className)}
     >
       <path d="M18 6 6 18" />
       <path d="m6 6 12 12" />

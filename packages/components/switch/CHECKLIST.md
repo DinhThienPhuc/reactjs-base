@@ -11,7 +11,7 @@ export const TextField = () => <></>
 
 ```typescript
 const HelperText = lazy(() =>
-  import("@phantomthief-react/components.helper-text").then((module) => ({
+  import("@phantompurr-react/components.helper-text").then((module) => ({
     default: module.HelperText,
   })),
 );
@@ -33,7 +33,7 @@ const HelperText = lazy(() =>
 
 ```typescript
 // Inside components.text-field
-import { HelperText } from "@phantomthief-react/components.helper-text";
+import { HelperText } from "@phantompurr-react/components.helper-text";
 ```
 
 - 💯 Prop ordering in components should adhere to the following guidelines:

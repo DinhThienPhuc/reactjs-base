@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/hooks.block",
+  "name": "@phantompurr-react/hooks.block",
   "version": "0.0.10",
   "type": "module",
   "main": "dist/index.cjs",
@@ -28,7 +28,7 @@
   "peerDependencies": {
     "typescript": "*",
     "react": "*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantompurr-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

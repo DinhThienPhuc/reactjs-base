@@ -24,7 +24,7 @@ export const IconArrowDown = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       color={color}
-      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
+      className={clsx("phantompurr-icon", "icon", `icon--${name}`, className)}
     >
       <path d="M12 5v14" />
       <path d="m19 12-7 7-7-7" />

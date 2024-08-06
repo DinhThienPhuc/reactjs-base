@@ -65,7 +65,7 @@ export default defineConfig(config);
    */
   const packageContent = `
 {
-  "name": "@phantomthief-react/${packageName}",
+  "name": "@phantompurr-react/${packageName}",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs",

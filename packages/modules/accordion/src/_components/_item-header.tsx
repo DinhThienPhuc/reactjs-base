@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 
-import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils";
+import { Typography } from "@phantompurr-react/components.typography";
+import { FONT } from "@phantompurr-react/utils";
 
 import { Styled } from "../_styles";
 import { IAccordionItemHeaderProps, TItemDictionary } from "../_types";

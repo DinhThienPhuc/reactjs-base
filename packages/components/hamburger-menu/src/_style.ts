@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { getInvisibleButton } from "@phantomthief-react/utils.helpers";
+import { getInvisibleButton } from "@phantompurr-react/utils.helpers";
 
 export const Styled = {
   Container: styled.button`

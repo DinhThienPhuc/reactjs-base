@@ -1,4 +1,4 @@
-# @phantomthief-react/components.switch
+# @phantompurr-react/components.switch
 
 ## 0.0.11
 
@@ -15,9 +15,9 @@
 - Updated dependencies [b6a46d1]
 - Updated dependencies [31ac3a0]
 - Updated dependencies [930318b]
-  - @phantomthief-react/hooks.sync-state-with-props@0.0.4
-  - @phantomthief-react/utils.definations@0.0.7
-  - @phantomthief-react/utils.constants@0.0.6
+  - @phantompurr-react/hooks.sync-state-with-props@0.0.4
+  - @phantompurr-react/utils.definations@0.0.7
+  - @phantompurr-react/utils.constants@0.0.6
 
 ## 0.0.10
 
@@ -31,19 +31,19 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/hooks@0.0.7
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/hooks@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.9
 
 ### Patch Changes
 
-- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 57de399: Add @phantompurr-react/components.icon to devDependencies and update package.json files
 - 2c30a5d: Update dependencies and add new constants for radio-group and label components
 - fac7aa1: U
 - 884e64f: Remove unused react-feather dependency from package.json files
-  - @phantomthief-react/utils@0.0.6
-  - @phantomthief-react/hooks@0.0.6
+  - @phantompurr-react/utils@0.0.6
+  - @phantompurr-react/hooks@0.0.6
 
 ## 0.0.8
 
@@ -53,9 +53,9 @@
 - c2a2304: Add accordion module with components and types
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/hooks@0.0.5
-  - @phantomthief-react/utils@0.0.5
-  - @phantomthief-react/components.typography@0.0.10
+  - @phantompurr-react/hooks@0.0.5
+  - @phantompurr-react/utils@0.0.5
+  - @phantompurr-react/components.typography@0.0.10
 
 ## 0.0.7
 
@@ -68,9 +68,9 @@
 - Updated dependencies [49b765c]
 - Updated dependencies [57b304e]
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/hooks@0.0.4
-  - @phantomthief-react/components.typography@0.0.9
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/hooks@0.0.4
+  - @phantompurr-react/components.typography@0.0.9
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.6
 
@@ -80,9 +80,9 @@
 - Updated dependencies [4c216ed]
 - Updated dependencies [c95f6e6]
 - Updated dependencies [fc1a4bb]
-  - @phantomthief-react/hooks@0.0.3
-  - @phantomthief-react/utils@0.0.3
-  - @phantomthief-react/components.typography@0.0.8
+  - @phantompurr-react/hooks@0.0.3
+  - @phantompurr-react/utils@0.0.3
+  - @phantompurr-react/components.typography@0.0.8
 
 ## 0.0.5
 
@@ -92,8 +92,8 @@
 - e513057: Group form interface into one to re-use
 - Updated dependencies [528ff47]
 - Updated dependencies [afaa6eb]
-  - @phantomthief-react/components.typography@0.0.7
-  - @phantomthief-react/utils@0.0.2
+  - @phantompurr-react/components.typography@0.0.7
+  - @phantompurr-react/utils@0.0.2
 
 ## 0.0.4
 
@@ -107,9 +107,9 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/components.typography@0.0.6
-  - @phantomthief-react/utils.constants@0.0.3
-  - @phantomthief-react/utils.definations@0.0.3
+  - @phantompurr-react/components.typography@0.0.6
+  - @phantompurr-react/utils.constants@0.0.3
+  - @phantompurr-react/utils.definations@0.0.3
 
 ## 0.0.2
 
@@ -118,4 +118,4 @@
 - 9ffa7d7: Release first version of components.switch and modify components.typography
 - Updated dependencies [9ffa7d7]
 - Updated dependencies [e2ed92d]
-  - @phantomthief-react/components.typography@0.0.5
+  - @phantompurr-react/components.typography@0.0.5

@@ -5,15 +5,15 @@ import {
   InputHTMLAttributes,
 } from "react";
 
-import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
-import { ILabelProps } from "@phantomthief-react/components.label";
-import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
-import { IPreAdormentProps } from "@phantomthief-react/components.pre-adorment";
+import { IHelperTextProps } from "@phantompurr-react/components.helper-text";
+import { ILabelProps } from "@phantompurr-react/components.label";
+import { IPostAdormentProps } from "@phantompurr-react/components.post-adorment";
+import { IPreAdormentProps } from "@phantompurr-react/components.pre-adorment";
 import {
   IExtendable,
   IFormFieldProps,
   TFunction,
-} from "@phantomthief-react/utils.definations";
+} from "@phantompurr-react/utils.definations";
 
 import { TEXT_FIELD_VARIANT } from "./_constants";
 

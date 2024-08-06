@@ -13,7 +13,7 @@
     "start": "ts-node ./scripts/run-pnpm-command.ts --stream --parallel start",
     "start:all": "pnpm --filter \"./apps/**\" --stream --parallel start",
     "build": "ts-node ./scripts/run-pnpm-command.ts -r build",
-    "build:packages": "pnpm --filter \"./packages/**/**\" -r build",
+    "build:packages": "pnpm --filter \"./packages/**/**\" --filter \"./core\" -r build",
     "build:apps": "pnpm --filter \"./apps/**\" -r build",
     "build:all": "pnpm build:packages && pnpm build:apps",
     "publish": "ts-node ./scripts/run-pnpm-command.ts -r publish --access public --no-git-checks",
@@ -21,7 +21,8 @@
     "rm:packages": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rimraf ./node_modules && rimraf ./pnpm-lock.yaml",
     "rm:builds": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf dist && pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf build",
     "rm:vite-cache": "ts-node ./scripts/remove-temporary-vite-files.ts",
-    "rm:all": "pnpm rm:vite-cache && pnpm rm:builds && pnpm rm:packages",
+    "rm:statistics": "ts-node ./scripts/remove-statistics.ts",
+    "rm:all": "pnpm rm:vite-cache && pnpm rm:statistics && pnpm rm:builds && pnpm rm:packages",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "dotenv -e .env.local -- npx chromatic --project-token=$CHROMATIC_TOKEN"

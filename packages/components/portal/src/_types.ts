@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable } from "@phantompurr-react/utils";
 
 export interface IPortalProps extends IExtendable {
   className?: string;

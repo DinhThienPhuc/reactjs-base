@@ -6,7 +6,7 @@ import { Styled } from "./_style";
 import { IPostAdormentProps } from "./_types";
 
 const Icon = lazy(() =>
-  import("@phantomthief-react/components.icon").then((module) => ({
+  import("@phantompurr-react/components.icon").then((module) => ({
     default: module.Icon,
   })),
 );
