@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Button } from "@phantomthief-react/components.button";
-import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils";
+import { Button } from "@phantompurr-react/components.button";
+import { Typography } from "@phantompurr-react/components.typography";
+import { FONT } from "@phantompurr-react/utils";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Navbar } from "./_components";

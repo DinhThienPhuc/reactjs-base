@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.icon",
+  "name": "@phantompurr-react/components.icon",
   "version": "0.0.6",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,12 +29,12 @@
     "typescript": "*",
     "react": "*",
     "clsx": "*",
-    "@phantomthief-react/components.loading-ellipsis": "workspace:*",
-    "@phantomthief-react/utils.helpers": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantompurr-react/components.loading-ellipsis": "workspace:*",
+    "@phantompurr-react/utils.helpers": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*"
   },
   "devDependencies": {
-    "@phantomthief-react/utils.constants": "workspace:*"
+    "@phantompurr-react/utils.constants": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

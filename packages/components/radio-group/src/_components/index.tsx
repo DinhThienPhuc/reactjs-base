@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import React, { Suspense, forwardRef, lazy } from "react";
 
-import { FlexBox } from "@phantomthief-react/components.flex-box";
-import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
+import { FlexBox } from "@phantompurr-react/components.flex-box";
+import useSyncStateWithProps from "@phantompurr-react/hooks.sync-state-with-props";
 
 import { RADIO_GROUP_DIRECTION } from "../_constants";
 import { Styled } from "../_style";

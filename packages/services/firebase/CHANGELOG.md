@@ -1,4 +1,4 @@
-# @phantomthief-react/services.firebase
+# @phantompurr-react/services.firebase
 
 ## 0.0.11
 
@@ -10,7 +10,7 @@
 - Updated dependencies [7d3b774]
 - Updated dependencies [b6a46d1]
 - Updated dependencies [930318b]
-  - @phantomthief-react/utils@0.0.8
+  - @phantompurr-react/utils@0.0.8
 
 ## 0.0.10
 
@@ -22,19 +22,19 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.9
 
 ### Patch Changes
 
-- @phantomthief-react/utils@0.0.6
+- @phantompurr-react/utils@0.0.6
 
 ## 0.0.8
 
 ### Patch Changes
 
-- @phantomthief-react/utils@0.0.5
+- @phantompurr-react/utils@0.0.5
 
 ## 0.0.7
 
@@ -42,14 +42,14 @@
 
 - d4002f6: Do not know why
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.6
 
 ### Patch Changes
 
 - Updated dependencies [c95f6e6]
-  - @phantomthief-react/utils@0.0.3
+  - @phantompurr-react/utils@0.0.3
 
 ## 0.0.5
 
@@ -58,7 +58,7 @@
 - 528ff47: Update load stradge
 - Updated dependencies [528ff47]
 - Updated dependencies [afaa6eb]
-  - @phantomthief-react/utils@0.0.2
+  - @phantompurr-react/utils@0.0.2
 
 ## 0.0.4
 
@@ -66,8 +66,8 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/utils.definations@0.0.3
-  - @phantomthief-react/utils.helpers@0.0.4
+  - @phantompurr-react/utils.definations@0.0.3
+  - @phantompurr-react/utils.helpers@0.0.4
 
 ## 0.0.3
 
@@ -77,7 +77,7 @@
 - 770afc5: Dynamic load modules inside services.firebase to reduce bundle size
 - Updated dependencies [73ccde8]
 - Updated dependencies [78157dd]
-  - @phantomthief-react/utils.helpers@0.0.3
+  - @phantompurr-react/utils.helpers@0.0.3
 
 ## 0.0.2
 

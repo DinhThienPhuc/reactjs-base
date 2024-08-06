@@ -1,4 +1,4 @@
-# @phantomthief-react/hooks.on-mounted
+# @phantompurr-react/hooks.on-mounted
 
 ## 0.0.5
 

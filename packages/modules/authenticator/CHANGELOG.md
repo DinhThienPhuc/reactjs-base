@@ -1,4 +1,4 @@
-# @phantomthief-react/modules.authenticator
+# @phantompurr-react/modules.authenticator
 
 ## 0.0.10
 
@@ -13,7 +13,7 @@
 - Updated dependencies [7d3b774]
 - Updated dependencies [b6a46d1]
 - Updated dependencies [930318b]
-  - @phantomthief-react/hooks.block@0.0.10
+  - @phantompurr-react/hooks.block@0.0.10
 
 ## 0.0.9
 
@@ -25,13 +25,13 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/hooks@0.0.7
+  - @phantompurr-react/hooks@0.0.7
 
 ## 0.0.8
 
 ### Patch Changes
 
-- @phantomthief-react/hooks@0.0.6
+- @phantompurr-react/hooks@0.0.6
 
 ## 0.0.7
 
@@ -39,7 +39,7 @@
 
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/hooks@0.0.5
+  - @phantompurr-react/hooks@0.0.5
 
 ## 0.0.6
 
@@ -51,7 +51,7 @@
 - Updated dependencies [ff15021]
 - Updated dependencies [49b765c]
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/hooks@0.0.4
+  - @phantompurr-react/hooks@0.0.4
 
 ## 0.0.5
 
@@ -60,7 +60,7 @@
 - Updated dependencies [4c216ed]
 - Updated dependencies [c95f6e6]
 - Updated dependencies [fc1a4bb]
-  - @phantomthief-react/hooks@0.0.3
+  - @phantompurr-react/hooks@0.0.3
 
 ## 0.0.4
 
@@ -69,7 +69,7 @@
 - 528ff47: Update load stradge
 - Updated dependencies [528ff47]
 - Updated dependencies [afaa6eb]
-  - @phantomthief-react/hooks@0.0.2
+  - @phantompurr-react/hooks@0.0.2
 
 ## 0.0.3
 
@@ -77,7 +77,7 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/hooks.block@0.0.3
+  - @phantompurr-react/hooks.block@0.0.3
 
 ## 0.0.2
 
@@ -85,4 +85,4 @@
 
 - 056222e: Release first version of modules.authenticator and modules.error-boundary
 - Updated dependencies [47fa599]
-  - @phantomthief-react/hooks.block@0.0.2
+  - @phantompurr-react/hooks.block@0.0.2

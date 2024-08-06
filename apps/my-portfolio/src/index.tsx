@@ -5,8 +5,8 @@ import {
   createHashRouter,
 } from "react-router-dom";
 
-import { LoadingEllipsis, LoadingRipple } from "@phantomthief-react/components";
-import { useMediaQuery } from "@phantomthief-react/hooks";
+import { LoadingEllipsis, LoadingRipple } from "@phantompurr-react/components";
+import { useMediaQuery } from "@phantompurr-react/hooks";
 
 import { LayoutDefault } from "./layouts";
 import PageAboutMe from "./pages/about-me";

@@ -1,3 +1,3 @@
-export * from "@phantomthief-react/services.firebase";
-export * from "@phantomthief-react/services.i18n";
-export * from "@phantomthief-react/services.styled-theme";
+export * from "@phantompurr-react/services.firebase";
+export * from "@phantompurr-react/services.i18n";
+export * from "@phantompurr-react/services.styled-theme";

@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/services",
+  "name": "@phantompurr-react/services",
   "version": "0.0.8",
   "type": "module",
   "main": "dist/index.cjs",
@@ -26,9 +26,9 @@
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
   "dependencies": {
-    "@phantomthief-react/services.firebase": "workspace:*",
-    "@phantomthief-react/services.i18n": "workspace:*",
-    "@phantomthief-react/services.styled-theme": "workspace:*"
+    "@phantompurr-react/services.firebase": "workspace:*",
+    "@phantompurr-react/services.i18n": "workspace:*",
+    "@phantompurr-react/services.styled-theme": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "*",

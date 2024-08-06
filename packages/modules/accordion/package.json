@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/modules.accordion",
+  "name": "@phantompurr-react/modules.accordion",
   "version": "0.0.8",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,12 +30,12 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils": "workspace:*",
-    "@phantomthief-react/components.icon": "workspace:*",
-    "@phantomthief-react/components.typography": "workspace:*"
+    "@phantompurr-react/utils": "workspace:*",
+    "@phantompurr-react/components.icon": "workspace:*",
+    "@phantompurr-react/components.typography": "workspace:*"
   },
   "devDependencies": {
-    "@phantomthief-react/components.flex-box": "workspace:*"
+    "@phantompurr-react/components.flex-box": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

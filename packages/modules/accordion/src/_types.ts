@@ -6,7 +6,7 @@ import {
   SetStateAction,
 } from "react";
 
-import { IExtendable } from "@phantomthief-react/utils";
+import { IExtendable } from "@phantompurr-react/utils";
 
 export type TItemDictionary = Record<string, boolean>;
 

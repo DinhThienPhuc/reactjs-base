@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.hamburger-menu",
+  "name": "@phantompurr-react/components.hamburger-menu",
   "version": "0.0.7",
   "type": "module",
   "main": "dist/index.cjs",
@@ -30,9 +30,9 @@
     "react": "*",
     "styled-components": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.helpers": "workspace:*",
-    "@phantomthief-react/utils.definations": "workspace:*",
-    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*"
+    "@phantompurr-react/utils.helpers": "workspace:*",
+    "@phantompurr-react/utils.definations": "workspace:*",
+    "@phantompurr-react/hooks.sync-state-with-props": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

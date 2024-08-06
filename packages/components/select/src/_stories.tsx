@@ -3,10 +3,10 @@ import { Controller, useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import { yupResolver } from "@hookform/resolvers/yup";
-import { IHelperTextProps } from "@phantomthief-react/components.helper-text";
-import { Icon } from "@phantomthief-react/components.icon";
-import { ILabelProps } from "@phantomthief-react/components.label";
-import { IPostAdormentProps } from "@phantomthief-react/components.post-adorment";
+import { IHelperTextProps } from "@phantompurr-react/components.helper-text";
+import { Icon } from "@phantompurr-react/components.icon";
+import { ILabelProps } from "@phantompurr-react/components.label";
+import { IPostAdormentProps } from "@phantompurr-react/components.post-adorment";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Select } from "./_components";

@@ -1,4 +1,4 @@
-# @phantomthief-react/utils
+# @phantompurr-react/utils
 
 ## 0.0.8
 
@@ -12,9 +12,9 @@
 - Updated dependencies [b6a46d1]
 - Updated dependencies [31ac3a0]
 - Updated dependencies [930318b]
-  - @phantomthief-react/utils.definations@0.0.7
-  - @phantomthief-react/utils.constants@0.0.6
-  - @phantomthief-react/utils.helpers@0.0.10
+  - @phantompurr-react/utils.definations@0.0.7
+  - @phantompurr-react/utils.constants@0.0.6
+  - @phantompurr-react/utils.helpers@0.0.10
 
 ## 0.0.7
 
@@ -28,9 +28,9 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/utils.constants@0.0.5
-  - @phantomthief-react/utils.helpers@0.0.9
-  - @phantomthief-react/utils.definations@0.0.6
+  - @phantompurr-react/utils.constants@0.0.5
+  - @phantompurr-react/utils.helpers@0.0.9
+  - @phantompurr-react/utils.definations@0.0.6
 
 ## 0.0.6
 
@@ -41,14 +41,14 @@
 - Updated dependencies [8a005f7]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/utils.helpers@0.0.8
+  - @phantompurr-react/utils.helpers@0.0.8
 
 ## 0.0.5
 
 ### Patch Changes
 
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/utils.helpers@0.0.7
+  - @phantompurr-react/utils.helpers@0.0.7
 
 ## 0.0.4
 
@@ -59,9 +59,9 @@
 - Updated dependencies [ff15021]
 - Updated dependencies [49b765c]
 - Updated dependencies [1782675]
-  - @phantomthief-react/utils.definations@0.0.5
-  - @phantomthief-react/utils.constants@0.0.4
-  - @phantomthief-react/utils.helpers@0.0.6
+  - @phantompurr-react/utils.definations@0.0.5
+  - @phantompurr-react/utils.constants@0.0.4
+  - @phantompurr-react/utils.helpers@0.0.6
 
 ## 0.0.3
 
@@ -77,5 +77,5 @@
 - afaa6eb: Release first version of main packages
 - Updated dependencies [528ff47]
 - Updated dependencies [e513057]
-  - @phantomthief-react/utils.definations@0.0.4
-  - @phantomthief-react/utils.helpers@0.0.5
+  - @phantompurr-react/utils.definations@0.0.4
+  - @phantompurr-react/utils.helpers@0.0.5

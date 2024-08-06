@@ -1,4 +1,4 @@
-# @phantomthief-react/modules.responsive-topnav
+# @phantompurr-react/modules.responsive-topnav
 
 ## 0.0.10
 
@@ -16,10 +16,10 @@
 - Updated dependencies [31ac3a0]
 - Updated dependencies [6f4f459]
 - Updated dependencies [930318b]
-  - @phantomthief-react/components.hamburger-menu@0.0.7
-  - @phantomthief-react/hooks.media-query@0.0.5
-  - @phantomthief-react/hooks.block@0.0.10
-  - @phantomthief-react/utils@0.0.8
+  - @phantompurr-react/components.hamburger-menu@0.0.7
+  - @phantompurr-react/hooks.media-query@0.0.5
+  - @phantompurr-react/hooks.block@0.0.10
+  - @phantompurr-react/utils@0.0.8
 
 ## 0.0.9
 
@@ -33,27 +33,27 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/components@0.0.10
-  - @phantomthief-react/hooks@0.0.7
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/components@0.0.10
+  - @phantompurr-react/hooks@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.8
 
 ### Patch Changes
 
-- @phantomthief-react/components@0.0.9
+- @phantompurr-react/components@0.0.9
 
 ## 0.0.7
 
 ### Patch Changes
 
-- @phantomthief-react/components@0.0.8
+- @phantompurr-react/components@0.0.8
 
 ## 0.0.6
 
 ### Patch Changes
 
-- 57de399: Add @phantomthief-react/components.icon to devDependencies and update package.json files
+- 57de399: Add @phantompurr-react/components.icon to devDependencies and update package.json files
 - 2c30a5d: Update dependencies and add new constants for radio-group and label components
 - fac7aa1: U
 - 884e64f: Remove unused react-feather dependency from package.json files
@@ -61,15 +61,15 @@
 - Updated dependencies [2c30a5d]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/components@0.0.7
-  - @phantomthief-react/utils@0.0.6
-  - @phantomthief-react/hooks@0.0.6
+  - @phantompurr-react/components@0.0.7
+  - @phantompurr-react/utils@0.0.6
+  - @phantompurr-react/hooks@0.0.6
 
 ## 0.0.5
 
 ### Patch Changes
 
-- @phantomthief-react/components@0.0.6
+- @phantompurr-react/components@0.0.6
 
 ## 0.0.4
 
@@ -78,9 +78,9 @@
 - c2a2304: Add accordion module with components and types
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/hooks@0.0.5
-  - @phantomthief-react/components@0.0.5
-  - @phantomthief-react/utils@0.0.5
+  - @phantompurr-react/hooks@0.0.5
+  - @phantompurr-react/components@0.0.5
+  - @phantompurr-react/utils@0.0.5
 
 ## 0.0.3
 
@@ -95,9 +95,9 @@
 - Updated dependencies [ff15021]
 - Updated dependencies [49b765c]
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/hooks@0.0.4
-  - @phantomthief-react/components@0.0.4
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/hooks@0.0.4
+  - @phantompurr-react/components@0.0.4
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.2
 
@@ -110,6 +110,6 @@
 - Updated dependencies [4c216ed]
 - Updated dependencies [c95f6e6]
 - Updated dependencies [fc1a4bb]
-  - @phantomthief-react/components@0.0.3
-  - @phantomthief-react/hooks@0.0.3
-  - @phantomthief-react/utils@0.0.3
+  - @phantompurr-react/components@0.0.3
+  - @phantompurr-react/hooks@0.0.3
+  - @phantompurr-react/utils@0.0.3

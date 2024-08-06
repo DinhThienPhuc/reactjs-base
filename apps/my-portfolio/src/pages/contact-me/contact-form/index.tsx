@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { FlexBox, Typography } from "@phantomthief-react/components";
+import { FlexBox, Typography } from "@phantompurr-react/components";
 
 import { CustomButton } from "../../../components/custom-button";
 import { Styled } from "./style";

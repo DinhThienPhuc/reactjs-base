@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.navbar",
+  "name": "@phantompurr-react/components.navbar",
   "version": "0.0.7",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,12 +29,12 @@
     "typescript": "*",
     "react": "*",
     "clsx": "*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantompurr-react/utils.definations": "workspace:*"
   },
   "devDependencies": {
-    "@phantomthief-react/components.typography": "workspace:*",
-    "@phantomthief-react/components.button": "workspace:*",
-    "@phantomthief-react/utils.constants": "workspace:*"
+    "@phantompurr-react/components.typography": "workspace:*",
+    "@phantompurr-react/components.button": "workspace:*",
+    "@phantompurr-react/utils.constants": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

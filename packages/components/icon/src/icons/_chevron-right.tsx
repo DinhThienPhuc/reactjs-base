@@ -24,7 +24,7 @@ export const IconChevronRight = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       color={color}
-      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
+      className={clsx("phantompurr-icon", "icon", `icon--${name}`, className)}
     >
       <path d="m9 18 6-6-6-6" />
     </svg>

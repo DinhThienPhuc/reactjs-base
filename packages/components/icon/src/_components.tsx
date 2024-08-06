@@ -1,7 +1,7 @@
 import React, { ComponentType, Suspense, useEffect, useState } from "react";
 
-import { LoadingEllipsis } from "@phantomthief-react/components.loading-ellipsis";
-import { toCamelCase } from "@phantomthief-react/utils.helpers";
+import { LoadingEllipsis } from "@phantompurr-react/components.loading-ellipsis";
+import { toCamelCase } from "@phantompurr-react/utils.helpers";
 
 import { IIconProps, ISingleIconProps } from "./_types";
 

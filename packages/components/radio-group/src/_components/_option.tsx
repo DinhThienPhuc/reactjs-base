@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { ChangeEvent, memo, useCallback, useMemo } from "react";
 
-import { arePropsShallowEqual } from "@phantomthief-react/utils";
+import { arePropsShallowEqual } from "@phantompurr-react/utils";
 
 import { Styled } from "../_style";
 import { IRadioGroupOptionProps } from "../_types";

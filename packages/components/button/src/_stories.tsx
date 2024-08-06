@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { LoadingRipple } from "@phantomthief-react/components.loading-ripple";
+import { LoadingRipple } from "@phantompurr-react/components.loading-ripple";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./_components";

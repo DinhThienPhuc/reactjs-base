@@ -1,7 +1,7 @@
 import React, { MouseEvent, useCallback, useState } from "react";
 
-import { Typography } from "@phantomthief-react/components.typography";
-import { FONT } from "@phantomthief-react/utils";
+import { Typography } from "@phantompurr-react/components.typography";
+import { FONT } from "@phantompurr-react/utils";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { ResponsiveTopnav } from "./_components";

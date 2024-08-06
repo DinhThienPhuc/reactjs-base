@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/hooks",
+  "name": "@phantompurr-react/hooks",
   "version": "0.0.8",
   "type": "module",
   "main": "dist/index.cjs",
@@ -26,14 +26,14 @@
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
   "dependencies": {
-    "@phantomthief-react/hooks.block": "workspace:*",
-    "@phantomthief-react/hooks.event-listener": "workspace:*",
-    "@phantomthief-react/hooks.focus-with-callback": "workspace:*",
-    "@phantomthief-react/hooks.isomorphic-layout-effect": "workspace:*",
-    "@phantomthief-react/hooks.media-query": "workspace:*",
-    "@phantomthief-react/hooks.not-click-on-elements": "workspace:*",
-    "@phantomthief-react/hooks.on-mounted": "workspace:*",
-    "@phantomthief-react/hooks.sync-state-with-props": "workspace:*"
+    "@phantompurr-react/hooks.block": "workspace:*",
+    "@phantompurr-react/hooks.event-listener": "workspace:*",
+    "@phantompurr-react/hooks.focus-with-callback": "workspace:*",
+    "@phantompurr-react/hooks.isomorphic-layout-effect": "workspace:*",
+    "@phantompurr-react/hooks.media-query": "workspace:*",
+    "@phantompurr-react/hooks.not-click-on-elements": "workspace:*",
+    "@phantompurr-react/hooks.on-mounted": "workspace:*",
+    "@phantompurr-react/hooks.sync-state-with-props": "workspace:*"
   },
   "peerDependencies": {
     "react": "*",

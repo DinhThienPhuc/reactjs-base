@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FONT } from "@phantomthief-react/utils.constants";
+import { FONT } from "@phantompurr-react/utils.constants";
 
 import { HELPER_TEXT_VARIANT } from "./_constants";
 import { THelperTextVariant } from "./_types";

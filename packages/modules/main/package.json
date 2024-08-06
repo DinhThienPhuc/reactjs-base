@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/modules",
+  "name": "@phantompurr-react/modules",
   "version": "0.0.11",
   "type": "module",
   "main": "dist/index.cjs",
@@ -26,10 +26,10 @@
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
   "dependencies": {
-    "@phantomthief-react/modules.accordion": "workspace:*",
-    "@phantomthief-react/modules.authenticator": "workspace:*",
-    "@phantomthief-react/modules.error-boundary": "workspace:*",
-    "@phantomthief-react/modules.responsive-topnav": "workspace:*"
+    "@phantompurr-react/modules.accordion": "workspace:*",
+    "@phantompurr-react/modules.authenticator": "workspace:*",
+    "@phantompurr-react/modules.error-boundary": "workspace:*",
+    "@phantompurr-react/modules.responsive-topnav": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "*",

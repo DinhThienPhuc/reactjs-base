@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FlexBox } from "@phantomthief-react/components";
+import { FlexBox } from "@phantompurr-react/components";
 
 export const Styled = {
   Container: styled.div``,

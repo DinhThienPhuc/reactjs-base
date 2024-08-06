@@ -16,11 +16,11 @@
 - Updated dependencies [b6a46d1]
 - Updated dependencies [6f4f459]
 - Updated dependencies [930318b]
-  - @phantomthief-react/components@0.0.11
-  - @phantomthief-react/services@0.0.8
-  - @phantomthief-react/modules@0.0.11
-  - @phantomthief-react/hooks@0.0.8
-  - @phantomthief-react/utils@0.0.8
+  - @phantompurr-react/components@0.0.11
+  - @phantompurr-react/services@0.0.8
+  - @phantompurr-react/modules@0.0.11
+  - @phantompurr-react/hooks@0.0.8
+  - @phantompurr-react/utils@0.0.8
 
 ## 0.0.8
 
@@ -36,11 +36,11 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/components@0.0.10
-  - @phantomthief-react/services@0.0.7
-  - @phantomthief-react/modules@0.0.10
-  - @phantomthief-react/hooks@0.0.7
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/components@0.0.10
+  - @phantompurr-react/services@0.0.7
+  - @phantompurr-react/modules@0.0.10
+  - @phantompurr-react/hooks@0.0.7
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.7
 
@@ -48,16 +48,16 @@
 
 - 5f53adb: Add react-hook-form dependency and update styles
 - Updated dependencies [5f53adb]
-  - @phantomthief-react/modules@0.0.9
-  - @phantomthief-react/components@0.0.9
+  - @phantompurr-react/modules@0.0.9
+  - @phantompurr-react/components@0.0.9
 
 ## 0.0.6
 
 ### Patch Changes
 
 - 4a063fd: Update home page layout and add new components
-  - @phantomthief-react/components@0.0.8
-  - @phantomthief-react/modules@0.0.8
+  - @phantompurr-react/components@0.0.8
+  - @phantompurr-react/modules@0.0.8
 
 ## 0.0.5
 
@@ -68,18 +68,18 @@
 - Updated dependencies [2c30a5d]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/components@0.0.7
-  - @phantomthief-react/modules@0.0.7
-  - @phantomthief-react/utils@0.0.6
-  - @phantomthief-react/hooks@0.0.6
-  - @phantomthief-react/services@0.0.6
+  - @phantompurr-react/components@0.0.7
+  - @phantompurr-react/modules@0.0.7
+  - @phantompurr-react/utils@0.0.6
+  - @phantompurr-react/hooks@0.0.6
+  - @phantompurr-react/services@0.0.6
 
 ## 0.0.4
 
 ### Patch Changes
 
-- @phantomthief-react/components@0.0.6
-- @phantomthief-react/modules@0.0.6
+- @phantompurr-react/components@0.0.6
+- @phantompurr-react/modules@0.0.6
 
 ## 0.0.3
 
@@ -88,11 +88,11 @@
 - c2a2304: Add accordion module with components and types
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/hooks@0.0.5
-  - @phantomthief-react/components@0.0.5
-  - @phantomthief-react/modules@0.0.5
-  - @phantomthief-react/utils@0.0.5
-  - @phantomthief-react/services@0.0.5
+  - @phantompurr-react/hooks@0.0.5
+  - @phantompurr-react/components@0.0.5
+  - @phantompurr-react/modules@0.0.5
+  - @phantompurr-react/utils@0.0.5
+  - @phantompurr-react/services@0.0.5
 
 ## 0.0.2
 
@@ -108,11 +108,11 @@
 - Updated dependencies [ff15021]
 - Updated dependencies [49b765c]
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/hooks@0.0.4
-  - @phantomthief-react/components@0.0.4
-  - @phantomthief-react/services@0.0.4
-  - @phantomthief-react/modules@0.0.4
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/hooks@0.0.4
+  - @phantompurr-react/components@0.0.4
+  - @phantompurr-react/services@0.0.4
+  - @phantompurr-react/modules@0.0.4
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.1
 
@@ -122,8 +122,8 @@
 - Updated dependencies [4c216ed]
 - Updated dependencies [c95f6e6]
 - Updated dependencies [fc1a4bb]
-  - @phantomthief-react/components@0.0.3
-  - @phantomthief-react/hooks@0.0.3
-  - @phantomthief-react/services@0.0.3
-  - @phantomthief-react/modules@0.0.3
-  - @phantomthief-react/utils@0.0.3
+  - @phantompurr-react/components@0.0.3
+  - @phantompurr-react/hooks@0.0.3
+  - @phantompurr-react/services@0.0.3
+  - @phantompurr-react/modules@0.0.3
+  - @phantompurr-react/utils@0.0.3

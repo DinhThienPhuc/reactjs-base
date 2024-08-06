@@ -1,4 +1,4 @@
-# @phantomthief-react/hooks
+# @phantompurr-react/hooks
 
 ## 0.0.8
 
@@ -10,14 +10,14 @@
 - Updated dependencies [7d3b774]
 - Updated dependencies [b6a46d1]
 - Updated dependencies [930318b]
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.5
-  - @phantomthief-react/hooks.not-click-on-elements@0.0.5
-  - @phantomthief-react/hooks.sync-state-with-props@0.0.4
-  - @phantomthief-react/hooks.focus-with-callback@0.0.5
-  - @phantomthief-react/hooks.event-listener@0.0.5
-  - @phantomthief-react/hooks.media-query@0.0.5
-  - @phantomthief-react/hooks.on-mounted@0.0.5
-  - @phantomthief-react/hooks.block@0.0.10
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.5
+  - @phantompurr-react/hooks.not-click-on-elements@0.0.5
+  - @phantompurr-react/hooks.sync-state-with-props@0.0.4
+  - @phantompurr-react/hooks.focus-with-callback@0.0.5
+  - @phantompurr-react/hooks.event-listener@0.0.5
+  - @phantompurr-react/hooks.media-query@0.0.5
+  - @phantompurr-react/hooks.on-mounted@0.0.5
+  - @phantompurr-react/hooks.block@0.0.10
 
 ## 0.0.7
 
@@ -31,20 +31,20 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/hooks.media-query@0.0.4
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.4
-  - @phantomthief-react/hooks.not-click-on-elements@0.0.4
-  - @phantomthief-react/hooks.sync-state-with-props@0.0.3
-  - @phantomthief-react/hooks.focus-with-callback@0.0.4
-  - @phantomthief-react/hooks.event-listener@0.0.4
-  - @phantomthief-react/hooks.on-mounted@0.0.4
-  - @phantomthief-react/hooks.block@0.0.9
+  - @phantompurr-react/hooks.media-query@0.0.4
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.4
+  - @phantompurr-react/hooks.not-click-on-elements@0.0.4
+  - @phantompurr-react/hooks.sync-state-with-props@0.0.3
+  - @phantompurr-react/hooks.focus-with-callback@0.0.4
+  - @phantompurr-react/hooks.event-listener@0.0.4
+  - @phantompurr-react/hooks.on-mounted@0.0.4
+  - @phantompurr-react/hooks.block@0.0.9
 
 ## 0.0.6
 
 ### Patch Changes
 
-- @phantomthief-react/hooks.block@0.0.8
+- @phantompurr-react/hooks.block@0.0.8
 
 ## 0.0.5
 
@@ -52,7 +52,7 @@
 
 - 6f55d43: Remove form-element package and its dependencies
 - c2a2304: Add accordion module with components and types
-  - @phantomthief-react/hooks.block@0.0.7
+  - @phantompurr-react/hooks.block@0.0.7
 
 ## 0.0.4
 
@@ -68,9 +68,9 @@
 - Updated dependencies [ff15021]
 - Updated dependencies [49b765c]
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/hooks.sync-state-with-props@0.0.2
-  - @phantomthief-react/hooks.media-query@0.0.3
-  - @phantomthief-react/hooks.block@0.0.6
+  - @phantompurr-react/hooks.sync-state-with-props@0.0.2
+  - @phantompurr-react/hooks.media-query@0.0.3
+  - @phantompurr-react/hooks.block@0.0.6
 
 ## 0.0.3
 
@@ -80,8 +80,8 @@
 - c95f6e6: Release first version of modules.responsive-topnav and update the main of the components,hooks,modules,services and utils
 - fc1a4bb: Add hooks.form-element, components.text-field and update content for components.pre-adorment and components.post-adorment
 - Updated dependencies [4c216ed]
-  - @phantomthief-react/hooks.media-query@0.0.2
-  - @phantomthief-react/hooks.block@0.0.5
+  - @phantompurr-react/hooks.media-query@0.0.2
+  - @phantompurr-react/hooks.block@0.0.5
 
 ## 0.0.2
 
@@ -90,4 +90,4 @@
 - 528ff47: Update load stradge
 - afaa6eb: Release first version of main packages
 - Updated dependencies [528ff47]
-  - @phantomthief-react/hooks.block@0.0.4
+  - @phantompurr-react/hooks.block@0.0.4

@@ -1,4 +1,4 @@
-# @phantomthief-react/hooks.media-query
+# @phantompurr-react/hooks.media-query
 
 ## 0.0.5
 
@@ -10,7 +10,7 @@
 - Updated dependencies [7d3b774]
 - Updated dependencies [b6a46d1]
 - Updated dependencies [930318b]
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.5
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.5
 
 ## 0.0.4
 
@@ -24,7 +24,7 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.4
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.4
 
 ## 0.0.3
 

@@ -1,4 +1,4 @@
-# @phantomthief-react/components.button
+# @phantompurr-react/components.button
 
 ## 0.0.11
 
@@ -17,8 +17,8 @@
 - Updated dependencies [31ac3a0]
 - Updated dependencies [6f4f459]
 - Updated dependencies [930318b]
-  - @phantomthief-react/components.loading-ripple@0.0.11
-  - @phantomthief-react/utils.definations@0.0.7
+  - @phantompurr-react/components.loading-ripple@0.0.11
+  - @phantompurr-react/utils.definations@0.0.7
 
 ## 0.0.10
 
@@ -30,8 +30,8 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/components.loading-ripple@0.0.10
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/components.loading-ripple@0.0.10
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.9
 
@@ -41,8 +41,8 @@
 - Updated dependencies [2c30a5d]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/components.loading-ripple@0.0.9
-  - @phantomthief-react/utils@0.0.6
+  - @phantompurr-react/components.loading-ripple@0.0.9
+  - @phantompurr-react/utils@0.0.6
 
 ## 0.0.8
 
@@ -50,8 +50,8 @@
 
 - Updated dependencies [6f55d43]
 - Updated dependencies [c2a2304]
-  - @phantomthief-react/components.loading-ripple@0.0.8
-  - @phantomthief-react/utils@0.0.5
+  - @phantompurr-react/components.loading-ripple@0.0.8
+  - @phantompurr-react/utils@0.0.5
 
 ## 0.0.7
 
@@ -59,16 +59,16 @@
 
 - d4002f6: Do not know why
 - Updated dependencies [d4002f6]
-  - @phantomthief-react/components.loading-ripple@0.0.7
-  - @phantomthief-react/utils@0.0.4
+  - @phantompurr-react/components.loading-ripple@0.0.7
+  - @phantompurr-react/utils@0.0.4
 
 ## 0.0.6
 
 ### Patch Changes
 
 - Updated dependencies [c95f6e6]
-  - @phantomthief-react/utils@0.0.3
-  - @phantomthief-react/components.loading-ripple@0.0.6
+  - @phantompurr-react/utils@0.0.3
+  - @phantompurr-react/components.loading-ripple@0.0.6
 
 ## 0.0.5
 
@@ -77,8 +77,8 @@
 - 528ff47: Update load stradge
 - Updated dependencies [528ff47]
 - Updated dependencies [afaa6eb]
-  - @phantomthief-react/components.loading-ripple@0.0.5
-  - @phantomthief-react/utils@0.0.2
+  - @phantompurr-react/components.loading-ripple@0.0.5
+  - @phantompurr-react/utils@0.0.2
 
 ## 0.0.4
 
@@ -86,7 +86,7 @@
 
 - f1429b4: Update internal classes followed BEM
 - Updated dependencies [f1429b4]
-  - @phantomthief-react/components.loading-ripple@0.0.4
+  - @phantompurr-react/components.loading-ripple@0.0.4
 
 ## 0.0.3
 
@@ -94,8 +94,8 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/components.loading-ripple@0.0.3
-  - @phantomthief-react/utils.definations@0.0.3
+  - @phantompurr-react/components.loading-ripple@0.0.3
+  - @phantompurr-react/utils.definations@0.0.3
 
 ## 0.0.2
 
@@ -103,4 +103,4 @@
 
 - 3a9acb2: Release first version of components.button, components.helper-text, components.label, components.loading-ellipsis, components.loading-ripple and update components.flex-box, components.typography
 - Updated dependencies [3a9acb2]
-  - @phantomthief-react/components.loading-ripple@0.0.2
+  - @phantompurr-react/components.loading-ripple@0.0.2

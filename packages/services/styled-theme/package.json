@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/services.styled-theme",
+  "name": "@phantompurr-react/services.styled-theme",
   "version": "0.0.10",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,7 +29,7 @@
     "typescript": "*",
     "react": "*",
     "styled-components": "*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantompurr-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

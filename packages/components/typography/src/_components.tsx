@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { FC, useMemo } from "react";
 
-import { capitalize } from "@phantomthief-react/utils.helpers";
+import { capitalize } from "@phantompurr-react/utils.helpers";
 
 import { Styled } from "./_style";
 import { IStyledTypographyProps, ITypographyProps } from "./_types";

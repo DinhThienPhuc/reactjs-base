@@ -24,7 +24,7 @@ export const IconInfo = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       color={color}
-      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
+      className={clsx("phantompurr-icon", "icon", `icon--${name}`, className)}
     >
       <circle cx="12" cy="12" r="10" />
       <path d="M12 16v-4" />

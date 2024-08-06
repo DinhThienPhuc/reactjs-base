@@ -3,7 +3,7 @@ import { ChangeEvent, HTMLAttributes, InputHTMLAttributes } from "react";
 import {
   IExtendable,
   IFormFieldProps,
-} from "@phantomthief-react/utils.definations";
+} from "@phantompurr-react/utils.definations";
 
 export interface ISwitchProps extends IFormFieldProps {
   value?: boolean;

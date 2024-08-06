@@ -1,16 +1,16 @@
 import clsx from "clsx";
 import React, { Suspense, lazy, useCallback, useMemo, useState } from "react";
 
-import useBlock from "@phantomthief-react/hooks.block";
-import useMediaQuery from "@phantomthief-react/hooks.media-query";
-import { VIEWPORT } from "@phantomthief-react/utils";
+import useBlock from "@phantompurr-react/hooks.block";
+import useMediaQuery from "@phantompurr-react/hooks.media-query";
+import { VIEWPORT } from "@phantompurr-react/utils";
 
 import { Styled } from "../_styles";
 import { IResponsiveTopnavProps } from "../_types";
 import { ResponsiveTopnavItem } from "./_item";
 
 const HamburgerMenu = lazy(() =>
-  import("@phantomthief-react/components.hamburger-menu").then((module) => ({
+  import("@phantompurr-react/components.hamburger-menu").then((module) => ({
     default: module.HamburgerMenu,
   })),
 );

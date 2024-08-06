@@ -11,36 +11,36 @@ import React, {
   useState,
 } from "react";
 
-import { Portal } from "@phantomthief-react/components.portal";
-import useBlock from "@phantomthief-react/hooks.block";
-import useNotClickOnElements from "@phantomthief-react/hooks.not-click-on-elements";
-import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
-import { INodePosition, getPositionOfNode } from "@phantomthief-react/utils";
+import { Portal } from "@phantompurr-react/components.portal";
+import useBlock from "@phantompurr-react/hooks.block";
+import useNotClickOnElements from "@phantompurr-react/hooks.not-click-on-elements";
+import useSyncStateWithProps from "@phantompurr-react/hooks.sync-state-with-props";
+import { INodePosition, getPositionOfNode } from "@phantompurr-react/utils";
 
 import { SELECT_VARIANT } from "../_constants";
 import { Styled } from "../_style";
 import { ISelectProps } from "../_types";
 
 const HelperText = lazy(() =>
-  import("@phantomthief-react/components.helper-text").then((module) => ({
+  import("@phantompurr-react/components.helper-text").then((module) => ({
     default: module.HelperText,
   })),
 );
 
 const Icon = lazy(() =>
-  import("@phantomthief-react/components.icon").then((module) => ({
+  import("@phantompurr-react/components.icon").then((module) => ({
     default: module.Icon,
   })),
 );
 
 const Label = lazy(() =>
-  import("@phantomthief-react/components.label").then((module) => ({
+  import("@phantompurr-react/components.label").then((module) => ({
     default: module.Label,
   })),
 );
 
 const PostAdorment = lazy(() =>
-  import("@phantomthief-react/components.post-adorment").then((module) => ({
+  import("@phantompurr-react/components.post-adorment").then((module) => ({
     default: module.PostAdorment,
   })),
 );

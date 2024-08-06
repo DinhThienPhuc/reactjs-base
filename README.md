@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://dinhthienphuc.github.io/assets/images/logos/phantom-purr.png">
-    <img src="https://dinhthienphuc.github.io/assets/images/logos/phantom-purr.png" height="128">
+    <source media="(prefers-color-scheme: dark)" srcset="https://dinhthienphuc.github.io/assets/images/logos/phantompurr.png">
+    <img src="https://dinhthienphuc.github.io/assets/images/logos/phantompurr.png" height="128">
   </picture>
   <h1 align="center">React.JS Base</h1>
 </p>
@@ -27,8 +27,8 @@ We use `vite` as our build tool for both development and production environments
 The packages will look like that:
 
 ```js
-@phantomthief-react/components.button
-@phantomthief-react/hooks.useOnMounted
+@phantompurr-react/components.button
+@phantompurr-react/hooks.useOnMounted
 ...
 ```
 

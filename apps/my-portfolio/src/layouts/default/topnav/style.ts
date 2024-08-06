@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { ResponsiveTopnav } from "@phantomthief-react/modules";
+import { ResponsiveTopnav } from "@phantompurr-react/modules";
 
 const Styled = {
   Container: styled(ResponsiveTopnav)`

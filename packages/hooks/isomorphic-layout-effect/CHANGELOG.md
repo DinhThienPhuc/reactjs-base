@@ -1,4 +1,4 @@
-# @phantomthief-react/hooks.isomorphic-layout-effect
+# @phantompurr-react/hooks.isomorphic-layout-effect
 
 ## 0.0.5
 

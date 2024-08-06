@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { MouseEvent, memo } from "react";
 
-import { arePropsShallowEqual } from "@phantomthief-react/utils";
+import { arePropsShallowEqual } from "@phantompurr-react/utils";
 
 import { Styled } from "../_styles";
 import { IResponsiveTopnavItemProps } from "../_types";

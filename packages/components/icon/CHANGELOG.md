@@ -1,4 +1,4 @@
-# @phantomthief-react/components.icon
+# @phantompurr-react/components.icon
 
 ## 0.0.6
 
@@ -16,9 +16,9 @@
 - Updated dependencies [31ac3a0]
 - Updated dependencies [6f4f459]
 - Updated dependencies [930318b]
-  - @phantomthief-react/components.loading-ellipsis@0.0.11
-  - @phantomthief-react/utils.definations@0.0.7
-  - @phantomthief-react/utils.helpers@0.0.10
+  - @phantompurr-react/components.loading-ellipsis@0.0.11
+  - @phantompurr-react/utils.definations@0.0.7
+  - @phantompurr-react/utils.helpers@0.0.10
 
 ## 0.0.5
 
@@ -34,8 +34,8 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/components.loading-ellipsis@0.0.10
-  - @phantomthief-react/utils@0.0.7
+  - @phantompurr-react/components.loading-ellipsis@0.0.10
+  - @phantompurr-react/utils@0.0.7
 
 ## 0.0.4
 
@@ -59,5 +59,5 @@
 - Updated dependencies [2c30a5d]
 - Updated dependencies [fac7aa1]
 - Updated dependencies [884e64f]
-  - @phantomthief-react/components.loading-ellipsis@0.0.9
-  - @phantomthief-react/utils@0.0.6
+  - @phantompurr-react/components.loading-ellipsis@0.0.9
+  - @phantompurr-react/utils@0.0.6

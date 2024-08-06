@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/modules.error-boundary",
+  "name": "@phantompurr-react/modules.error-boundary",
   "version": "0.0.10",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,7 +29,7 @@
     "typescript": "*",
     "react": "*",
     "styled-components": "*",
-    "@phantomthief-react/utils.definations": "workspace:*"
+    "@phantompurr-react/utils.definations": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

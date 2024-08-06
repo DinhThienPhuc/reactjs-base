@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { FONT } from "@phantomthief-react/utils.constants";
+import { FONT } from "@phantompurr-react/utils.constants";
 
 const disabledLabelModify = ({ $disabled }: { $disabled: boolean }) => {
   if ($disabled) {

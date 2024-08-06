@@ -1,4 +1,4 @@
-# @phantomthief-react/hooks.event-listener
+# @phantompurr-react/hooks.event-listener
 
 ## 0.0.5
 
@@ -10,7 +10,7 @@
 - Updated dependencies [7d3b774]
 - Updated dependencies [b6a46d1]
 - Updated dependencies [930318b]
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.5
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.5
 
 ## 0.0.4
 
@@ -22,7 +22,7 @@
 - Updated dependencies [d4e97f2]
 - Updated dependencies [9b062fa]
 - Updated dependencies [0c123ca]
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.4
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.4
 
 ## 0.0.3
 
@@ -30,7 +30,7 @@
 
 - Bump to one higher version to update the package
 - Updated dependencies
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.3
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.3
 
 ## 0.0.2
 
@@ -38,4 +38,4 @@
 
 - 47fa599: Release first version of hooks.block, hooks.event-listener, hooks.focus-with-callback, hooks.isomorphic-layout-effect, hooks.not-click-on-element, hooks.on-mounted
 - Updated dependencies [47fa599]
-  - @phantomthief-react/hooks.isomorphic-layout-effect@0.0.2
+  - @phantompurr-react/hooks.isomorphic-layout-effect@0.0.2

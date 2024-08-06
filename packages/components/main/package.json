@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components",
+  "name": "@phantompurr-react/components",
   "version": "0.0.11",
   "type": "module",
   "main": "dist/index.cjs",
@@ -26,19 +26,19 @@
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
   "dependencies": {
-    "@phantomthief-react/components.button": "workspace:*",
-    "@phantomthief-react/components.flex-box": "workspace:*",
-    "@phantomthief-react/components.hamburger-menu": "workspace:*",
-    "@phantomthief-react/components.icon": "workspace:*",
-    "@phantomthief-react/components.loading-ellipsis": "workspace:*",
-    "@phantomthief-react/components.loading-ripple": "workspace:*",
-    "@phantomthief-react/components.navbar": "workspace:*",
-    "@phantomthief-react/components.portal": "workspace:*",
-    "@phantomthief-react/components.radio-group": "workspace:*",
-    "@phantomthief-react/components.select": "workspace:*",
-    "@phantomthief-react/components.switch": "workspace:*",
-    "@phantomthief-react/components.text-field": "workspace:*",
-    "@phantomthief-react/components.typography": "workspace:*"
+    "@phantompurr-react/components.button": "workspace:*",
+    "@phantompurr-react/components.flex-box": "workspace:*",
+    "@phantompurr-react/components.hamburger-menu": "workspace:*",
+    "@phantompurr-react/components.icon": "workspace:*",
+    "@phantompurr-react/components.loading-ellipsis": "workspace:*",
+    "@phantompurr-react/components.loading-ripple": "workspace:*",
+    "@phantompurr-react/components.navbar": "workspace:*",
+    "@phantompurr-react/components.portal": "workspace:*",
+    "@phantompurr-react/components.radio-group": "workspace:*",
+    "@phantompurr-react/components.select": "workspace:*",
+    "@phantompurr-react/components.switch": "workspace:*",
+    "@phantompurr-react/components.text-field": "workspace:*",
+    "@phantompurr-react/components.typography": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "*",

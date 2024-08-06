@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/components.portal",
+  "name": "@phantompurr-react/components.portal",
   "version": "0.0.8",
   "type": "module",
   "main": "dist/index.cjs",
@@ -29,7 +29,7 @@
     "typescript": "*",
     "react": "*",
     "react-dom": "*",
-    "@phantomthief-react/utils": "workspace:*"
+    "@phantompurr-react/utils": "workspace:*"
   },
   "author": "@DinhThienPhuc",
   "license": "ISC",

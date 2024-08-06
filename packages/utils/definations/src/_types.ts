@@ -5,7 +5,7 @@ import {
   SIZE,
   SIZE_UNIT,
   VARIANT,
-} from "@phantomthief-react/utils.constants";
+} from "@phantompurr-react/utils.constants";
 
 /**
  * Override any type for bypass linter

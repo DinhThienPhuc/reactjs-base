@@ -1,4 +1,4 @@
-import { IButtonProps } from "@phantomthief-react/components";
+import { IButtonProps } from "@phantompurr-react/components";
 
 import { Styled } from "./style";
 

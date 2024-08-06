@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { ChangeEvent, Suspense, forwardRef, lazy } from "react";
 
-import useSyncStateWithProps from "@phantomthief-react/hooks.sync-state-with-props";
+import useSyncStateWithProps from "@phantompurr-react/hooks.sync-state-with-props";
 
 import { Styled } from "../_style";
 import { ISwitchProps } from "../_types";

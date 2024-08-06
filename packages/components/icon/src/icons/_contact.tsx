@@ -24,7 +24,7 @@ export const IconContact = ({
       strokeLinecap="round"
       strokeLinejoin="round"
       color={color}
-      className={clsx("phantomthief-icon", "icon", `icon--${name}`, className)}
+      className={clsx("phantompurr-icon", "icon", `icon--${name}`, className)}
     >
       <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2" />
       <rect width="18" height="18" x="3" y="4" rx="2" />

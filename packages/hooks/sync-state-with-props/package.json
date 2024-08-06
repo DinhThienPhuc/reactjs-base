@@ -1,5 +1,5 @@
 {
-  "name": "@phantomthief-react/hooks.sync-state-with-props",
+  "name": "@phantompurr-react/hooks.sync-state-with-props",
   "version": "0.0.4",
   "type": "module",
   "main": "dist/index.cjs",

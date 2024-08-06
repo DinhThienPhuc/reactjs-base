@@ -1,5 +1,5 @@
-import { Icon } from "@phantomthief-react/components";
-import { IAccordionItemProps } from "@phantomthief-react/modules";
+import { Icon } from "@phantompurr-react/components";
+import { IAccordionItemProps } from "@phantompurr-react/modules";
 
 import { CommonStyled } from "../../styles";
 import { ContactForm } from "./contact-form";
