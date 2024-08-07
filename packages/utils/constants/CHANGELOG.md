@@ -1,5 +1,11 @@
 # @phantompurr-react/utils.constants
 
+## 1.0.0
+
+### Major Changes
+
+- 4e6f42d: Change the organization name and release a core package
+
 ## 0.0.6
 
 ### Patch Changes

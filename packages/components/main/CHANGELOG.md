@@ -1,5 +1,28 @@
 # @phantompurr-react/components
 
+## 1.0.0
+
+### Major Changes
+
+- 4e6f42d: Change the organization name and release a core package
+
+### Patch Changes
+
+- Updated dependencies [4e6f42d]
+  - @phantompurr-react/components.loading-ellipsis@1.0.0
+  - @phantompurr-react/components.hamburger-menu@1.0.0
+  - @phantompurr-react/components.loading-ripple@1.0.0
+  - @phantompurr-react/components.radio-group@1.0.0
+  - @phantompurr-react/components.text-field@1.0.0
+  - @phantompurr-react/components.typography@1.0.0
+  - @phantompurr-react/components.flex-box@1.0.0
+  - @phantompurr-react/components.button@1.0.0
+  - @phantompurr-react/components.navbar@1.0.0
+  - @phantompurr-react/components.portal@1.0.0
+  - @phantompurr-react/components.select@1.0.0
+  - @phantompurr-react/components.switch@1.0.0
+  - @phantompurr-react/components.icon@1.0.0
+
 ## 0.0.11
 
 ### Patch Changes

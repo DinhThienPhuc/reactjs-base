@@ -17,7 +17,7 @@
     "build:apps": "pnpm --filter \"./apps/**\" -r build",
     "build:all": "pnpm build:packages && pnpm build:apps",
     "publish": "ts-node ./scripts/run-pnpm-command.ts -r publish --access public --no-git-checks",
-    "publish:all": "pnpm --filter \"./packages/**/**\" -r publish --access public --no-git-checks",
+    "publish:all": "pnpm --filter \"./packages/**/**\" --filter \"./core\" -r publish --access public --no-git-checks",
     "rm:packages": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf ./node_modules && rimraf ./node_modules && rimraf ./pnpm-lock.yaml",
     "rm:builds": "pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf dist && pnpm --filter \"./packages/**/**\" --filter \"./apps/**\" -r exec rimraf build",
     "rm:vite-cache": "ts-node ./scripts/remove-temporary-vite-files.ts",

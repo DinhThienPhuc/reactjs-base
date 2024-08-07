@@ -1,5 +1,23 @@
 # @phantompurr-react/components.text-field
 
+## 1.0.0
+
+### Major Changes
+
+- 4e6f42d: Change the organization name and release a core package
+
+### Patch Changes
+
+- Updated dependencies [4e6f42d]
+  - @phantompurr-react/hooks.sync-state-with-props@1.0.0
+  - @phantompurr-react/hooks.focus-with-callback@1.0.0
+  - @phantompurr-react/components.post-adorment@1.0.0
+  - @phantompurr-react/components.pre-adorment@1.0.0
+  - @phantompurr-react/components.helper-text@1.0.0
+  - @phantompurr-react/utils.definations@1.0.0
+  - @phantompurr-react/components.label@1.0.0
+  - @phantompurr-react/utils.helpers@1.0.0
+
 ## 0.0.9
 
 ### Patch Changes

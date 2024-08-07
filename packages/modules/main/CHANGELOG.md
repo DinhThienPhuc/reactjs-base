@@ -1,5 +1,19 @@
 # @phantompurr-react/modules
 
+## 1.0.0
+
+### Major Changes
+
+- 4e6f42d: Change the organization name and release a core package
+
+### Patch Changes
+
+- Updated dependencies [4e6f42d]
+  - @phantompurr-react/modules.responsive-topnav@1.0.0
+  - @phantompurr-react/modules.error-boundary@1.0.0
+  - @phantompurr-react/modules.authenticator@1.0.0
+  - @phantompurr-react/modules.accordion@1.0.0
+
 ## 0.0.11
 
 ### Patch Changes
